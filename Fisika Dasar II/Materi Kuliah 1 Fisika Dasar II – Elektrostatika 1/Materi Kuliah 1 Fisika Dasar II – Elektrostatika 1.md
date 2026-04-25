@@ -10,7 +10,7 @@ Muatan listrik ($Q$) adalah sifat dasar materi yang menyebabkan interaksi gaya p
 
 Dalam satuan internasional (SI), muatan diukur dalam **Coulomb (C)**. Satu Coulomb setara dengan muatan dari $6,24 \times 10^{18}$ elektron. Besarnya muatan selalu terkuantisasi, artinya muatan suatu benda selalu merupakan kelipatan bulat dari muatan dasar $e$.
 
-![Contoh bahan silikon dengan susunan atom 14 proton, 14 neutron, dan 14 elektron (dari berbagai sumber)](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770346354478.png)
+![Contoh bahan silikon dengan susunan atom 14 proton, 14 neutron, dan 14 elektron (dari berbagai sumber)](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770346354478.png)
 
 ## 1.2 Klasifikasi Material
 
@@ -21,7 +21,7 @@ Berdasarkan kemampuan muatannya untuk bergerak, material dibagi menjadi:
 3. **Semikonduktor:** Sifat perantara antara konduktor dan isolator (contoh: silikon).
 4. **Superkonduktor:** Konduktor sempurna tanpa hambatan pada suhu tertentu.
 
-![Ilustrasi sifat material dari pita energinya.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770206633199.png)
+![Ilustrasi sifat material dari pita energinya.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770206633199.png)
 
 Sumber: <https://nirajchawake.wordpress.com/>
 
@@ -50,7 +50,7 @@ Charles Coulomb menemukan bahwa gaya antara dua muatan titik:
 
 Timbangan Coulomb adalah alat yang dirancang untuk mengukur gaya elektrostatis yang sangat kecil di antara dua benda bermuatan. Alat ini bekerja berdasarkan prinsip **elastisitas puntiran**.
 
-![Timbangan Puntir Coulomb adalah alat presisi yang digunakan oleh Charles Augustin de Coulomb pada tahun 1785 untuk menentukan hukum dasar interaksi muatan listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770207994499.png)
+![Timbangan Puntir Coulomb adalah alat presisi yang digunakan oleh Charles Augustin de Coulomb pada tahun 1785 untuk menentukan hukum dasar interaksi muatan listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770207994499.png)
 
 ### Komponen Utama
 
@@ -94,7 +94,7 @@ Dimana konstanta elektrostatis di udara/vakum adalah $k \approx 9 \times 10^9 \t
 
 Hukum Coulomb bukan sekadar rumus yang muncul tiba-tiba; ia adalah hasil dari pengamatan eksperimental yang sangat teliti menggunakan **Coulomb’s Balance** (Timbangan Puntir). Secara matematis, rumusan ($\vec{F}_{ij} = k \frac{Q_i Q_j}{r_{ij}^2} \hat{u}_{ij}$) dapat dijelaskan melalui tahap-tahap berikut:
 
-![Ilustrasi hukum Coulomb](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770243336318.png)
+![Ilustrasi hukum Coulomb](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770243336318.png)
 
 #### 1. Fondasi Empiris (Eksperimen)
 
@@ -157,7 +157,7 @@ Berdasarkan Figure 5, aturan emas dalam elektrostatika adalah: **Gaya total yang
 
 Jika ada $N$ muatan, maka satu muatan akan mengalami $(N-1)$ interaksi gaya.
 
-![Ilustrasi superposisi.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770477688374.png)
+![Ilustrasi superposisi.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770477688374.png)
 
 ### Langkah-Langkah Penyelesaian Detail
 
@@ -383,7 +383,7 @@ Mengapa menggunakan limit? Agar muatan uji tidak mengubah distribusi muatan sumb
 
 Berdasarkan ilustrasi pada Figure 6, kita melihat perbedaan mendasar antara medan yang dihasilkan oleh muatan positif ($+Q$) dan muatan negatif ($-Q$). Visualisasi ini mengikuti konvensi internasional dalam fisika.
 
-![Visualisasikan Garis Medan Listrik (Electric Field Lines) yang merupakan konsep kunci untuk memahami interaksi tanpa sentuh dalam elektrostatika](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770521765897.png)
+![Visualisasikan Garis Medan Listrik (Electric Field Lines) yang merupakan konsep kunci untuk memahami interaksi tanpa sentuh dalam elektrostatika](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770521765897.png)
 
 #### 1. Definisi Garis Medan Listrik
 
@@ -439,7 +439,7 @@ $$\vec{E} = \frac{kq}{r^2} \hat{r}$$
 
 Hingga titik ini, kita telah mempelajari medan listrik dari muatan titik (diskrit). Namun, ketika kita berhadapan dengan benda makroskopis (benda yang tampak oleh mata), muatan tersebut dianggap terdistribusi secara kontinyu di seluruh bagian benda.
 
-![Ilustrasi muatan kontinyu](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523050976.png)
+![Ilustrasi muatan kontinyu](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770523050976.png)
 
 #### 1. Dari Diskrit ke Kontinyu
 
@@ -501,7 +501,7 @@ Untuk menghitung medan listrik dari distribusi kontinyu, ikuti langkah-langkah i
 
 Dalam bab sebelumnya, kita telah mempelajari medan listrik yang dihasilkan oleh satu muatan tunggal. Namun, bagaimana jika dalam suatu ruang terdapat banyak muatan (distribusi muatan diskrit)? Prinsip Superposisi adalah jawabannya.
 
-![Ilustrasi superposisi medan listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770522035032.png)
+![Ilustrasi superposisi medan listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770522035032.png)
 
 ### Definisi Matematis
 
@@ -552,7 +552,7 @@ Untuk menyelesaikan soal superposisi, ikuti langkah berikut:
 
 Pada persoalan ini, kita diminta untuk menganalisis sistem yang terdiri dari tiga muatan titik yang disusun secara tegak lurus pada sumbu $x$ dan $y$. Ketelitian dalam menentukan arah panah (vektor) adalah kunci utama.
 
-![Ilustrasi soal](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770522421826.png)
+![Ilustrasi soal](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770522421826.png)
 
 #### 1. Inventarisasi Data & Koordinat
 
@@ -628,7 +628,7 @@ $$\sigma = \frac{Q}{A}$$
 
 Berdasarkan prinsip superposisi, medan listrik total adalah jumlah dari medan pelat positif ($\vec{E}_+$) dan medan pelat negatif ($\vec{E}_-$). Ingat bahwa medan pelat tunggal tak berhingga adalah $E = \frac{\sigma}{2\epsilon_0}$.
 
-![Ilustrasi kapasitor plat sejajar.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523476178.png)
+![Ilustrasi kapasitor plat sejajar.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770523476178.png)
 
 1. **Wilayah Luar (Atas & Bawah):**
 	
@@ -655,7 +655,7 @@ Sesuai dengan garis-garis merah pada Figure 10, medan di dalam kapasitor bersifa
 
 Ini adalah bagian yang sangat menarik karena menggabungkan Elektrostatika dengan Hukum Newton.
 
-![Ilustrasi dinamika partikel dalam medan seragam.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523801877.png)
+![Ilustrasi dinamika partikel dalam medan seragam.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770523801877.png)
 
 Jika sebuah partikel bermuatan (seperti elektron $-e$ atau proton $+e$) dilepaskan di dalam kapasitor:
 
@@ -675,7 +675,7 @@ $$v_x = \sqrt{2 \frac{e|\vec{E}|}{m} x}$$
 
 Pada bagian sebelumnya, kita membahas partikel yang bergerak searah dengan medan (1D). Sekarang, kita akan menganalisis kasus di mana partikel (misalnya elektron) masuk ke dalam medan listrik dengan arah **tegak lurus** terhadap garis medan. Kasus ini adalah prinsip dasar cara kerja monitor CRT, osiloskop, dan spektrometer massa.
 
-![Ilustrasi lintasan partikel dalam medan listrik seragam.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525039912.png)
+![Ilustrasi lintasan partikel dalam medan listrik seragam.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770525039912.png)
 
 #### 1. Kondisi Awal (Analogi Gerak Parabola)
 
@@ -743,13 +743,13 @@ Inilah yang terjadi di dalam **Tabung Sinar Katoda (CRT)** pada televisi lama, d
 
 Prinsip ini digunakan pada **Cathode Ray Tube (CRT)**. Dengan mengatur medan listrik pada pelat defleksi vertikal dan horizontal, kita dapat membelokkan berkas elektron ke titik mana pun di layar fosfor untuk membentuk gambar.
 
-![Ilustrasi prinsip dasar layar CRT.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523867714.png)
+![Ilustrasi prinsip dasar layar CRT.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770523867714.png)
 
 ## 3.5 Contoh Soal: Gerak Proton dalam Medan Listrik Seragam
 
 Sebuah proton dipercepat (dari kondisi diam) pada medan listrik 500 N/C. Pada suatu saat kemudian, kecepatannya $2.5×10^6$ m/s.
 
-![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770524729206.png)
+![](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770524729206.png)
 
 **Data Konstanta Fisis (Wajib Diketahui):**
 
@@ -830,7 +830,7 @@ Fluks listrik ($\Phi_E$) adalah besaran skalar yang menggambarkan "jumlah" garis
 
 Kasus paling sederhana adalah ketika medan listrik ($\vec{E}$) bersifat seragam (nilainya sama di setiap titik) dan menembus bidang luasan ($A$) secara tegak lurus.
 
-![Ilustrasi flux listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525664471.png)
+![Ilustrasi flux listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770525664471.png)
 
 **Rumus Dasar:**
 
@@ -843,7 +843,7 @@ $$\Phi_E = |\vec{E}| A$$
 
 Bagaimana jika bidang tersebut miring? Sesuai ilustrasi pada Figure, kita perlu mendefinisikan **Vektor Luas** ($\vec{A}$).
 
-![Ilustrasi bidang sembarang.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525763288.png)
+![Ilustrasi bidang sembarang.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770525763288.png)
 
 > Vektor $\vec{A}$ memiliki magnitudo sebesar luas bidang ($A$) dan arahnya selalu tegak lurus (Normal) terhadap permukaan tersebut ($\hat{n}$).
 
@@ -863,7 +863,7 @@ $$\Phi_E = \vec{E} \cdot \vec{A} = |\vec{E}| A \cos \theta$$
 
 Dalam situasi nyata, medan listrik mungkin tidak seragam dan permukaannya mungkin melengkung. Untuk menghitung fluks total, kita membagi permukaan menjadi elemen luasan yang sangat kecil ($dA$).
 
-![Ilustrasi flux dalam bidang umum.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525869996.png)
+![Ilustrasi flux dalam bidang umum.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770525869996.png)
 
 **Rumus Integral:**
 
@@ -890,7 +890,7 @@ Pada bagian ini, kita melakukan eksperimen pikiran (_thought experiment_) untuk 
 
 Bayangkan sebuah muatan titik positif $+q$ yang terletak tepat di pusat sebuah bola khayal berjari-jari $r$. Bola khayal ini kita sebut sebagai **Permukaan Gauss** (_Gaussian Surface_).
 
-![Flux ruang bola.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770526124568.png)
+![Flux ruang bola.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770526124568.png)
 
 ##### Mengapa Memilih Bentuk Bola?
 
@@ -1014,7 +1014,7 @@ Persamaan ini menghubungkan apa yang terjadi **di permukaan** (fluks) dengan apa
 
 	- Secara visual: Tidak ada satu pun garis medan yang **menusuk/menembus** permukaan kuning tersebut; garis-garis itu hanya "menyapu" lewat di atas dan di bawahnya.
 
-![Ilustrasi flux bernilai nol dalam medan listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770526557896.png)
+![Ilustrasi flux bernilai nol dalam medan listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770526557896.png)
 
 ## 4.6 Langkah Strategis Aplikasi Hukum Gauss
 
@@ -1056,7 +1056,7 @@ $$|\vec{E}| \oint dA = \frac{q_{enc}}{\epsilon_0}$$$$|\vec{E}| \cdot A_{total} =
 
 Jika Anda menghadapi distribusi muatan berbentuk kawat panjang, permukaan Gauss yang paling cocok adalah **Silinder**.
 
-![Contoh hukum gauss di permukaan silinder.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770528321295.png)
+![Contoh hukum gauss di permukaan silinder.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770528321295.png)
 
 Sesuai ilustrasi Figure 20, integral permukaan silinder harus dipecah menjadi tiga bagian:
 
@@ -1074,7 +1074,7 @@ $$\int dA = \int_{atas} dA + \int_{bawah} dA + \int_{sisi} dA = 2(\pi r^2) + 2\p
 
 Pada bagian ini, kita dihadapkan pada sebuah kawat lurus yang sangat panjang (dianggap tak berhingga) dengan rapat muatan linear $\lambda$. Kita ingin menghitung kuat medan listrik $\vec{E}$ pada jarak $r$ dari kawat tersebut.
 
-![Ilustrasi distribusi muatan garis](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770528656472.png)
+![Ilustrasi distribusi muatan garis](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770528656472.png)
 
 #### 1. Identifikasi Simetri dan Arah Medan
 
@@ -1134,7 +1134,7 @@ $$E = \frac{2k\lambda}{r}$$
 
 Pada bagian ini, kita mempelajari bagaimana menghitung medan listrik yang dihasilkan oleh sebuah lembaran tipis non-konduktor yang sangat luas dengan rapat muatan permukaan $\sigma$ (sigma).
 
-![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770528863313.png)
+![](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770528863313.png)
 
 #### 1. Analisis Simetri dan Arah Medan
 
@@ -1191,7 +1191,7 @@ Hasil $E = \frac{\sigma}{2\epsilon_0}$ menunjukkan hal yang luar biasa:
 
 Pada bagian ini, kita meninjau sebuah bola pejal (bukan konduktor) dengan jari-jari luar $a$ dan total muatan $+Q$ yang tersebar merata di seluruh volumenya. Kita ingin menghitung kuat medan listrik $E$ di sebuah titik yang berada pada jarak $r$ dari pusat, di mana $r < a$ (di dalam bola).
 
-![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770529097718.png)
+![](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770529097718.png)
 
 #### 1. Konsep Rapat Muatan Volume ($\rho$)
 
@@ -1255,7 +1255,7 @@ $$E = \frac{kQr}{a^3}$$
 
 Pada bagian ini, kita meninjau titik pengamatan yang berada di luar bola pejal bermuatan. Jari-jari bola adalah $a$ dan jari-jari permukaan Gauss kita adalah $r$, dengan syarat $r > a$.
 
-![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770529299987.png)
+![](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20–%20Elektrostatika%201-1770529299987.png)
 
 #### 1. Pemilihan Permukaan Gauss
 
