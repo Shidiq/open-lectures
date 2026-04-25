@@ -1,0 +1,1080 @@
+# Bab 1: Energi Potensial dan Potensial Listrik
+
+## 1.1 Konsep Dasar Energi Potensial Listrik
+
+Gaya elektrostatik adalah gaya konservatif. Artinya, usaha yang dilakukan oleh gaya listrik untuk memindahkan muatan tidak bergantung pada lintasan yang ditempuh, melainkan hanya pada posisi awal dan akhir.
+
+> Bagian ini menjelaskan bagaimana energi tersimpan dalam sistem muatan. Untuk memahaminya, kita harus melihat hubungan antara gaya, usaha, dan perubahan energi.
+
+### 1. Sifat Konservatif Gaya Elektrostatik
+
+Pernyataan kunci: _"Usaha yang dilakukan oleh gaya elektrostatik tidak bergantung pada lintasannya."_
+
+Dalam fisika, ini berarti gaya listrik adalah **gaya konservatif**. Sama seperti gaya gravitasi, jika Anda memindahkan muatan dari titik A ke titik B, besar usaha yang dilakukan oleh medan listrik akan selalu sama, baik Anda bergerak lurus, berbelok-belok, atau memutar terlebih dahulu. Hal ini memungkinkan kita untuk mendefinisikan fungsi "Energi Potensial" yang hanya bergantung pada posisi.
+
+### 2. Hubungan Usaha ($W$) dan Energi Potensial ($\Delta U$)
+
+Secara matematis, perubahan energi potensial sistem ($\Delta U$) didefinisikan sebagai negatif dari usaha ($W$) yang dilakukan oleh gaya listrik:
+
+$$\Delta U = U_f - U_i = -W$$
+
+**Mengapa tandanya negatif?**
+
+Ini adalah poin yang sering membingungkan. Ingat prinsip ini:
+
+- Jika medan listrik melakukan usaha positif ($W > 0$), artinya medan tersebut "mendorong" muatan sesuai arah alaminya (misal: muatan positif menjauhi muatan positif lain). Akibatnya, sistem kehilangan energi potensial (energi berubah menjadi kinetik), sehingga $\Delta U$ bernilai negatif.
+- Sebaliknya, jika kita melawan medan, kita melakukan usaha luar yang akan disimpan sebagai energi potensial tambahan.
+
+### 3. Formulasi Matematis Usaha
+
+Usaha ($W$) didefinisikan sebagai hasil kali titik (_dot product_) antara gaya dan perpindahan:
+
+$$W = \vec{F} \cdot \Delta\vec{r} = q\vec{E} \cdot \Delta\vec{r}$$
+
+Jika medan listrik ($\vec{E}$) tidak seragam (seperti pada gambar yang menunjukkan garis-garis medan menyebar dari muatan pusat), kita harus menggunakan integral untuk menjumlahkan usaha di setiap titik kecil lintasan ($d\vec{s}$):
+
+$$W = \int q\vec{E} \cdot d\vec{s}$$
+
+### 4. Konsep Titik Referensi di Tak Terhingga ($\infty$)
+
+Disebutkan:
+
+_"_$W$ _adalah usaha yang akan dilakukan oleh gaya listrik (_$qE$_) untuk memindah muatan test positif_ $q$ _dari titik di_ $\infty$ _ke titik_ $P$_."_
+
+Dalam elektrostatika, kita biasanya menetapkan titik tak terhingga sebagai referensi di mana energi potensialnya dianggap nol ($U_\infty = 0$).
+
+- Bayangkan muatan uji $q$ berada sangat jauh sehingga tidak merasakan gaya apa pun.
+- Saat ia dibawa mendekati muatan sumber, gaya listrik mulai bekerja.
+- Energi potensial di titik $P$ didefinisikan sebagai usaha yang dilakukan medan jika muatan tersebut dilepaskan dari $P$ kembali ke tak terhingga.
+
+### 5. Interpretasi Visual Gambar
+
+Gambar ini menunjukkan muatan sumber positif (hijau di pusat) dan muatan uji positif (hijau di luar).
+
+![Ilustrasi.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770716541232.png)
+
+- **Garis merah (panah):** Menunjukkan arah medan listrik ($\vec{E}$) yang keluar dari muatan positif.
+- **Arah Panah Biru:** Menunjukkan arah gaya atau perpindahan. Karena sesama muatan positif tolak-menolak, maka gaya listrik cenderung mendorong muatan uji menjauh (menuju $U_f$ yang lebih jauh).
+- **Gradien Energi:** Semakin dekat muatan uji positif ke muatan sumber positif, semakin besar energi potensialnya ($U$ tinggi), karena ada "tekanan" tolak-menolak yang besar yang siap melepaskan muatan tersebut.
+
+## 1.2 Potensial Listrik ($V$)
+
+Jika pada pembahasan sebelumnya kita berfokus pada **Energi Potensial (**$U$**)** yang melibatkan interaksi antara muatan sumber dan muatan uji, maka pada bagian ini kita memperkenalkan **Potensial Listrik (**$V$**)** sebagai karakteristik murni dari medan itu sendiri.
+
+### 1. Penurunan Matematis dari Usaha ke Potensial
+
+Hubungan antara usaha ($W$), energi potensial ($\Delta U$), dan beda potensial ($\Delta V$) diturunkan sebagai berikut:
+
+1. **Usaha Diferensial (**$dW$**):**
+
+	Saat sebuah muatan uji $q_0$ bergerak sejauh $d\vec{s}$ dalam medan listrik $\vec{E}$, usaha yang dilakukan oleh gaya listrik adalah:
+
+	$$dW = \vec{F} \cdot d\vec{s} = q_0 \vec{E} \cdot d\vec{s}$$
+
+2. **Usaha Total (**$W$**):**
+
+	Untuk memindahkan muatan dari titik $i$ ke $f$, kita mengintegralkan seluruh usaha kecil di sepanjang lintasan:
+
+	$$W = q_0 \int_{i}^{f} \vec{E} \cdot d\vec{s}$$
+
+3. **Perubahan Energi Potensial (**$\Delta U$**):**
+
+	Karena $\Delta U = -W$, maka:
+
+	$$\Delta U = U_f - U_i = -q_0 \int_{i}^{f} \vec{E} \cdot d\vec{s}$$
+
+4. **Definisi Potensial Listrik (**$V$**):**
+
+	Potensial didefinisikan sebagai energi potensial per satuan muatan:
+
+	$$V = \frac{U}{q_0}$$
+
+	Sehingga beda potensialnya adalah:
+
+	$$\Delta V = \frac{\Delta U}{q_0} = -\int_{i}^{f} \vec{E} \cdot d\vec{s}$$
+
+### 2. Perbedaan Esensial: $U$ vs $V$
+
+Bagian ini memberikan informasi yang sangat krusial bagi mahasiswa:
+
+- **Beda Potensial (**$\Delta V$**):** Hanya bergantung pada **distribusi muatan sumber**. Titik $i$ dan $f$ memiliki nilai potensial bahkan jika tidak ada muatan apa pun di sana. Ini adalah properti lokasi di dalam medan listrik.
+- **Perubahan Energi Potensial (**$\Delta U$**):** Hanya muncul jika ada **muatan uji** yang dipindahkan di antara titik-titik tersebut. Tanpa adanya muatan uji yang berinteraksi, tidak ada energi yang tersimpan.
+
+#### Korelasi Fisis: Memahami "Lanskap" vs "Interaksi"
+
+Pernyataan yang Anda kutip merujuk pada perbedaan antara **properti ruang** dan **properti sistem**. Berikut adalah bedah detailnya:
+
+##### 1. Analogi Topografi (Bukit dan Ketinggian)
+
+Bayangkan sebuah bukit yang terjal.
+
+- **Potensial (**$V$**) adalah "Ketinggian" (**$h$**):** Titik di puncak bukit memiliki "ketinggian" tertentu, tidak peduli apakah ada orang yang berdiri di sana atau tidak. Ketinggian adalah properti dari bukit itu sendiri (distribusi massa tanah/muatan sumber).
+- **Energi Potensial (**$U$**) adalah "Energi Gravitasi" (**$mgh$**):** Anda baru memiliki energi potensial jika Anda menaruh sebuah benda bermassa $m$ di ketinggian tersebut. Jika massa benda nol, energinya nol, tapi ketinggian bukit tetap ada.
+
+**Korelasi Fisis:** Potensial listrik adalah cara kita mendeskripsikan betapa "curam" atau "tinggi" pengaruh listrik di suatu titik tanpa perlu tahu muatan apa yang akan lewat di sana.
+
+##### 2. Properti Intrinsik vs Ekstrinsik
+
+- $V$ **bersifat Intrinsik terhadap Medan:** Jika kita memiliki sebuah bola bermassa besar (muatan sumber $Q$), ia otomatis "memodifikasi" ruang di sekitarnya. Modifikasi inilah yang kita sebut Potensial. Ia adalah **potensi** untuk melakukan usaha.
+- $U$ **bersifat Ekstrinsik terhadap Sistem:** Energi adalah hasil dari **interaksi**. Secara fisis, energi potensial tidak disimpan _di dalam_ muatan uji, melainkan disimpan dalam **medan** yang berada di antara muatan sumber dan muatan uji. Itulah sebabnya kita menyebutnya energi _sistem_.
+
+##### 3. Konsep "Kesiapan" Ruang
+
+Secara fisis, pernyataan tersebut bermakna bahwa ruang di sekitar muatan tidaklah "kosong".
+
+- Setiap koordinat $(x, y, z)$ di sekitar muatan sumber memiliki nilai $V$. Ini menunjukkan **kesiapan** ruang tersebut untuk memberikan energi kepada muatan apa pun yang datang.
+- Ketika muatan uji $q$ masuk ke titik tersebut, ia seolah-olah "menagih" kesiapan ruang tersebut. Maka munculah energi: $U = qV$.
+
+##### 4. Mengapa Perbedaan Ini Penting? (Signifikansi Praktis)
+
+Dalam teknik elektro atau fisika terapan, kita lebih sering bekerja dengan $V$ (Tegangan/Voltage) daripada $U$.
+
+- **Alasannya:** Kita bisa mendesain sebuah baterai 12 Volt tanpa perlu tahu apakah baterai itu akan menyalakan lampu kecil atau motor besar.
+- **Korelasinya:** Nilai 12 Volt ($V$) adalah janji distribusi muatan sumber di dalam baterai. Berapa besar energi ($U$) yang dikeluarkan? Itu tergantung pada berapa banyak muatan ($q$) yang kita lewatkan melalui kabel.
+
+##### Ringkasan Perbandingan
+
+|   |   |   |
+|---|---|---|
+|**Fitur**|**Potensial Listrik (V)**|**Energi Potensial Listrik (U)**|
+|**Penyebab**|Distribusi muatan sumber saja.|Interaksi muatan sumber DAN muatan uji.|
+|**Eksistensi**|Ada di setiap titik ruang (Medan).|Ada hanya jika ada muatan yang berinteraksi.|
+|**Analogi fisis**|"Tekanan" atau "Ketinggian".|"Kerja yang tersimpan".|
+|**Rumus**|$V = k \frac{Q}{r}$|$U = k \frac{Qq}{r}$|
+
+### 3. Sistem Referensi: Relatif vs Absolut
+
+Dalam perhitungan praktis, nilai mutlak potensial di satu titik tidaklah penting; yang penting adalah **perbedaannya**.
+
+- **Referensi Relatif:** Kita bebas menentukan di mana titik nol kita (seperti menentukan lantai dasar pada gedung).
+- **Referensi Absolut:** Secara konvensi fisik, kita sering menetapkan titik tak terhingga ($\infty$) sebagai titik nol ($U_i = 0$ dan $V_i = 0$). Dengan referensi ini, potensial di titik $f$ adalah usaha yang dilakukan medan untuk membawa muatan dari tak terhingga ke titik tersebut.
+
+### 4. Satuan dan Konversi Penting
+
+Bagian ini menjelaskan standarisasi satuan untuk menghindari kesalahan perhitungan:
+
+- **Volt (V):** $1 \text{ Volt} = 1 \text{ Joule/Coulomb}$.
+- **Medan Listrik (**$\vec{E}$**):** Selain $N/C$, satuan yang lebih sering digunakan adalah **V/m** (Volt per meter).
+- **Elektron-Volt (eV):** Ini adalah satuan energi skala atomik. $1 \text{ eV}$ adalah energi yang diperoleh satu elektron saat bergerak melalui beda potensial $1 \text{ Volt}$.
+
+	$$1 \text{ eV} = 1,60 \times 10^{-19} \text{ Joule}$$
+
+### 5. Interpretasi Visual (Gambar Lintasan)
+
+Pada gambar ini, terlihat lintasan hijau melengkung ($Path$) yang memotong garis-garis medan biru ($Field line$).
+
+![Ilustrasi potensial listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770717334082.png)
+
+- Integral $-\int \vec{E} \cdot d\vec{s}$ menunjukkan bahwa kita hanya menghitung komponen medan yang sejajar dengan lintasan.
+- Karena gaya listrik bersifat konservatif, bentuk lengkungan lintasan tersebut tidak akan merubah hasil akhir $\Delta V$, selama titik awal ($i$) dan titik akhir ($f$) tetap sama.
+
+## 1.3 Analisis Kasus: Pergerakan Elektron dalam Medan Listrik Bumi
+
+### Soal
+
+Kuat medan listrik di permukaan bumi diketahui adalah $E = 150 \text{ N/C}$ arah ke bawah. Suatu elektron bergerak dipengaruhi oleh medan tersebut dan menempuh jarak $d = 520 \text{ m}$. Hitung:
+
+a. Perubahan tenaga potensial listrik yang dialami elektron
+
+b. Beda potensial listrik yang dilalui elektron
+
+![Ilustrasi soal.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770717704360.png)
+
+---
+
+Soal ini merupakan contoh klasik untuk memahami hubungan antara Medan Listrik ($\vec{E}$), Gaya Listrik ($\vec{F}$), Usaha ($W$), Energi Potensial ($\Delta U$), dan Beda Potensial ($\Delta V$).
+
+### 1. Identifikasi Masalah
+
+Berdasarkan pembahasan sebelumnya, kita memiliki data berikut:
+
+- **Kuat medan listrik bumi (**$E$**):** $150 \text{ N/C}$ dengan arah ke **bawah** (menuju pusat bumi).
+- **Partikel:** Sebuah elektron.
+	- Muatan elektron ($q$ atau $e$): $-1,6 \times 10^{-19} \text{ C}$ (negatif).
+- **Perpindahan (**$d$**):** $520 \text{ m}$ ke arah **atas**.
+
+#### Logika Arah Gaya
+
+Karena muatan elektron negatif, maka gaya listrik ($\vec{F} = q\vec{E}$) yang dialaminya akan **berlawanan arah** dengan medan listrik. Jika medan ke bawah, maka gaya listrik pada elektron mengarah ke **atas**.
+
+### 2. Penyelesaian Bagian (a): Perubahan Energi Potensial ($\Delta U$)
+
+Untuk mencari $\Delta U$, kita harus menghitung usaha ($W$) yang dilakukan oleh gaya listrik terlebih dahulu.
+
+#### Langkah 1: Menghitung Usaha ($W$)
+
+Usaha oleh gaya listrik didefinisikan sebagai:
+
+$$W = \vec{F} \cdot \vec{d} = F \cdot d \cos \theta$$
+
+- Besar gaya $F = |q|E = (1,6 \times 10^{-19} \text{ C}) \times (150 \text{ N/C}) = 2,4 \times 10^{-17} \text{ N}$.
+- Arah gaya $F$ adalah ke atas.
+- Arah perpindahan $d$ adalah ke atas.
+- Maka sudut $\theta$ antara gaya dan perpindahan adalah $0^\circ$.
+
+$$W = (2,4 \times 10^{-17} \text{ N}) \times (520 \text{ m}) \times \cos 0^\circ$$$$W = 1,248 \times 10^{-14} \text{ J} \approx 1,2 \times 10^{-14} \text{ J}$$
+
+#### Langkah 2: Menghitung Perubahan Energi Potensial ($\Delta U$)
+
+Hubungan antara usaha dan energi potensial adalah:
+
+$$\Delta U = -W$$$$\Delta U = -1,2 \times 10^{-14} \text{ J}$$
+
+**Interpretasi Fisis:** Tanda negatif menunjukkan bahwa energi potensial elektron **berkurang** (turun). Hal ini masuk akal karena elektron bergerak "mengikuti" gaya alaminya (tertolak ke atas). Seperti benda yang jatuh bebas dalam gravitasi, energinya berubah dari potensial menjadi kinetik.
+
+### 3. Penyelesaian Bagian (b): Beda Potensial Listrik ($\Delta V$)
+
+Beda potensial didefinisikan sebagai perubahan energi potensial per satuan muatan.
+
+#### Perhitungan
+
+$$\Delta V = \frac{\Delta U}{q}$$
+
+Masukkan nilai yang sudah kita dapatkan (ingat untuk menyertakan tanda negatif pada muatan elektron):
+
+$$\Delta V = \frac{-1,2 \times 10^{-14} \text{ J}}{-1,6 \times 10^{-19} \text{ C}}$$$$\Delta V = 75.000 \text{ Volt} = 75 \text{ kV}$$
+
+**Interpretasi Fisis:**
+
+- Hasilnya positif ($+75 \text{ kV}$), yang berarti titik akhir (atas) memiliki potensial yang **lebih tinggi** daripada titik awal (permukaan bumi).
+- **Aturan Emas:** Garis medan listrik selalu menunjuk dari potensial tinggi ke potensial rendah. Karena medan listrik bumi menunjuk ke bawah, maka titik di atas secara otomatis berada pada potensial yang lebih tinggi daripada titik di bawah.
+- Meskipun energi potensial elektron ($U$) turun, ia berpindah ke lokasi dengan potensial listrik ($V$) yang lebih tinggi. Tanda negatif pada muatan elektron membalikkan hubungan antara $U$ dan $V$.
+
+### Kesimpulan Penting
+
+1. **Muatan Positif** akan kehilangan energi potensial jika bergerak dari potensial tinggi ke rendah.
+2. **Muatan Negatif (Elektron)** akan kehilangan energi potensial jika bergerak dari potensial rendah ke tinggi (seperti pada soal ini).
+3. Usaha yang dilakukan oleh medan listrik dalam kasus ini bersifat "membantu" pergerakan elektron ke atas.
+
+# Bab 2: Permukaan Ekipotensial dan Distribusi Muatan
+
+## 2.1 Permukaan Ekipotensial
+
+Permukaan ekipotensial adalah alat bantu visual dan matematis untuk memahami bagaimana potensial listrik terdistribusi di dalam ruang.
+
+### 1. Definisi dan Karakteristik Utama
+
+Permukaan ekipotensial didefinisikan sebagai permukaan di mana setiap titik pada permukaan tersebut memiliki **potensial listrik (**$V$**) yang sama**.
+
+**Karakteristik Fisis Penting:**
+
+- **Tegak Lurus terhadap Medan Listrik:** Garis medan listrik ($\vec{E}$) selalu tegak lurus dengan permukaan ekipotensial di setiap titik.
+	- _Mengapa?_ Ingat hubungan $dV = -\vec{E} \cdot d\vec{s}$. Jika kita bergerak di sepanjang permukaan ekipotensial, maka $dV = 0$. Agar hasil perkalian titik ($\vec{E} \cdot d\vec{s}$) menjadi nol saat ada perpindahan ($d\vec{s} \neq 0$) dan medan ($E \neq 0$), maka sudut antara keduanya harus $90^\circ$ ($\cos 90^\circ = 0$).
+- **Usaha Nol (**$W = 0$**):** Tidak ada usaha yang dilakukan oleh gaya listrik untuk memindahkan muatan di sepanjang permukaan yang sama. Karena tidak ada perbedaan potensial ($\Delta V = 0$), maka $\Delta U = q\Delta V = 0$.
+
+### 2. Analogi Gravitasi (Peta Topografi)
+
+Contoh analogi yang sangat kuat: **Garis Kontur Ketinggian.**
+
+- Di peta gunung, garis kontur menghubungkan titik-titik dengan ketinggian yang sama. Jika Anda berjalan mengikuti garis kontur, Anda tidak akan merasa lelah (tidak naik atau turun secara gravitasi).
+- Dalam listrik, "ketinggian" digantikan oleh "potensial". Selama Anda berada di permukaan ekipotensial yang sama, Anda berada di "ketinggian listrik" yang sama.
+
+### 3. Visualisasi Berbagai Distribusi
+
+![Visualisasi distribusi potensial listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718469987.png)
+
+Gambar ini menyajikan tiga skenario visual:
+
+- **(a) Medan Seragam:** Garis medan listrik berbentuk garis lurus sejajar. Permukaan ekipotensialnya berbentuk **bidang datar sejajar** yang memotong garis medan secara tegak lurus.
+- **(b) Muatan Titik:** Medan menyebar secara radial. Permukaan ekipotensialnya berbentuk **bola-bola konsentris** (seperti lapisan bawang) dengan muatan sebagai pusatnya.
+- **(c) Dipol Listrik:** Pada sistem dua muatan berlawanan, permukaan ekipotensial menjadi lebih kompleks (berbentuk melengkung di sekitar muatan) namun tetap mempertahankan sifat tegak lurus terhadap garis medan yang melengkung.
+
+### 4. Perpindahan Antar Permukaan
+
+Jika permukaan ekipotensial adalah "lantai" dengan ketinggian yang sama, maka memindahkan muatan dari satu permukaan ke permukaan lain adalah seperti "naik atau turun tangga".
+
+Bagian menekankan dua hal krusial:
+
+1. **Independensi Lintasan:** Usaha yang dilakukan untuk memindahkan muatan dari permukaan $i$ (awal) ke permukaan $f$ (akhir) **tidak bergantung pada rutenya**.
+	
+	- Anda bisa bergerak lurus, zigzag, atau berputar-putar; selama Anda berakhir di permukaan ekipotensial yang sama, usaha yang dilakukan tetap sama.
+		
+2. **Formulasi Integral:** Beda potensial tetap dihitung dengan integral garis:
+
+	$$V_f - V_i = -\int_{i}^{f} \vec{E} \cdot d\vec{s}$$
+
+	Nilai ini hanya ditentukan oleh identitas permukaan awal dan permukaan akhir.
+
+### 5. Hubungan dengan Jarak Antar Permukaan
+
+Secara fisis, jika permukaan ekipotensial digambarkan dengan selang potensial yang sama (misal selisih 10V per garis):
+
+- Di daerah di mana garis-garis ekipotensial **sangat rapat**, itu berarti medan listriknya **sangat kuat** (potensial berubah drastis dalam jarak pendek).
+- Di daerah di mana garis-garisnya **renggang**, medan listriknya **lemah**.
+
+## 2.2 Potensial dari Muatan Titik dan Dipol Listrik
+
+Setelah memahami definisi umum potensial, kita sekarang akan menerapkannya pada konfigurasi muatan yang paling dasar: muatan titik tunggal, sistem banyak muatan, dan dipol listrik.
+
+### 1. Potensial dari Muatan Titik
+
+Untuk menentukan potensial listrik pada jarak $r$ dari sebuah muatan titik $q$, kita menggunakan definisi beda potensial dengan menetapkan titik acuan di tak terhingga ($\infty$).
+
+![Ilustrasi potensial dari muatan titik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718730339.png)
+
+**Proses Penurunan Matematis:**
+
+1. **Setting Referensi:** Kita tetapkan potensial di tak terhingga adalah nol ($V_f = 0$ pada $r = \infty$) dan kita ingin mencari potensial $V$ pada jarak $R$.
+2. **Persamaan Dasar:**
+
+	$$\Delta V = V_f - V_i = -\int_{i}^{f} \vec{E} \cdot d\vec{s}$$
+
+3. **Substitusi Medan (**$E$**):** Menggunakan hukum Coulomb, $E = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}$. Karena arah medan dan perpindahan searah ($\theta = 0^\circ$), maka $\vec{E} \cdot d\vec{s} = E \, dr$.
+4. **Integrasi:**
+
+	$$0 - V = -\int_{R}^{\infty} \frac{1}{4\pi\epsilon_0} \frac{q}{r^2} dr$$$$-V = -\frac{q}{4\pi\epsilon_0} \left[-\frac{1}{r} \right]_{R}^{\infty}$$$$-V = \frac{q}{4\pi\epsilon_0} \left(0 - \frac{1}{R} \right)$$
+
+5. **Hasil Akhir:**
+
+	$$V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r}$$
+
+**Catatan Fisis:** Berbeda dengan medan listrik yang berbanding terbalik dengan kuadrat jarak ($1/r^2$), potensial listrik hanya berbanding terbalik dengan jarak ($1/r$).
+
+### 2. Potensial dari Sistem Banyak Muatan
+
+Jika terdapat lebih dari satu muatan titik, kita menggunakan **Prinsip Superposisi**. Berita baiknya adalah potensial merupakan besaran **skalar**, sehingga kita tidak perlu melakukan penjumlahan vektor yang rumit.
+
+$$V = \sum_{i=1}^{n} V_i = \frac{1}{4\pi\epsilon_0} \sum_{i=1}^{n} \frac{q_i}{r_i}$$
+
+**Korelasi Penting:**
+
+- Medan $E$ bisa bernilai nol di suatu titik, namun potensial $V$ tidak nol (misal: tepat di tengah-tengah dua muatan identik).
+- Potensial $V$ bisa bernilai nol, namun medan $E$ tidak nol (misal: tepat di tengah-tengah dipol).
+
+![Ilustrasi muatan dari sistem banyak.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718860812.png)
+
+### 3. Potensial oleh Dipol Listrik
+
+Dipol listrik adalah sistem yang terdiri dari dua muatan sama besar tetapi berlawanan tanda ($+q$ dan $-q$) yang dipisahkan oleh jarak $d$.
+
+![Ilustrasi potensial dipol listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718917776.png)
+
+#### Konsep Momen Dipol ($p$)
+
+Didefinisikan sebagai vektor yang mengarah dari muatan negatif ke positif dengan besar:
+
+$$p = qd$$
+
+#### Potensial di Titik Jauh ($r \gg d$)
+
+Untuk titik $P$ yang sangat jauh dibandingkan dengan jarak antar muatan, potensial dihitung berdasarkan jarak $r$ dan sudut $\theta$ terhadap sumbu dipol:
+
+$$V = \frac{1}{4\pi\epsilon_0} \frac{p \cos \theta}{r^2}$$
+
+#### Analisis Fisis terhadap Sudut $\theta$
+
+1. **Pada Sumbu Dipol (**$\theta = 0^\circ$ **atau** $180^\circ$**):** Potensial memiliki nilai maksimum (positif atau negatif).
+2. **Pada Bidang Tegak Lurus/Garis Tengah (**$\theta = 90^\circ$**):** Karena $\cos 90^\circ = 0$, maka $V = 0$. Ini berarti garis tengah antara dua muatan dipol adalah garis ekipotensial nol.
+3. **Laju Penurunan:** Potensial dipol turun jauh lebih cepat ($1/r^2$) dibandingkan muatan tunggal ($1/r$). Hal ini dikarenakan dari kejauhan, muatan positif dan negatif terlihat seolah-olah saling meniadakan.
+
+### Ringkasan Perbandingan
+
+|   |   |   |
+|---|---|---|
+|**Jenis Sumber**|**Medan Listrik (E)**|**Potensial Listrik (V)**|
+|**Muatan Titik**|Berbanding terbalik $r^2$|Berbanding terbalik $r$|
+|**Dipol Listrik**|Berbanding terbalik $r^3$|Berbanding terbalik $r^2$|
+|**Sifat Matematika**|Penjumlahan Vektor|Penjumlahan Aljabar (Skalar)|
+
+## 2.3 Potensial Listrik pada Distribusi Muatan Kontinu dan Konduktor
+
+Dalam realitas fisik, kita jarang berhadapan dengan muatan tunggal. Sebaliknya, muatan sering tersebar pada suatu benda. Bab ini akan menjelaskan cara menghitung potensial yang dihasilkan oleh distribusi muatan tersebut serta karakteristik unik pada bahan konduktor.
+
+### 1. Potensial karena Distribusi Muatan Kontinu
+
+Ketika muatan tidak lagi berupa titik-titik terpisah melainkan tersebar secara merata pada suatu garis, bidang, atau volume, kita menggunakan pendekatan kalkulus (integrasi).
+
+![Ilustrasi potensial karena muatan terdistribusi kontinu.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719192105.png)
+
+#### 1.1 Strategi Penyelesaian
+
+Langkah-langkah untuk menentukan potensial di titik $P$ adalah:
+
+1. **Membagi Distribusi:** Anggap benda tersebut terdiri dari elemen muatan yang sangat kecil, disebut $dq$.
+2. **Menganggap sebagai Muatan Titik:** Setiap elemen $dq$ dianggap sebagai muatan titik yang memberikan kontribusi potensial kecil ($dV$) sebesar:
+
+	$$dV = \frac{1}{4\pi\epsilon_0} \frac{dq}{r}$$
+
+3. **Integrasi:** Jumlahkan seluruh kontribusi $dV$ dari seluruh bagian benda:
+
+	$$V = \int dV = \frac{1}{4\pi\epsilon_0} \int \frac{dq}{r}$$
+
+#### 1.2 Menentukan Ekspresi $dq$
+
+Bentuk muatan $dq$ bergantung pada geometri benda tersebut:
+
+- **Distribusi Garis:** Jika muatan tersebar pada kawat (panjang $l$), maka $dq = \lambda dl$.
+	- $\lambda$: Rapat muatan linier (Coulomb/meter).
+- **Distribusi Permukaan:** Jika muatan tersebar pada pelat atau kulit bola (luas $A$), maka $dq = \sigma dA$.
+	- $\sigma$: Rapat muatan permukaan (Coulomb/meter$^2$).
+- **Distribusi Volume:** Jika muatan tersebar dalam benda padat (volume $V$), maka $dq = \rho dV$.
+	- $\rho$: Rapat muatan volume (Coulomb/meter$^3$).
+
+### 2. Potensial akibat Konduktor Terisolasi Bermuatan
+
+Konduktor memiliki sifat unik dalam elektrostatika karena elektron di dalamnya bebas bergerak. Hal ini menghasilkan beberapa konsekuensi fisis yang sangat penting.
+
+![Potensial akibat konduktor terisolasi yang bermuatan](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719279129.png)
+
+#### 2.1 Perilaku Muatan dan Medan
+
+Berdasarkan Hukum Gauss dan sifat konduktor dalam kesetimbangan elektrostatik:
+
+- **Muatan di Permukaan:** Semua muatan kelebihan akan menolak satu sama lain dan berkumpul hanya di **permukaan luar** konduktor.
+- **Medan Listrik Internal (**$E = 0$**):** Di dalam material konduktor, medan listrik adalah nol. Jika ada medan, maka elektron akan bergerak, yang berarti sistem belum setimbang.
+- **Arah Medan di Permukaan:** Tepat di luar permukaan, medan listrik selalu tegak lurus terhadap permukaan tersebut.
+
+#### 2.2 Sifat Ekipotensial Konduktor
+
+Karena $\vec{E} = 0$ di dalam konduktor, maka beda potensial antara dua titik ($A$ dan $B$) di dalam atau di permukaan konduktor adalah:
+
+$$V_B - V_A = -\int_{A}^{B} \vec{E} \cdot d\vec{s} = 0$$
+
+**Kesimpulan Fisis:**
+
+1. Seluruh bagian konduktor (baik di permukaan maupun di dalam) memiliki **potensial listrik yang sama**.
+2. Konduktor adalah sebuah **benda ekipotensial**.
+
+#### 2.3 Analisis Grafik
+
+![Potensial bola konduktor.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719335649.png)
+
+Jika kita memiliki bola konduktor berjari-jari $R$ dengan total muatan $Q$:
+
+- **Untuk** $r < R$ **(Di Dalam):**
+	- Medan Listrik $E = 0$.
+	- Potensial $V$ bernilai konstan: $V = \frac{k_e Q}{R}$.
+- **Untuk** $r \geq R$ **(Di Luar):**
+	- Medan Listrik turun secara kuadratik: $E = \frac{k_e Q}{r^2}$.
+	- Potensial $V$ turun secara linear terhadap jarak: $V = \frac{k_e Q}{r}$.
+
+### 3. Korelasi Fisis yang Penting
+
+Mengapa potensial di dalam konduktor tidak nol meskipun medan listriknya nol?
+
+- **Analogi:** Bayangkan sebuah meja yang sangat tinggi di atas permukaan tanah. Meskipun permukaannya rata (tidak ada kemiringan/medan), setiap titik di atas meja tetap memiliki "ketinggian" (potensial) yang besar dibandingkan tanah.
+- **Makna:** Dibutuhkan usaha untuk membawa muatan dari tak terhingga menuju permukaan konduktor. Namun, setelah sampai di permukaan, tidak dibutuhkan usaha lagi untuk memindahkan muatan tersebut ke bagian dalam karena tidak ada hambatan (medan listrik).
+
+## 2.4 Hubungan Diferensial antara Medan Listrik dan Potensial
+
+Jika pada bagian sebelumnya kita menghitung potensial dari medan listrik melalui operasi **integral**, sekarang kita akan melakukan sebaliknya: menentukan medan listrik dari fungsi potensial menggunakan operasi **turunan (derivatif)**.
+
+### 1. Penurunan Hubungan Matematis
+
+Mari kita tinjau sebuah muatan uji positif $q_0$ yang berpindah sejauh $d\vec{s}$ dari satu permukaan ekipotensial ke permukaan ekipotensial lainnya yang berdekatan.
+
+#### Langkah 1: Tinjauan Energi
+
+Usaha ($W$) yang dilakukan oleh medan listrik adalah negatif dari perubahan energi potensial listrik ($dU$):
+
+$$W = -dU$$
+
+Karena $dU = q_0 dV$, maka:
+
+$$W = -q_0 dV$$
+
+#### Langkah 2: Tinjauan Gaya
+
+Di sisi lain, berdasarkan definisi kerja mekanis, usaha adalah hasil kali titik antara gaya listrik dan perpindahan:
+
+$$W = \vec{F} \cdot d\vec{s} = (q_0 \vec{E}) \cdot d\vec{s}$$
+
+Jika $\theta$ adalah sudut antara arah medan listrik $\vec{E}$ dan arah perpindahan $d\vec{s}$, maka:
+
+$$W = q_0 E (\cos \theta) ds$$
+
+#### Langkah 3: Menyamakan Kedua Persamaan
+
+$$-q_0 dV = q_0 E (\cos \theta) ds$$
+
+Dengan mencoret $q_0$, kita mendapatkan:
+
+$$E \cos \theta = -\frac{dV}{ds}$$
+
+### 2. Interpretasi Fisis: Komponen Medan Listrik
+
+Besaran $E \cos \theta$ sebenarnya adalah komponen medan listrik pada arah $s$, yang kita simbolkan sebagai $E_s$. Maka rumusnya menjadi:
+
+$$E_s = -\frac{\partial V}{\partial s}$$
+
+**Arti Fisis dari Persamaan ini:**
+
+1. **Laju Perubahan:** Medan listrik pada arah tertentu adalah nilai negatif dari laju perubahan potensial terhadap jarak pada arah tersebut.
+2. **Arah Penurunan:** Tanda **negatif** menunjukkan bahwa vektor medan listrik selalu mengarah ke tempat yang potensialnya **menurun** paling drastis.
+3. **Tegak Lurus:** Jika kita berpindah di sepanjang permukaan ekipotensial ($dV = 0$), maka $E_s = 0$. Ini membuktikan kembali bahwa medan listrik tidak memiliki komponen di sepanjang permukaan ekipotensial, alias selalu tegak lurus terhadap permukaan tersebut.
+
+### 3. Penerapan dalam Koordinat Kartesius
+
+Jika kita memiliki fungsi potensial dalam ruang tiga dimensi $V(x, y, z)$, kita dapat menemukan komponen medan listrik pada masing-masing sumbu menggunakan turunan parsial:
+
+$$E_x = -\frac{\partial V}{\partial x}$$$$E_y = -\frac{\partial V}{\partial y}$$$$E_z = -\frac{\partial V}{\partial z}$$
+
+_Catatan: Turunan parsial (_$\partial$_) berarti kita hanya menurunkan variabel yang dimaksud (misal_ $x$_) dan menganggap variabel lain (_$y$ _dan_ $z$_) sebagai konstanta._
+
+### 4. Contoh Analisis (Pengayaan)
+
+Bayangkan fungsi potensial listrik di suatu ruang adalah $V = 2x^2y$. Berapakah medan listrik di titik tersebut?
+
+- **Komponen** $x$**:** $E_x = -\frac{\partial (2x^2y)}{\partial x} = -4xy$
+- **Komponen** $y$**:** $E_y = -\frac{\partial (2x^2y)}{\partial y} = -2x^2$
+- **Komponen** $z$**:** $E_z = -\frac{\partial (2x^2y)}{\partial z} = 0$
+
+Maka vektor medan listriknya adalah $\vec{E} = -4xy\hat{i} - 2x^2\hat{j}$.
+
+### Ringkasan Konsep
+
+|   |   |   |
+|---|---|---|
+|**Operasi**|**Rumus**|**Keterangan**|
+|**Mencari** $V$ **dari** $E$|$V = -\int \vec{E} \cdot d\vec{s}$|Menggunakan **Integrasi** (Penjumlahan kontribusi)|
+|**Mencari** $E$ **dari** $V$|$E_s = -\frac{\partial V}{\partial s}$|Menggunakan **Diferensiasi** (Mencari kemiringan/gradien)|
+
+## 2.5 Energi Potensial Sistem Muatan dan Perilaku Konduktor
+
+Bagian ini akan membahas dua aspek penting: bagaimana energi tersimpan saat kita mengumpulkan beberapa muatan di satu tempat, dan bagaimana konduktor logam mendistribusikan muatan serta potensialnya secara otomatis.
+
+### 1. Tenaga Potensial Listrik Sistem Partikel Bermuatan
+
+Energi potensial listrik sebuah sistem didefinisikan sebagai **usaha yang harus dilakukan oleh agen luar untuk merakit sistem tersebut**, dengan membawa setiap muatan satu per satu dari jarak tak terhingga ke posisi akhirnya.
+
+![Ilustrasi konfigurasi muatan.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719855097.png)
+
+#### 1.1 Sistem Dua Muatan Titik
+
+Bayangkan kita memiliki dua muatan, $q_1$ dan $q_2$, yang dipisahkan oleh jarak $d$.
+
+- Saat $q_1$ diletakkan pertama kali, tidak ada usaha yang dilakukan karena belum ada medan listrik di sana.
+- Saat $q_2$ dibawa mendekat ke posisi $d$ dari $q_1$, ia merasakan medan yang dihasilkan $q_1$. Usaha yang dibutuhkan untuk melawan (atau mengikuti) gaya tersebut adalah:
+
+	$$U = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{d}$$
+
+**Catatan Fisis:**
+
+- Jika $q_1$ dan $q_2$ memiliki tanda yang sama, $U$ bernilai **positif**. Ini berarti kita harus "memaksa" mereka untuk berdekatan (melawan gaya tolak).
+- Jika tanda berbeda, $U$ bernilai **negatif**. Ini berarti medan listrik melakukan usaha untuk menarik mereka, sehingga sistem kehilangan energi potensial.
+
+#### 1.2 Sistem Tiga Muatan (Prinsip Pasangan)
+
+Untuk sistem dengan tiga muatan ($q_1, q_2, q_3$) yang membentuk segitiga dengan sisi $d$, energinya adalah jumlah dari energi interaksi **setiap pasangan unik** yang mungkin terbentuk:
+
+$$U = \frac{1}{4\pi\epsilon_0} \left(\frac{q_1 q_2}{d} + \frac{q_2 q_3}{d} + \frac{q_3 q_1}{d} \right)$$
+
+**Logika Perhitungannya:**
+
+1. Letakkan $q_1$: $W_1 = 0$.
+2. Bawa $q_2$: $W_2 = \text{interaksi } (q_1, q_2)$.
+3. Bawa $q_3$: $W_3 = \text{interaksi } (q_1, q_3) + \text{interaksi } (q_2, q_3)$.
+4. Total Energi $U = W_1 + W_2 + W_3$.
+
+### 2. Potensial Berkaitan dengan Konduktor Bermuatan
+
+Konduktor (seperti bola logam) memiliki sifat unik karena elektron di dalamnya bebas bergerak.
+
+> Dalam konduktor muatan bebas selalu berada di permukaan konduktor karena di dalam konduktor resultan gaya listrik adalah nol. Muatan-muatan bebas menuju permukaan karena di permukaan gaya tolak menolak adalah minimum atau muatan-muatan bebas mempunyai jarak antar muatan yang paling panjang.
+
+#### 2.1 Distribusi Muatan
+
+Muatan bebas pada konduktor selalu berkumpul di **permukaan luar**.
+
+- **Alasannya:** Muatan sejenis saling tolak-menolak. Posisi di mana gaya tolak antar mereka paling minimum adalah posisi di mana jarak antar mereka paling jauh, yaitu di permukaan terluar.
+- **Akibatnya:** Di dalam material konduktor, tidak ada kelebihan muatan bersih, sehingga medan listrik di dalam adalah nol ($E = 0$).
+
+#### 2.2 Analisis Potensial pada Bola Konduktor ($R$)
+
+Misalkan bola memiliki muatan total $Q$ dan jari-jari $R$.
+
+1. **Di Dalam dan di Permukaan (**$0 \leq r \leq R$**):**
+
+	Karena $E = 0$, maka tidak ada perubahan potensial di sepanjang bagian dalam bola. Potensial di titik pusat sama dengan di permukaan:
+
+	$$V = \frac{1}{4\pi\epsilon_0} \frac{Q}{R}$$
+
+	_Artinya: Bola konduktor adalah benda ekipotensial (memiliki satu nilai potensial yang sama di seluruh volumenya)._
+
+2. **Di Luar Bola (**$r > R$**):**
+
+	Begitu kita keluar dari bola, ia berperilaku persis seperti muatan titik yang terkonsentrasi di pusat:
+
+	$$V = \frac{1}{4\pi\epsilon_0} \frac{Q}{r} \quad \text{dan} \quad \vec{E} = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2} \hat{u}_r$$
+
+### 3. Ringkasan Hubungan $E$ dan $V$ pada Konduktor
+
+Berdasarkan hal tersebut, kita dapat menyimpulkan profil fisis sebagai berikut:
+
+|   |   |   |
+|---|---|---|
+|**Wilayah**|**Medan Listrik (E)**|**Potensial Listrik (V)**|
+|**Di dalam (**$r < R$**)**|Nol ($0$)|Konstan ($kQ/R$)|
+|**Di permukaan (**$r = R$**)**|Maksimum ($kQ/R^2$)|Tetap ($kQ/R$)|
+|**Di luar (**$r > R$**)**|Meluruh secara $1/r^2$|Meluruh secara $1/r$|
+
+**Pesan Kunci:**
+
+Meskipun medan listrik di dalam bola adalah nol, **potensialnya tidak nol**. Hal ini karena potensial dihitung berdasarkan usaha untuk membawa muatan dari tak terhingga. Kita butuh usaha besar untuk sampai ke permukaan bola, namun setelah sampai di permukaan, kita tidak butuh usaha tambahan untuk masuk ke dalamnya.
+
+## 2.6 Pembahasan Soal
+
+---
+
+1. Delapan buah muatan titik positif $q$ yang sama ($q = 1$ C) diletakkan pada pojok-pojok kubus dengan rusuk $a = 10$ cm. Hitunglah kuat medan listrik dan potensial listrik di pusat kubus tersebut.
+2. Ada dua muatan sama besar diletakkan pada suatu jarak tertentu. Jika masing-masing muatan itu dijadikan dua kalinya, bagaimanakah jaraknya diubah supaya gayanya tetap?
+3. Ada tiga muatan sama besar dan sejenis membentuk segitiga sama sisi. Jika sisi segitiga dijadikan dua kalinya, bagaimanakah perubahan energi potensial sistem ini?
+
+---
+
+### Pembahasan Soal 1: Distribusi Muatan pada Pojok-Pojok Kubus
+
+Soal ini menguji pemahaman kita tentang perbedaan sifat fisis antara Medan Listrik (Vektor) dan Potensial Listrik (Skalar).
+
+#### 1. Analisis Geometri Kubus
+
+Diketahui:
+
+- Panjang rusuk ($a$) = $10$ cm = $0,1$ m.
+- Muatan ($q$) = $1$ C (pada setiap pojok).
+- Lokasi titik pengamatan: Pusat kubus.
+
+Untuk menghitung medan dan potensial, kita butuh jarak ($r$) dari pojok ke pusat kubus.
+
+1. Diagonal sisi kubus = $a\sqrt{2}$.
+2. Diagonal ruang kubus = $\sqrt{(a\sqrt{2})^2 + a^2} = a\sqrt{3}$.
+3. Jarak dari pojok ke pusat ($r$) adalah setengah dari diagonal ruang:
+
+	$$r = \frac{1}{2} a\sqrt{3} = \frac{0,1 \sqrt{3}}{2} = 0,05\sqrt{3} \text{ m}$$
+
+#### 2. Menghitung Kuat Medan Listrik ($\vec{E}$) di Pusat Kubus
+
+Medan listrik adalah besaran **vektor**. Artinya, arah sangat menentukan hasil akhirnya.
+
+##### Analisis Simetri
+
+- Bayangkan satu muatan di pojok kiri bawah depan. Ia menghasilkan medan listrik $\vec{E}_1$ yang mengarah menjauhi muatan tersebut (menembus pusat kubus).
+- Di pojok yang berlawanan secara diagonal (pojok kanan atas belakang), terdapat muatan $q$ yang sama persis. Ia menghasilkan medan $\vec{E}_2$ yang besarnya sama namun arahnya tepat berlawanan dengan $\vec{E}_1$.
+- Akibatnya, $\vec{E}_1 + \vec{E}_2 = 0$.
+
+Karena kubus memiliki 4 pasang pojok yang saling berlawanan secara diagonal, maka setiap pasang akan saling meniadakan.
+
+$$\vec{E}_{total} = \vec{E}_1 + \vec{E}_2 + \dots + \vec{E}_8 = 0$$
+
+**Jawaban:** Kuat medan listrik di pusat kubus adalah $0 \text{ N/C}$.
+
+#### 3. Menghitung Potensial Listrik ($V$) di Pusat Kubus
+
+Potensial listrik adalah besaran **skalar**. Artinya, kita cukup menjumlahkan nilainya secara aljabar tanpa mempedulikan arah.
+
+##### Langkah Perhitungan
+
+Karena kedelapan muatan memiliki besar yang sama ($q$) dan jarak yang sama ($r$) ke pusat, maka potensial totalnya adalah 8 kali potensial dari satu muatan:
+
+$$V_{total} = \sum_{i=1}^{8} V_i = 8 \times \left(\frac{1}{4\pi\epsilon_0} \frac{q}{r} \right)$$
+
+Masukkan nilai konstanta Coulomb $k = \frac{1}{4\pi\epsilon_0} \approx 9 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$:
+
+$$V_{total} = 8 \times \left(9 \times 10^9 \times \frac{1}{0,05\sqrt{3}} \right)$$$$V_{total} = \frac{72 \times 10^9}{0,05\sqrt{3}}$$$$V_{total} = \frac{1,44 \times 10^{12}}{\sqrt{3}}$$
+
+Gunakan nilai $\sqrt{3} \approx 1,732$:
+
+$$V_{total} \approx 8,31 \times 10^{11} \text{ Volt}$$
+
+**Jawaban:** Potensial listrik di pusat kubus adalah sekitar $8,31 \times 10^{11} \text{ V}$.
+
+#### Kesimpulan Fisis
+
+Kasus ini menunjukkan fenomena yang sangat penting dalam fisika:
+
+1. **Medan Nol, Potensial Tidak Nol:** Di pusat kubus, gaya-gaya listrik saling tarik-menarik/tolak-menolak secara seimbang sehingga benda di pusat tidak akan bergerak (resultan gaya nol). Namun, titik tersebut memiliki energi potensial yang sangat tinggi karena kita telah melakukan usaha yang luar biasa besar untuk mengumpulkan delapan muatan $1$ Coulomb (muatan yang sangat masif untuk ukuran laboratorium) ke dalam ruang sekecil itu.
+2. **Pentingnya Satuan:** Perhatikan bahwa muatan $1$ C adalah muatan yang sangat besar. Dalam praktikum, kita biasanya menggunakan satuan mikroCoulomb ($\mu\text{C}$). Jika soal menggunakan $1 \mu\text{C}$, maka hasilnya akan menjadi $8,31 \times 10^5 \text{ V}$.
+
+### Pembahasan Soal 2: Analisis Perbandingan Gaya Coulomb
+
+Soal ini berkaitan dengan **Hukum Coulomb**, yang menyatakan bahwa gaya elektrostatis antara dua muatan berbanding lurus dengan perkalian muatan-muatannya dan berbanding terbalik dengan kuadrat jarak antara keduanya.
+
+#### 1. Persamaan Dasar
+
+Rumus umum Hukum Coulomb adalah:
+
+$$F = k \frac{q_1 q_2}{r^2}$$
+
+Di mana:
+
+- $F$ = Gaya Coulomb
+- $k$ = Konstanta Coulomb
+- $q_1, q_2$ = Besar muatan
+- $r$ = Jarak antar muatan
+
+#### 2. Identifikasi Kondisi
+
+**Kondisi Awal (1):**
+
+- Muatan: $q_1$ dan $q_2$
+- Jarak: $r_1$
+- Gaya: $F_1 = k \frac{q_1 q_2}{r_1^2}$
+
+**Kondisi Akhir (2):**
+
+- Muatan dijadikan dua kali lipat: $q_1' = 2q_1$ dan $q_2' = 2q_2$
+- Gaya harus tetap: $F_2 = F_1$
+- Jarak baru: $r_2$ (yang ingin kita cari hubungannya dengan $r_1$)
+
+#### 3. Langkah Penyelesaian (Metode Perbandingan)
+
+Karena $F_1 = F_2$, kita dapat menyamakan kedua persamaan tersebut:
+
+$$k \frac{q_1 q_2}{r_1^2} = k \frac{(2q_1)(2q_2)}{r_2^2}$$
+
+Kita bisa mencoret konstanta $k$, $q_1$, dan $q_2$ dari kedua ruas:
+
+$$\frac{1}{r_1^2} = \frac{4}{r_2^2}$$
+
+Kemudian, kita lakukan perkalian silang:
+
+$$r_2^2 = 4r_1^2$$
+
+Untuk mendapatkan nilai $r_2$, kita akarkan kedua ruas:
+
+$$\sqrt{r_2^2} = \sqrt{4r_1^2}$$$$r_2 = 2r_1$$
+
+#### 4. Kesimpulan Fisis
+
+Agar gaya Coulomb tetap konstan ketika masing-masing muatan diperbesar menjadi dua kali lipat, maka **jarak antara kedua muatan tersebut juga harus diperbesar menjadi dua kali lipat dari jarak semula.**
+
+##### Logika Sederhana
+
+1. **Efek Muatan:** Mengalikan masing-masing muatan dengan 2 akan membuat pembilang menjadi 4 kali lebih besar ($2 \times 2 = 4$). Ini cenderung membuat gaya menjadi 4 kali lebih kuat.
+2. **Efek Jarak:** Karena gaya berbanding terbalik dengan **kuadrat** jarak ($1/r^2$), maka untuk mengimbangi penguatan 4 kali tadi, kita butuh penyebut yang juga 4 kali lebih besar.
+3. Jarak yang dikuadratkan menghasilkan angka 4 adalah 2 ($2^2 = 4$). Jadi, jarak harus menjadi 2 kali semula.
+
+### Pembahasan Soal 3: Analisis Energi Potensial Sistem Muatan Segitiga
+
+Soal ini menguji pemahaman kita tentang energi rakitan sistem. Energi potensial sistem adalah usaha total yang diperlukan untuk menyusun muatan-muatan tersebut dari jarak tak terhingga ke posisi masing-masing.
+
+#### 1. Kondisi Awal (Sistem 1)
+
+Diketahui:
+
+- Tiga muatan identik dan sejenis: $q_1 = q_2 = q_3 = q$.
+- Membentuk segitiga sama sisi dengan panjang sisi: $a$.
+
+Dalam segitiga, terdapat **tiga pasangan** muatan yang berinteraksi:
+
+1. Pasangan muatan 1 dan 2 (jarak $a$)
+2. Pasangan muatan 2 dan 3 (jarak $a$)
+3. Pasangan muatan 3 dan 1 (jarak $a$)
+
+Maka, energi potensial total awal ($U_1$) adalah:
+
+$$U_1 = k \frac{q_1 q_2}{a} + k \frac{q_2 q_3}{a} + k \frac{q_3 q_1}{a}$$
+
+Karena muatannya sama besar ($q$), maka:
+
+$$U_1 = 3 \left(k \frac{q^2}{a} \right)$$
+
+#### 2. Kondisi Akhir (Sistem 2)
+
+Diketahui:
+
+- Muatan tetap sama ($q$).
+- Panjang sisi segitiga dijadikan dua kalinya: $a' = 2a$.
+
+Energi potensial total akhir ($U_2$) adalah:
+
+$$U_2 = 3 \left(k \frac{q^2}{a'} \right)$$
+
+Substitusikan nilai $a' = 2a$:
+
+$$U_2 = 3 \left(k \frac{q^2}{2a} \right)$$$$U_2 = \frac{1}{2} \left[3 \left(k \frac{q^2}{a} \right) \right]$$
+
+#### 3. Perbandingan dan Kesimpulan
+
+Dengan membandingkan $U_1$ dan $U_2$, kita mendapatkan hubungan:
+
+$$U_2 = \frac{1}{2} U_1$$
+
+**Jawaban:**
+
+Jika sisi segitiga dijadikan dua kalinya, maka energi potensial sistem tersebut akan berubah menjadi **setengah (**$1/2$**) dari energi potensial semula.**
+
+#### 4. Korelasi Fisis
+
+1. **Hubungan Berbanding Terbalik:** Energi potensial listrik ($U$) berbanding terbalik dengan jarak ($r$). Jika jarak antar seluruh komponen sistem menjauh, maka kerapatan energi sistem tersebut akan menurun.
+2. **Usaha oleh Gaya Listrik:** Karena muatannya sejenis (positif-positif atau negatif-negatif), mereka secara alami saling tolak-menolak.
+	
+	- Memperbesar jarak berarti membiarkan muatan "menjauh" sesuai arah gaya alaminya.
+	- Selama proses penjauhan ini, medan listrik melakukan usaha positif, sehingga energi potensial yang tersimpan dalam sistem berkurang.
+		
+3. **Aplikasi Konsep:** Jika muatannya berlawanan jenis (misal dua positif satu negatif), perhitungannya tetap sama (menggunakan penjumlahan aljabar), namun tanda plus-minus pada hasil akhir akan menentukan apakah energi tersebut dilepaskan atau diserap oleh sistem.
+
+# Bab 3: Kapasitor dan Kapasitansi
+
+Kapasitor adalah salah satu aplikasi paling nyata dari prinsip potensial listrik. Alat ini berfungsi untuk menyimpan energi potensial listrik dan muatan listrik dalam jangka waktu tertentu.
+
+![Ilustrasi kapasitor](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781222122.png)
+
+## 3.1 Prinsip Dasar Kapasitansi
+
+Secara struktural, sebuah kapasitor terdiri dari dua konduktor (sering disebut pelat) dengan bentuk apa pun yang diletakkan berdekatan tetapi tidak bersentuhan. Biasanya, di antara kedua pelat tersebut diisi oleh bahan isolator yang disebut **Dielektrik**.
+
+### 1.1 Definisi Kapasitansi ($C$)
+
+Ketika kapasitor dihubungkan dengan sumber tegangan (baterai), muatan $+q$ akan berkumpul pada satu pelat dan muatan $-q$ pada pelat lainnya. Besarnya muatan $q$ yang tersimpan berbanding lurus dengan beda potensial ($V$) antar pelat:
+
+$$q = CV$$
+
+**Kapasitansi (**$C$**)** adalah ukuran kemampuan kapasitor untuk menyimpan muatan.
+
+- **Satuan SI:** Farad (F). $1 \text{ F} = 1 \text{ Coulomb/Volt}$.
+- **Catatan:** 1 Farad adalah satuan yang sangat besar. Dalam praktik elektronika, kita lebih sering menggunakan $\mu\text{F}$ ($10^{-6} \text{ F}$), $\text{nF}$ ($10^{-9} \text{ F}$), atau $\text{pF}$ ($10^{-12} \text{ F}$).
+
+![Simbol kapasitor.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781408179.png)
+
+## 3.2 Geometri dan Perhitungan Kapasitansi
+
+Nilai kapasitansi tidak bergantung pada muatan atau tegangan, melainkan bergantung sepenuhnya pada **bagaimana kapasitor itu dibuat** (geometri dan materialnya).
+
+### 2.1 Kapasitor Pelat Paralel
+
+Untuk kapasitor yang terdiri dari dua pelat sejajar dengan luas $A$ dan dipisahkan jarak $d$:
+
+$$C = \frac{\epsilon_0 A}{d}$$
+
+- **Analisis:** Untuk memperbesar kapasitansi, kita bisa memperluas pelat ($A \uparrow$) atau mendekatkan jarak antar pelat ($d \downarrow$).
+
+### 2.2 Geometri Lainnya
+
+Berdasarkan hukum Gauss, kita dapat menurunkan rumus kapasitansi untuk bentuk lainnya:
+
+1. **Kapasitor Silinder:** Terdiri dari dua silinder konsentris dengan jari-jari $a$ (dalam) dan $b$ (luar) serta panjang $L$.
+
+	$$C = 2\pi\epsilon_0 \frac{L}{\ln(b/a)}$$
+
+2. **Kapasitor Bola:** Terdiri dari dua bola konduktor konsentris.
+
+	$$C = 4\pi\epsilon_0 \frac{ab}{b-a}$$
+
+3. **Bola Terisolasi:** Sebuah konduktor bola tunggal jari-jari $R$ (dengan menganggap pelat kedua berada di tak terhingga).
+
+	$$C = 4\pi\epsilon_0 R$$
+
+## 3.3 Rangkaian Kapasitor
+
+Seringkali kita membutuhkan nilai kapasitansi tertentu yang tidak tersedia pada satu komponen tunggal, sehingga kita merangkainya.
+
+![Rangkaian kapasitor seri dan paralel.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781618718.png)
+
+### 3.1 Rangkaian Paralel
+
+Kapasitor dipasang berdampingan sehingga setiap kapasitor merasakan **tegangan (**$V$**) yang sama**.
+
+- **Muatan Total:** $q_{total} = q_1 + q_2 + q_3 + \dots$
+- **Kapasitansi Ekivalen (**$C_{eq}$**):**
+
+	$$C_{eq} = C_1 + C_2 + C_3 + \dots$$
+
+- **Tujuan:** Digunakan untuk memperbesar nilai kapasitansi total.
+
+### 3.2 Rangkaian Seri
+
+Kapasitor dipasang berderet sehingga setiap kapasitor menyimpan **muatan (**$q$**) yang sama**.
+
+- **Tegangan Total:** $V_{total} = V_1 + V_2 + V_3 + \dots$
+- **Kapasitansi Ekivalen (**$C_{eq}$**):**
+
+	$$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \dots$$
+
+- **Tujuan:** Digunakan untuk membagi tegangan tinggi agar tidak merusak satu kapasitor tunggal.
+
+## 3.4 Peran Dielektrik dalam Aplikasi
+
+Mengapa kita butuh dielektrik? Soal pada Slide 26 menunjukkan bahwa untuk membuat kapasitor $1\text{ F}$ dengan udara, kita butuh pelat dengan sisi sekitar $10\text{ km}$. Ini sangat tidak praktis.
+
+**Solusinya:** Menyisipkan bahan dielektrik dengan konstanta $\kappa$.
+
+$$C = \frac{\kappa \epsilon_0 A}{d}$$
+
+Dielektrik berfungsi untuk:
+
+1. Meningkatkan kapasitansi tanpa menambah ukuran fisik.
+2. Menjaga agar kedua pelat logam tidak saling bersentuhan secara mekanis.
+3. Meningkatkan tegangan operasional maksimum (kekuatan dielektrik).
+
+# Bab 4: Dielektrik dan Penyimpanan Energi pada Kapasitor
+
+Pada bab-bab sebelumnya, kita mengasumsikan bahwa ruang di antara pelat kapasitor adalah hampa udara. Namun, dalam aplikasinya, ruang tersebut diisi oleh material isolator yang disebut **Dielektrik**. Bab ini akan mengupas tuntas pengaruh material ini serta bagaimana kapasitor menyimpan energi.
+
+## 4.1 Konsep Dasar Dielektrik
+
+**Dielektrik** adalah bahan isolasi (non-konduktor) seperti kaca, mika, kertas, atau plastik yang ditempatkan di antara dua konduktor kapasitor.
+
+![Konsep bahan dielektrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781731159.png)
+
+### 1.1 Fungsi Utama Dielektrik
+
+Secara fisis, penyisipan bahan dielektrik memberikan tiga keuntungan utama:
+
+1. **Peningkatan Kapasitansi:** Bahan dielektrik meningkatkan kemampuan kapasitor dalam menyimpan muatan.
+2. **Stabilitas Mekanik:** Bertindak sebagai pemisah fisik yang menjaga agar kedua pelat logam yang berdekatan tidak saling bersentuhan.
+3. **Kekuatan Dielektrik:** Memungkinkan kapasitor bekerja pada tegangan tinggi tanpa terjadi kebocoran arus (loncatan bunga api) antar pelat.
+
+#### General Materials
+
+|**Material**|**Dielectric Constant (κ)**|
+|---|---|
+|Air|1.00059|
+|Bakelite|4.9|
+|Gasoline|2.0 (70°F)|
+|Glass (Pyrex)|5.6|
+|Mica|5.4|
+|Neoprene|6.9|
+|Paper|3.7|
+|Paraffin|2.1–2.5|
+|Plexiglas|3.4|
+|Polystyrene|2.55|
+|Porcelain|7|
+|Strontium titanate|240|
+|Transformer oil|2.24|
+
+#### Dielectric Constants of Typical Metal Oxides
+
+|**Composition**|**Dielectric Constant**|
+|---|---|
+|SiO₂|3.9|
+|Al₂O₃|9|
+|ZrO₂|29|
+|HfO₂|25|
+|HfSiO₄|11|
+|Ta₂O₅|26|
+|La₂O₃|30|
+|LaAlO₃|30|
+|Nb₂O₅|35|
+|TiO₂|95|
+|BaTiO₃|1700|
+|SrTiO₃|2000|
+|Pb(Zr,Ti)O₃, (Pb,La)(Zr,Ti)O₃|2500|
+|CaCu₃Ti₄O₁₂|80,000|
+
+### 1.2 Formulasi Matematis
+
+Dengan adanya dielektrik, rumus kapasitansi pelat paralel berubah menjadi:
+
+$$C = \kappa \epsilon_0 \frac{A}{d}$$
+
+Di mana $\kappa$ **(kappa)** adalah **Konstanta Dielektrik** material tersebut.
+
+- Untuk ruang hampa, $\kappa = 1,00$.
+- Untuk udara, $\kappa \approx 1,0006$ (sering dianggap 1 untuk perhitungan praktis).
+- Untuk bahan lain, $\kappa > 1$.
+
+## 4.2 Material Dielektrik dan Karakteristiknya
+
+Setiap bahan memiliki kemampuan yang berbeda dalam merespons medan listrik. Berikut adalah beberapa contoh material berdasarkan tabel pada Slide 29:
+
+### 2.1 Material Umum
+
+- **Mika (**$\kappa = 5,4$**):** Sering digunakan karena stabil pada suhu tinggi.
+- **Kertas (**$\kappa = 3,7$**):** Murah, namun memiliki kekuatan tegangan terbatas.
+- **Kaca Pyrex (**$\kappa = 5,6$**):** Memiliki isolasi yang sangat baik.
+
+### 2.2 Material Oksida Logam dan Keramik (High-$\kappa$)
+
+Teknologi modern menggunakan material dengan konstanta dielektrik yang sangat besar untuk memperkecil ukuran alat:
+
+- **Titanium Dioksida (**$TiO_2$**,** $\kappa = 95$**):** Digunakan dalam sensor dan kapasitor presisi.
+- **Barium Titanat (**$BaTiO_3$**,** $\kappa = 1700$**):** Salah satu material dengan $\kappa$ tertinggi, memungkinkan pembuatan kapasitor berkapasitas besar dalam ukuran milimeter.
+
+**Korelasi Fisis:** Semakin besar nilai $\kappa$, semakin banyak muatan yang dapat disimpan pada tegangan yang sama, karena molekul-molekul di dalam dielektrik terpolarisasi dan menghasilkan medan listrik internal yang melawan medan listrik luar, sehingga beda potensial antar pelat menurun dan kapasitansi naik.
+
+## 4.3 Energi Potensial yang Tersimpan ($U_C$)
+
+Kapasitor tidak hanya menyimpan muatan, tetapi juga menyimpan energi dalam bentuk medan listrik di antara pelatnya.
+
+### 3.1 Derivasi Melalui Grafik $V$ vs $Q$
+
+Jika kita memplot hubungan antara beda potensial ($V$) dan muatan ($Q$), kita akan mendapatkan garis lurus dengan kemiringan ($1/C$).
+
+- **Usaha (**$W$**):** Untuk menambahkan muatan kecil $\Delta Q$ pada potensial $V$, diperlukan usaha sebesar $\Delta W = V \Delta Q$.
+- **Energi Total:** Usaha total untuk mengisi kapasitor dari nol hingga muatan $Q$ adalah **luas daerah di bawah kurva** tersebut.
+
+Karena bentuk daerah di bawah garis tersebut adalah **segitiga**, maka energinya adalah:
+
+$$U_C = \frac{1}{2} \times \text{alas} \times \text{tinggi} = \frac{1}{2} Q V$$
+
+![V vs Charge Q.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770784170976.png)
+
+### 3.2 Tiga Bentuk Persamaan Energi
+
+Dengan mensubstitusikan $Q = CV$, kita mendapatkan tiga cara untuk menghitung energi yang tersimpan:
+
+1. **Dasar:** $U_C = \frac{1}{2} Q V$
+2. **Berbasis Kapasitansi dan Tegangan:** $U_C = \frac{1}{2} C V^2$
+3. **Berbasis Muatan dan Kapasitansi:** $U_C = \frac{Q^2}{2C}$
+
+## 4.4 Ringkasan Hubungan Fisis
+
+|                                 |                                                                             |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| **Fenomena**                    | **Efek Penyisipan Dielektrik**                                              |
+| **Kapasitansi (**$C$**)**       | Meningkat sebesar faktor $\kappa$ ($C = \kappa C_0$)                        |
+| **Medan Listrik (**$E$**)**     | Menurun (jika muatan tetap) karena polarisasi bahan.                        |
+| **Beda Potensial (**$V$**)**    | Menurun (jika muatan tetap) karena $V = Q/C$.                               |
+| **Energi Ter simpan (**$U$**)** | Berubah bergantung pada kondisi (apakah terhubung baterai atau terisolasi). |
+
+**Ingat!:**
+
+Tanpa dielektrik, kapasitor 1 Farad akan sebesar kota kecil. Dielektrik adalah "pahlawan tersembunyi" yang memungkinkan ponsel pintar Anda memiliki ribuan kapasitor di dalamnya tanpa membuatnya menjadi raksasa.
+
+## 4.5 Analisis Geometri: Kasus Kapasitor 1 Farad
+
+> Berapa LUAS kapasitor 1 F yang jarak antar pelatnya 1 mm?
+
+Soal ini bertujuan untuk menunjukkan ketidakmungkinan praktis membangun kapasitor berkapasitas besar hanya dengan mengandalkan udara/hampa sebagai pemisah.
+
+### 1. Identifikasi Data
+
+Parameter yang diketahui adalah:
+
+- **Kapasitansi (**$C$**):** $1 \text{ F}$ (Farad).
+- **Jarak antar pelat (**$d$**):** $1 \text{ mm} = 0,001 \text{ m} = 10^{-3} \text{ m}$.
+- **Konstanta Permitivitas Ruang Hampa (**$\epsilon_0$**):** $8,85 \times 10^{-12} \text{ C}^2/(\text{N}\cdot\text{m}^2)$.
+
+### 2. Langkah Perhitungan Luas ($A$)
+
+Kita menggunakan rumus kapasitansi untuk kapasitor plat paralel:
+
+$$C = \frac{\epsilon_0 A}{d}$$
+
+Untuk mencari Luas ($A$), kita atur ulang persamaannya:
+
+$$A = \frac{C \cdot d}{\epsilon_0}$$
+
+Masukkan nilai-nilai yang diketahui:
+
+$$A = \frac{(1 \text{ F}) \times (0,001 \text{ m})}{8,85 \times 10^{-12} \text{ C}^2/(\text{N}\cdot\text{m}^2)}$$$$A = \frac{10^{-3}}{8,85 \times 10^{-12}}$$$$A \approx 1,13 \times 10^8 \text{ m}^2$$
+
+### 3. Visualisasi Dimensi (Panjang Sisi)
+
+Agar lebih mudah dibayangkan, asumsikan pelat kapasitor tersebut berbentuk persegi. Maka panjang sisinya ($s$) adalah:
+
+$$s = \sqrt{A}$$$$s = \sqrt{1,13 \times 10^8 \text{ m}^2}$$$$s \approx 10.629 \text{ m} \approx 10,6 \text{ km}$$
+
+### 4. Analisis Fisis dan Kesimpulan
+
+#### Mengapa ini tidak praktis?
+
+Hasil perhitungan menunjukkan bahwa untuk membuat kapasitor $1 \text{ F}$ dengan jarak antar pelat $1 \text{ mm}$ di udara, kita membutuhkan pelat logam raksasa dengan panjang sisi lebih dari **10 kilometer**. Sebagai perbandingan, ini hampir seluas satu kota kecil.
+
+#### Bagaimana solusi teknisnya? (Loncatan ke Konsep Dielektrik)
+
+Pertanyaan retoris: _"Is this a practical capacitor to build? NO!"_.
+
+Untuk mendapatkan kapasitas $1 \text{ F}$ dalam ukuran yang bisa digenggam tangan (seperti kapasitor yang ada di laboratorium), para insinyur fisika melakukan dua hal:
+
+1. **Memperkecil** $d$**:** Menggunakan lapisan isolator yang sangat tipis (skala mikrometer).
+2. **Menambahkan Dielektrik (**$\kappa$**):** Menggunakan bahan dengan konstanta dielektrik tinggi. Dengan menyisipkan bahan dielektrik, rumus berubah menjadi:
+
+	$$C = \frac{\kappa \epsilon_0 A}{d}$$
+
+	Jika kita menggunakan bahan dengan $\kappa = 1000$ (seperti beberapa keramik khusus), maka luas pelat yang dibutuhkan bisa dipotong menjadi $1/1000$-nya, sehingga ukurannya menjadi masuk akal untuk diproduksi.
+
+#### Pesan
+
+Penyelesaian ini membuktikan mengapa satuan **Farad** adalah satuan yang sangat masif. Inilah alasan mengapa sebagian besar komponen elektronik yang kita temui menggunakan satuan mikrofarad ($\mu\text{F}$), nanofarad ($\text{nF}$), atau pikofarad ($\text{pF}$).
