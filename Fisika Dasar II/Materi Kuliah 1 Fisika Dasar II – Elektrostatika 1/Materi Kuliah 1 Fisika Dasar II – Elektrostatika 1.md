@@ -1,29 +1,3 @@
----
-type: sumber
-mata_kuliah: "[[MFF1012 Fisika Dasar II]]"
-jenis: catatan
-format: file
-penulis: Shidiq Nur Hidayat
-tahun: 2026
-tags:
-  - sumber
-  - makalah
-title: Penjelasan Kuliah Fisika Dasar II – Elektrostatika 1
-subtitle: Hukum Coulomb, Medan Listrik dan Hukum Gauss
-author:
-  - Dr. Ir. Shidiq Nur Hidayat, S.Si., M.Sc.
-date: 2026-02-08
-toc: true
-toc-own-page: true
-titlepage: true
-book: true
-header-includes:
-  - \newcounter{none}
-classoption:
-  - oneside
-url: https://gemini.google.com/app/054ef793bcb849c6
----
-
 # Bab 1: Material Kelistrikan dan Sifat Muatan
 
 ## 1.1 Sifat Dasar Muatan
