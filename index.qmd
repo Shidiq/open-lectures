@@ -1,0 +1,9 @@
+---
+title: "Open Lectures"
+---
+
+Selamat datang di materi kuliah terbuka dari Departemen Fisika FMIPA UGM.
+
+## Mata Kuliah
+
+- [Fisika Dasar II](Fisika Dasar II/index.qmd)

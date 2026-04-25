@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "**/*.qmd"
+
+website:
+  title: "Open Lectures — Shidiq Nur Hidayat"
+  description: "Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM"
+  repo-url: https://github.com/Shidiq/open-lectures
+  repo-actions: [edit, issue]
+  
+  navbar:
+    left:
+      - text: "Beranda"
+        href: index.qmd
+  
+  sidebar:
+    - title: "Fisika Dasar II"
+      contents:
+        - "Fisika Dasar II/index.qmd"
+        - section: "Elektrostatika"
+          contents:
+            - "Fisika Dasar II/materi-01-elektrostatika-1/index.qmd"
+            - "Fisika Dasar II/materi-02-elektrostatika-2/index.qmd"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    highlight-style: github
