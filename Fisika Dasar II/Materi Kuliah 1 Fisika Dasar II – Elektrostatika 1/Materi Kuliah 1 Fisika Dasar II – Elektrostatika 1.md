@@ -1,0 +1,1500 @@
+---
+type: sumber
+mata_kuliah: "[[MFF1012 Fisika Dasar II]]"
+jenis: catatan
+format: file
+penulis: Shidiq Nur Hidayat
+tahun: 2026
+tags:
+  - sumber
+  - makalah
+title: Penjelasan Kuliah Fisika Dasar II – Elektrostatika 1
+subtitle: Hukum Coulomb, Medan Listrik dan Hukum Gauss
+author:
+  - Dr. Ir. Shidiq Nur Hidayat, S.Si., M.Sc.
+date: 2026-02-08
+toc: true
+toc-own-page: true
+titlepage: true
+book: true
+header-includes:
+  - \newcounter{none}
+classoption:
+  - oneside
+url: https://gemini.google.com/app/054ef793bcb849c6
+---
+
+# Bab 1: Material Kelistrikan dan Sifat Muatan
+
+## 1.1 Sifat Dasar Muatan
+
+Muatan listrik ($Q$) adalah sifat dasar materi yang menyebabkan interaksi gaya pada benda bermuatan lainnya.
+
+- **Proton:** Membawa muatan positif ($Q+$).
+- **Elektron:** Membawa muatan negatif ($Q-$).
+- **Neutron:** Bersifat netral.
+
+Dalam satuan internasional (SI), muatan diukur dalam **Coulomb (C)**. Satu Coulomb setara dengan muatan dari $6,24 \times 10^{18}$ elektron. Besarnya muatan selalu terkuantisasi, artinya muatan suatu benda selalu merupakan kelipatan bulat dari muatan dasar $e$.
+
+![Contoh bahan silikon dengan susunan atom 14 proton, 14 neutron, dan 14 elektron (dari berbagai sumber)](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770346354478.png)
+
+## 1.2 Klasifikasi Material
+
+Berdasarkan kemampuan muatannya untuk bergerak, material dibagi menjadi:
+
+1. **Konduktor:** Muatan bergerak bebas (contoh: logam/tembaga).
+2. **Isolator (Non-konduktor):** Muatan tidak dapat bergerak bebas (contoh: karet, kaca).
+3. **Semikonduktor:** Sifat perantara antara konduktor dan isolator (contoh: silikon).
+4. **Superkonduktor:** Konduktor sempurna tanpa hambatan pada suhu tertentu.
+
+![Ilustrasi sifat material dari pita energinya.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770206633199.png)
+
+Sumber: <https://nirajchawake.wordpress.com/>
+
+1. **Logam (Konduktor):**
+	- **Karakteristik:** Pita Valensi dan Pita Konduksi saling tumpang tindih (_overlap_).
+	- **Perilaku:** Tidak ada celah energi (_Band Gap_). Hal ini memungkinkan elektron bergerak bebas ke pita konduksi bahkan dengan energi yang sangat kecil. Inilah alasan logam sangat baik dalam menghantarkan arus listrik.
+	- **Energi Fermi:** Terletak di dalam daerah tumpang tindih tersebut.
+2. **Semikonduktor:**
+	- **Karakteristik:** Terdapat celah energi yang sempit ($\Delta E \leq 3.2 \text{ eV}$).
+	- **Perilaku:** Pada suhu nol mutlak, ia bersifat isolator. Namun, dengan tambahan energi (panas atau medan listrik), elektron dapat melompati celah ini menuju pita konduksi. Contoh utamanya adalah Silikon (Si) dan Germanium (Ge).
+3. **Isolator:**
+	- **Karakteristik:** Memiliki celah energi (_Band Gap_) yang sangat besar.
+	- **Perilaku:** Elektron pada pita valensi sangat sulit (hampir tidak mungkin) untuk berpindah ke pita konduksi karena energi yang dibutuhkan terlalu besar. Akibatnya, tidak ada muatan yang bebas bergerak untuk menghantarkan listrik.
+
+# Bab 2: Hukum Coulomb
+
+## 2.1 Interaksi Gaya Elektrostatis
+
+Charles Coulomb menemukan bahwa gaya antara dua muatan titik:
+
+1. Berbanding lurus dengan perkalian besar kedua muatan.
+2. Berbanding terbalik dengan kuadrat jarak antar muatan ($r^2$).
+3. Arah gaya: **Tolak-menolak** jika sejenis, **Tarik-menarik** jika berlawanan jenis.
+
+## 2.2 Instrumen Historis: Coulomb Balance (Timbangan Puntir)
+
+Timbangan Coulomb adalah alat yang dirancang untuk mengukur gaya elektrostatis yang sangat kecil di antara dua benda bermuatan. Alat ini bekerja berdasarkan prinsip **elastisitas puntiran**.
+
+![Timbangan Puntir Coulomb adalah alat presisi yang digunakan oleh Charles Augustin de Coulomb pada tahun 1785 untuk menentukan hukum dasar interaksi muatan listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770207994499.png)
+
+### Komponen Utama
+
+Berdasarkan Figure 3, komponen utamanya adalah:
+
+- **Suspension Head:** Bagian atas yang dapat diputar untuk menyesuaikan posisi awal atau mengukur sudut puntiran.
+- **Fiber (Serat/Kawat Halus):** Sebuah kawat perak atau serat halus yang sangat sensitif. Kawat ini akan terpuntir jika ada gaya yang bekerja pada batang di bawahnya.
+- **Batang Isolator:** Batang ringan yang digantungkan pada kawat, dengan sebuah bola bermuatan di salah satu ujungnya dan penyeimbang di ujung lainnya.
+- **Bola A dan B:** Bola **A** biasanya adalah bola statis (tetap) yang diberi muatan, sedangkan bola **B** adalah bola bebas yang berada pada batang gantung.
+
+### Mekanisme Kerja
+
+1. **Pemberian Muatan:** Kedua bola (A dan B) diberi muatan listrik.
+2. **Interaksi Gaya:** Jika muatannya sejenis, bola B akan tertolak menjauhi bola A. Gerakan ini menyebabkan batang berputar.
+3. **Puntiran Serat:** Putaran batang menyebabkan serat (fiber) terpuntir. Serat ini akan memberikan gaya pemulih (torsi) yang melawan putaran tersebut.
+4. **Keseimbangan:** Batang akan berhenti berputar pada sudut tertentu ($\theta$) di mana gaya puntir serat sama dengan gaya elektrostatis dari kedua muatan.
+5. **Pengukuran:** Sudut puntiran ini terbaca pada skala lingkaran di tabung kaca. Sudut tersebut berbanding lurus dengan besar gaya listriknya ($F \propto \theta$).
+
+### Kesimpulan Ilmiah
+
+Melalui alat ini, Coulomb berhasil memvariasikan jarak ($r$) dan besar muatan ($q$), lalu menemukan bahwa:
+
+- Gaya berbanding terbalik dengan kuadrat jarak ($F \propto 1/r^2$).
+- Gaya berbanding lurus dengan hasil kali kedua muatan ($F \propto q_1 q_2$).
+
+Penemuan ini menjadi cikal bakal **Hukum Coulomb** yang kita pelajari hari ini.
+
+## 2.3 Rumusan Matematis
+
+**Bentuk Skalar:**
+
+$$F = k \frac{Q_1 Q_2}{r^2}$$
+
+**Bentuk Vektor:**
+
+$$\vec{F}_{ij} = k \frac{q_i q_j}{|\vec{r}_i - \vec{r}_j|^3} (\vec{r}_i - \vec{r}_j)$$
+
+Dimana konstanta elektrostatis di udara/vakum adalah $k \approx 9 \times 10^9 \text{ Nm}^2/\text{C}^2$.
+
+### Penjelasan Penurunan dan Analisis Vektor Hukum Coulomb
+
+Hukum Coulomb bukan sekadar rumus yang muncul tiba-tiba; ia adalah hasil dari pengamatan eksperimental yang sangat teliti menggunakan **Coulomb’s Balance** (Timbangan Puntir). Secara matematis, rumusan ($\vec{F}_{ij} = k \frac{Q_i Q_j}{r_{ij}^2} \hat{u}_{ij}$) dapat dijelaskan melalui tahap-tahap berikut:
+
+![Ilustrasi hukum Coulomb](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770243336318.png)
+
+#### 1. Fondasi Empiris (Eksperimen)
+
+Melalui timbangan puntir, Charles Coulomb menemukan tiga hubungan fundamental:
+
+- **Hubungan Muatan:** Gaya ($F$) berbanding lurus dengan hasil kali kedua muatan ($Q_1 \times Q_2$). Jika salah satu muatan diperbesar 2 kali, gayanya pun naik 2 kali.
+- **Hukum Kuadrat Terbalik:** Gaya berbanding terbalik dengan kuadrat jarak ($1/r^2$). Jika jarak dijauhkan 2 kali lipat, gaya interaksinya melemah menjadi $1/4$ dari semula.
+- **Konstanta Medium:** Gaya bergantung pada medium tempat muatan berada, yang diwakili oleh konstanta $k$.
+
+Maka secara skalar:
+
+$$F = k \frac{Q_1 Q_2}{r^2}$$
+
+#### 2. Representasi Vektor (Arah Interaksi)
+
+Gaya adalah besaran vektor. Dalam fisika, kita harus tahu bukan hanya berapa besarnya, tapi ke mana arahnya. Untuk itu, kita menambahkan **Vektor Satuan** ($\hat{u}_{ij}$ atau $\hat{r}$).
+
+##### Analisis Komponen Rumus
+
+$$\vec{F}_{ij} = k \frac{Q_i Q_j}{r_{ij}^2} \hat{u}_{ij}$$
+
+- $\vec{F}_{ij}$**:** Gaya yang bekerja **pada** muatan $i$ **oleh** muatan $j$.
+- $k$**:** Konstanta elektrostatis ($9 \times 10^9 \text{ Nm}^2/\text{C}^2$). Nilai ini setara dengan $\frac{1}{4\pi\epsilon_0}$.
+- $r_{ij}^2$**:** Kuadrat jarak pemisah antara kedua muatan tersebut.
+- $\hat{u}_{ij}$**:** Unit arah interaksi (Vektor Satuan). Vektor ini memiliki panjang tepat 1, sehingga tidak mengubah nilai gaya, namun memberikan informasi arah:
+	- Jika $Q_i$ dan $Q_j$ **sejenis** (hasil kali positif), maka $\vec{F}$ searah dengan $\hat{u}$ (Tolak-menolak).
+	- Jika $Q_i$ dan $Q_j$ **berlawanan** (hasil kali negatif), maka $\vec{F}$ berlawanan arah dengan $\hat{u}$ (Tarik-menarik).
+
+#### 3. Penurunan ke Bentuk Posisi Vektor
+
+Dalam koordinat 3D ($x, y, z$), kita sering tidak mengetahui jarak $r$ secara langsung, melainkan posisi muatan $\vec{r}_i$ dan $\vec{r}_j$.
+
+Ingat definisi vektor satuan:
+
+$$\hat{u}_{ij} = \frac{\vec{r}_i - \vec{r}_j}{|\vec{r}_i - \vec{r}_j|}$$
+
+Jika kita substitusikan vektor satuan ini ke rumus utama, maka:
+
+$$\vec{F}_{ij} = k \frac{q_i q_j}{|\vec{r}_i - \vec{r}_j|^2} \left(\frac{\vec{r}_i - \vec{r}_j}{|\vec{r}_i - \vec{r}_j|} \right)$$
+
+Hasil penyederhanaannya adalah:
+
+$$\vec{F}_{ij} = k \frac{q_i q_j}{|\vec{r}_i - \vec{r}_j|^3} (\vec{r}_i - \vec{r}_j)$$
+
+**Mengapa penyebutnya menjadi pangkat 3?**
+
+Ini sering membingungkan mahasiswa. Penyebut menjadi pangkat 3 karena bagian pembilangnya bukan lagi vektor satuan ($\hat{u}$), melainkan vektor posisi penuh ($\vec{r}_i - \vec{r}_j$). Secara fisik, ini tetaplah hukum kuadrat terbalik.
+
+#### 4. Prinsip Superposisi
+
+Jika terdapat banyak muatan (seperti contoh 8 muatan dalam kubus), maka gaya total pada satu muatan adalah jumlah vektor dari semua gaya individu:
+
+$$\vec{F}_{total} = \vec{F}_{i1} + \vec{F}_{i2} + \vec{F}_{i3} + \dots$$
+
+Hal ini mengharuskan kita untuk mahir dalam menguraikan komponen vektor $x, y,$ dan $z$ seperti yang dicontohkan pada interaksi muatan diskrit.
+
+## 2.4 Panduan Analisis: Menghitung Gaya Total (Prinsip Superposisi)
+
+Berdasarkan Figure 5, aturan emas dalam elektrostatika adalah: **Gaya total yang dialami oleh satu muatan adalah jumlah VEKTOR dari gaya-gaya yang diberikan oleh muatan lain di sekitarnya.**
+
+Jika ada $N$ muatan, maka satu muatan akan mengalami $(N-1)$ interaksi gaya.
+
+![Ilustrasi superposisi.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770477688374.png)
+
+### Langkah-Langkah Penyelesaian Detail
+
+#### Langkah 1: Tentukan "Muatan Target"
+
+Pilih muatan mana yang ingin dihitung gaya totalnya. Misal, kita ingin menghitung gaya total pada muatan $Q_1$.
+
+#### Langkah 2: Identifikasi Semua Pasangan Interaksi
+
+- Pada sistem **3 muatan**, $Q_1$ berinteraksi dengan $Q_2$ (menghasilkan $\vec{F}_{12}$) dan $Q_3$ (menghasilkan $\vec{F}_{13}$).
+- Pada sistem **4 muatan**, $Q_1$ berinteraksi dengan $Q_2, Q_3,$ dan $Q_4$.
+
+#### Langkah 3: Tentukan Arah Gaya (Paling Krusial!)
+
+Jangan hitung angka dulu. Gambar panah gaya pada muatan target:
+
+- **Tolak-menolak:** Jika muatan target dan muatan tetangga **sejenis** (+ dengan +, atau - dengan -), gambar panah menjauhi muatan tetangga.
+- **Tarik-menarik:** Jika muatan target dan muatan tetangga **berlawanan jenis**, gambar panah mendekati muatan tetangga.
+
+#### Langkah 4: Hitung Besarnya Gaya (Magnitudo)
+
+Gunakan rumus skalar Coulomb untuk setiap pasangan:
+
+$$F = k \frac{|Q_{target} \cdot Q_{tetangga}|}{r^2}$$
+
+_Catatan: Masukkan nilai mutlak muatan (abaikan tanda +/- saat menghitung besar gaya)._
+
+#### Langkah 5: Uraikan ke Komponen Vektor (X dan Y)
+
+Jika muatan tidak berada dalam satu garis lurus (seperti pada gambar 3-muatan dan 4-muatan di Figure 5), gunakan trigonometri:
+
+- $F_x = F \cos \theta$
+- $F_y = F \sin \theta$
+
+#### Langkah 6: Jumlahkan Komponennya
+
+Hitung total gaya pada masing-masing sumbu:
+
+$$\sum F_x = F_{1x} + F_{2x} + \dots$$$$\sum F_y = F_{1y} + F_{2y} + \dots$$
+
+#### Langkah 7: Hitung Resultan Akhir
+
+Dapatkan nilai total gaya menggunakan Pythagoras:
+
+$$F_{total} = \sqrt{(\sum F_x)^2 + (\sum F_y)^2}$$
+
+Untuk arahnya (sudut $\alpha$):
+
+$$\alpha = \tan^{-1} \left(\frac{\sum F_y}{\sum F_x} \right)$$
+
+### Contoh Kasus Visual
+
+#### Kasus 3 Muatan (Segitiga)
+
+Pada gambar kiri atas, perhatikan muatan $Q_1$ (+):
+
+1. **Interaksi dengan** $Q_2$ **(+):** Karena sejenis, $Q_1$ ditolak oleh $Q_2$. Panah $\vec{F}_{12}$ mengarah lurus menjauhi $Q_2$.
+2. **Interaksi dengan** $Q_3$ **(-):** Karena berbeda jenis, $Q_1$ ditarik oleh $Q_3$. Panah $\vec{F}_{13}$ mengarah lurus menuju $Q_3$.
+3. **Resultan:** Gaya total pada $Q_1$ adalah hasil penjumlahan vektor $\vec{F}_{12} + \vec{F}_{13}$.
+
+#### Kasus 4 Muatan (Segi Empat)
+
+Pada gambar kanan, muatan $Q_1$ (+) berinteraksi dengan tiga muatan lainnya:
+
+1. **Ditolak oleh** $Q_2$ **(+)** $\rightarrow$ Panah menjauh.
+2. **Ditarik oleh** $Q_3$ **(-)** $\rightarrow$ Panah mendekat.
+3. **Ditarik oleh** $Q_4$ **(-)** $\rightarrow$ Panah mendekat.
+4. **Total:** Anda harus menjumlahkan ketiga vektor tersebut secara analitik ($x, y, z$).
+
+## 2.5 Pembahasan Latihan Soal
+
+### Soal 1: Analisis Detail Latihan Soal Gaya Coulomb
+
+Dua muatan titik $Q_1 = 50\text{ mC}$ dan $Q_2 = 100\text{ mC}$ dipisahkan pada jarak $10\text{ cm}$. Tentukan:
+
+a) Sketsa gaya interaksinya.
+
+b) Nilai gaya interaksi pada masing-masing muatan.
+
+c) Nilai satuan muatan dasar pada masing-masing muatan.
+
+#### 1. Identifikasi Variabel & Konversi Satuan
+
+Langkah pertama yang wajib dilakukan adalah mengonversi semua satuan ke dalam Sistem Internasional (SI):
+
+- Muatan 1 ($Q_1$): $50\text{ mC} = 50 \times 10^{-3}\text{ C} = 5 \times 10^{-2}\text{ C}$
+- Muatan 2 ($Q_2$): $100\text{ mC} = 100 \times 10^{-3}\text{ C} = 10^{-1}\text{ C}$
+- Jarak ($r$): $10\text{ cm} = 0,1\text{ m} = 10^{-1}\text{ m}$
+- Konstanta ($k$): $9 \times 10^9\text{ Nm}^2/\text{C}^2$
+
+#### 2. Penyelesaian Bagian (a): Sketsa Gaya
+
+Karena kedua muatan bernilai positif ($Q_1 > 0$ dan $Q_2 > 0$), maka sifat interaksinya adalah **Tolak-menolak**.
+
+**Representasi Visual:**
+
+$$Q_1 (+) \longleftarrow \vec{F}_{12} \quad \dots \quad \vec{F}_{21} \longrightarrow Q_2 (+)$$
+
+- $\vec{F}_{12}$ adalah gaya pada $Q_1$ akibat $Q_2$ (arah ke kiri).
+- $\vec{F}_{21}$ adalah gaya pada $Q_2$ akibat $Q_1$ (arah ke kanan).
+- Sesuai Hukum III Newton, $|\vec{F}_{12}| = |\vec{F}_{21}|$.
+
+#### 3. Penyelesaian Bagian (b): Nilai Gaya Interaksi
+
+Menggunakan rumus Hukum Coulomb:
+
+$$F = k \frac{Q_1 Q_2}{r^2}$$
+
+Substitusi nilai:
+
+$$F = (9 \times 10^9) \frac{(50 \times 10^{-3})(100 \times 10^{-3})}{(0,1)^2}$$$$F = (9 \times 10^9) \frac{5000 \times 10^{-6}}{0,01}$$$$F = (9 \times 10^9) \frac{5 \times 10^{-3}}{10^{-2}}$$$$F = (9 \times 10^9) (5 \times 10^{-1})$$$$F = 45 \times 10^8\text{ Newton}$$$$F = 4,5 \times 10^9\text{ N}$$
+
+**Analisis:** Gaya ini sangat besar (setara dengan berat benda jutaan ton). Dalam praktiknya, muatan sebesar $50\text{ mC}$ (mili-Coulomb) sangat jarang ditemukan pada percobaan statis biasa; biasanya muatan berada pada orde $\mu\text{C}$ (mikro-Coulomb). Namun, untuk keperluan soal latihan ini, kita mengikuti angka yang diberikan.
+
+#### 4. Penyelesaian Bagian (c): Nilai Satuan Muatan Dasar
+
+Pertanyaan ini meminta kita menghitung berapa banyak elektron/proton ($n$) yang menyusun muatan tersebut.
+
+Muatan dasar ($e$) adalah $1,6 \times 10^{-19}\text{ C}$.
+
+Rumus kuantisasi muatan: $Q = n \cdot e$ maka $n = \frac{Q}{e}$.
+
+- **Untuk** $Q_1$**:**
+
+	$$n_1 = \frac{50 \times 10^{-3}}{1,6 \times 10^{-19}}$$$$n_1 = 3,125 \times 10^{17}\text{ unit muatan dasar}$$
+
+- **Untuk** $Q_2$**:**
+
+	$$n_2 = \frac{100 \times 10^{-3}}{1,6 \times 10^{-19}}$$$$n_2 = 6,25 \times 10^{17}\text{ unit muatan dasar}$$
+
+Artinya, muatan $Q_1$ kekurangan elektron sebanyak $3,125 \times 10^{17}$ buah sehingga ia menjadi bermuatan positif.
+
+### Soal 2: Analisis Gaya pada Sistem Banyak Muatan
+
+Dalam sistem yang terdiri dari lebih dari dua muatan, kita menggunakan **Prinsip Superposisi**. Artinya, gaya total yang dirasakan oleh satu muatan adalah jumlah vektor dari gaya-gaya yang diberikan oleh setiap muatan lainnya secara individu.
+
+**Deskripsi Soal:**
+
+Terdapat tiga muatan pada sumbu-X:
+
+- $Q_1 = +25 \text{ nC}$ (Positif)
+- $Q_2 = -10 \text{ nC}$ (Negatif)
+- $Q_3 = +20 \text{ nC}$ (Positif)
+
+**Geometri (Posisi):**
+
+- Jarak $Q_1$ ke $Q_2 = 20 \text{ cm} = 0,2 \text{ m}$
+- Jarak $Q_1$ ke $Q_3 = 40 \text{ cm} = 0,4 \text{ m}$
+- Maka, jarak $Q_2$ ke $Q_3 = 40 \text{ cm} - 20 \text{ cm} = 20 \text{ cm} = 0,2 \text{ m}$
+
+#### Langkah 1: Konversi Satuan ke SI
+
+- $Q_1 = 25 \times 10^{-9} \text{ C}$
+- $Q_2 = -10 \times 10^{-9} \text{ C}$
+- $Q_3 = 20 \times 10^{-9} \text{ C}$
+- $k = 9 \times 10^9 \text{ Nm}^2/\text{C}^2$
+
+#### Langkah 2: Hitung Besar Gaya Antar Pasangan Muatan
+
+Kita hitung dulu besar gaya (skalar) tanpa memperhatikan arah:
+
+1. **Gaya antara** $Q_1$ **dan** $Q_2$ **(**$F_{12}$**):**
+
+	$$F_{12} = k \frac{|Q_1 Q_2|}{r_{12}^2} = 9 \times 10^9 \frac{(25 \times 10^{-9})(10 \times 10^{-9})}{(0,2)^2}$$$$F_{12} = \frac{2250 \times 10^{-9}}{0,04} = 5,625 \times 10^{-5} \text{ N}$$
+
+2. **Gaya antara** $Q_1$ **dan** $Q_3$ **(**$F_{13}$**):**
+
+	$$F_{13} = k \frac{|Q_1 Q_3|}{r_{13}^2} = 9 \times 10^9 \frac{(25 \times 10^{-9})(20 \times 10^{-9})}{(0,4)^2}$$$$F_{13} = \frac{4500 \times 10^{-9}}{0,16} = 2,8125 \times 10^{-5} \text{ N}$$
+
+3. **Gaya antara** $Q_2$ **dan** $Q_3$ **(**$F_{23}$**):**
+
+	$$F_{23} = k \frac{|Q_2 Q_3|}{r_{23}^2} = 9 \times 10^9 \frac{(10 \times 10^{-9})(20 \times 10^{-9})}{(0,2)^2}$$$$F_{23} = \frac{1800 \times 10^{-9}}{0,04} = 4,5 \times 10^{-5} \text{ N}$$
+
+#### Langkah 3: Menentukan Arah dan Gaya Total (Jawaban A)
+
+Kita asumsikan arah ke kanan adalah positif ($+x$) dan kiri adalah negatif ($-x$).
+
+- **Gaya Total pada** $Q_1$ **(**$\vec{F}_1$**):**
+	- $Q_2$ menarik $Q_1$ ke kanan (berlawanan jenis).
+	- $Q_3$ menolak $Q_1$ ke kiri (sejenis).
+
+		$$\sum F_1 = F_{12} - F_{13} = 5,625 \times 10^{-5} - 2,8125 \times 10^{-5} = +2,8125 \times 10^{-5} \text{ N (Ke Kanan)}$$
+
+- **Gaya Total pada** $Q_2$ **(**$\vec{F}_2$**):**
+	- $Q_1$ menarik $Q_2$ ke kiri (berlawanan jenis).
+	- $Q_3$ menarik $Q_2$ ke kanan (berlawanan jenis).
+
+		$$\sum F_2 = -F_{21} + F_{23} = -5,625 \times 10^{-5} + 4,5 \times 10^{-5} = -1,125 \times 10^{-5} \text{ N (Ke Kiri)}$$
+
+- **Gaya Total pada** $Q_3$ **(**$\vec{F}_3$**):**
+	- $Q_1$ menolak $Q_3$ ke kanan (sejenis).
+	- $Q_2$ menarik $Q_3$ ke kiri (berlawanan jenis).
+
+		$$\sum F_3 = F_{31} - F_{32} = 2,8125 \times 10^{-5} - 4,5 \times 10^{-5} = -1,6875 \times 10^{-5} \text{ N (Ke Kiri)}$$
+
+#### Langkah 4: Kesimpulan (Jawaban B)
+
+Bandingkan nilai mutlak gaya-gaya tersebut:
+
+1. $|F_1| = 2,8125 \times 10^{-5} \text{ N}$
+2. $|F_2| = 1,125 \times 10^{-5} \text{ N}$
+3. $|F_3| = 1,6875 \times 10^{-5} \text{ N}$
+
+**Kesimpulan:**
+
+Muatan yang memiliki gaya terbesar adalah $Q_1$ dengan nilai $2,8125 \times 10^{-5} \text{ N}$ dan arah vektor gayanya adalah **ke kanan (menuju sumbu X positif)**.
+
+# Bab 3: Medan Listrik
+
+## 3.1 Definisi Medan
+
+Medan listrik ($\vec{E}$) didefinisikan sebagai gaya per satuan muatan uji yang diletakkan di suatu titik. Medan menunjukkan kemampuan untuk menimbulkan gaya tersebut.
+
+$$\vec{E} = \lim_{q_{tes} \to 0} \frac{\vec{F}}{q_{tes}} \text{ [N/C]}$$
+
+Mengapa menggunakan limit? Agar muatan uji tidak mengubah distribusi muatan sumber yang menciptakan medan tersebut.
+
+## 3.2 Medan Muatan Titik dan Kontinyu
+
+### Medan Muatan Titik
+
+> **Muatan Titik:** $\vec{E} = \frac{kq}{r^2} \hat{r}$
+
+Berdasarkan ilustrasi pada Figure 6, kita melihat perbedaan mendasar antara medan yang dihasilkan oleh muatan positif ($+Q$) dan muatan negatif ($-Q$). Visualisasi ini mengikuti konvensi internasional dalam fisika.
+
+![Visualisasikan Garis Medan Listrik (Electric Field Lines) yang merupakan konsep kunci untuk memahami interaksi tanpa sentuh dalam elektrostatika](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770521765897.png)
+
+#### 1. Definisi Garis Medan Listrik
+
+Garis medan listrik adalah garis khayal yang digambarkan sedemikian rupa sehingga arahnya pada setiap titik sama dengan arah medan listrik di titik tersebut.
+
+**Arah Medan pada Muatan Titik**
+
+- **Muatan Positif (**$+Q$**):** Garis-garis medan digambarkan keluar secara radial (menjauh dari pusat).
+- **Muatan Negatif (**$-Q$**):** Garis-garis medan digambarkan masuk secara radial (menuju pusat).
+
+#### 2. Mengapa Arahnya Berbeda?
+
+Arah ini ditentukan berdasarkan **Muatan Uji Positif (**$q_0$**)**.
+
+- Bayangkan Anda meletakkan muatan uji positif kecil di dekat $+Q$. Karena muatan sejenis tolak-menolak, muatan uji tersebut akan terdorong **menjauh**. Maka, arah panah digambarkan keluar.
+- Jika Anda meletakkan muatan uji positif kecil di dekat $-Q$, muatan tersebut akan **tertarik** mendekat. Maka, arah panah digambarkan masuk.
+
+#### 3. Komponen Visual dalam Ilustrasi
+
+Dalam hal ini, terdapat dua istilah penting:
+
+1. **Vektor Medan Listrik:** Panah orange yang menunjukkan nilai spesifik $\vec{E}$ di satu titik koordinat tertentu. Panjang panah mewakili besarnya (_magnitude_) medan di titik itu.
+2. **Garis Medan Listrik:** Garis hitam panjang yang menunjukkan jalur kontinuitas medan dalam ruang.
+
+#### 4. Karakteristik Utama Garis Medan
+
+Dari ilustrasi tersebut, kita bisa menarik kesimpulan fisis yang sangat penting:
+
+- **Simetri Radial:** Medan menyebar secara merata ke segala arah (360 derajat dalam 2D, atau ke seluruh ruang dalam 3D).
+- **Kerapatan Garis = Kekuatan Medan:** Perhatikan bahwa semakin dekat ke muatan pusat, garis-garis tersebut semakin rapat. Ini menunjukkan bahwa medan listrik paling kuat berada di dekat muatan dan melemah seiring bertambahnya jarak ($E \propto 1/r^2$).
+- **Tidak Pernah Berpotongan:** Garis medan listrik dari muatan tunggal tidak akan pernah saling berpotongan karena di setiap titik ruang, vektor medan hanya memiliki satu arah resultan yang pasti.
+
+#### 5. Rumus Terkait
+
+Secara matematis, ilustrasi ini diringkas dalam persamaan:
+
+$$\vec{E} = \frac{kq}{r^2} \hat{r}$$
+
+- Jika $q$ positif, maka $\vec{E}$ searah dengan $\hat{r}$ (keluar).
+- Jika $q$ negatif, maka $\vec{E}$ berlawanan arah dengan $\hat{r}$ (masuk).
+
+### Medan Muatan Kontinyu
+
+- **Distribusi Kontinyu:** Kita membagi benda menjadi elemen muatan kecil $dq$ dan melakukan integrasi:
+
+	$$\vec{E} = k \int \frac{dq}{r^2} \hat{r}$$
+
+**Jenis Rapat Muatan:**
+
+- Garis ($\lambda$): $dq = \lambda dl$
+- Luas ($\sigma$): $dq = \sigma dA$
+- Volume ($\rho$): $dq = \rho dV$
+
+Hingga titik ini, kita telah mempelajari medan listrik dari muatan titik (diskrit). Namun, ketika kita berhadapan dengan benda makroskopis (benda yang tampak oleh mata), muatan tersebut dianggap terdistribusi secara kontinyu di seluruh bagian benda.
+
+![Ilustrasi muatan kontinyu](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523050976.png)
+
+#### 1. Dari Diskrit ke Kontinyu
+
+Perhatikan transisi matematis pada muatan diskrit dan kontinyu. Jika pada muatan diskrit kita menggunakan penjumlahan (**Sigma /** $\sum$), maka pada muatan kontinyu kita menggunakan **Integral (**$\int$**)**.
+
+##### Analogi Perubahan
+
+- **Muatan Tunggal:** $\vec{E} = \frac{kq}{r^2} \hat{r}$
+- **Banyak Muatan (Diskrit):** $\vec{E} = k \sum \frac{q_i}{r_i^2} \hat{r}_i$
+- **Muatan Kontinyu:** Kita membagi benda menjadi elemen muatan yang sangat kecil, disebut $dq$. Medan listrik yang dihasilkan oleh satu elemen kecil ini adalah $d\vec{E}$.
+
+	$$d\vec{E} = \frac{kdq}{r^2} \hat{r}$$
+
+	Untuk mendapatkan medan total ($\vec{E}_{total}$), kita menjumlahkan seluruh kontribusi elemen tersebut melalui integrasi:
+
+	$$\vec{E} = k \int \frac{dq}{r^2} \hat{r}$$
+
+#### 2. Parameter Rapat Muatan
+
+Bagaimana kita mendefinisikan "seberapa banyak" muatan dalam elemen kecil $dq$? Kita menggunakan konsep **Rapat Muatan**. Tergantung pada dimensi bendanya, terdapat tiga jenis rapat muatan:
+
+##### A. Muatan Garis (Linear Charge Density) - $\lambda$
+
+Digunakan untuk benda berbentuk kawat atau benang tipis panjang.
+
+- **Rumus:** $\lambda = \frac{Q}{l} = \frac{dq}{dl}$
+- **Elemen Muatan:** $dq = \lambda dl$ (atau $\lambda dx$ dalam koordinat Kartesian).
+- **Koordinat Polar:** $dq = \lambda R d\phi$.
+
+##### B. Muatan Luasan (Surface Charge Density) - $\sigma$
+
+Digunakan untuk benda berbentuk pelat, cakram, atau kulit bola.
+
+- **Rumus:** $\sigma = \frac{Q}{A} = \frac{dq}{dA}$
+- **Elemen Muatan:** $dq = \sigma dA$.
+- **Kartesian:** $dq = \sigma dx dy$.
+- **Polar:** $dq = \sigma r dr d\phi$.
+
+##### C. Muatan Volume (Volume Charge Density) - $\rho$
+
+Digunakan untuk benda padat seperti bola pejal atau silinder padat.
+
+- **Rumus:** $\rho = \frac{Q}{V} = \frac{dq}{dV}$
+- **Elemen Muatan:** $dq = \rho dV$.
+- **Kartesian:** $dq = \rho dx dy dz$.
+- **Bola:** $dq = \rho r^2 \sin \theta dr d\theta d\phi$.
+
+#### 3. Strategi Penyelesaian Masalah Kontinyu
+
+Untuk menghitung medan listrik dari distribusi kontinyu, ikuti langkah-langkah ini:
+
+1. **Identifikasi Dimensi:** Tentukan apakah benda tersebut adalah garis, luasan, atau volume.
+2. **Pilih Sistem Koordinat:** Gunakan Kartesian ($x,y,z$) untuk kotak/pelat, atau Polar/Bola untuk benda melingkar/bundar.
+3. **Tentukan** $dq$**:** Gunakan rapat muatan yang sesuai ($\lambda, \sigma,$ atau $\rho$).
+4. **Uraikan Vektor:** Tentukan komponen medan ($dE_x, dE_y$) dan perhatikan apakah ada komponen yang saling meniadakan karena **Simetri**.
+5. **Integrasi:** Hitung integral dari batas bawah hingga batas atas benda tersebut.
+
+## 3.3 Prinsip Superposisi Medan Listrik
+
+Dalam bab sebelumnya, kita telah mempelajari medan listrik yang dihasilkan oleh satu muatan tunggal. Namun, bagaimana jika dalam suatu ruang terdapat banyak muatan (distribusi muatan diskrit)? Prinsip Superposisi adalah jawabannya.
+
+![Ilustrasi superposisi medan listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770522035032.png)
+
+### Definisi Matematis
+
+Prinsip Superposisi menyatakan bahwa medan listrik total ($\vec{E}_0$) di suatu titik pengamatan (titik $O$ pada Figure) akibat sekelompok muatan sumber adalah **jumlah vektor** dari medan listrik yang dihasilkan oleh masing-masing muatan sumber secara individual.
+
+Secara matematis, jika terdapat $N$ muatan, maka:
+
+$$\vec{E}_0 = \vec{E}_{01} + \vec{E}_{02} + \vec{E}_{03} + \dots + \vec{E}_{0N}$$
+
+Perhatikan Figure 8, terdapat tiga muatan sumber ($q_1, q_2, q_3$) yang semuanya bernilai positif. Kita ingin mencari medan di titik asal ($O$):
+
+1. **Independensi Muatan:** Muatan $q_1$ menciptakan medan $\vec{E}_{01}$ seolah-olah $q_2$ dan $q_3$ tidak ada. Hal yang sama berlaku untuk muatan lainnya.
+2. **Vektor Posisi (**$r_{i0}$**):** Setiap muatan memiliki jarak tertentu ke titik $O$. Jarak ini dikuadratkan di penyebut ($r^2$) sesuai hukum kuadrat terbalik.
+3. **Arah Medan (**$\hat{r}_{i0}$**):** Karena semua muatan sumber adalah positif ($+q$), maka semua panah medan di titik $O$ menjauhi muatan sumber tersebut. Perhatikan arah panah hitam ($\vec{E}_{01}, \vec{E}_{02}, \vec{E}_{03}$) yang memancar keluar dari titik $O$.
+
+### Penurunan Rumus Umum
+
+Jika kita masukkan rumus medan listrik muatan titik ke dalam persamaan superposisi, kita mendapatkan:
+
+$$\vec{E}_0 = \frac{kq_1}{r_{10}^2} \hat{r}_{10} + \frac{kq_2}{r_{20}^2} \hat{r}_{20} + \frac{kq_3}{r_{30}^2} \hat{r}_{30} + \dots$$
+
+Untuk menyederhanakannya, kita gunakan notasi sigma ($\sum$):
+
+$$\vec{E}_0 = k \sum_{i=1}^{N} \frac{q_i}{r_{i0}^2} \hat{r}_{i0}$$
+
+**Keterangan Variabel:**
+
+- $k$: Konstanta Coulomb ($9 \times 10^9 \text{ Nm}^2/\text{C}^2$).
+- $q_i$: Besar muatan sumber ke-$i$.
+- $r_{i0}$: Jarak dari muatan ke-$i$ ke titik pengamatan.
+- $\hat{r}_{i0}$: Vektor satuan yang menunjukkan arah dari muatan ke-$i$ ke titik pengamatan.
+
+### Strategi Penyelesaian Soal
+
+Untuk menyelesaikan soal superposisi, ikuti langkah berikut:
+
+1. **Hitung Magnitudo:** Hitung nilai $E$ untuk setiap muatan menggunakan $\frac{kq}{r^2}$.
+2. **Tentukan Sudut:** Lihat posisi muatan untuk menentukan sudut vektor terhadap sumbu-X atau sumbu-Y.
+3. **Uraikan Komponen:**
+	
+	- $E_x = E \cos \theta$
+	- $E_y = E \sin \theta$
+		
+4. **Jumlahkan per Sumbu:** Cari $\sum E_x$ dan $\sum E_y$.
+5. **Resultan:** Gunakan Pythagoras $E_{total} = \sqrt{(\sum E_x)^2 + (\sum E_y)^2}$.
+
+### Contoh Soal Medan Listrik
+
+Pada persoalan ini, kita diminta untuk menganalisis sistem yang terdiri dari tiga muatan titik yang disusun secara tegak lurus pada sumbu $x$ dan $y$. Ketelitian dalam menentukan arah panah (vektor) adalah kunci utama.
+
+![Ilustrasi soal](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770522421826.png)
+
+#### 1. Inventarisasi Data & Koordinat
+
+Berdasarkan ilustrasi, kita definisikan posisi masing-masing muatan:
+
+- **Muatan 1 (**$Q_1$**):** $+5,00\text{ nC}$ berada di titik asal $(0, 0)$.
+- **Muatan 2 (**$Q_2$**):** $-3,00\text{ nC}$ berada pada sumbu $y$ di titik $(0; -0,100)\text{ m}$.
+- **Muatan 3 (**$Q_3$**):** $+6,00\text{ nC}$ berada pada sumbu $x$ di titik $(0,300; 0)\text{ m}$.
+
+Konstanta Coulomb ($k$) = $9 \times 10^9\text{ Nm}^2/\text{C}^2$.
+
+Ingat: $1\text{ nC} = 10^{-9}\text{ C}$.
+
+#### 2. Penyelesaian Pertanyaan (a): Medan Listrik $\vec{E}$ di $(0,0)$
+
+Untuk mencari medan listrik di titik asal $(0,0)$, kita harus menghitung kontribusi dari muatan-muatan _selain_ muatan yang ada di titik itu (karena medan muatan titik di posisinya sendiri tidak terdefinisi). Jadi, kita hitung medan akibat $Q_2$ dan $Q_3$.
+
+##### Langkah A: Medan akibat $Q_2$ ($\vec{E}_2$)
+
+- **Besar Medan (**$E_2$**):**
+
+	$$E_2 = k \frac{|Q_2|}{r_2^2} = (9 \times 10^9) \frac{3 \times 10^{-9}}{(0,100)^2} = \frac{27}{0,01} = 2700\text{ N/C}$$
+
+- **Arah:** Muatan $Q_2$ negatif dan berada di _bawah_ titik $(0,0)$. Karena medan listrik muatan negatif bersifat "masuk" atau menuju muatan tersebut, maka di titik $(0,0)$ medan akan mengarah ke **bawah** ($-\hat{j}$).
+- **Vektor:** $\vec{E}_2 = -2700\hat{j}\text{ N/C}$.
+
+##### Langkah B: Medan akibat $Q_3$ ($\vec{E}_3$)
+
+- **Besar Medan (**$E_3$**):**
+
+	$$E_3 = k \frac{Q_3}{r_3^2} = (9 \times 10^9) \frac{6 \times 10^{-9}}{(0,300)^2} = \frac{54}{0,09} = 600\text{ N/C}$$
+
+- **Arah:** Muatan $Q_3$ positif dan berada di _kanan_ titik $(0,0)$. Karena medan listrik muatan positif bersifat "keluar" atau menjauhi muatan tersebut, maka di titik $(0,0)$ medan akan menjauhi $Q_3$, yaitu ke arah **kiri** ($-\hat{i}$).
+- **Vektor:** $\vec{E}_3 = -600\hat{i}\text{ N/C}$.
+
+##### Langkah C: Resultan Medan Total ($\vec{E}_{total}$)
+
+$$\vec{E}_{total} = \vec{E}_3 + \vec{E}_2 = (-600\hat{i} - 2700\hat{j})\text{ N/C}$$
+
+#### 3. Penyelesaian Pertanyaan (b): Gaya $\vec{F}$ pada muatan $5,00\text{ nC}$
+
+Setelah kita mendapatkan medan listrik total di titik $(0,0)$, mencari gaya pada muatan yang diletakkan di sana ($Q_1$) menjadi sangat mudah dengan rumus:
+
+$$\vec{F} = Q_1 \cdot \vec{E}_{total}$$
+
+##### Perhitungan
+
+$$\vec{F} = (5,00 \times 10^{-9}\text{ C}) \cdot (-600\hat{i} - 2700\hat{j})\text{ N/C}$$$$\vec{F} = -(3000 \times 10^{-9})\hat{i} - (13500 \times 10^{-9})\hat{j}\text{ N}$$$$\vec{F} = (-3,0 \times 10^{-6}\hat{i} - 13,5 \times 10^{-6}\hat{j})\text{ N}$$
+
+Atau dalam notasi mikronewton:
+
+$$\vec{F} = (-3,0\hat{i} - 13,5\hat{j})~\mu\text{N}$$
+
+##### Magnitudo Gaya Total
+
+$$F = \sqrt{(-3,0)^2 + (-13,5)^2} \approx 13,83~\mu\text{N}$$
+
+#### 4. Ringkasan Logika
+
+1. **Analisis Visual:** Selalu gambar panah medan di titik target. Jangan terkecoh dengan posisi muatan; fokuslah pada apakah muatan itu "mendorong" (positif) atau "menarik" (negatif) muatan uji di titik tersebut.
+2. **Hukum Kuadrat Terbalik:** Perhatikan bahwa meskipun $Q_3$ muatannya dua kali lipat $Q_2$, medannya jauh lebih kecil ($600$ vs $2700$) karena jaraknya tiga kali lebih jauh ($0,3$ vs $0,1$). Ingat: jarak sangat mendominasi kekuatan medan.
+3. **Satuan:** Hasil gaya dalam orde $10^{-6}$ (mikro) adalah sangat wajar untuk muatan skala nano-Coulomb.
+
+## 3.4 Kapasitor Plat Sejajar & Medan Seragam
+
+Kapasitor plat sejajar terdiri dari dua pelat konduktor yang disusun sejajar dengan luas permukaan ($A$) yang sama dan dipisahkan oleh jarak ($d$) yang sangat kecil dibandingkan dengan ukuran pelatnya.
+
+### 1. Distribusi Muatan dan Medan Listrik
+
+Ketika kapasitor dihubungkan dengan sumber tegangan, satu pelat akan bermuatan $+Q$ dan pelat lainnya bermuatan $-Q$. Hal ini menciptakan rapat muatan luasan ($\sigma$):
+
+$$\sigma = \frac{Q}{A}$$
+
+Berdasarkan prinsip superposisi, medan listrik total adalah jumlah dari medan pelat positif ($\vec{E}_+$) dan medan pelat negatif ($\vec{E}_-$). Ingat bahwa medan pelat tunggal tak berhingga adalah $E = \frac{\sigma}{2\epsilon_0}$.
+
+![Ilustrasi kapasitor plat sejajar.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523476178.png)
+
+1. **Wilayah Luar (Atas & Bawah):**
+	
+	- Di atas pelat positif, $\vec{E}_+$ mengarah ke atas dan $\vec{E}_-$ mengarah ke bawah. Karena besarnya sama, keduanya saling meniadakan.
+	- **Hasil:** $E = 0$ (Sesuai keterangan pada gambar).
+		
+2. **Wilayah Dalam (Antara Kedua Pelat):**
+	
+	- Di antara pelat, $\vec{E}_+$ mengarah ke bawah (menjauhi pelat $+$) dan $\vec{E}_-$ juga mengarah ke bawah (menuju pelat $-$).
+	- Kedua medan searah, sehingga mereka saling memperkuat:
+
+		$$E = \frac{\sigma}{2\epsilon_0} + \frac{\sigma}{2\epsilon_0} = \frac{\sigma}{\epsilon_0}$$
+
+	- **Hasil:** $E = \frac{\sigma}{\epsilon_0}$ (Medan seragam).
+
+### 2. Karakteristik Medan Seragam
+
+Sesuai dengan garis-garis merah pada Figure 10, medan di dalam kapasitor bersifat seragam:
+
+- **Besarnya Konstan:** Nilai $E$ tidak bergantung pada posisi partikel selama masih berada di antara kedua pelat.
+- **Arahnya Sejajar:** Garis-garis medan selalu tegak lurus terhadap pelat, mengalir dari pelat positif ke pelat negatif.
+
+### 3. Dinamika Partikel dalam Medan Seragam
+
+Ini adalah bagian yang sangat menarik karena menggabungkan Elektrostatika dengan Hukum Newton.
+
+![Ilustrasi dinamika partikel dalam medan seragam.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523801877.png)
+
+Jika sebuah partikel bermuatan (seperti elektron $-e$ atau proton $+e$) dilepaskan di dalam kapasitor:
+
+1. **Gaya Listrik:** Partikel mengalami gaya $\vec{F} = q\vec{E}$.
+2. **Hukum II Newton:** Gaya tersebut menyebabkan percepatan $\vec{a} = \frac{q\vec{E}}{m}$.
+3. **Kinematika:** Karena medannya konstan, maka percepatannya juga konstan (GLBB). Kita bisa menggunakan rumus:
+	
+	- $v = v_0 + at$
+	- $x = v_0 t + \frac{1}{2} at^2$
+	- $v^2 = v_0^2 + 2ax$
+
+Jika elektron dilepaskan dari keadaan diam ($v_0 = 0$) dan menempuh jarak $x$, kecepatannya saat mencapai pelat seberang adalah:
+
+$$v_x = \sqrt{2 \frac{e|\vec{E}|}{m} x}$$
+
+### Analisis Lintasan Partikel dalam Medan Listrik Seragam
+
+Pada bagian sebelumnya, kita membahas partikel yang bergerak searah dengan medan (1D). Sekarang, kita akan menganalisis kasus di mana partikel (misalnya elektron) masuk ke dalam medan listrik dengan arah **tegak lurus** terhadap garis medan. Kasus ini adalah prinsip dasar cara kerja monitor CRT, osiloskop, dan spektrometer massa.
+
+![Ilustrasi lintasan partikel dalam medan listrik seragam.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525039912.png)
+
+#### 1. Kondisi Awal (Analogi Gerak Parabola)
+
+Perhatikan gambar tersebut. Sebuah elektron (muatan $-e$) masuk ke celah antara dua pelat dengan kecepatan awal horizontal $v_{x0}$.
+
+- **Sumbu X:** Tidak ada gaya listrik (karena $\vec{E}$ mengarah vertikal). Maka kecepatan di sumbu X tetap konstan (**GLB**).
+- **Sumbu Y:** Terdapat gaya listrik konstan yang menarik elektron ke arah pelat positif (ke atas). Maka elektron mengalami percepatan konstan (**GLBB**).
+
+#### 2. Penurunan Persamaan Gerak
+
+##### A. Gaya dan Percepatan
+
+Berdasarkan Hukum II Newton dan definisi medan listrik:
+
+$$\vec{F} = q\vec{E} = m\vec{a}$$
+
+Karena partikel adalah elektron ($q = -e$), maka arah gaya berlawanan dengan arah medan. Jika medan $\vec{E}$ ke bawah, maka gaya $\vec{F}$ ke atas.
+
+$$a_y = \frac{e|\vec{E}|}{m}$$
+
+##### B. Analisis Kecepatan (Vektor $\vec{v}$)
+
+Di setiap titik di dalam medan, kecepatan partikel merupakan resultan dari dua komponen:
+
+1. **Komponen Horizontal (**$v_x$**):**
+
+	$$v_x = v_{x0}$$
+
+	(Tidak berubah terhadap waktu).
+
+2. **Komponen Vertikal (**$v_y$**):**
+
+	Karena elektron masuk secara horizontal, $v_{y0} = 0$.
+
+	$$v_y = a_y t = \left(\frac{e|\vec{E}|}{m} \right) t$$
+
+##### C. Kecepatan Total dan Arah Defleksi
+
+Besar kecepatan total ($v$) saat keluar dari medan adalah:
+
+$$v = \sqrt{v_x^2 + v_y^2} = \sqrt{v_{x0}^2 + \left(\frac{e|\vec{E}|t}{m} \right)^2}$$
+
+Sudut belok atau **sudut defleksi** ($\theta$) terhadap garis horizontal dapat dihitung dengan:
+
+$$\tan \theta = \frac{v_y}{v_x} \implies \theta = \tan^{-1} \left(\frac{e|\vec{E}|t}{m v_{x0}} \right)$$
+
+#### 3. Bentuk Lintasan (Trajektori)
+
+Jika kita mengeliminasi variabel waktu ($t$) dari persamaan posisi $x = v_{x0}t$ dan $y = \frac{1}{2} a_y t^2$, kita akan mendapatkan:
+
+$$y = \left(\frac{e|\vec{E}|}{2m v_{x0}^2} \right) x^2$$
+
+Ini adalah persamaan **parabola**. Artinya, selama berada di dalam medan listrik, elektron akan bergerak mengikuti lintasan melengkung (parabolik).
+
+## 3.4 Aplikasi Nyata: Defleksi Berkas Elektron
+
+Persamaan di atas menunjukkan bahwa kita bisa mengatur posisi jatuhnya elektron pada layar dengan mengubah:
+
+1. **Nilai** $|\vec{E}|$**:** Semakin besar tegangan pelat, semakin tajam belokannya.
+2. **Kecepatan awal** $v_{x0}$**:** Semakin cepat elektron masuk, semakin sedikit ia sempat membelok (lintasan lebih lurus).
+
+Inilah yang terjadi di dalam **Tabung Sinar Katoda (CRT)** pada televisi lama, di mana medan listrik "menulis" gambar pada layar dengan membelokkan berkas elektron secara sangat cepat.
+
+### Aplikasi Teknologi: Tabung Sinar Katoda (CRT)
+
+Prinsip ini digunakan pada **Cathode Ray Tube (CRT)**. Dengan mengatur medan listrik pada pelat defleksi vertikal dan horizontal, kita dapat membelokkan berkas elektron ke titik mana pun di layar fosfor untuk membentuk gambar.
+
+![Ilustrasi prinsip dasar layar CRT.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770523867714.png)
+
+## 3.5 Contoh Soal: Gerak Proton dalam Medan Listrik Seragam
+
+Sebuah proton dipercepat (dari kondisi diam) pada medan listrik 500 N/C. Pada suatu saat kemudian, kecepatannya $2.5×10^6$ m/s.
+
+![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770524729206.png)
+
+**Data Konstanta Fisis (Wajib Diketahui):**
+
+- **Muatan Proton (**$q$ **atau** $e$**):** $+1,6 \times 10^{-19}\text{ C}$
+- **Massa Proton (**$m$**):** $1,67 \times 10^{-27}\text{ kg}$
+
+**Data dari Soal:**
+
+- Medan Listrik ($E$): $500\text{ N/C}$
+- Kecepatan awal ($v_0$): $0$ (diam)
+- Kecepatan akhir ($v$): $2,5 \times 10^6\text{ m/s}$
+
+### (a) Menghitung Percepatan Proton ($a$)
+
+Langkah pertama adalah menghubungkan gaya listrik dengan hukum kedua Newton.
+
+Gaya listrik yang dialami proton adalah $F = qE$, dan gaya ini menyebabkan percepatan $F = ma$.
+
+**Persamaan:**
+
+$$a = \frac{qE}{m}$$
+
+**Perhitungan:**
+
+$$a = \frac{(1,6 \times 10^{-19}\text{ C}) \times (500\text{ N/C})}{1,67 \times 10^{-27}\text{ kg}}$$$$a = \frac{8,0 \times 10^{-17}}{1,67 \times 10^{-27}}$$$$a \approx 4,79 \times 10^{10}\text{ m/s}^2$$
+
+_Catatan: Perhatikan betapa besarnya percepatan ini! Hal ini terjadi karena massa proton sangatlah kecil._
+
+### (b) Menghitung Waktu Tempuh ($t$)
+
+Karena medan listriknya seragam, maka percepatannya konstan. Kita bisa menggunakan rumus GLBB (Gerak Lurus Berubah Beraturan).
+
+**Persamaan:**
+
+$$v = v_0 + at \implies t = \frac{v - v_0}{a}$$
+
+**Perhitungan:**
+
+$$t = \frac{2,5 \times 10^6\text{ m/s} - 0}{4,79 \times 10^{10}\text{ m/s}^2}$$$$t \approx 5,22 \times 10^{-5}\text{ detik}$$
+
+Atau sekitar $52,2~\mu\text{s}$ (mikrodetik).
+
+### (c) Menghitung Jarak Tempuh ($x$)
+
+Untuk menghitung seberapa jauh proton bergerak hingga mencapai kecepatan tersebut, kita bisa menggunakan rumus posisi atau hubungan kecepatan-jarak.
+
+**Persamaan:**
+
+$$v^2 = v_0^2 + 2ax \implies x = \frac{v^2}{2a}$$
+
+**Perhitungan:**
+
+$$x = \frac{(2,5 \times 10^6)^2}{2 \times (4,79 \times 10^{10})}$$$$x = \frac{6,25 \times 10^{12}}{9,58 \times 10^{10}}$$$$x \approx 65,24\text{ meter}$$
+
+### (d) Menghitung Energi Kinetik ($K$)
+
+Energi kinetik adalah energi yang dimiliki benda karena geraknya.
+
+**Persamaan:**
+
+$$K = \frac{1}{2} mv^2$$
+
+**Perhitungan:**
+
+$$K = \frac{1}{2} \times (1,67 \times 10^{-27}\text{ kg}) \times (2,5 \times 10^6\text{ m/s})^2$$$$K = 0,5 \times 1,67 \times 10^{-27} \times 6,25 \times 10^{12}$$$$K \approx 5,22 \times 10^{-15}\text{ Joule}$$
+
+**Konversi ke Elektronvolt (eV):**
+
+Dalam fisika partikel, satuan Joule seringkali terlalu besar. Mari kita konversi ke eV dengan membaginya dengan muatan elektron ($1,6 \times 10^{-19}$):
+
+$$K \approx 32.625\text{ eV} \text{ atau } 32,6\text{ keV}$$
+
+# Bab 4: Fluks Listrik (Aliran Medan) dan Hukum Gauss
+
+Fluks listrik ($\Phi_E$) adalah besaran skalar yang menggambarkan "jumlah" garis medan listrik yang menembus suatu permukaan tertentu. Konsep ini merupakan prasyarat mutlak untuk memahami Hukum Gauss.
+
+## 4.1 Medan Listrik Seragam & Bidang Tegak Lurus
+
+Kasus paling sederhana adalah ketika medan listrik ($\vec{E}$) bersifat seragam (nilainya sama di setiap titik) dan menembus bidang luasan ($A$) secara tegak lurus.
+
+![Ilustrasi flux listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525664471.png)
+
+**Rumus Dasar:**
+
+$$\Phi_E = |\vec{E}| A$$
+
+- **Interpretasi Fisis:** Fluks berbanding lurus dengan jumlah garis medan. Semakin rapat garis medan (medan kuat), maka fluks semakin besar.
+- **Satuan SI:** Newton meter kuadrat per Coulomb ($N \cdot m^2/C$).
+
+## 4.2 Fluks pada Bidang Sembarang
+
+Bagaimana jika bidang tersebut miring? Sesuai ilustrasi pada Figure, kita perlu mendefinisikan **Vektor Luas** ($\vec{A}$).
+
+![Ilustrasi bidang sembarang.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525763288.png)
+
+> Vektor $\vec{A}$ memiliki magnitudo sebesar luas bidang ($A$) dan arahnya selalu tegak lurus (Normal) terhadap permukaan tersebut ($\hat{n}$).
+
+Jika terdapat sudut $\theta$ antara arah medan listrik ($\vec{E}$) dan garis normal bidang ($\hat{n}$), maka hanya komponen medan yang tegak lurus permukaan saja yang berkontribusi pada fluks.
+
+**Rumus Vektor:**
+
+$$\Phi_E = \vec{E} \cdot \vec{A} = |\vec{E}| A \cos \theta$$
+
+**Analisis Sudut (**$\theta$**):**
+
+1. $\theta = 0^\circ$**:** Bidang tegak lurus medan (garis normal sejajar medan). Fluks maksimal: $\Phi_E = EA$.
+2. $\theta = 90^\circ$**:** Bidang sejajar medan (garis normal tegak lurus medan). Tidak ada garis yang "menembus" bidang. Fluks nol: $\Phi_E = 0$.
+3. $\theta = 180^\circ$**:** Medan masuk ke permukaan (berlawanan arah normal). Fluks bernilai negatif.
+
+## 4.3 Definisi Umum: Integrasi Fluks
+
+Dalam situasi nyata, medan listrik mungkin tidak seragam dan permukaannya mungkin melengkung. Untuk menghitung fluks total, kita membagi permukaan menjadi elemen luasan yang sangat kecil ($dA$).
+
+![Ilustrasi flux dalam bidang umum.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770525869996.png)
+
+**Rumus Integral:**
+
+$$\Phi_E = \int \vec{E} \cdot d\vec{A} = \int E \cos \theta dA$$
+
+- **Metode Mosaik:** Seperti yang dijelaskan, kita menjumlahkan ($\sum$) fluks dari ribuan kotak kecil hingga menjadi integral permukaan.
+- **Permukaan Tertutup:** Jika integral dilakukan pada permukaan tertutup (seperti bola atau kubus), kita menggunakan simbol integral tertutup: $\oint \vec{E} \cdot d\vec{A}$.
+
+## 4.4 Hubungan dengan Hukum Gauss
+
+Puncak dari pemahaman fluks adalah **Hukum Gauss**. Carl Friedrich Gauss menemukan bahwa total fluks yang keluar dari _permukaan tertutup apa pun_ hanya bergantung pada jumlah muatan netto ($q_{enc}$) di dalamnya. Hukum ini menyatakan bahwa total fluks listrik yang keluar dari permukaan tertutup sebanding dengan total muatan netto yang dilingkupi oleh permukaan tersebut.
+
+**Persamaan Gauss:**
+
+$$\Phi_E = \oint \vec{E} \cdot d\vec{A} = \frac{q_{enc}}{\epsilon_0}$$
+
+Hukum ini sangat memudahkan perhitungan medan listrik pada sistem yang memiliki simetri tinggi (bola, silinder, plat tak berhingga).
+
+### Contoh Kasus: Flux ruang bola dari sebuah titik muatan
+
+Pada bagian ini, kita melakukan eksperimen pikiran (_thought experiment_) untuk menghitung total fluks listrik yang menembus sebuah permukaan bola yang menyelimuti sebuah muatan titik. Ini adalah jembatan matematis dari Hukum Coulomb menuju Hukum Gauss.
+
+#### 1. Setup Geometri
+
+Bayangkan sebuah muatan titik positif $+q$ yang terletak tepat di pusat sebuah bola khayal berjari-jari $r$. Bola khayal ini kita sebut sebagai **Permukaan Gauss** (_Gaussian Surface_).
+
+![Flux ruang bola.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770526124568.png)
+
+##### Mengapa Memilih Bentuk Bola?
+
+Karena muatan titik memiliki **Simetri Bola**. Pada jarak yang sama ($r$) dari pusat, kuat medan listrik ($E$) akan selalu sama nilainya di titik mana pun pada permukaan bola tersebut.
+
+#### 2. Analisis Vektor di Permukaan (Langkah-Langkah Matematis)
+
+##### A. Kuat Medan Listrik ($\vec{E}$)
+
+Berdasarkan Hukum Coulomb, medan listrik pada jarak $r$ adalah:
+
+$$\vec{E} = \frac{kq}{r^2} \hat{r}$$
+
+Di sini, $|\vec{E}|$ bernilai **konstan** untuk seluruh permukaan bola karena semua titik di permukaan memiliki jarak $r$ yang sama dari pusat.
+
+##### B. Vektor Satuan Normal ($\hat{n}$)
+
+Pada sebuah bola, garis normal (garis yang tegak lurus permukaan) selalu mengarah radial keluar dari pusat. Jadi, vektor arah luas $d\vec{A}$ searah dengan vektor medan listrik $\vec{E}$.
+
+- Sudut antara $\vec{E}$ dan $\hat{n}$ adalah $\theta = 0^\circ$.
+- Maka, $\vec{E} \cdot \hat{n} = |\vec{E}| \cos(0^\circ) = |\vec{E}|$.
+
+#### 3. Penurunan Integral Fluks
+
+Kita masukkan komponen-komponen di atas ke dalam definisi umum fluks:
+
+1. **Definisi Fluks:**
+
+	$$\Phi_E = \oint \vec{E} \cdot d\vec{A}$$
+
+2. **Karena** $\vec{E}$ **sejajar dengan** $d\vec{A}$**:**
+
+	$$\Phi_E = \oint |\vec{E}| dA$$
+
+3. **Karena** $|\vec{E}|$ **konstan, ia boleh keluar dari integral:**
+
+	$$\Phi_E = |\vec{E}| \oint dA$$
+
+4. **Integral Luas Bola:**
+
+	Nilai $\oint dA$ adalah total luas permukaan bola, yaitu $4\pi r^2$.
+
+	$$\Phi_E = |\vec{E}| (4\pi r^2)$$
+
+#### 4. Hasil Akhir dan Substitusi Konstanta
+
+Sekarang, kita ganti $|\vec{E}|$ dengan rumus Coulomb:
+
+$$\Phi_E = \left(\frac{kq}{r^2} \right) (4\pi r^2)$$
+
+Perhatikan bahwa variabel $r^2$ di pembilang dan penyebut saling meniadakan!
+
+$$\Phi_E = 4\pi kq$$
+
+Mengingat bahwa $k = \frac{1}{4\pi\epsilon_0}$, maka:
+
+$$\Phi_E = 4\pi \left(\frac{1}{4\pi\epsilon_0} \right) q = \frac{q}{\epsilon_0}$$
+
+#### 5. Kesimpulan Fisis (Penting!)
+
+Hasil akhir $\Phi_E = \frac{q}{\epsilon_0}$ memberikan kita dua kesimpulan revolusioner:
+
+1. **Independensi Jarak:** Total fluks yang menembus permukaan **tidak tergantung pada jari-jari (**$r$**)**. Artinya, mau bolanya kecil atau besar, jumlah "garis" yang lewat tetap sama selama muatan di dalamnya tetap.
+2. **Hukum Gauss:** Fluks listrik hanya bergantung pada **besarnya muatan netto** yang dilingkupi oleh permukaan tersebut dibagi dengan permitivitas ruang hampa ($\epsilon_0$).
+
+Secara singkat, untuk muatan titik $+q$ di pusat bola dengan jari-jari $r$:
+
+1. Medan $E$ di setiap permukaan bola adalah $kq/r^2$.
+2. Medan selalu tegak lurus permukaan ($\theta = 0^\circ$).
+3. Luas bola adalah $4\pi r^2$.
+4. $\Phi_E = (kq/r^2) \cdot (4\pi r^2) = 4\pi kq = \frac{q}{\epsilon_0}$. (Terbukti sesuai Hukum Gauss).
+
+## 4.5 Analisis Konseptual Fluks dan Hukum Gauss
+
+Hukum Gauss dinyatakan dengan persamaan:
+
+$$\Phi_E = \oint \vec{E} \cdot d\vec{A} = \frac{q_{enc}}{\epsilon_0}$$
+
+Persamaan ini menghubungkan apa yang terjadi **di permukaan** (fluks) dengan apa yang ada **di dalam** permukaan (muatan netto). Berikut adalah bedah kasus berdasarkan pertanyaan pada Slide 29.
+
+### Pertanyaan 1: Hubungan Medan Nol dan Fluks
+
+**"Jika medan listrik bernilai Nol di setiap titik di permukaan, apakah fluks listriknya juga bernilai Nol?"**
+
+- **Jawaban:** **Ya.**
+- **Penjelasan:** Secara matematis, fluks adalah integral dari medan listrik terhadap luas permukaan ($\int \vec{E} \cdot d\vec{A}$). Jika variabel $\vec{E}$ di setiap titik permukaan adalah nol, maka hasil penjumlahannya (integralnya) pasti nol. Secara fisis, jika tidak ada "angin" (medan), maka tidak ada aliran yang menembus "jendela" (permukaan).
+
+### Pertanyaan 2: Hubungan Fluks Nol dan Medan
+
+**"Jika fluks listrik Nol, haruskah medan listrik tidak ada di setiap titik?"**
+
+- **Jawaban:** **Tidak.**
+- **Penjelasan:** Ini adalah poin yang sering menjebak. Fluks bisa bernilai nol meskipun ada medan listrik yang sangat kuat. Ada dua kondisi utama:
+	
+	1. **Arah Medan:** Jika medan listrik sejajar dengan permukaan (seperti gambar di bawah), maka tidak ada garis medan yang "menembus" masuk. Karena $\vec{E}$ tegak lurus dengan normal bidang ($\theta = 90^\circ$), maka $\cos(90^\circ) = 0$.
+	2. **Permukaan Tertutup:** Pada permukaan tertutup, fluks netto adalah nol jika jumlah garis medan yang **masuk** sama dengan jumlah garis medan yang **keluar**. Medannya ada, tapi total alirannya nol.
+
+### Pertanyaan 3: Fluks Nol dan Muatan di Dalam
+
+**"Jika fluks listriknya Nol di luasan tertutup, apakah ada muatan di dalamnya?"**
+
+- **Jawaban:** **Mungkin ada, tapi muatan NETTO-nya adalah Nol.**
+- **Penjelasan:** Hukum Gauss menyatakan $\Phi_E \propto q_{netto}$. Jika $\Phi_E = 0$, maka $q_{netto} = 0$. Ini bisa berarti dua hal:
+	
+	1. Memang benar-benar **tidak ada muatan** sama sekali di dalam.
+	2. Ada muatan, tetapi **jumlah muatan positif sama dengan jumlah muatan negatif** (misalnya ada dipol di dalam kotak). Total muatannya nol, sehingga fluks totalnya juga nol.
+
+### Pertanyaan 4: Analisis Gambar (Plat Kuning)
+
+**"Berapa nilai fluks dari gambar di bawah ini? Kenapa?"**
+
+- **Jawaban:** $\Phi_E = 0$ **(Nol).**
+- **Penjelasan:**
+	- Perhatikan garis-garis medan (orange) yang mengalir horizontal.
+	- Perhatikan posisi bidang kuning. Bidang tersebut diletakkan sejajar dengan arah aliran medan.
+	- Vektor Normal bidang ($\hat{n}$) selalu tegak lurus permukaan bidang. Dalam kasus ini, kawat normal akan mengarah ke atas atau ke bawah.
+	- Sudut antara Medan ($\vec{E}$) dan Normal ($\hat{n}$) adalah $\theta = 90^\circ$.
+	- Berdasarkan rumus $\Phi_E = EA \cos \theta$:
+
+		$$\Phi_E = EA \cos(90^\circ) = EA(0) = 0$$
+
+	- Secara visual: Tidak ada satu pun garis medan yang **menusuk/menembus** permukaan kuning tersebut; garis-garis itu hanya "menyapu" lewat di atas dan di bawahnya.
+
+![Ilustrasi flux bernilai nol dalam medan listrik.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770526557896.png)
+
+## 4.6 Langkah Strategis Aplikasi Hukum Gauss
+
+Hukum Gauss adalah alat yang sangat efisien untuk menghitung medan listrik ($\vec{E}$) jika kita memiliki distribusi muatan yang simetris (bola, silinder, atau bidang datar). Berikut adalah prosedur standar operasionalnya:
+
+### Langkah 1: Memilih Permukaan Gauss yang Tepat
+
+Langkah ini adalah yang paling krusial. Permukaan Gauss adalah permukaan tertutup khayal yang Anda buat sendiri.
+
+- **Prinsip Konstanta:** Pilih permukaan di mana besar medan listrik ($|\vec{E}|$) bernilai konstan di setiap titik permukaan tersebut. Ini biasanya terjadi jika jarak permukaan ke muatan sumber selalu sama.
+- **Prinsip Arah (Dot Product):** Cari permukaan di mana arah medan listrik ($\vec{E}$) bersifat:
+	
+	1. **Tegak lurus terhadap permukaan** (searah dengan vektor normal $\hat{n}$), sehingga $\vec{E} \cdot d\vec{A} = E dA$ ($\cos 0^\circ = 1$).
+	2. **Sejajar dengan permukaan** (tegak lurus terhadap vektor normal $\hat{n}$), sehingga $\vec{E} \cdot d\vec{A} = 0$ ($\cos 90^\circ = 0$).
+
+### Langkah 2: Menentukan Muatan di Dalam Permukaan ($q_{enc}$)
+
+Anda harus menghitung berapa total muatan yang "terperangkap" di dalam permukaan khayal yang Anda buat tadi.
+
+- Jika muatan titik: jumlahkan saja nilainya.
+- Jika muatan kontinyu: gunakan rapat muatan.
+	- Garis: $q = \lambda \cdot l$
+	- Luas: $q = \sigma \cdot A$
+	- Volume: $q = \rho \cdot V$
+
+### Langkah 3: Evaluasi Integral dan Penyelesaian
+
+Setelah langkah 1 dan 2 siap, masukkan ke persamaan:
+
+$$\oint \vec{E} \cdot d\vec{A} = \frac{q_{enc}}{\epsilon_0}$$
+
+Karena Anda sudah memilih permukaan yang simetris di Langkah 1, maka $|\vec{E}|$ bisa keluar dari integral:
+
+$$|\vec{E}| \oint dA = \frac{q_{enc}}{\epsilon_0}$$$$|\vec{E}| \cdot A_{total} = \frac{q_{enc}}{\epsilon_0}$$
+
+## 4.7 Contoh Kasus Aplikasi Hukum Gauss
+
+### Permukaan Silinder
+
+Jika Anda menghadapi distribusi muatan berbentuk kawat panjang, permukaan Gauss yang paling cocok adalah **Silinder**.
+
+![Contoh hukum gauss di permukaan silinder.](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770528321295.png)
+
+Sesuai ilustrasi Figure 20, integral permukaan silinder harus dipecah menjadi tiga bagian:
+
+1. **Tutup Atas:** Luasnya $\pi r^2$.
+2. **Tutup Bawah:** Luasnya $\pi r^2$.
+3. **Selimut (Sisi):** Luasnya $2\pi rh$ (keliling lingkaran dikali tinggi).
+
+**Total Luas Permukaan (**$A$**):**
+
+$$\int dA = \int_{atas} dA + \int_{bawah} dA + \int_{sisi} dA = 2(\pi r^2) + 2\pi rh$$
+
+> Pada kasus kawat panjang, medan listrik hanya menembus **selimut silinder**. Medan listrik sejajar dengan tutup atas dan bawah ($\theta = 90^\circ$), sehingga fluks pada bagian tutup adalah **NOL**. Anda hanya perlu menghitung fluks pada bagian sisi/selimut saja ($E \cdot 2\pi rh$).
+
+### Distribusi Muatan Batang/Garis
+
+Pada bagian ini, kita dihadapkan pada sebuah kawat lurus yang sangat panjang (dianggap tak berhingga) dengan rapat muatan linear $\lambda$. Kita ingin menghitung kuat medan listrik $\vec{E}$ pada jarak $r$ dari kawat tersebut.
+
+![Ilustrasi distribusi muatan garis](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770528656472.png)
+
+#### 1. Identifikasi Simetri dan Arah Medan
+
+Langkah pertama dalam aplikasi Gauss adalah memahami geometri sistem.
+
+- **Sifat Muatan:** Kawat bermuatan positif secara merata.
+- **Arah Medan (**$\vec{E}$**):** Karena kawat dianggap sangat panjang, medan listrik harus memancar keluar secara **radial** (tegak lurus kawat). Tidak ada alasan bagi medan untuk condong ke kiri atau ke kanan karena simetri kawat yang tak berhingga.
+
+#### 2. Pemilihan Permukaan Gauss
+
+Berdasarkan simetri radial tersebut, kita memilih **Permukaan Gauss berupa Silinder** dengan jari-jari $r$ dan panjang $L$ yang menyelimuti kawat tersebut.
+
+Permukaan silinder ini terdiri dari tiga bagian:
+
+1. **Dua Tutup (Atas & Bawah):** Luas bidang $A = \pi r^2$.
+2. **Selimut Silinder:** Luas bidang $A = 2\pi rL$.
+
+#### 3. Analisis Fluks Listrik ($\Phi_E$)
+
+Kita evaluasi integral fluks $\oint \vec{E} \cdot d\vec{A}$ pada ketiga permukaan tersebut:
+
+- **Pada Tutup Atas dan Bawah:** Vektor normal bidang ($\hat{n}$) mengarah vertikal, sedangkan medan $\vec{E}$ mengarah horizontal (radial). Karena mereka saling tegak lurus ($\theta = 90^\circ$), maka **fluksnya adalah NOL**.
+
+	$$\Phi_{tutup} = \int E \cos(90^\circ) dA = 0$$
+
+- **Pada Selimut Silinder:** Vektor medan $\vec{E}$ selalu searah dengan vektor normal bidang $d\vec{A}$ ($\theta = 0^\circ$). Karena jarak $r$ konstan, maka besar $E$ juga konstan di seluruh selimut.
+
+	$$\Phi_{selimut} = \int E \cos(0^\circ) dA = E \int dA = E(2\pi rL)$$
+
+**Total Fluks:** $\Phi_{total} = E(2\pi rL)$.
+
+#### 4. Menentukan Muatan yang Dilingkupi ($q_{enc}$)
+
+Berapa banyak muatan yang "terperangkap" di dalam silinder Gauss kita?
+
+Karena panjang silinder adalah $L$ dan rapat muatannya adalah $\lambda$ (muatan per satuan panjang), maka:
+
+$$q_{enc} = \lambda \cdot L$$
+
+#### 5. Aplikasi Hukum Gauss dan Hasil Akhir
+
+Kita gabungkan semua data ke dalam persamaan Hukum Gauss:
+
+$$\Phi_E = \frac{q_{enc}}{\epsilon_0}$$$$E(2\pi rL) = \frac{\lambda L}{\epsilon_0}$$
+
+Perhatikan bahwa variabel $L$ **saling meniadakan** di kedua sisi. Ini menunjukkan bahwa medan listrik tidak bergantung pada seberapa panjang permukaan Gauss "khayal" yang kita buat.
+
+**Rumus Akhir Medan Listrik Kawat Panjang:**
+
+$$E = \frac{\lambda}{2\pi \epsilon_0 r}$$
+
+Atau jika menggunakan konstanta $k = \frac{1}{4\pi\epsilon_0}$:
+
+$$E = \frac{2k\lambda}{r}$$
+
+### Distribusi Muatan Luasan (Plat)
+
+Pada bagian ini, kita mempelajari bagaimana menghitung medan listrik yang dihasilkan oleh sebuah lembaran tipis non-konduktor yang sangat luas dengan rapat muatan permukaan $\sigma$ (sigma).
+
+![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770528863313.png)
+
+#### 1. Analisis Simetri dan Arah Medan
+
+- **Sifat Muatan:** Lembaran memiliki muatan positif $+Q$ yang tersebar merata.
+- **Arah Medan (**$\vec{E}$**):** Karena lembaran sangat luas, medan listrik harus keluar secara tegak lurus dari permukaan di kedua sisi (atas dan bawah). Tidak ada komponen medan yang sejajar dengan plat karena pengaruh muatan di kiri dan kanan saling meniadakan.
+
+#### 2. Pemilihan Permukaan Gauss (Pillbox)
+
+Untuk kasus ini, kita menggunakan permukaan Gauss berbentuk **Silinder Kecil** (sering disebut _pillbox_) yang memotong lembaran secara tegak lurus.
+
+- Silinder ini memiliki luas penampang $A$ pada bagian tutup atas dan tutup bawahnya.
+- Silinder ini menembus plat sedemikian rupa sehingga plat berada tepat di tengah silinder.
+
+#### 3. Menghitung Fluks Listrik ($\Phi_E$)
+
+Berdasarkan ilustrasi di Figure 22, kita bagi fluks menjadi dua bagian:
+
+1. **Selimut Silinder (Bagian Samping):** Vektor normal bidang samping tegak lurus terhadap arah medan $\vec{E}$ ($\theta = 90^\circ$). Maka, fluks yang melewati samping adalah **NOL**.
+2. **Dua Tutup (Atas dan Bawah):** Medan listrik $\vec{E}$ menembus kedua tutup secara tegak lurus ($\theta = 0^\circ$).
+	
+	- Fluks pada tutup atas = $EA$.
+	- Fluks pada tutup bawah = $EA$.
+	- **Total Fluks (**$\Phi_E$**):** $EA + EA = 2EA$.
+
+#### 4. Menentukan Muatan yang Dilingkupi ($q_{enc}$)
+
+Permukaan Gauss kita hanya melingkupi sebagian kecil dari plat, yaitu seluas penampang $A$.
+
+Mengingat rapat muatan permukaan adalah $\sigma = \frac{q}{A}$, maka:
+
+$$q_{enc} = \sigma \cdot A$$
+
+#### 5. Aplikasi Hukum Gauss dan Hasil Akhir
+
+Kita masukkan ke dalam persamaan utama:
+
+$$\Phi_E = \frac{q_{enc}}{\epsilon_0}$$$$2EA = \frac{\sigma A}{\epsilon_0}$$
+
+Perhatikan bahwa luas penampang $A$ dapat kita coret dari kedua sisi persamaan. Hal ini berarti besar medan listrik tidak bergantung pada seberapa besar luas permukaan Gauss yang kita pilih.
+
+**Rumus Akhir Medan Listrik Plat Tak Berhingga:**
+
+$$E = \frac{\sigma}{2\epsilon_0}$$
+
+#### 6. Interpretasi Fisis (Penting!)
+
+Hasil $E = \frac{\sigma}{2\epsilon_0}$ menunjukkan hal yang luar biasa:
+
+1. **Medan Seragam:** Tidak ada variabel jarak ($r$) dalam rumus tersebut. Ini berarti di dekat plat maupun agak jauh dari plat, kuat medannya **SAMA**.
+2. **Ketergantungan pada Medium:** Kuat medan hanya bergantung pada seberapa rapat muatannya ($\sigma$) dan sifat ruangnya ($\epsilon_0$).
+3. **Dua Sisi:** Angka "2" pada penyebut muncul karena fluks keluar dari **dua sisi** plat (atas dan bawah). Jika kita membahas medan di dalam kapasitor (antara dua plat), medannya akan menjadi dua kali lipat ($E = \frac{\sigma}{\epsilon_0}$) karena kontribusi dari kedua plat yang searah.
+
+### Distribusi Muatan Pada Bola Bermuatan Untuk r < a
+
+Pada bagian ini, kita meninjau sebuah bola pejal (bukan konduktor) dengan jari-jari luar $a$ dan total muatan $+Q$ yang tersebar merata di seluruh volumenya. Kita ingin menghitung kuat medan listrik $E$ di sebuah titik yang berada pada jarak $r$ dari pusat, di mana $r < a$ (di dalam bola).
+
+![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770529097718.png)
+
+#### 1. Konsep Rapat Muatan Volume ($\rho$)
+
+Karena muatan terdistribusi merata di seluruh volume bola, maka kita memiliki **Rapat Muatan Volume** yang konstan.
+
+- **Volume Total Bola:** $V_{total} = \frac{4}{3}\pi a^3$
+- **Rapat Muatan (**$\rho$**):**
+
+	$$\rho = \frac{Q}{V_{total}} = \frac{Q}{\frac{4}{3}\pi a^3}$$
+
+#### 2. Pemilihan Permukaan Gauss
+
+Sesuai dengan simetri bola, kita memilih **Permukaan Gauss berupa bola khayal** dengan jari-jari $r$ (garis kuning pada Figure 23).
+
+- Permukaan ini berada di dalam bola pejal tersebut.
+- Luas permukaan Gauss ini adalah $A = 4\pi r^2$.
+
+#### 3. Menghitung Muatan yang Dilingkupi ($q_{enc}$)
+
+Ini adalah bagian terpenting. Muatan yang dilingkupi oleh permukaan Gauss kita hanyalah muatan yang berada di dalam volume radius $r$.
+
+$$q_{enc} = \rho \times V_{Gaussian}$$$$q_{enc} = \rho \times \left(\frac{4}{3}\pi r^3 \right)$$
+
+Jika kita substitusikan nilai $\rho$ dari langkah pertama:
+
+$$q_{enc} = \left(\frac{Q}{\frac{4}{3}\pi a^3} \right) \times \left(\frac{4}{3}\pi r^3 \right)$$$$q_{enc} = Q \left(\frac{r^3}{a^3} \right)$$
+
+_Interpretasi:_ Muatan yang dilingkupi berbanding lurus dengan pangkat tiga dari perbandingan jari-jari.
+
+#### 4. Aplikasi Hukum Gauss
+
+Kita masukkan ke persamaan fluks:
+
+$$\oint \vec{E} \cdot d\vec{A} = \frac{q_{enc}}{\epsilon_0}$$
+
+Karena $E$ konstan dan searah dengan normal bidang di seluruh permukaan Gauss:
+
+$$E(4\pi r^2) = \frac{q_{enc}}{\epsilon_0}$$
+
+Substitusikan nilai $q_{enc}$ yang telah kita dapatkan:
+
+$$E(4\pi r^2) = \frac{Q (r^3/a^3)}{\epsilon_0}$$
+
+#### 5. Hasil Akhir dan Analisis
+
+Kita selesaikan untuk $E$:
+
+$$E = \frac{Q \cdot r^3}{4\pi \epsilon_0 r^2 \cdot a^3}$$$$E = \frac{Q \cdot r}{4\pi \epsilon_0 a^3}$$
+
+Atau jika menggunakan konstanta $k = \frac{1}{4\pi\epsilon_0}$:
+
+$$E = \frac{kQr}{a^3}$$
+
+#### Kesimpulan Fisis (Penting!)
+
+1. **Hubungan Linier:** Di dalam bola ($r < a$), medan listrik **berbanding lurus** dengan jarak ($E \propto r$). Artinya, di pusat bola ($r=0$) medannya adalah nol, dan semakin menjauh ke kulit bola, medannya semakin kuat secara linier.
+2. **Berbeda dengan Muatan Titik:** Jika pada muatan titik medan berkurang seiring $1/r^2$, di dalam bola bermuatan merata, medan justru bertambah seiring bertambahnya $r$.
+3. **Batas Permukaan:** Saat $r = a$ (tepat di permukaan), rumus ini akan menjadi $E = \frac{kQ}{a^2}$, yang mana sama persis dengan rumus muatan titik.
+
+### Distribusi Muatan Pada Bola Bermuatan Untuk r > a
+
+Pada bagian ini, kita meninjau titik pengamatan yang berada di luar bola pejal bermuatan. Jari-jari bola adalah $a$ dan jari-jari permukaan Gauss kita adalah $r$, dengan syarat $r > a$.
+
+![](attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 1-1770529299987.png)
+
+#### 1. Pemilihan Permukaan Gauss
+
+Sama seperti kasus sebelumnya, karena distribusi muatan memiliki simetri bola, maka medan listrik ($\vec{E}$) akan memancar keluar secara radial dan seragam ke segala arah.
+
+- Kita memilih **Permukaan Gauss berupa bola khayal** dengan jari-jari $r$ yang menyelimuti seluruh bola bermuatan tersebut.
+- Luas permukaan Gauss ini adalah $A = 4\pi r^2$.
+
+#### 2. Menghitung Fluks Listrik ($\Phi_E$)
+
+Karena medan listrik $\vec{E}$ di setiap titik pada permukaan Gauss memiliki besar yang sama dan arahnya selalu tegak lurus terhadap permukaan ($\theta = 0^\circ$), maka integral fluks menjadi sangat sederhana:
+
+$$\oint \vec{E} \cdot d\vec{A} = E \oint dA = E(4\pi r^2)$$
+
+#### 3. Menentukan Muatan yang Dilingkupi ($q_{enc}$)
+
+Ini adalah perbedaan mendasar dengan kasus $r < a$.
+
+- Ketika permukaan Gauss kita berada di luar bola ($r > a$), maka **seluruh muatan total bola (**$Q$**)** berada di dalam "jaring" permukaan Gauss kita.
+- Jadi, tidak perlu lagi menggunakan perbandingan volume atau rapat muatan $\rho$ secara rumit.
+
+	$$q_{enc} = Q$$
+
+#### 4. Aplikasi Hukum Gauss dan Hasil Akhir
+
+Masukkan nilai-nilai tersebut ke dalam persamaan Hukum Gauss:
+
+$$\Phi_E = \frac{q_{enc}}{\epsilon_0}$$$$E(4\pi r^2) = \frac{Q}{\epsilon_0}$$
+
+Kita selesaikan untuk $E$:
+
+$$E = \frac{Q}{4\pi \epsilon_0 r^2}$$
+
+Atau dengan menggunakan konstanta Coulomb $k = \frac{1}{4\pi \epsilon_0}$:
+
+$$E = \frac{kQ}{r^2}$$
+
+#### 5. Analisis dan Kesimpulan Fisis
+
+Berdasarkan hasil di atas, kita dapat menarik kesimpulan yang sangat penting bagi pemahaman elektrostatika Anda:
+
+1. **Ekivalensi Muatan Titik:** Rumus $E = \frac{kQ}{r^2}$ untuk luar bola identik dengan rumus medan listrik untuk sebuah muatan titik. Artinya, bagi pengamat yang berada di luar bola, bola raksasa bermuatan tersebut berperilaku seolah-olah seluruh muatannya terkumpul di satu titik pusat.
+2. **Hukum Kuadrat Terbalik:** Berbeda dengan bagian dalam bola ($E \propto r$), di luar bola medan listrik melemah sebanding dengan kuadrat jarak ($E \propto 1/r^2$).
+3. **Kontinuitas di Permukaan:** Tepat di kulit bola ($r = a$), kedua rumus (dalam dan luar) akan menghasilkan nilai yang sama:
+	
+	- Dari dalam: $E = \frac{kQa}{a^3} = \frac{kQ}{a^2}$
+	- Dari luar: $E = \frac{kQ}{a^2}$
+	- Ini menunjukkan bahwa medan listrik berubah secara kontinyu dari pusat hingga tak terhingga.
+
+#### Visualisasi Grafik Medan (E vs r)
+
+Jika Anda menggambar grafik medan listrik terhadap jarak dari pusat:
+
+- **0 hingga a:** Grafik naik secara linier (garis lurus miring ke atas).
+- **Di r = a:** Mencapai titik tertinggi ($E_{max}$).
+- **r > a:** Grafik turun melengkung secara eksponensial mendekati nol (kurva $1/r^2$).
+
+# Bab 5: Pembahasan Contoh Soal
+
+## 5.1 Pembahasan Latihan Fluks Listrik pada Bidang Persegi
+
+Dalam soal ini, kita akan menghitung fluks listrik ($\Phi_E$) yang melewati sebuah bidang persegi di dalam medan listrik seragam.
+
+### 1. Identifikasi Data (Besaran yang Diketahui)
+
+- **Medan Listrik (**$\vec{E}$**):** $3,50 \text{ kN/C} = 3500 \text{ N/C}$ (arah ke sumbu $x$ positif).
+- **Dimensi Bidang:** Lebar ($w$) = $0,350 \text{ m}$ dan Panjang ($l$) = $0,700 \text{ m}$.
+- **Luas Bidang (**$A$**):**
+
+	$$A = w \times l = 0,350 \text{ m} \times 0,700 \text{ m} = 0,245 \text{ m}^2$$
+
+### 2. Rumus Utama
+
+Berdasarkan flux pada bidang sembarang, fluks listrik dihitung dengan persamaan:
+
+$$\Phi_E = E \cdot A \cos \theta$$
+
+Dimana $\theta$ adalah sudut antara **arah medan listrik (**$\vec{E}$**)** dan **garis normal bidang (**$\hat{n}$**)**.
+
+### 3. Langkah Penyelesaian Kasus
+
+#### (a) Bidang paralel dengan bidang $yz$
+
+- **Analisis Geometri:** Jika bidang berada paralel dengan bidang $yz$ (berdiri tegak), maka garis normalnya (garis yang menusuk tegak lurus bidang) akan mengarah ke sumbu $x$.
+- **Sudut (**$\theta$**):** Karena medan listrik juga mengarah ke sumbu $x$, maka medan dan normal bidang adalah **sejajar**.
+
+	$$\theta = 0^\circ \implies \cos(0^\circ) = 1$$
+
+- **Perhitungan:**
+
+	$$\Phi_E = (3500 \text{ N/C}) \times (0,245 \text{ m}^2) \times 1 = \mathbf{857,5 \text{ Nm}^2/C}$$
+
+#### (b) Bidang paralel dengan bidang $xy$
+
+- **Analisis Geometri:** Jika bidang berada paralel dengan bidang $xy$ (mendatar/tidur), maka garis normalnya akan mengarah ke sumbu $z$ (ke atas atau bawah).
+- **Sudut (**$\theta$**):** Medan listrik mengarah ke sumbu $x$, sedangkan normal bidang ke sumbu $z$. Sumbu $x$ dan $z$ adalah **tegak lurus**.
+
+	$$\theta = 90^\circ \implies \cos(90^\circ) = 0$$
+
+- **Perhitungan:**
+
+	$$\Phi_E = (3500 \text{ N/C}) \times (0,245 \text{ m}^2) \times 0 = \mathbf{0 \text{ Nm}^2/C}$$
+
+> Dalam kasus ini, garis medan hanya "menyapu" permukaan bidang tanpa ada yang menembusnya sama sekali.
+
+#### (c) Normal bidang menyudut $40,0^\circ$ dengan sumbu $x$
+
+- **Analisis Geometri:** Di sini, soal langsung memberikan nilai sudut antara vektor normal ($\hat{n}$) dan arah medan ($\vec{E}$ yang searah sumbu $x$).
+- **Sudut (**$\theta$**):** $\theta = 40,0^\circ$.
+- **Perhitungan:**
+
+	$$\Phi_E = (3500 \text{ N/C}) \times (0,245 \text{ m}^2) \times \cos(40^\circ)$$$$\Phi_E = 857,5 \times 0,7660 \approx \mathbf{656,88 \text{ Nm}^2/C}$$
+
+### 4. Ringkasan Konsep untuk Anda
+
+1. **Kasus Maksimal (a):** Terjadi saat bidang tegak lurus terhadap aliran medan.
+2. **Kasus Nol (b):** Terjadi saat bidang sejajar terhadap aliran medan (tidak ada penetrasi garis medan).
+3. **Kasus Sudut (c):** Nilai fluks akan selalu lebih kecil dari nilai maksimal karena hanya komponen proyeksi medan yang dihitung.
+
+## 5.2 Pembahasan Latihan 1: Analisis Medan dan Fluks pada Filament
+
+**Data yang Diketahui:**
+
+- Panjang Filament ($L_{f}$): $7\text{ m}$
+- Muatan Total Filament ($Q_{total}$): $2,00~\mu\text{C} = 2,00 \times 10^{-6}\text{ C}$
+- Panjang Silinder Gauss ($L_{s}$): $2\text{ cm} = 0,02\text{ m}$
+- Jari-jari Silinder ($r$): $10\text{ cm} = 0,1\text{ m}$
+
+**Langkah 1: Menghitung Rapat Muatan Linear ($\lambda$)**
+
+Karena muatan terdistribusi seragam pada filament, kita cari dulu berapa muatan per satu meter panjangnya.
+
+$$\lambda = \frac{Q_{total}}{L_{f}}$$$$\lambda = \frac{2,00 \times 10^{-6}\text{ C}}{7\text{ m}} \approx 2,857 \times 10^{-7}\text{ C/m}$$
+
+**Langkah 2: Menyelesaikan Bagian (a) - Medan Listrik ($E$)**
+
+Kita gunakan pendekatan Hukum Gauss untuk kawat lurus panjang (Simetri Silinder). Pada selimut silinder, medan listrik bersifat radial dan konstan.
+
+**Rumus:**
+
+$$E = \frac{\lambda}{2\pi \epsilon_0 r}$$
+
+_(Tips: Gunakan hubungan_ $\frac{1}{2\pi \epsilon_0} = 2k$ _agar perhitungan lebih cepat)_
+
+**Perhitungan:**
+
+$$E = \frac{2 \cdot (9 \times 10^9) \cdot (2,857 \times 10^{-7})}{0,1}$$$$E = \frac{5142,6}{0,1}$$$$E = 51.426\text{ N/C} \approx \mathbf{5,14 \times 10^4\text{ N/C}}$$
+
+**Langkah 3: Menyelesaikan Bagian (b) - Total Fluks Listrik ($\Phi_E$)**
+
+Berdasarkan Hukum Gauss, total fluks yang menembus permukaan tertutup hanya bergantung pada muatan yang terperangkap di dalamnya ($q_{enc}$).
+
+**1. Hitung Muatan di Dalam Silinder (**$q_{enc}$**):**
+
+Hanya muatan filament sepanjang $2\text{ cm}$ ($L_s$) yang berada di dalam silinder tersebut.
+
+$$q_{enc} = \lambda \cdot L_{s}$$$$q_{enc} = (2,857 \times 10^{-7}\text{ C/m}) \cdot (0,02\text{ m})$$$$q_{enc} = 5,714 \times 10^{-9}\text{ C}$$
+
+**2. Hitung Fluks Listrik:**
+
+$$\Phi_E = \frac{q_{enc}}{\epsilon_0}$$$$\Phi_E = \frac{5,714 \times 10^{-9}\text{ C}}{8,85 \times 10^{-12}\text{ C}^2/\text{Nm}^2}$$$$\Phi_E \approx \mathbf{645,6\text{ Nm}^2/C}$$
+
+_(Cara Alternatif:_ $\Phi_E = E \cdot A_{selimut} = E \cdot (2\pi r L_s)$_. Hasilnya akan sama)._
+
+**Analisis Kesimpulan**
+
+1. **Validitas Pendekatan:** Mengapa kita boleh menganggap filament $7\text{ m}$ sebagai "tak berhingga"? Karena titik pengamatan kita ($r=10\text{ cm}$) sangat dekat dibandingkan ujung-ujung kawat yang berjarak $3,5\text{ m}$ dari pusat. Kesalahan akibat pendekatan ini sangat kecil.
+2. **Arah Medan:** Karena muatan filament positif, maka arah medan listrik di permukaan silinder adalah **radial keluar** (menjauhi sumbu silinder).
+3. **Fluks:** Perhatikan bahwa fluks hanya melewati dinding samping silinder. Pada tutup atas dan bawah silinder, medan listrik sejajar dengan permukaan, sehingga fluksnya nol.
+
+## 5.3 Pembahasan Latihan 2: Soal Plat Tembaga
+
+**Soal:** Plat tembaga sisi $50 \text{ cm}$ ($0,5 \text{ m}$), tidak bermuatan, diletakkan dalam medan seragam $E = 80,0 \text{ kN/C}$ ($80.000 \text{ N/C}$) tegak lurus plat.
+
+**Logika Fisika:**
+
+Tembaga adalah **konduktor**. Saat diletakkan di medan luar, elektron akan berpindah ke satu sisi, menyisakan muatan positif di sisi lain. Proses ini berlanjut sampai medan listrik **di dalam** tembaga menjadi **NOL**. Untuk mencapai ini, muatan induksi di permukaan harus menghasilkan medan yang melawan medan luar.
+
+**Penyelesaian:**
+
+- **(a) Rapat Muatan (**$\sigma$**):**
+
+	Pada permukaan konduktor, $E = \sigma / \epsilon_0$.
+
+	$$\sigma = E \cdot \epsilon_0 = 80.000 \text{ N/C} \times 8,85 \times 10^{-12} \text{ C}^2/\text{Nm}^2$$$$\sigma \approx 7,08 \times 10^{-7} \text{ C/m}^2 \text{ atau } 0,708 \mu\text{C/m}^2$$
+
+- **(b) Total Muatan (**$Q$**):**
+
+	$$Q = \sigma \cdot A = \sigma \cdot (\text{sisi} \times \text{sisi})$$$$Q = 7,08 \times 10^{-7} \text{ C/m}^2 \times (0,5 \text{ m})^2 = 7,08 \times 10^{-7} \times 0,25$$$$Q = 1,77 \times 10^{-7} \text{ C} \text{ atau } 0,177 \mu\text{C}$$
+
+## 5.4 Pembahasan Latihan 3: Soal Kubus Medan Non-Uniform
+
+**Soal:** Kubus sisi $L = 2 \text{ m}$. Medan $\vec{E} = (3x+4)\hat{i} + 6\hat{j} + 7\hat{k}$. Berapa muatan netto di dalam?
+
+**Penyelesaian:**
+
+Kita hitung fluks netto $\Phi_{net} = \oint \vec{E} \cdot d\vec{A}$.
+
+1. **Sumbu Y dan Z:** Karena komponen $E_y = 6$ dan $E_z = 7$ adalah konstanta, fluks yang masuk di satu sisi akan keluar di sisi lain dengan nilai yang sama. Maka $\Phi_y = 0$ dan $\Phi_z = 0$.
+2. **Sumbu X:** Medan berubah terhadap $x$.
+	
+	- **Muka Kiri (**$x = 0$**):** $\vec{E}_x = 3(0) + 4 = 4$. Arah normal ke luar adalah $-\hat{i}$.
+
+		$$\Phi_{kiri} = \vec{E} \cdot \vec{A} = (4)(-L^2) = -4 \times (2^2) = -16 \text{ Nm}^2/\text{C}$$
+
+	- **Muka Kanan (**$x = 2$**):** $\vec{E}_x = 3(2) + 4 = 10$. Arah normal ke luar adalah $+\hat{i}$.
+
+		$$\Phi_{kanan} = (10)(L^2) = 10 \times 4 = 40 \text{ Nm}^2/\text{C}$$
+
+3. **Fluks Netto:**
+
+	$$\Phi_{net} = 40 - 16 = 24 \text{ Nm}^2/\text{C}$$
+
+4. **Muatan Netto (**$q_{enc}$**):**
+
+	$$q_{enc} = \Phi_{net} \cdot \epsilon_0 = 24 \times 8,85 \times 10^{-12}$$$$q_{enc} \approx 2,12 \times 10^{-10} \text{ C}$$
