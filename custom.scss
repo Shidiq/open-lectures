@@ -1,0 +1,286 @@
+/*-- scss:defaults --*/
+
+// UGM brand colors
+$primary:    #003f8a;
+$secondary:  #5a7fa8;
+$accent:     #f5a000;
+$light:      #f8f9fa;
+$dark:       #1a1a2e;
+
+// Typography
+$font-family-sans-serif: "Inter", "Segoe UI", system-ui, sans-serif;
+$font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
+$font-size-base: 1rem;
+$line-height-base: 1.7;
+$headings-font-weight: 700;
+$headings-line-height: 1.3;
+
+// Navbar
+$navbar-bg: $primary;
+$navbar-fg: #ffffff;
+$navbar-hl: $accent;
+
+// Sidebar
+$sidebar-bg: #f4f6f9;
+$sidebar-fg: #2c3e50;
+$sidebar-hl: $primary;
+
+// Code blocks
+$code-bg: #f6f8fa;
+$code-color: #24292e;
+
+/*-- scss:rules --*/
+
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ── Hero section ──────────────────────────────────────────────
+.hero-banner {
+  background: linear-gradient(135deg, $primary 0%, #0a5299 60%, #1a73c8 100%);
+  color: white;
+  padding: 4rem 2rem 3.5rem;
+  margin: -1.5rem -1.5rem 2.5rem;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    opacity: 0.85;
+    max-width: 600px;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// ── Course cards ──────────────────────────────────────────────
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+
+  // strip paragraph margin Quarto adds inside divs
+  p { margin: 0; }
+}
+
+.course-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+
+  // invisible full-card link overlay
+  .card-link-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 1;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,63,138,0.12);
+    border-color: $primary;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $dark;
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+
+  .card-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .card-tag {
+    display: inline-block;
+    background: #eff6ff;
+    color: $primary;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+    letter-spacing: 0.03em;
+  }
+}
+
+// ── Section heading ───────────────────────────────────────────
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 0.5rem;
+}
+
+// ── Navbar tweaks ─────────────────────────────────────────────
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+}
+
+// ── Sidebar ───────────────────────────────────────────────────
+#quarto-sidebar {
+  border-right: 1px solid #e2e8f0;
+
+  .sidebar-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    padding: 0.5rem 0.75rem 0.25rem;
+  }
+
+  .sidebar-item-text {
+    font-size: 0.9rem;
+  }
+
+  .active > .sidebar-item-text {
+    color: $primary;
+    font-weight: 600;
+  }
+}
+
+// ── TOC ───────────────────────────────────────────────────────
+#TOC {
+  border-left: 3px solid #e2e8f0;
+  padding-left: 1rem;
+
+  .active {
+    border-left: 3px solid $primary;
+    margin-left: -1rem;
+    padding-left: 0.85rem;
+    color: $primary;
+    font-weight: 600;
+  }
+}
+
+// ── Content area ──────────────────────────────────────────────
+#quarto-content {
+  h1 { color: $dark; }
+  h2 {
+    color: $dark;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+  }
+  h3 { color: #2d3748; }
+}
+
+// ── Code blocks ───────────────────────────────────────────────
+pre.sourceCode {
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+}
+
+// ── Callouts ─────────────────────────────────────────────────
+.callout {
+  border-radius: 0.5rem;
+  border-left-width: 4px;
+}
+
+// ── Footer ───────────────────────────────────────────────────
+.nav-footer {
+  background: #1a1a2e;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  padding: 1.5rem 0;
+
+  a {
+    color: #cbd5e1;
+    &:hover { color: white; }
+  }
+}
+
+// ── Page nav buttons ──────────────────────────────────────────
+.page-navigation {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+
+  .nav-page a {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    display: block;
+    transition: border-color 0.15s, background 0.15s;
+
+    &:hover {
+      border-color: $primary;
+      background: #eff6ff;
+    }
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2.5rem 1.25rem 2rem;
+    margin: -1rem -1rem 1.5rem;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,9 +1,60 @@
 ---
-title: "Open Lectures"
+pagetitle: "Open Lectures – Fisika UGM"
+page-layout: full
+toc: false
+code-tools: false
 ---
 
-Selamat datang di materi kuliah terbuka dari Departemen Fisika FMIPA UGM.
+::: {.hero-banner}
+::: {.hero-badge}
+Departemen Fisika · FMIPA UGM
+:::
+::: {.hero-title}
+Open Lectures
+:::
+::: {.hero-subtitle}
+Materi kuliah terbuka yang dapat diakses siapa saja — bebas, terbuka, dan terus diperbarui.
+:::
+:::
 
-## Mata Kuliah
+::: {.section-label}
+Mata Kuliah Tersedia
+:::
 
-- [Fisika Dasar II](Fisika Dasar II/index.qmd)
+## Daftar Mata Kuliah
+
+::: {.course-grid}
+
+::: {.course-card}
+<a href="Fisika Dasar II/index.qmd" class="card-link-overlay" aria-label="Fisika Dasar II"></a>
+[⚡]{.card-icon}
+
+[Fisika Dasar II]{.card-title}
+
+[Elektrostatika, medan listrik, potensial, arus listrik, dan medan magnet untuk mahasiswa sains dan teknik.]{.card-desc}
+
+[S1 · Semester 2]{.card-tag}
+:::
+
+:::
+
+---
+
+::: {.columns}
+
+::: {.column width="33%"}
+### Terbuka & Gratis
+Semua materi dapat diakses tanpa biaya. Berlisensi [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — bebas dibagikan dan dimodifikasi dengan atribusi.
+:::
+
+::: {.column width="33%"}
+### Interaktif
+Kode Python tertanam langsung di halaman. Visualisasi dan simulasi dapat dijalankan secara langsung.
+:::
+
+::: {.column width="33%"}
+### Kontribusi
+Temukan kesalahan atau ingin menambahkan materi? Buka [issue](https://github.com/Shidiq/open-lectures/issues) atau kirim pull request.
+:::
+
+:::

@@ -6,18 +6,38 @@ project:
     - "**/*.qmd"
 
 website:
-  title: "Open Lectures — Shidiq Nur Hidayat"
+  title: "Open Lectures"
   description: "Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM"
   repo-url: https://github.com/Shidiq/open-lectures
   repo-actions: [edit, issue]
-  
+  favicon: "assets/favicon.svg"
+
   navbar:
+    logo: "assets/logo.svg"
+    logo-alt: "Open Lectures logo"
+    title: false
     left:
       - text: "Beranda"
         href: index.qmd
-  
+        icon: house
+      - text: "Mata Kuliah"
+        menu:
+          - text: "Fisika Dasar II"
+            href: "Fisika Dasar II/index.qmd"
+            icon: book
+    right:
+      - icon: github
+        href: https://github.com/Shidiq/open-lectures
+        aria-label: GitHub repository
+    search: true
+    background: primary
+    foreground: light
+
   sidebar:
     - title: "Fisika Dasar II"
+      style: "docked"
+      background: light
+      collapse-level: 2
       contents:
         - "Fisika Dasar II/index.qmd"
         - section: "Elektrostatika"
@@ -25,11 +45,39 @@ website:
             - "Fisika Dasar II/materi-01-elektrostatika-1/index.qmd"
             - "Fisika Dasar II/materi-02-elektrostatika-2/index.qmd"
 
+  page-navigation: true
+
+  page-footer:
+    left: |
+      &copy; 2024 Departemen Fisika, FMIPA UGM. Konten berlisensi [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+    right: |
+      Dibuat dengan [Quarto](https://quarto.org) &bull; [Kode sumber](https://github.com/Shidiq/open-lectures)
+    background: dark
+
+  open-graph:
+    site-name: "Open Lectures – Fisika UGM"
+    description: "Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM"
+
+  twitter-card:
+    creator: "@shidiq"
+    site: "@shidiq"
+
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [flatly, custom.scss]
     toc: true
     toc-depth: 3
+    toc-title: "Daftar Isi"
+    toc-expand: true
     code-fold: true
     code-tools: true
+    code-copy: true
     highlight-style: github
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    grid:
+      sidebar-width: 260px
+      body-width: 900px
+      margin-width: 200px
