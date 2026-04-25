@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Elektrostatika 2 – Open Lectures — Shidiq Nur Hidayat</title>
+<title>Elektrostatika 2 – Open Lectures</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -68,16 +33,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../Fisika Dasar II/materi-01-elektrostatika-1/index.html" rel="prev">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1eb2a280a64a1f5f4b84ce19fa1dd180.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-09bcd2438ddda8166a810b4ec224e0a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9d619b883b96467601d31840edf7aa4b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,6 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -136,17 +104,32 @@ window.Quarto = {
 };
 </script>
 
+<meta property="og:title" content="Elektrostatika 2 – Open Lectures">
+<meta property="og:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta property="og:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-02-elektrostatika-2/attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 2-1770716541232.png">
+<meta property="og:site_name" content="Open Lectures">
+<meta property="og:image:height" content="850">
+<meta property="og:image:width" content="2144">
+<meta name="twitter:title" content="Elektrostatika 2 – Open Lectures">
+<meta name="twitter:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta name="twitter:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-02-elektrostatika-2/attachments/Materi Kuliah 1 Fisika Dasar II – Elektrostatika 2-1770716541232.png">
+<meta name="twitter:creator" content="@shidiq">
+<meta name="twitter:site" content="@shidiq">
+<meta name="twitter:image-height" content="850">
+<meta name="twitter:image-width" content="2144">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Open Lectures — Shidiq Nur Hidayat</span>
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo light-content">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -156,8 +139,28 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
+</i> 
 <span class="menu-text">Beranda</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mata-kuliah" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Mata Kuliah</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mata-kuliah">    
+        <li>
+    <a class="dropdown-item" href="../../Fisika Dasar II/index.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">Fisika Dasar II</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Shidiq/open-lectures"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -179,7 +182,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -217,8 +220,8 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Daftar Isi</h2>
    
   <ul>
   <li><a href="#bab-1-energi-potensial-dan-potensial-listrik" id="toc-bab-1-energi-potensial-dan-potensial-listrik" class="nav-link active" data-scroll-target="#bab-1-energi-potensial-dan-potensial-listrik">Bab 1: Energi Potensial dan Potensial Listrik</a>
@@ -344,7 +347,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-01-elektrostatika-1/index.html">Elektrostatika</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-02-elektrostatika-2/index.html">Elektrostatika 2</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Elektrostatika 2</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Elektrostatika 2</h1>
 </div>
 
 
@@ -1652,8 +1655,6 @@ window.Quarto = {
 <p>Penyelesaian ini membuktikan mengapa satuan <strong>Farad</strong> adalah satuan yang sangat masif. Inilah alasan mengapa sebagian besar komponen elektronik yang kita temui menggunakan satuan mikrofarad (<span class="math inline">\(\mu\text{F}\)</span>), nanofarad (<span class="math inline">\(\text{nF}\)</span>), atau pikofarad (<span class="math inline">\(\text{pF}\)</span>).</p>
 
 
-<!-- -->
-
 </section>
 </section>
 </section>
@@ -1731,60 +1732,9 @@ window.Quarto = {
       });
       clipboardModal.on('success', onCopySuccess);
     }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
-    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Shidiq\.github\.io\/open-lectures\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1798,6 +1748,13 @@ window.Quarto = {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -2110,1095 +2067,33 @@ window.Quarto = {
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Elektrostatika 2"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bab 1: Energi Potensial dan Potensial Listrik</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.1 Konsep Dasar Energi Potensial Listrik</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Gaya elektrostatik adalah gaya konservatif. Artinya, usaha yang dilakukan oleh gaya listrik untuk memindahkan muatan tidak bergantung pada lintasan yang ditempuh, melainkan hanya pada posisi awal dan akhir.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Bagian ini menjelaskan bagaimana energi tersimpan dalam sistem muatan. Untuk memahaminya, kita harus melihat hubungan antara gaya, usaha, dan perubahan energi.</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Sifat Konservatif Gaya Elektrostatik</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Pernyataan kunci: _"Usaha yang dilakukan oleh gaya elektrostatik tidak bergantung pada lintasannya."_</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Dalam fisika, ini berarti gaya listrik adalah **gaya konservatif**. Sama seperti gaya gravitasi, jika Anda memindahkan muatan dari titik A ke titik B, besar usaha yang dilakukan oleh medan listrik akan selalu sama, baik Anda bergerak lurus, berbelok-belok, atau memutar terlebih dahulu. Hal ini memungkinkan kita untuk mendefinisikan fungsi "Energi Potensial" yang hanya bergantung pada posisi.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Hubungan Usaha ($W$) dan Energi Potensial ($\Delta U$)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Secara matematis, perubahan energi potensial sistem ($\Delta U$) didefinisikan sebagai negatif dari usaha ($W$) yang dilakukan oleh gaya listrik:</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>$$\Delta U = U_f - U_i = -W$$</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>**Mengapa tandanya negatif?**</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Ini adalah poin yang sering membingungkan. Ingat prinsip ini:</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jika medan listrik melakukan usaha positif ($W &gt; 0$), artinya medan tersebut "mendorong" muatan sesuai arah alaminya (misal: muatan positif menjauhi muatan positif lain). Akibatnya, sistem kehilangan energi potensial (energi berubah menjadi kinetik), sehingga $\Delta U$ bernilai negatif.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sebaliknya, jika kita melawan medan, kita melakukan usaha luar yang akan disimpan sebagai energi potensial tambahan.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Formulasi Matematis Usaha</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Usaha ($W$) didefinisikan sebagai hasil kali titik (_dot product_) antara gaya dan perpindahan:</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>$$W = \vec{F} \cdot \Delta\vec{r} = q\vec{E} \cdot \Delta\vec{r}$$</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Jika medan listrik ($\vec{E}$) tidak seragam (seperti pada gambar yang menunjukkan garis-garis medan menyebar dari muatan pusat), kita harus menggunakan integral untuk menjumlahkan usaha di setiap titik kecil lintasan ($d\vec{s}$):</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>$$W = \int q\vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Konsep Titik Referensi di Tak Terhingga ($\infty$)</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>Disebutkan:</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>_"_$W$ _adalah usaha yang akan dilakukan oleh gaya listrik (_$qE$_) untuk memindah muatan test positif_ $q$ _dari titik di_ $\infty$ _ke titik_ $P$_."_</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>Dalam elektrostatika, kita biasanya menetapkan titik tak terhingga sebagai referensi di mana energi potensialnya dianggap nol ($U_\infty = 0$).</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bayangkan muatan uji $q$ berada sangat jauh sehingga tidak merasakan gaya apa pun.</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Saat ia dibawa mendekati muatan sumber, gaya listrik mulai bekerja.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energi potensial di titik $P$ didefinisikan sebagai usaha yang dilakukan medan jika muatan tersebut dilepaskan dari $P$ kembali ke tak terhingga.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. Interpretasi Visual Gambar</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Gambar ini menunjukkan muatan sumber positif (hijau di pusat) dan muatan uji positif (hijau di luar).</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770716541232.png)</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Garis merah (panah):** Menunjukkan arah medan listrik ($\vec{E}$) yang keluar dari muatan positif.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Arah Panah Biru:** Menunjukkan arah gaya atau perpindahan. Karena sesama muatan positif tolak-menolak, maka gaya listrik cenderung mendorong muatan uji menjauh (menuju $U_f$ yang lebih jauh).</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gradien Energi:** Semakin dekat muatan uji positif ke muatan sumber positif, semakin besar energi potensialnya ($U$ tinggi), karena ada "tekanan" tolak-menolak yang besar yang siap melepaskan muatan tersebut.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.2 Potensial Listrik ($V$)</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>Jika pada pembahasan sebelumnya kita berfokus pada **Energi Potensial (**$U$**)** yang melibatkan interaksi antara muatan sumber dan muatan uji, maka pada bagian ini kita memperkenalkan **Potensial Listrik (**$V$**)** sebagai karakteristik murni dari medan itu sendiri.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Penurunan Matematis dari Usaha ke Potensial</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>Hubungan antara usaha ($W$), energi potensial ($\Delta U$), dan beda potensial ($\Delta V$) diturunkan sebagai berikut:</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Usaha Diferensial (**$dW$**):**</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    Saat sebuah muatan uji $q_0$ bergerak sejauh $d\vec{s}$ dalam medan listrik $\vec{E}$, usaha yang dilakukan oleh gaya listrik adalah:</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    $$dW = \vec{F} \cdot d\vec{s} = q_0 \vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Usaha Total (**$W$**):**</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>    Untuk memindahkan muatan dari titik $i$ ke $f$, kita mengintegralkan seluruh usaha kecil di sepanjang lintasan:</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>    $$W = q_0 \int_{i}^{f} \vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Perubahan Energi Potensial (**$\Delta U$**):**</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>    Karena $\Delta U = -W$, maka:</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>    $$\Delta U = U_f - U_i = -q_0 \int_{i}^{f} \vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Definisi Potensial Listrik (**$V$**):**</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>    Potensial didefinisikan sebagai energi potensial per satuan muatan:</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>    $$V = \frac{U}{q_0}$$</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>    Sehingga beda potensialnya adalah:</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    $$\Delta V = \frac{\Delta U}{q_0} = -\int_{i}^{f} \vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Perbedaan Esensial: $U$ vs $V$</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>Bagian ini memberikan informasi yang sangat krusial bagi mahasiswa:</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Beda Potensial (**$\Delta V$**):** Hanya bergantung pada **distribusi muatan sumber**. Titik $i$ dan $f$ memiliki nilai potensial bahkan jika tidak ada muatan apa pun di sana. Ini adalah properti lokasi di dalam medan listrik.</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Perubahan Energi Potensial (**$\Delta U$**):** Hanya muncul jika ada **muatan uji** yang dipindahkan di antara titik-titik tersebut. Tanpa adanya muatan uji yang berinteraksi, tidak ada energi yang tersimpan.</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Korelasi Fisis: Memahami "Lanskap" vs "Interaksi"</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>Pernyataan yang Anda kutip merujuk pada perbedaan antara **properti ruang** dan **properti sistem**. Berikut adalah bedah detailnya:</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 1. Analogi Topografi (Bukit dan Ketinggian)</span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>Bayangkan sebuah bukit yang terjal.</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Potensial (**$V$**) adalah "Ketinggian" (**$h$**):** Titik di puncak bukit memiliki "ketinggian" tertentu, tidak peduli apakah ada orang yang berdiri di sana atau tidak. Ketinggian adalah properti dari bukit itu sendiri (distribusi massa tanah/muatan sumber).</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Energi Potensial (**$U$**) adalah "Energi Gravitasi" (**$mgh$**):** Anda baru memiliki energi potensial jika Anda menaruh sebuah benda bermassa $m$ di ketinggian tersebut. Jika massa benda nol, energinya nol, tapi ketinggian bukit tetap ada.</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>**Korelasi Fisis:** Potensial listrik adalah cara kita mendeskripsikan betapa "curam" atau "tinggi" pengaruh listrik di suatu titik tanpa perlu tahu muatan apa yang akan lewat di sana.</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 2. Properti Intrinsik vs Ekstrinsik</span></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$V$ **bersifat Intrinsik terhadap Medan:** Jika kita memiliki sebuah bola bermassa besar (muatan sumber $Q$), ia otomatis "memodifikasi" ruang di sekitarnya. Modifikasi inilah yang kita sebut Potensial. Ia adalah **potensi** untuk melakukan usaha.</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$U$ **bersifat Ekstrinsik terhadap Sistem:** Energi adalah hasil dari **interaksi**. Secara fisis, energi potensial tidak disimpan _di dalam_ muatan uji, melainkan disimpan dalam **medan** yang berada di antara muatan sumber dan muatan uji. Itulah sebabnya kita menyebutnya energi _sistem_.</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 3. Konsep "Kesiapan" Ruang</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>Secara fisis, pernyataan tersebut bermakna bahwa ruang di sekitar muatan tidaklah "kosong".</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Setiap koordinat $(x, y, z)$ di sekitar muatan sumber memiliki nilai $V$. Ini menunjukkan **kesiapan** ruang tersebut untuk memberikan energi kepada muatan apa pun yang datang.</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ketika muatan uji $q$ masuk ke titik tersebut, ia seolah-olah "menagih" kesiapan ruang tersebut. Maka munculah energi: $U = qV$.</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 4. Mengapa Perbedaan Ini Penting? (Signifikansi Praktis)</span></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>Dalam teknik elektro atau fisika terapan, kita lebih sering bekerja dengan $V$ (Tegangan/Voltage) daripada $U$.</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Alasannya:** Kita bisa mendesain sebuah baterai 12 Volt tanpa perlu tahu apakah baterai itu akan menyalakan lampu kecil atau motor besar.</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Korelasinya:** Nilai 12 Volt ($V$) adalah janji distribusi muatan sumber di dalam baterai. Berapa besar energi ($U$) yang dikeluarkan? Itu tergantung pada berapa banyak muatan ($q$) yang kita lewatkan melalui kabel.</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Ringkasan Perbandingan</span></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Fitur**|**Potensial Listrik (V)**|**Energi Potensial Listrik (U)**<span class="pp">|</span></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Penyebab**<span class="pp">|</span>Distribusi muatan sumber saja.<span class="pp">|</span>Interaksi muatan sumber DAN muatan uji.<span class="pp">|</span></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Eksistensi**<span class="pp">|</span>Ada di setiap titik ruang (Medan).<span class="pp">|</span>Ada hanya jika ada muatan yang berinteraksi.<span class="pp">|</span></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Analogi fisis**<span class="pp">|</span>"Tekanan" atau "Ketinggian".<span class="pp">|</span>"Kerja yang tersimpan".<span class="pp">|</span></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Rumus**<span class="pp">|</span>$V = k \frac{Q}{r}$<span class="pp">|</span>$U = k \frac{Qq}{r}$<span class="pp">|</span></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Sistem Referensi: Relatif vs Absolut</span></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>Dalam perhitungan praktis, nilai mutlak potensial di satu titik tidaklah penting; yang penting adalah **perbedaannya**.</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Referensi Relatif:** Kita bebas menentukan di mana titik nol kita (seperti menentukan lantai dasar pada gedung).</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Referensi Absolut:** Secara konvensi fisik, kita sering menetapkan titik tak terhingga ($\infty$) sebagai titik nol ($U_i = 0$ dan $V_i = 0$). Dengan referensi ini, potensial di titik $f$ adalah usaha yang dilakukan medan untuk membawa muatan dari tak terhingga ke titik tersebut.</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Satuan dan Konversi Penting</span></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>Bagian ini menjelaskan standarisasi satuan untuk menghindari kesalahan perhitungan:</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Volt (V):** $1 \text{ Volt} = 1 \text{ Joule/Coulomb}$.</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Medan Listrik (**$\vec{E}$**):** Selain $N/C$, satuan yang lebih sering digunakan adalah **V/m** (Volt per meter).</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Elektron-Volt (eV):** Ini adalah satuan energi skala atomik. $1 \text{ eV}$ adalah energi yang diperoleh satu elektron saat bergerak melalui beda potensial $1 \text{ Volt}$.</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>    $$1 \text{ eV} = 1,60 \times 10^{-19} \text{ Joule}$$</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. Interpretasi Visual (Gambar Lintasan)</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>Pada gambar ini, terlihat lintasan hijau melengkung ($Path$) yang memotong garis-garis medan biru ($Field line$).</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi potensial listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770717334082.png)</span></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integral $-\int \vec{E} \cdot d\vec{s}$ menunjukkan bahwa kita hanya menghitung komponen medan yang sejajar dengan lintasan.</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Karena gaya listrik bersifat konservatif, bentuk lengkungan lintasan tersebut tidak akan merubah hasil akhir $\Delta V$, selama titik awal ($i$) dan titik akhir ($f$) tetap sama.</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.3 Analisis Kasus: Pergerakan Elektron dalam Medan Listrik Bumi</span></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="fu">### Soal</span></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>Kuat medan listrik di permukaan bumi diketahui adalah $E = 150 \text{ N/C}$ arah ke bawah. Suatu elektron bergerak dipengaruhi oleh medan tersebut dan menempuh jarak $d = 520 \text{ m}$. Hitung:</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>a. Perubahan tenaga potensial listrik yang dialami elektron</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>b. Beda potensial listrik yang dilalui elektron</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi soal.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770717704360.png)</span></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>Soal ini merupakan contoh klasik untuk memahami hubungan antara Medan Listrik ($\vec{E}$), Gaya Listrik ($\vec{F}$), Usaha ($W$), Energi Potensial ($\Delta U$), dan Beda Potensial ($\Delta V$).</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Identifikasi Masalah</span></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>Berdasarkan pembahasan sebelumnya, kita memiliki data berikut:</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kuat medan listrik bumi (**$E$**):** $150 \text{ N/C}$ dengan arah ke **bawah** (menuju pusat bumi).</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Partikel:** Sebuah elektron.</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Muatan elektron ($q$ atau $e$): $-1,6 \times 10^{-19} \text{ C}$ (negatif).</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Perpindahan (**$d$**):** $520 \text{ m}$ ke arah **atas**.</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Logika Arah Gaya</span></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>Karena muatan elektron negatif, maka gaya listrik ($\vec{F} = q\vec{E}$) yang dialaminya akan **berlawanan arah** dengan medan listrik. Jika medan ke bawah, maka gaya listrik pada elektron mengarah ke **atas**.</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Penyelesaian Bagian (a): Perubahan Energi Potensial ($\Delta U$)</span></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>Untuk mencari $\Delta U$, kita harus menghitung usaha ($W$) yang dilakukan oleh gaya listrik terlebih dahulu.</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Langkah 1: Menghitung Usaha ($W$)</span></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>Usaha oleh gaya listrik didefinisikan sebagai:</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>$$W = \vec{F} \cdot \vec{d} = F \cdot d \cos \theta$$</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Besar gaya $F = |q|E = (1,6 \times 10^{-19} \text{ C}) \times (150 \text{ N/C}) = 2,4 \times 10^{-17} \text{ N}$.</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Arah gaya $F$ adalah ke atas.</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Arah perpindahan $d$ adalah ke atas.</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Maka sudut $\theta$ antara gaya dan perpindahan adalah $0^\circ$.</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>$$W = (2,4 \times 10^{-17} \text{ N}) \times (520 \text{ m}) \times \cos 0^\circ$$$$W = 1,248 \times 10^{-14} \text{ J} \approx 1,2 \times 10^{-14} \text{ J}$$</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Langkah 2: Menghitung Perubahan Energi Potensial ($\Delta U$)</span></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>Hubungan antara usaha dan energi potensial adalah:</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>$$\Delta U = -W$$$$\Delta U = -1,2 \times 10^{-14} \text{ J}$$</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**Interpretasi Fisis:** Tanda negatif menunjukkan bahwa energi potensial elektron **berkurang** (turun). Hal ini masuk akal karena elektron bergerak "mengikuti" gaya alaminya (tertolak ke atas). Seperti benda yang jatuh bebas dalam gravitasi, energinya berubah dari potensial menjadi kinetik.</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Penyelesaian Bagian (b): Beda Potensial Listrik ($\Delta V$)</span></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>Beda potensial didefinisikan sebagai perubahan energi potensial per satuan muatan.</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Perhitungan</span></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>$$\Delta V = \frac{\Delta U}{q}$$</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>Masukkan nilai yang sudah kita dapatkan (ingat untuk menyertakan tanda negatif pada muatan elektron):</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>$$\Delta V = \frac{-1,2 \times 10^{-14} \text{ J}}{-1,6 \times 10^{-19} \text{ C}}$$$$\Delta V = 75.000 \text{ Volt} = 75 \text{ kV}$$</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>**Interpretasi Fisis:**</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hasilnya positif ($+75 \text{ kV}$), yang berarti titik akhir (atas) memiliki potensial yang **lebih tinggi** daripada titik awal (permukaan bumi).</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Aturan Emas:** Garis medan listrik selalu menunjuk dari potensial tinggi ke potensial rendah. Karena medan listrik bumi menunjuk ke bawah, maka titik di atas secara otomatis berada pada potensial yang lebih tinggi daripada titik di bawah.</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meskipun energi potensial elektron ($U$) turun, ia berpindah ke lokasi dengan potensial listrik ($V$) yang lebih tinggi. Tanda negatif pada muatan elektron membalikkan hubungan antara $U$ dan $V$.</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### Kesimpulan Penting</span></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Muatan Positif** akan kehilangan energi potensial jika bergerak dari potensial tinggi ke rendah.</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Muatan Negatif (Elektron)** akan kehilangan energi potensial jika bergerak dari potensial rendah ke tinggi (seperti pada soal ini).</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Usaha yang dilakukan oleh medan listrik dalam kasus ini bersifat "membantu" pergerakan elektron ke atas.</span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bab 2: Permukaan Ekipotensial dan Distribusi Muatan</span></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.1 Permukaan Ekipotensial</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>Permukaan ekipotensial adalah alat bantu visual dan matematis untuk memahami bagaimana potensial listrik terdistribusi di dalam ruang.</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Definisi dan Karakteristik Utama</span></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>Permukaan ekipotensial didefinisikan sebagai permukaan di mana setiap titik pada permukaan tersebut memiliki **potensial listrik (**$V$**) yang sama**.</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**Karakteristik Fisis Penting:**</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tegak Lurus terhadap Medan Listrik:** Garis medan listrik ($\vec{E}$) selalu tegak lurus dengan permukaan ekipotensial di setiap titik.</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>_Mengapa?_ Ingat hubungan $dV = -\vec{E} \cdot d\vec{s}$. Jika kita bergerak di sepanjang permukaan ekipotensial, maka $dV = 0$. Agar hasil perkalian titik ($\vec{E} \cdot d\vec{s}$) menjadi nol saat ada perpindahan ($d\vec{s} \neq 0$) dan medan ($E \neq 0$), maka sudut antara keduanya harus $90^\circ$ ($\cos 90^\circ = 0$).</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Usaha Nol (**$W = 0$**):** Tidak ada usaha yang dilakukan oleh gaya listrik untuk memindahkan muatan di sepanjang permukaan yang sama. Karena tidak ada perbedaan potensial ($\Delta V = 0$), maka $\Delta U = q\Delta V = 0$.</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Analogi Gravitasi (Peta Topografi)</span></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>Contoh analogi yang sangat kuat: **Garis Kontur Ketinggian.**</span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Di peta gunung, garis kontur menghubungkan titik-titik dengan ketinggian yang sama. Jika Anda berjalan mengikuti garis kontur, Anda tidak akan merasa lelah (tidak naik atau turun secara gravitasi).</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dalam listrik, "ketinggian" digantikan oleh "potensial". Selama Anda berada di permukaan ekipotensial yang sama, Anda berada di "ketinggian listrik" yang sama.</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Visualisasi Berbagai Distribusi</span></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="al">![Visualisasi distribusi potensial listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718469987.png)</span></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>Gambar ini menyajikan tiga skenario visual:</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**(a) Medan Seragam:** Garis medan listrik berbentuk garis lurus sejajar. Permukaan ekipotensialnya berbentuk **bidang datar sejajar** yang memotong garis medan secara tegak lurus.</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**(b) Muatan Titik:** Medan menyebar secara radial. Permukaan ekipotensialnya berbentuk **bola-bola konsentris** (seperti lapisan bawang) dengan muatan sebagai pusatnya.</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**(c) Dipol Listrik:** Pada sistem dua muatan berlawanan, permukaan ekipotensial menjadi lebih kompleks (berbentuk melengkung di sekitar muatan) namun tetap mempertahankan sifat tegak lurus terhadap garis medan yang melengkung.</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Perpindahan Antar Permukaan</span></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>Jika permukaan ekipotensial adalah "lantai" dengan ketinggian yang sama, maka memindahkan muatan dari satu permukaan ke permukaan lain adalah seperti "naik atau turun tangga".</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>Bagian menekankan dua hal krusial:</span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Independensi Lintasan:** Usaha yang dilakukan untuk memindahkan muatan dari permukaan $i$ (awal) ke permukaan $f$ (akhir) **tidak bergantung pada rutenya**.</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Anda bisa bergerak lurus, zigzag, atau berputar-putar; selama Anda berakhir di permukaan ekipotensial yang sama, usaha yang dilakukan tetap sama.</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Formulasi Integral:** Beda potensial tetap dihitung dengan integral garis:</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>    $$V_f - V_i = -\int_{i}^{f} \vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>    Nilai ini hanya ditentukan oleh identitas permukaan awal dan permukaan akhir.</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. Hubungan dengan Jarak Antar Permukaan</span></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>Secara fisis, jika permukaan ekipotensial digambarkan dengan selang potensial yang sama (misal selisih 10V per garis):</span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Di daerah di mana garis-garis ekipotensial **sangat rapat**, itu berarti medan listriknya **sangat kuat** (potensial berubah drastis dalam jarak pendek).</span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Di daerah di mana garis-garisnya **renggang**, medan listriknya **lemah**.</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.2 Potensial dari Muatan Titik dan Dipol Listrik</span></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>Setelah memahami definisi umum potensial, kita sekarang akan menerapkannya pada konfigurasi muatan yang paling dasar: muatan titik tunggal, sistem banyak muatan, dan dipol listrik.</span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Potensial dari Muatan Titik</span></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>Untuk menentukan potensial listrik pada jarak $r$ dari sebuah muatan titik $q$, kita menggunakan definisi beda potensial dengan menetapkan titik acuan di tak terhingga ($\infty$).</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi potensial dari muatan titik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718730339.png)</span></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>**Proses Penurunan Matematis:**</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Setting Referensi:** Kita tetapkan potensial di tak terhingga adalah nol ($V_f = 0$ pada $r = \infty$) dan kita ingin mencari potensial $V$ pada jarak $R$.</span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Persamaan Dasar:**</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>    $$\Delta V = V_f - V_i = -\int_{i}^{f} \vec{E} \cdot d\vec{s}$$</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Substitusi Medan (**$E$**):** Menggunakan hukum Coulomb, $E = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}$. Karena arah medan dan perpindahan searah ($\theta = 0^\circ$), maka $\vec{E} \cdot d\vec{s} = E \, dr$.</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Integrasi:**</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>    $$0 - V = -\int_{R}^{\infty} \frac{1}{4\pi\epsilon_0} \frac{q}{r^2} dr$$$$-V = -\frac{q}{4\pi\epsilon_0} \left[-\frac{1}{r} \right]_{R}^{\infty}$$$$-V = \frac{q}{4\pi\epsilon_0} \left(0 - \frac{1}{R} \right)$$</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Hasil Akhir:**</span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>    $$V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r}$$</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>**Catatan Fisis:** Berbeda dengan medan listrik yang berbanding terbalik dengan kuadrat jarak ($1/r^2$), potensial listrik hanya berbanding terbalik dengan jarak ($1/r$).</span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Potensial dari Sistem Banyak Muatan</span></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>Jika terdapat lebih dari satu muatan titik, kita menggunakan **Prinsip Superposisi**. Berita baiknya adalah potensial merupakan besaran **skalar**, sehingga kita tidak perlu melakukan penjumlahan vektor yang rumit.</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>$$V = \sum_{i=1}^{n} V_i = \frac{1}{4\pi\epsilon_0} \sum_{i=1}^{n} \frac{q_i}{r_i}$$</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>**Korelasi Penting:**</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Medan $E$ bisa bernilai nol di suatu titik, namun potensial $V$ tidak nol (misal: tepat di tengah-tengah dua muatan identik).</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Potensial $V$ bisa bernilai nol, namun medan $E$ tidak nol (misal: tepat di tengah-tengah dipol).</span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi muatan dari sistem banyak.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718860812.png)</span></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Potensial oleh Dipol Listrik</span></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>Dipol listrik adalah sistem yang terdiri dari dua muatan sama besar tetapi berlawanan tanda ($+q$ dan $-q$) yang dipisahkan oleh jarak $d$.</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi potensial dipol listrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770718917776.png)</span></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Konsep Momen Dipol ($p$)</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>Didefinisikan sebagai vektor yang mengarah dari muatan negatif ke positif dengan besar:</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>$$p = qd$$</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Potensial di Titik Jauh ($r \gg d$)</span></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>Untuk titik $P$ yang sangat jauh dibandingkan dengan jarak antar muatan, potensial dihitung berdasarkan jarak $r$ dan sudut $\theta$ terhadap sumbu dipol:</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>$$V = \frac{1}{4\pi\epsilon_0} \frac{p \cos \theta}{r^2}$$</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Analisis Fisis terhadap Sudut $\theta$</span></span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Pada Sumbu Dipol (**$\theta = 0^\circ$ **atau** $180^\circ$**):** Potensial memiliki nilai maksimum (positif atau negatif).</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Pada Bidang Tegak Lurus/Garis Tengah (**$\theta = 90^\circ$**):** Karena $\cos 90^\circ = 0$, maka $V = 0$. Ini berarti garis tengah antara dua muatan dipol adalah garis ekipotensial nol.</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Laju Penurunan:** Potensial dipol turun jauh lebih cepat ($1/r^2$) dibandingkan muatan tunggal ($1/r$). Hal ini dikarenakan dari kejauhan, muatan positif dan negatif terlihat seolah-olah saling meniadakan.</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ringkasan Perbandingan</span></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Jenis Sumber**|**Medan Listrik (E)**|**Potensial Listrik (V)**<span class="pp">|</span></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Muatan Titik**<span class="pp">|</span>Berbanding terbalik $r^2$<span class="pp">|</span>Berbanding terbalik $r$<span class="pp">|</span></span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Dipol Listrik**<span class="pp">|</span>Berbanding terbalik $r^3$<span class="pp">|</span>Berbanding terbalik $r^2$<span class="pp">|</span></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Sifat Matematika**<span class="pp">|</span>Penjumlahan Vektor<span class="pp">|</span>Penjumlahan Aljabar (Skalar)<span class="pp">|</span></span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.3 Potensial Listrik pada Distribusi Muatan Kontinu dan Konduktor</span></span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>Dalam realitas fisik, kita jarang berhadapan dengan muatan tunggal. Sebaliknya, muatan sering tersebar pada suatu benda. Bab ini akan menjelaskan cara menghitung potensial yang dihasilkan oleh distribusi muatan tersebut serta karakteristik unik pada bahan konduktor.</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Potensial karena Distribusi Muatan Kontinu</span></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>Ketika muatan tidak lagi berupa titik-titik terpisah melainkan tersebar secara merata pada suatu garis, bidang, atau volume, kita menggunakan pendekatan kalkulus (integrasi).</span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi potensial karena muatan terdistribusi kontinu.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719192105.png)</span></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1.1 Strategi Penyelesaian</span></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>Langkah-langkah untuk menentukan potensial di titik $P$ adalah:</span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Membagi Distribusi:** Anggap benda tersebut terdiri dari elemen muatan yang sangat kecil, disebut $dq$.</span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Menganggap sebagai Muatan Titik:** Setiap elemen $dq$ dianggap sebagai muatan titik yang memberikan kontribusi potensial kecil ($dV$) sebesar:</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>    $$dV = \frac{1}{4\pi\epsilon_0} \frac{dq}{r}$$</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Integrasi:** Jumlahkan seluruh kontribusi $dV$ dari seluruh bagian benda:</span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>    $$V = \int dV = \frac{1}{4\pi\epsilon_0} \int \frac{dq}{r}$$</span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1.2 Menentukan Ekspresi $dq$</span></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>Bentuk muatan $dq$ bergantung pada geometri benda tersebut:</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Distribusi Garis:** Jika muatan tersebar pada kawat (panjang $l$), maka $dq = \lambda dl$.</span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>$\lambda$: Rapat muatan linier (Coulomb/meter).</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Distribusi Permukaan:** Jika muatan tersebar pada pelat atau kulit bola (luas $A$), maka $dq = \sigma dA$.</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>$\sigma$: Rapat muatan permukaan (Coulomb/meter$^2$).</span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Distribusi Volume:** Jika muatan tersebar dalam benda padat (volume $V$), maka $dq = \rho dV$.</span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>$\rho$: Rapat muatan volume (Coulomb/meter$^3$).</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Potensial akibat Konduktor Terisolasi Bermuatan</span></span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>Konduktor memiliki sifat unik dalam elektrostatika karena elektron di dalamnya bebas bergerak. Hal ini menghasilkan beberapa konsekuensi fisis yang sangat penting.</span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="al">![Potensial akibat konduktor terisolasi yang bermuatan](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719279129.png)</span></span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2.1 Perilaku Muatan dan Medan</span></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>Berdasarkan Hukum Gauss dan sifat konduktor dalam kesetimbangan elektrostatik:</span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Muatan di Permukaan:** Semua muatan kelebihan akan menolak satu sama lain dan berkumpul hanya di **permukaan luar** konduktor.</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Medan Listrik Internal (**$E = 0$**):** Di dalam material konduktor, medan listrik adalah nol. Jika ada medan, maka elektron akan bergerak, yang berarti sistem belum setimbang.</span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Arah Medan di Permukaan:** Tepat di luar permukaan, medan listrik selalu tegak lurus terhadap permukaan tersebut.</span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2.2 Sifat Ekipotensial Konduktor</span></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>Karena $\vec{E} = 0$ di dalam konduktor, maka beda potensial antara dua titik ($A$ dan $B$) di dalam atau di permukaan konduktor adalah:</span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>$$V_B - V_A = -\int_{A}^{B} \vec{E} \cdot d\vec{s} = 0$$</span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>**Kesimpulan Fisis:**</span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Seluruh bagian konduktor (baik di permukaan maupun di dalam) memiliki **potensial listrik yang sama**.</span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Konduktor adalah sebuah **benda ekipotensial**.</span>
-<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2.3 Analisis Grafik</span></span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="al">![Potensial bola konduktor.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719335649.png)</span></span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>Jika kita memiliki bola konduktor berjari-jari $R$ dengan total muatan $Q$:</span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Untuk** $r &lt; R$ **(Di Dalam):**</span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Medan Listrik $E = 0$.</span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Potensial $V$ bernilai konstan: $V = \frac{k_e Q}{R}$.</span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Untuk** $r \geq R$ **(Di Luar):**</span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Medan Listrik turun secara kuadratik: $E = \frac{k_e Q}{r^2}$.</span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Potensial $V$ turun secara linear terhadap jarak: $V = \frac{k_e Q}{r}$.</span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Korelasi Fisis yang Penting</span></span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>Mengapa potensial di dalam konduktor tidak nol meskipun medan listriknya nol?</span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Analogi:** Bayangkan sebuah meja yang sangat tinggi di atas permukaan tanah. Meskipun permukaannya rata (tidak ada kemiringan/medan), setiap titik di atas meja tetap memiliki "ketinggian" (potensial) yang besar dibandingkan tanah.</span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Makna:** Dibutuhkan usaha untuk membawa muatan dari tak terhingga menuju permukaan konduktor. Namun, setelah sampai di permukaan, tidak dibutuhkan usaha lagi untuk memindahkan muatan tersebut ke bagian dalam karena tidak ada hambatan (medan listrik).</span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.4 Hubungan Diferensial antara Medan Listrik dan Potensial</span></span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>Jika pada bagian sebelumnya kita menghitung potensial dari medan listrik melalui operasi **integral**, sekarang kita akan melakukan sebaliknya: menentukan medan listrik dari fungsi potensial menggunakan operasi **turunan (derivatif)**.</span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Penurunan Hubungan Matematis</span></span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>Mari kita tinjau sebuah muatan uji positif $q_0$ yang berpindah sejauh $d\vec{s}$ dari satu permukaan ekipotensial ke permukaan ekipotensial lainnya yang berdekatan.</span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Langkah 1: Tinjauan Energi</span></span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>Usaha ($W$) yang dilakukan oleh medan listrik adalah negatif dari perubahan energi potensial listrik ($dU$):</span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>$$W = -dU$$</span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>Karena $dU = q_0 dV$, maka:</span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>$$W = -q_0 dV$$</span>
-<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Langkah 2: Tinjauan Gaya</span></span>
-<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>Di sisi lain, berdasarkan definisi kerja mekanis, usaha adalah hasil kali titik antara gaya listrik dan perpindahan:</span>
-<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>$$W = \vec{F} \cdot d\vec{s} = (q_0 \vec{E}) \cdot d\vec{s}$$</span>
-<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>Jika $\theta$ adalah sudut antara arah medan listrik $\vec{E}$ dan arah perpindahan $d\vec{s}$, maka:</span>
-<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>$$W = q_0 E (\cos \theta) ds$$</span>
-<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Langkah 3: Menyamakan Kedua Persamaan</span></span>
-<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>$$-q_0 dV = q_0 E (\cos \theta) ds$$</span>
-<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>Dengan mencoret $q_0$, kita mendapatkan:</span>
-<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>$$E \cos \theta = -\frac{dV}{ds}$$</span>
-<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Interpretasi Fisis: Komponen Medan Listrik</span></span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>Besaran $E \cos \theta$ sebenarnya adalah komponen medan listrik pada arah $s$, yang kita simbolkan sebagai $E_s$. Maka rumusnya menjadi:</span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>$$E_s = -\frac{\partial V}{\partial s}$$</span>
-<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>**Arti Fisis dari Persamaan ini:**</span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Laju Perubahan:** Medan listrik pada arah tertentu adalah nilai negatif dari laju perubahan potensial terhadap jarak pada arah tersebut.</span>
-<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Arah Penurunan:** Tanda **negatif** menunjukkan bahwa vektor medan listrik selalu mengarah ke tempat yang potensialnya **menurun** paling drastis.</span>
-<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Tegak Lurus:** Jika kita berpindah di sepanjang permukaan ekipotensial ($dV = 0$), maka $E_s = 0$. Ini membuktikan kembali bahwa medan listrik tidak memiliki komponen di sepanjang permukaan ekipotensial, alias selalu tegak lurus terhadap permukaan tersebut.</span>
-<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Penerapan dalam Koordinat Kartesius</span></span>
-<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>Jika kita memiliki fungsi potensial dalam ruang tiga dimensi $V(x, y, z)$, kita dapat menemukan komponen medan listrik pada masing-masing sumbu menggunakan turunan parsial:</span>
-<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>$$E_x = -\frac{\partial V}{\partial x}$$$$E_y = -\frac{\partial V}{\partial y}$$$$E_z = -\frac{\partial V}{\partial z}$$</span>
-<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>_Catatan: Turunan parsial (_$\partial$_) berarti kita hanya menurunkan variabel yang dimaksud (misal_ $x$_) dan menganggap variabel lain (_$y$ _dan_ $z$_) sebagai konstanta._</span>
-<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Contoh Analisis (Pengayaan)</span></span>
-<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a>Bayangkan fungsi potensial listrik di suatu ruang adalah $V = 2x^2y$. Berapakah medan listrik di titik tersebut?</span>
-<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Komponen** $x$**:** $E_x = -\frac{\partial (2x^2y)}{\partial x} = -4xy$</span>
-<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Komponen** $y$**:** $E_y = -\frac{\partial (2x^2y)}{\partial y} = -2x^2$</span>
-<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Komponen** $z$**:** $E_z = -\frac{\partial (2x^2y)}{\partial z} = 0$</span>
-<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a>Maka vektor medan listriknya adalah $\vec{E} = -4xy\hat{i} - 2x^2\hat{j}$.</span>
-<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ringkasan Konsep</span></span>
-<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span></span>
-<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Operasi**|**Rumus**|**Keterangan**<span class="pp">|</span></span>
-<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Mencari** $V$ **dari** $E$|$V = -\int \vec{E} \cdot d\vec{s}$|Menggunakan **Integrasi** (Penjumlahan kontribusi)<span class="pp">|</span></span>
-<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Mencari** $E$ **dari** $V$|$E_s = -\frac{\partial V}{\partial s}$|Menggunakan **Diferensiasi** (Mencari kemiringan/gradien)<span class="pp">|</span></span>
-<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.5 Energi Potensial Sistem Muatan dan Perilaku Konduktor</span></span>
-<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a>Bagian ini akan membahas dua aspek penting: bagaimana energi tersimpan saat kita mengumpulkan beberapa muatan di satu tempat, dan bagaimana konduktor logam mendistribusikan muatan serta potensialnya secara otomatis.</span>
-<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Tenaga Potensial Listrik Sistem Partikel Bermuatan</span></span>
-<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>Energi potensial listrik sebuah sistem didefinisikan sebagai **usaha yang harus dilakukan oleh agen luar untuk merakit sistem tersebut**, dengan membawa setiap muatan satu per satu dari jarak tak terhingga ke posisi akhirnya.</span>
-<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi konfigurasi muatan.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770719855097.png)</span></span>
-<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1.1 Sistem Dua Muatan Titik</span></span>
-<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>Bayangkan kita memiliki dua muatan, $q_1$ dan $q_2$, yang dipisahkan oleh jarak $d$.</span>
-<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Saat $q_1$ diletakkan pertama kali, tidak ada usaha yang dilakukan karena belum ada medan listrik di sana.</span>
-<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Saat $q_2$ dibawa mendekat ke posisi $d$ dari $q_1$, ia merasakan medan yang dihasilkan $q_1$. Usaha yang dibutuhkan untuk melawan (atau mengikuti) gaya tersebut adalah:</span>
-<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>    $$U = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{d}$$</span>
-<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>**Catatan Fisis:**</span>
-<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jika $q_1$ dan $q_2$ memiliki tanda yang sama, $U$ bernilai **positif**. Ini berarti kita harus "memaksa" mereka untuk berdekatan (melawan gaya tolak).</span>
-<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jika tanda berbeda, $U$ bernilai **negatif**. Ini berarti medan listrik melakukan usaha untuk menarik mereka, sehingga sistem kehilangan energi potensial.</span>
-<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1.2 Sistem Tiga Muatan (Prinsip Pasangan)</span></span>
-<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a>Untuk sistem dengan tiga muatan ($q_1, q_2, q_3$) yang membentuk segitiga dengan sisi $d$, energinya adalah jumlah dari energi interaksi **setiap pasangan unik** yang mungkin terbentuk:</span>
-<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>$$U = \frac{1}{4\pi\epsilon_0} \left(\frac{q_1 q_2}{d} + \frac{q_2 q_3}{d} + \frac{q_3 q_1}{d} \right)$$</span>
-<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>**Logika Perhitungannya:**</span>
-<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Letakkan $q_1$: $W_1 = 0$.</span>
-<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Bawa $q_2$: $W_2 = \text{interaksi } (q_1, q_2)$.</span>
-<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Bawa $q_3$: $W_3 = \text{interaksi } (q_1, q_3) + \text{interaksi } (q_2, q_3)$.</span>
-<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Total Energi $U = W_1 + W_2 + W_3$.</span>
-<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Potensial Berkaitan dengan Konduktor Bermuatan</span></span>
-<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>Konduktor (seperti bola logam) memiliki sifat unik karena elektron di dalamnya bebas bergerak.</span>
-<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Dalam konduktor muatan bebas selalu berada di permukaan konduktor karena di dalam konduktor resultan gaya listrik adalah nol. Muatan-muatan bebas menuju permukaan karena di permukaan gaya tolak menolak adalah minimum atau muatan-muatan bebas mempunyai jarak antar muatan yang paling panjang.</span></span>
-<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2.1 Distribusi Muatan</span></span>
-<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>Muatan bebas pada konduktor selalu berkumpul di **permukaan luar**.</span>
-<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Alasannya:** Muatan sejenis saling tolak-menolak. Posisi di mana gaya tolak antar mereka paling minimum adalah posisi di mana jarak antar mereka paling jauh, yaitu di permukaan terluar.</span>
-<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Akibatnya:** Di dalam material konduktor, tidak ada kelebihan muatan bersih, sehingga medan listrik di dalam adalah nol ($E = 0$).</span>
-<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2.2 Analisis Potensial pada Bola Konduktor ($R$)</span></span>
-<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>Misalkan bola memiliki muatan total $Q$ dan jari-jari $R$.</span>
-<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Di Dalam dan di Permukaan (**$0 \leq r \leq R$**):**</span>
-<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>    Karena $E = 0$, maka tidak ada perubahan potensial di sepanjang bagian dalam bola. Potensial di titik pusat sama dengan di permukaan:</span>
-<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>    $$V = \frac{1}{4\pi\epsilon_0} \frac{Q}{R}$$</span>
-<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>    _Artinya: Bola konduktor adalah benda ekipotensial (memiliki satu nilai potensial yang sama di seluruh volumenya)._</span>
-<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Di Luar Bola (**$r &gt; R$**):**</span>
-<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>    Begitu kita keluar dari bola, ia berperilaku persis seperti muatan titik yang terkonsentrasi di pusat:</span>
-<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>    $$V = \frac{1}{4\pi\epsilon_0} \frac{Q}{r} \quad \text{dan} \quad \vec{E} = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2} \hat{u}_r$$</span>
-<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Ringkasan Hubungan $E$ dan $V$ pada Konduktor</span></span>
-<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>Berdasarkan hal tersebut, kita dapat menyimpulkan profil fisis sebagai berikut:</span>
-<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span>   <span class="pp">|</span></span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Wilayah**|**Medan Listrik (E)**|**Potensial Listrik (V)**<span class="pp">|</span></span>
-<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Di dalam (**$r &lt; R$**)**<span class="pp">|</span>Nol ($0$)<span class="pp">|</span>Konstan ($kQ/R$)<span class="pp">|</span></span>
-<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Di permukaan (**$r = R$**)**<span class="pp">|</span>Maksimum ($kQ/R^2$)<span class="pp">|</span>Tetap ($kQ/R$)<span class="pp">|</span></span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Di luar (**$r &gt; R$**)**<span class="pp">|</span>Meluruh secara $1/r^2$<span class="pp">|</span>Meluruh secara $1/r$<span class="pp">|</span></span>
-<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>**Pesan Kunci:**</span>
-<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>Meskipun medan listrik di dalam bola adalah nol, **potensialnya tidak nol**. Hal ini karena potensial dihitung berdasarkan usaha untuk membawa muatan dari tak terhingga. Kita butuh usaha besar untuk sampai ke permukaan bola, namun setelah sampai di permukaan, kita tidak butuh usaha tambahan untuk masuk ke dalamnya.</span>
-<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2.6 Pembahasan Soal</span></span>
-<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Delapan buah muatan titik positif $q$ yang sama ($q = 1$ C) diletakkan pada pojok-pojok kubus dengan rusuk $a = 10$ cm. Hitunglah kuat medan listrik dan potensial listrik di pusat kubus tersebut.</span>
-<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Ada dua muatan sama besar diletakkan pada suatu jarak tertentu. Jika masing-masing muatan itu dijadikan dua kalinya, bagaimanakah jaraknya diubah supaya gayanya tetap?</span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ada tiga muatan sama besar dan sejenis membentuk segitiga sama sisi. Jika sisi segitiga dijadikan dua kalinya, bagaimanakah perubahan energi potensial sistem ini?</span>
-<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pembahasan Soal 1: Distribusi Muatan pada Pojok-Pojok Kubus</span></span>
-<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a>Soal ini menguji pemahaman kita tentang perbedaan sifat fisis antara Medan Listrik (Vektor) dan Potensial Listrik (Skalar).</span>
-<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. Analisis Geometri Kubus</span></span>
-<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>Diketahui:</span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Panjang rusuk ($a$) = $10$ cm = $0,1$ m.</span>
-<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muatan ($q$) = $1$ C (pada setiap pojok).</span>
-<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lokasi titik pengamatan: Pusat kubus.</span>
-<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>Untuk menghitung medan dan potensial, kita butuh jarak ($r$) dari pojok ke pusat kubus.</span>
-<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Diagonal sisi kubus = $a\sqrt{2}$.</span>
-<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Diagonal ruang kubus = $\sqrt{(a\sqrt{2})^2 + a^2} = a\sqrt{3}$.</span>
-<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Jarak dari pojok ke pusat ($r$) adalah setengah dari diagonal ruang:</span>
-<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>    $$r = \frac{1}{2} a\sqrt{3} = \frac{0,1 \sqrt{3}}{2} = 0,05\sqrt{3} \text{ m}$$</span>
-<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. Menghitung Kuat Medan Listrik ($\vec{E}$) di Pusat Kubus</span></span>
-<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>Medan listrik adalah besaran **vektor**. Artinya, arah sangat menentukan hasil akhirnya.</span>
-<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Analisis Simetri</span></span>
-<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bayangkan satu muatan di pojok kiri bawah depan. Ia menghasilkan medan listrik $\vec{E}_1$ yang mengarah menjauhi muatan tersebut (menembus pusat kubus).</span>
-<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Di pojok yang berlawanan secara diagonal (pojok kanan atas belakang), terdapat muatan $q$ yang sama persis. Ia menghasilkan medan $\vec{E}_2$ yang besarnya sama namun arahnya tepat berlawanan dengan $\vec{E}_1$.</span>
-<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Akibatnya, $\vec{E}_1 + \vec{E}_2 = 0$.</span>
-<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>Karena kubus memiliki 4 pasang pojok yang saling berlawanan secara diagonal, maka setiap pasang akan saling meniadakan.</span>
-<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>$$\vec{E}_{total} = \vec{E}_1 + \vec{E}_2 + \dots + \vec{E}_8 = 0$$</span>
-<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>**Jawaban:** Kuat medan listrik di pusat kubus adalah $0 \text{ N/C}$.</span>
-<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. Menghitung Potensial Listrik ($V$) di Pusat Kubus</span></span>
-<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>Potensial listrik adalah besaran **skalar**. Artinya, kita cukup menjumlahkan nilainya secara aljabar tanpa mempedulikan arah.</span>
-<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Langkah Perhitungan</span></span>
-<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>Karena kedelapan muatan memiliki besar yang sama ($q$) dan jarak yang sama ($r$) ke pusat, maka potensial totalnya adalah 8 kali potensial dari satu muatan:</span>
-<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>$$V_{total} = \sum_{i=1}^{8} V_i = 8 \times \left(\frac{1}{4\pi\epsilon_0} \frac{q}{r} \right)$$</span>
-<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>Masukkan nilai konstanta Coulomb $k = \frac{1}{4\pi\epsilon_0} \approx 9 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$:</span>
-<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>$$V_{total} = 8 \times \left(9 \times 10^9 \times \frac{1}{0,05\sqrt{3}} \right)$$$$V_{total} = \frac{72 \times 10^9}{0,05\sqrt{3}}$$$$V_{total} = \frac{1,44 \times 10^{12}}{\sqrt{3}}$$</span>
-<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>Gunakan nilai $\sqrt{3} \approx 1,732$:</span>
-<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>$$V_{total} \approx 8,31 \times 10^{11} \text{ Volt}$$</span>
-<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>**Jawaban:** Potensial listrik di pusat kubus adalah sekitar $8,31 \times 10^{11} \text{ V}$.</span>
-<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Kesimpulan Fisis</span></span>
-<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>Kasus ini menunjukkan fenomena yang sangat penting dalam fisika:</span>
-<span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Medan Nol, Potensial Tidak Nol:** Di pusat kubus, gaya-gaya listrik saling tarik-menarik/tolak-menolak secara seimbang sehingga benda di pusat tidak akan bergerak (resultan gaya nol). Namun, titik tersebut memiliki energi potensial yang sangat tinggi karena kita telah melakukan usaha yang luar biasa besar untuk mengumpulkan delapan muatan $1$ Coulomb (muatan yang sangat masif untuk ukuran laboratorium) ke dalam ruang sekecil itu.</span>
-<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Pentingnya Satuan:** Perhatikan bahwa muatan $1$ C adalah muatan yang sangat besar. Dalam praktikum, kita biasanya menggunakan satuan mikroCoulomb ($\mu\text{C}$). Jika soal menggunakan $1 \mu\text{C}$, maka hasilnya akan menjadi $8,31 \times 10^5 \text{ V}$.</span>
-<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pembahasan Soal 2: Analisis Perbandingan Gaya Coulomb</span></span>
-<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>Soal ini berkaitan dengan **Hukum Coulomb**, yang menyatakan bahwa gaya elektrostatis antara dua muatan berbanding lurus dengan perkalian muatan-muatannya dan berbanding terbalik dengan kuadrat jarak antara keduanya.</span>
-<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. Persamaan Dasar</span></span>
-<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>Rumus umum Hukum Coulomb adalah:</span>
-<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a>$$F = k \frac{q_1 q_2}{r^2}$$</span>
-<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>Di mana:</span>
-<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$F$ = Gaya Coulomb</span>
-<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$k$ = Konstanta Coulomb</span>
-<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$q_1, q_2$ = Besar muatan</span>
-<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>$r$ = Jarak antar muatan</span>
-<span id="cb1-708"><a href="#cb1-708" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. Identifikasi Kondisi</span></span>
-<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>**Kondisi Awal (1):**</span>
-<span id="cb1-712"><a href="#cb1-712" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muatan: $q_1$ dan $q_2$</span>
-<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jarak: $r_1$</span>
-<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gaya: $F_1 = k \frac{q_1 q_2}{r_1^2}$</span>
-<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a>**Kondisi Akhir (2):**</span>
-<span id="cb1-718"><a href="#cb1-718" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-719"><a href="#cb1-719" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muatan dijadikan dua kali lipat: $q_1' = 2q_1$ dan $q_2' = 2q_2$</span>
-<span id="cb1-720"><a href="#cb1-720" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Gaya harus tetap: $F_2 = F_1$</span>
-<span id="cb1-721"><a href="#cb1-721" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jarak baru: $r_2$ (yang ingin kita cari hubungannya dengan $r_1$)</span>
-<span id="cb1-722"><a href="#cb1-722" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-723"><a href="#cb1-723" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. Langkah Penyelesaian (Metode Perbandingan)</span></span>
-<span id="cb1-724"><a href="#cb1-724" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-725"><a href="#cb1-725" aria-hidden="true" tabindex="-1"></a>Karena $F_1 = F_2$, kita dapat menyamakan kedua persamaan tersebut:</span>
-<span id="cb1-726"><a href="#cb1-726" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-727"><a href="#cb1-727" aria-hidden="true" tabindex="-1"></a>$$k \frac{q_1 q_2}{r_1^2} = k \frac{(2q_1)(2q_2)}{r_2^2}$$</span>
-<span id="cb1-728"><a href="#cb1-728" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-729"><a href="#cb1-729" aria-hidden="true" tabindex="-1"></a>Kita bisa mencoret konstanta $k$, $q_1$, dan $q_2$ dari kedua ruas:</span>
-<span id="cb1-730"><a href="#cb1-730" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-731"><a href="#cb1-731" aria-hidden="true" tabindex="-1"></a>$$\frac{1}{r_1^2} = \frac{4}{r_2^2}$$</span>
-<span id="cb1-732"><a href="#cb1-732" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-733"><a href="#cb1-733" aria-hidden="true" tabindex="-1"></a>Kemudian, kita lakukan perkalian silang:</span>
-<span id="cb1-734"><a href="#cb1-734" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-735"><a href="#cb1-735" aria-hidden="true" tabindex="-1"></a>$$r_2^2 = 4r_1^2$$</span>
-<span id="cb1-736"><a href="#cb1-736" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-737"><a href="#cb1-737" aria-hidden="true" tabindex="-1"></a>Untuk mendapatkan nilai $r_2$, kita akarkan kedua ruas:</span>
-<span id="cb1-738"><a href="#cb1-738" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-739"><a href="#cb1-739" aria-hidden="true" tabindex="-1"></a>$$\sqrt{r_2^2} = \sqrt{4r_1^2}$$$$r_2 = 2r_1$$</span>
-<span id="cb1-740"><a href="#cb1-740" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-741"><a href="#cb1-741" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 4. Kesimpulan Fisis</span></span>
-<span id="cb1-742"><a href="#cb1-742" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-743"><a href="#cb1-743" aria-hidden="true" tabindex="-1"></a>Agar gaya Coulomb tetap konstan ketika masing-masing muatan diperbesar menjadi dua kali lipat, maka **jarak antara kedua muatan tersebut juga harus diperbesar menjadi dua kali lipat dari jarak semula.**</span>
-<span id="cb1-744"><a href="#cb1-744" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-745"><a href="#cb1-745" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Logika Sederhana</span></span>
-<span id="cb1-746"><a href="#cb1-746" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-747"><a href="#cb1-747" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Efek Muatan:** Mengalikan masing-masing muatan dengan 2 akan membuat pembilang menjadi 4 kali lebih besar ($2 \times 2 = 4$). Ini cenderung membuat gaya menjadi 4 kali lebih kuat.</span>
-<span id="cb1-748"><a href="#cb1-748" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Efek Jarak:** Karena gaya berbanding terbalik dengan **kuadrat** jarak ($1/r^2$), maka untuk mengimbangi penguatan 4 kali tadi, kita butuh penyebut yang juga 4 kali lebih besar.</span>
-<span id="cb1-749"><a href="#cb1-749" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Jarak yang dikuadratkan menghasilkan angka 4 adalah 2 ($2^2 = 4$). Jadi, jarak harus menjadi 2 kali semula.</span>
-<span id="cb1-750"><a href="#cb1-750" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-751"><a href="#cb1-751" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pembahasan Soal 3: Analisis Energi Potensial Sistem Muatan Segitiga</span></span>
-<span id="cb1-752"><a href="#cb1-752" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-753"><a href="#cb1-753" aria-hidden="true" tabindex="-1"></a>Soal ini menguji pemahaman kita tentang energi rakitan sistem. Energi potensial sistem adalah usaha total yang diperlukan untuk menyusun muatan-muatan tersebut dari jarak tak terhingga ke posisi masing-masing.</span>
-<span id="cb1-754"><a href="#cb1-754" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-755"><a href="#cb1-755" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. Kondisi Awal (Sistem 1)</span></span>
-<span id="cb1-756"><a href="#cb1-756" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-757"><a href="#cb1-757" aria-hidden="true" tabindex="-1"></a>Diketahui:</span>
-<span id="cb1-758"><a href="#cb1-758" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-759"><a href="#cb1-759" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tiga muatan identik dan sejenis: $q_1 = q_2 = q_3 = q$.</span>
-<span id="cb1-760"><a href="#cb1-760" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Membentuk segitiga sama sisi dengan panjang sisi: $a$.</span>
-<span id="cb1-761"><a href="#cb1-761" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-762"><a href="#cb1-762" aria-hidden="true" tabindex="-1"></a>Dalam segitiga, terdapat **tiga pasangan** muatan yang berinteraksi:</span>
-<span id="cb1-763"><a href="#cb1-763" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-764"><a href="#cb1-764" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Pasangan muatan 1 dan 2 (jarak $a$)</span>
-<span id="cb1-765"><a href="#cb1-765" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Pasangan muatan 2 dan 3 (jarak $a$)</span>
-<span id="cb1-766"><a href="#cb1-766" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Pasangan muatan 3 dan 1 (jarak $a$)</span>
-<span id="cb1-767"><a href="#cb1-767" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-768"><a href="#cb1-768" aria-hidden="true" tabindex="-1"></a>Maka, energi potensial total awal ($U_1$) adalah:</span>
-<span id="cb1-769"><a href="#cb1-769" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-770"><a href="#cb1-770" aria-hidden="true" tabindex="-1"></a>$$U_1 = k \frac{q_1 q_2}{a} + k \frac{q_2 q_3}{a} + k \frac{q_3 q_1}{a}$$</span>
-<span id="cb1-771"><a href="#cb1-771" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-772"><a href="#cb1-772" aria-hidden="true" tabindex="-1"></a>Karena muatannya sama besar ($q$), maka:</span>
-<span id="cb1-773"><a href="#cb1-773" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-774"><a href="#cb1-774" aria-hidden="true" tabindex="-1"></a>$$U_1 = 3 \left(k \frac{q^2}{a} \right)$$</span>
-<span id="cb1-775"><a href="#cb1-775" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-776"><a href="#cb1-776" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. Kondisi Akhir (Sistem 2)</span></span>
-<span id="cb1-777"><a href="#cb1-777" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-778"><a href="#cb1-778" aria-hidden="true" tabindex="-1"></a>Diketahui:</span>
-<span id="cb1-779"><a href="#cb1-779" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-780"><a href="#cb1-780" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muatan tetap sama ($q$).</span>
-<span id="cb1-781"><a href="#cb1-781" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Panjang sisi segitiga dijadikan dua kalinya: $a' = 2a$.</span>
-<span id="cb1-782"><a href="#cb1-782" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-783"><a href="#cb1-783" aria-hidden="true" tabindex="-1"></a>Energi potensial total akhir ($U_2$) adalah:</span>
-<span id="cb1-784"><a href="#cb1-784" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-785"><a href="#cb1-785" aria-hidden="true" tabindex="-1"></a>$$U_2 = 3 \left(k \frac{q^2}{a'} \right)$$</span>
-<span id="cb1-786"><a href="#cb1-786" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-787"><a href="#cb1-787" aria-hidden="true" tabindex="-1"></a>Substitusikan nilai $a' = 2a$:</span>
-<span id="cb1-788"><a href="#cb1-788" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-789"><a href="#cb1-789" aria-hidden="true" tabindex="-1"></a>$$U_2 = 3 \left(k \frac{q^2}{2a} \right)$$$$U_2 = \frac{1}{2} \left<span class="co">[</span><span class="ot">3 \left(k \frac{q^2}{a} \right) \right</span><span class="co">]</span>$$</span>
-<span id="cb1-790"><a href="#cb1-790" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-791"><a href="#cb1-791" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. Perbandingan dan Kesimpulan</span></span>
-<span id="cb1-792"><a href="#cb1-792" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-793"><a href="#cb1-793" aria-hidden="true" tabindex="-1"></a>Dengan membandingkan $U_1$ dan $U_2$, kita mendapatkan hubungan:</span>
-<span id="cb1-794"><a href="#cb1-794" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-795"><a href="#cb1-795" aria-hidden="true" tabindex="-1"></a>$$U_2 = \frac{1}{2} U_1$$</span>
-<span id="cb1-796"><a href="#cb1-796" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-797"><a href="#cb1-797" aria-hidden="true" tabindex="-1"></a>**Jawaban:**</span>
-<span id="cb1-798"><a href="#cb1-798" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-799"><a href="#cb1-799" aria-hidden="true" tabindex="-1"></a>Jika sisi segitiga dijadikan dua kalinya, maka energi potensial sistem tersebut akan berubah menjadi **setengah (**$1/2$**) dari energi potensial semula.**</span>
-<span id="cb1-800"><a href="#cb1-800" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-801"><a href="#cb1-801" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 4. Korelasi Fisis</span></span>
-<span id="cb1-802"><a href="#cb1-802" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-803"><a href="#cb1-803" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Hubungan Berbanding Terbalik:** Energi potensial listrik ($U$) berbanding terbalik dengan jarak ($r$). Jika jarak antar seluruh komponen sistem menjauh, maka kerapatan energi sistem tersebut akan menurun.</span>
-<span id="cb1-804"><a href="#cb1-804" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Usaha oleh Gaya Listrik:** Karena muatannya sejenis (positif-positif atau negatif-negatif), mereka secara alami saling tolak-menolak.</span>
-<span id="cb1-805"><a href="#cb1-805" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-806"><a href="#cb1-806" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Memperbesar jarak berarti membiarkan muatan "menjauh" sesuai arah gaya alaminya.</span>
-<span id="cb1-807"><a href="#cb1-807" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Selama proses penjauhan ini, medan listrik melakukan usaha positif, sehingga energi potensial yang tersimpan dalam sistem berkurang.</span>
-<span id="cb1-808"><a href="#cb1-808" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-809"><a href="#cb1-809" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Aplikasi Konsep:** Jika muatannya berlawanan jenis (misal dua positif satu negatif), perhitungannya tetap sama (menggunakan penjumlahan aljabar), namun tanda plus-minus pada hasil akhir akan menentukan apakah energi tersebut dilepaskan atau diserap oleh sistem.</span>
-<span id="cb1-810"><a href="#cb1-810" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-811"><a href="#cb1-811" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bab 3: Kapasitor dan Kapasitansi</span></span>
-<span id="cb1-812"><a href="#cb1-812" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-813"><a href="#cb1-813" aria-hidden="true" tabindex="-1"></a>Kapasitor adalah salah satu aplikasi paling nyata dari prinsip potensial listrik. Alat ini berfungsi untuk menyimpan energi potensial listrik dan muatan listrik dalam jangka waktu tertentu.</span>
-<span id="cb1-814"><a href="#cb1-814" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-815"><a href="#cb1-815" aria-hidden="true" tabindex="-1"></a><span class="al">![Ilustrasi kapasitor](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781222122.png)</span></span>
-<span id="cb1-816"><a href="#cb1-816" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-817"><a href="#cb1-817" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.1 Prinsip Dasar Kapasitansi</span></span>
-<span id="cb1-818"><a href="#cb1-818" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-819"><a href="#cb1-819" aria-hidden="true" tabindex="-1"></a>Secara struktural, sebuah kapasitor terdiri dari dua konduktor (sering disebut pelat) dengan bentuk apa pun yang diletakkan berdekatan tetapi tidak bersentuhan. Biasanya, di antara kedua pelat tersebut diisi oleh bahan isolator yang disebut **Dielektrik**.</span>
-<span id="cb1-820"><a href="#cb1-820" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-821"><a href="#cb1-821" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1.1 Definisi Kapasitansi ($C$)</span></span>
-<span id="cb1-822"><a href="#cb1-822" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-823"><a href="#cb1-823" aria-hidden="true" tabindex="-1"></a>Ketika kapasitor dihubungkan dengan sumber tegangan (baterai), muatan $+q$ akan berkumpul pada satu pelat dan muatan $-q$ pada pelat lainnya. Besarnya muatan $q$ yang tersimpan berbanding lurus dengan beda potensial ($V$) antar pelat:</span>
-<span id="cb1-824"><a href="#cb1-824" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-825"><a href="#cb1-825" aria-hidden="true" tabindex="-1"></a>$$q = CV$$</span>
-<span id="cb1-826"><a href="#cb1-826" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-827"><a href="#cb1-827" aria-hidden="true" tabindex="-1"></a>**Kapasitansi (**$C$**)** adalah ukuran kemampuan kapasitor untuk menyimpan muatan.</span>
-<span id="cb1-828"><a href="#cb1-828" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-829"><a href="#cb1-829" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Satuan SI:** Farad (F). $1 \text{ F} = 1 \text{ Coulomb/Volt}$.</span>
-<span id="cb1-830"><a href="#cb1-830" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Catatan:** 1 Farad adalah satuan yang sangat besar. Dalam praktik elektronika, kita lebih sering menggunakan $\mu\text{F}$ ($10^{-6} \text{ F}$), $\text{nF}$ ($10^{-9} \text{ F}$), atau $\text{pF}$ ($10^{-12} \text{ F}$).</span>
-<span id="cb1-831"><a href="#cb1-831" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-832"><a href="#cb1-832" aria-hidden="true" tabindex="-1"></a><span class="al">![Simbol kapasitor.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781408179.png)</span></span>
-<span id="cb1-833"><a href="#cb1-833" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-834"><a href="#cb1-834" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.2 Geometri dan Perhitungan Kapasitansi</span></span>
-<span id="cb1-835"><a href="#cb1-835" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-836"><a href="#cb1-836" aria-hidden="true" tabindex="-1"></a>Nilai kapasitansi tidak bergantung pada muatan atau tegangan, melainkan bergantung sepenuhnya pada **bagaimana kapasitor itu dibuat** (geometri dan materialnya).</span>
-<span id="cb1-837"><a href="#cb1-837" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-838"><a href="#cb1-838" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2.1 Kapasitor Pelat Paralel</span></span>
-<span id="cb1-839"><a href="#cb1-839" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-840"><a href="#cb1-840" aria-hidden="true" tabindex="-1"></a>Untuk kapasitor yang terdiri dari dua pelat sejajar dengan luas $A$ dan dipisahkan jarak $d$:</span>
-<span id="cb1-841"><a href="#cb1-841" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-842"><a href="#cb1-842" aria-hidden="true" tabindex="-1"></a>$$C = \frac{\epsilon_0 A}{d}$$</span>
-<span id="cb1-843"><a href="#cb1-843" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-844"><a href="#cb1-844" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Analisis:** Untuk memperbesar kapasitansi, kita bisa memperluas pelat ($A \uparrow$) atau mendekatkan jarak antar pelat ($d \downarrow$).</span>
-<span id="cb1-845"><a href="#cb1-845" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-846"><a href="#cb1-846" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2.2 Geometri Lainnya</span></span>
-<span id="cb1-847"><a href="#cb1-847" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-848"><a href="#cb1-848" aria-hidden="true" tabindex="-1"></a>Berdasarkan hukum Gauss, kita dapat menurunkan rumus kapasitansi untuk bentuk lainnya:</span>
-<span id="cb1-849"><a href="#cb1-849" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-850"><a href="#cb1-850" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Kapasitor Silinder:** Terdiri dari dua silinder konsentris dengan jari-jari $a$ (dalam) dan $b$ (luar) serta panjang $L$.</span>
-<span id="cb1-851"><a href="#cb1-851" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-852"><a href="#cb1-852" aria-hidden="true" tabindex="-1"></a>    $$C = 2\pi\epsilon_0 \frac{L}{\ln(b/a)}$$</span>
-<span id="cb1-853"><a href="#cb1-853" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-854"><a href="#cb1-854" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Kapasitor Bola:** Terdiri dari dua bola konduktor konsentris.</span>
-<span id="cb1-855"><a href="#cb1-855" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-856"><a href="#cb1-856" aria-hidden="true" tabindex="-1"></a>    $$C = 4\pi\epsilon_0 \frac{ab}{b-a}$$</span>
-<span id="cb1-857"><a href="#cb1-857" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-858"><a href="#cb1-858" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Bola Terisolasi:** Sebuah konduktor bola tunggal jari-jari $R$ (dengan menganggap pelat kedua berada di tak terhingga).</span>
-<span id="cb1-859"><a href="#cb1-859" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-860"><a href="#cb1-860" aria-hidden="true" tabindex="-1"></a>    $$C = 4\pi\epsilon_0 R$$</span>
-<span id="cb1-861"><a href="#cb1-861" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-862"><a href="#cb1-862" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.3 Rangkaian Kapasitor</span></span>
-<span id="cb1-863"><a href="#cb1-863" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-864"><a href="#cb1-864" aria-hidden="true" tabindex="-1"></a>Seringkali kita membutuhkan nilai kapasitansi tertentu yang tidak tersedia pada satu komponen tunggal, sehingga kita merangkainya.</span>
-<span id="cb1-865"><a href="#cb1-865" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-866"><a href="#cb1-866" aria-hidden="true" tabindex="-1"></a><span class="al">![Rangkaian kapasitor seri dan paralel.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781618718.png)</span></span>
-<span id="cb1-867"><a href="#cb1-867" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-868"><a href="#cb1-868" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3.1 Rangkaian Paralel</span></span>
-<span id="cb1-869"><a href="#cb1-869" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-870"><a href="#cb1-870" aria-hidden="true" tabindex="-1"></a>Kapasitor dipasang berdampingan sehingga setiap kapasitor merasakan **tegangan (**$V$**) yang sama**.</span>
-<span id="cb1-871"><a href="#cb1-871" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-872"><a href="#cb1-872" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Muatan Total:** $q_{total} = q_1 + q_2 + q_3 + \dots$</span>
-<span id="cb1-873"><a href="#cb1-873" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kapasitansi Ekivalen (**$C_{eq}$**):**</span>
-<span id="cb1-874"><a href="#cb1-874" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-875"><a href="#cb1-875" aria-hidden="true" tabindex="-1"></a>    $$C_{eq} = C_1 + C_2 + C_3 + \dots$$</span>
-<span id="cb1-876"><a href="#cb1-876" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-877"><a href="#cb1-877" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tujuan:** Digunakan untuk memperbesar nilai kapasitansi total.</span>
-<span id="cb1-878"><a href="#cb1-878" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-879"><a href="#cb1-879" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3.2 Rangkaian Seri</span></span>
-<span id="cb1-880"><a href="#cb1-880" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-881"><a href="#cb1-881" aria-hidden="true" tabindex="-1"></a>Kapasitor dipasang berderet sehingga setiap kapasitor menyimpan **muatan (**$q$**) yang sama**.</span>
-<span id="cb1-882"><a href="#cb1-882" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-883"><a href="#cb1-883" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tegangan Total:** $V_{total} = V_1 + V_2 + V_3 + \dots$</span>
-<span id="cb1-884"><a href="#cb1-884" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kapasitansi Ekivalen (**$C_{eq}$**):**</span>
-<span id="cb1-885"><a href="#cb1-885" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-886"><a href="#cb1-886" aria-hidden="true" tabindex="-1"></a>    $$\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \dots$$</span>
-<span id="cb1-887"><a href="#cb1-887" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-888"><a href="#cb1-888" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tujuan:** Digunakan untuk membagi tegangan tinggi agar tidak merusak satu kapasitor tunggal.</span>
-<span id="cb1-889"><a href="#cb1-889" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-890"><a href="#cb1-890" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.4 Peran Dielektrik dalam Aplikasi</span></span>
-<span id="cb1-891"><a href="#cb1-891" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-892"><a href="#cb1-892" aria-hidden="true" tabindex="-1"></a>Mengapa kita butuh dielektrik? Soal pada Slide 26 menunjukkan bahwa untuk membuat kapasitor $1\text{ F}$ dengan udara, kita butuh pelat dengan sisi sekitar $10\text{ km}$. Ini sangat tidak praktis.</span>
-<span id="cb1-893"><a href="#cb1-893" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-894"><a href="#cb1-894" aria-hidden="true" tabindex="-1"></a>**Solusinya:** Menyisipkan bahan dielektrik dengan konstanta $\kappa$.</span>
-<span id="cb1-895"><a href="#cb1-895" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-896"><a href="#cb1-896" aria-hidden="true" tabindex="-1"></a>$$C = \frac{\kappa \epsilon_0 A}{d}$$</span>
-<span id="cb1-897"><a href="#cb1-897" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-898"><a href="#cb1-898" aria-hidden="true" tabindex="-1"></a>Dielektrik berfungsi untuk:</span>
-<span id="cb1-899"><a href="#cb1-899" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-900"><a href="#cb1-900" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Meningkatkan kapasitansi tanpa menambah ukuran fisik.</span>
-<span id="cb1-901"><a href="#cb1-901" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Menjaga agar kedua pelat logam tidak saling bersentuhan secara mekanis.</span>
-<span id="cb1-902"><a href="#cb1-902" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Meningkatkan tegangan operasional maksimum (kekuatan dielektrik).</span>
-<span id="cb1-903"><a href="#cb1-903" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-904"><a href="#cb1-904" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bab 4: Dielektrik dan Penyimpanan Energi pada Kapasitor</span></span>
-<span id="cb1-905"><a href="#cb1-905" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-906"><a href="#cb1-906" aria-hidden="true" tabindex="-1"></a>Pada bab-bab sebelumnya, kita mengasumsikan bahwa ruang di antara pelat kapasitor adalah hampa udara. Namun, dalam aplikasinya, ruang tersebut diisi oleh material isolator yang disebut **Dielektrik**. Bab ini akan mengupas tuntas pengaruh material ini serta bagaimana kapasitor menyimpan energi.</span>
-<span id="cb1-907"><a href="#cb1-907" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-908"><a href="#cb1-908" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.1 Konsep Dasar Dielektrik</span></span>
-<span id="cb1-909"><a href="#cb1-909" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-910"><a href="#cb1-910" aria-hidden="true" tabindex="-1"></a>**Dielektrik** adalah bahan isolasi (non-konduktor) seperti kaca, mika, kertas, atau plastik yang ditempatkan di antara dua konduktor kapasitor.</span>
-<span id="cb1-911"><a href="#cb1-911" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-912"><a href="#cb1-912" aria-hidden="true" tabindex="-1"></a><span class="al">![Konsep bahan dielektrik.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770781731159.png)</span></span>
-<span id="cb1-913"><a href="#cb1-913" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-914"><a href="#cb1-914" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1.1 Fungsi Utama Dielektrik</span></span>
-<span id="cb1-915"><a href="#cb1-915" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-916"><a href="#cb1-916" aria-hidden="true" tabindex="-1"></a>Secara fisis, penyisipan bahan dielektrik memberikan tiga keuntungan utama:</span>
-<span id="cb1-917"><a href="#cb1-917" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-918"><a href="#cb1-918" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Peningkatan Kapasitansi:** Bahan dielektrik meningkatkan kemampuan kapasitor dalam menyimpan muatan.</span>
-<span id="cb1-919"><a href="#cb1-919" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Stabilitas Mekanik:** Bertindak sebagai pemisah fisik yang menjaga agar kedua pelat logam yang berdekatan tidak saling bersentuhan.</span>
-<span id="cb1-920"><a href="#cb1-920" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Kekuatan Dielektrik:** Memungkinkan kapasitor bekerja pada tegangan tinggi tanpa terjadi kebocoran arus (loncatan bunga api) antar pelat.</span>
-<span id="cb1-921"><a href="#cb1-921" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-922"><a href="#cb1-922" aria-hidden="true" tabindex="-1"></a><span class="fu">#### General Materials</span></span>
-<span id="cb1-923"><a href="#cb1-923" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-924"><a href="#cb1-924" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Material**|**Dielectric Constant (κ)**<span class="pp">|</span></span>
-<span id="cb1-925"><a href="#cb1-925" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-926"><a href="#cb1-926" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Air<span class="pp">|</span>1.00059<span class="pp">|</span></span>
-<span id="cb1-927"><a href="#cb1-927" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Bakelite<span class="pp">|</span>4.9<span class="pp">|</span></span>
-<span id="cb1-928"><a href="#cb1-928" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Gasoline<span class="pp">|</span>2.0 (70°F)<span class="pp">|</span></span>
-<span id="cb1-929"><a href="#cb1-929" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Glass (Pyrex)<span class="pp">|</span>5.6<span class="pp">|</span></span>
-<span id="cb1-930"><a href="#cb1-930" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Mica<span class="pp">|</span>5.4<span class="pp">|</span></span>
-<span id="cb1-931"><a href="#cb1-931" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Neoprene<span class="pp">|</span>6.9<span class="pp">|</span></span>
-<span id="cb1-932"><a href="#cb1-932" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Paper<span class="pp">|</span>3.7<span class="pp">|</span></span>
-<span id="cb1-933"><a href="#cb1-933" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Paraffin<span class="pp">|</span>2.1–2.5<span class="pp">|</span></span>
-<span id="cb1-934"><a href="#cb1-934" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Plexiglas<span class="pp">|</span>3.4<span class="pp">|</span></span>
-<span id="cb1-935"><a href="#cb1-935" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Polystyrene<span class="pp">|</span>2.55<span class="pp">|</span></span>
-<span id="cb1-936"><a href="#cb1-936" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Porcelain<span class="pp">|</span>7<span class="pp">|</span></span>
-<span id="cb1-937"><a href="#cb1-937" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Strontium titanate<span class="pp">|</span>240<span class="pp">|</span></span>
-<span id="cb1-938"><a href="#cb1-938" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Transformer oil<span class="pp">|</span>2.24<span class="pp">|</span></span>
-<span id="cb1-939"><a href="#cb1-939" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-940"><a href="#cb1-940" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Dielectric Constants of Typical Metal Oxides</span></span>
-<span id="cb1-941"><a href="#cb1-941" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-942"><a href="#cb1-942" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>**Composition**|**Dielectric Constant**<span class="pp">|</span></span>
-<span id="cb1-943"><a href="#cb1-943" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-944"><a href="#cb1-944" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>SiO₂<span class="pp">|</span>3.9<span class="pp">|</span></span>
-<span id="cb1-945"><a href="#cb1-945" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Al₂O₃<span class="pp">|</span>9<span class="pp">|</span></span>
-<span id="cb1-946"><a href="#cb1-946" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>ZrO₂<span class="pp">|</span>29<span class="pp">|</span></span>
-<span id="cb1-947"><a href="#cb1-947" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>HfO₂<span class="pp">|</span>25<span class="pp">|</span></span>
-<span id="cb1-948"><a href="#cb1-948" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>HfSiO₄<span class="pp">|</span>11<span class="pp">|</span></span>
-<span id="cb1-949"><a href="#cb1-949" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Ta₂O₅<span class="pp">|</span>26<span class="pp">|</span></span>
-<span id="cb1-950"><a href="#cb1-950" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>La₂O₃<span class="pp">|</span>30<span class="pp">|</span></span>
-<span id="cb1-951"><a href="#cb1-951" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>LaAlO₃<span class="pp">|</span>30<span class="pp">|</span></span>
-<span id="cb1-952"><a href="#cb1-952" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Nb₂O₅<span class="pp">|</span>35<span class="pp">|</span></span>
-<span id="cb1-953"><a href="#cb1-953" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>TiO₂<span class="pp">|</span>95<span class="pp">|</span></span>
-<span id="cb1-954"><a href="#cb1-954" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>BaTiO₃<span class="pp">|</span>1700<span class="pp">|</span></span>
-<span id="cb1-955"><a href="#cb1-955" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>SrTiO₃<span class="pp">|</span>2000<span class="pp">|</span></span>
-<span id="cb1-956"><a href="#cb1-956" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Pb(Zr,Ti)O₃, (Pb,La)(Zr,Ti)O₃<span class="pp">|</span>2500<span class="pp">|</span></span>
-<span id="cb1-957"><a href="#cb1-957" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>CaCu₃Ti₄O₁₂<span class="pp">|</span>80,000<span class="pp">|</span></span>
-<span id="cb1-958"><a href="#cb1-958" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-959"><a href="#cb1-959" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1.2 Formulasi Matematis</span></span>
-<span id="cb1-960"><a href="#cb1-960" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-961"><a href="#cb1-961" aria-hidden="true" tabindex="-1"></a>Dengan adanya dielektrik, rumus kapasitansi pelat paralel berubah menjadi:</span>
-<span id="cb1-962"><a href="#cb1-962" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-963"><a href="#cb1-963" aria-hidden="true" tabindex="-1"></a>$$C = \kappa \epsilon_0 \frac{A}{d}$$</span>
-<span id="cb1-964"><a href="#cb1-964" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-965"><a href="#cb1-965" aria-hidden="true" tabindex="-1"></a>Di mana $\kappa$ **(kappa)** adalah **Konstanta Dielektrik** material tersebut.</span>
-<span id="cb1-966"><a href="#cb1-966" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-967"><a href="#cb1-967" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Untuk ruang hampa, $\kappa = 1,00$.</span>
-<span id="cb1-968"><a href="#cb1-968" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Untuk udara, $\kappa \approx 1,0006$ (sering dianggap 1 untuk perhitungan praktis).</span>
-<span id="cb1-969"><a href="#cb1-969" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Untuk bahan lain, $\kappa &gt; 1$.</span>
-<span id="cb1-970"><a href="#cb1-970" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-971"><a href="#cb1-971" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.2 Material Dielektrik dan Karakteristiknya</span></span>
-<span id="cb1-972"><a href="#cb1-972" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-973"><a href="#cb1-973" aria-hidden="true" tabindex="-1"></a>Setiap bahan memiliki kemampuan yang berbeda dalam merespons medan listrik. Berikut adalah beberapa contoh material berdasarkan tabel pada Slide 29:</span>
-<span id="cb1-974"><a href="#cb1-974" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-975"><a href="#cb1-975" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2.1 Material Umum</span></span>
-<span id="cb1-976"><a href="#cb1-976" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-977"><a href="#cb1-977" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mika (**$\kappa = 5,4$**):** Sering digunakan karena stabil pada suhu tinggi.</span>
-<span id="cb1-978"><a href="#cb1-978" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kertas (**$\kappa = 3,7$**):** Murah, namun memiliki kekuatan tegangan terbatas.</span>
-<span id="cb1-979"><a href="#cb1-979" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kaca Pyrex (**$\kappa = 5,6$**):** Memiliki isolasi yang sangat baik.</span>
-<span id="cb1-980"><a href="#cb1-980" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-981"><a href="#cb1-981" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2.2 Material Oksida Logam dan Keramik (High-$\kappa$)</span></span>
-<span id="cb1-982"><a href="#cb1-982" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-983"><a href="#cb1-983" aria-hidden="true" tabindex="-1"></a>Teknologi modern menggunakan material dengan konstanta dielektrik yang sangat besar untuk memperkecil ukuran alat:</span>
-<span id="cb1-984"><a href="#cb1-984" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-985"><a href="#cb1-985" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Titanium Dioksida (**$TiO_2$**,** $\kappa = 95$**):** Digunakan dalam sensor dan kapasitor presisi.</span>
-<span id="cb1-986"><a href="#cb1-986" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Barium Titanat (**$BaTiO_3$**,** $\kappa = 1700$**):** Salah satu material dengan $\kappa$ tertinggi, memungkinkan pembuatan kapasitor berkapasitas besar dalam ukuran milimeter.</span>
-<span id="cb1-987"><a href="#cb1-987" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-988"><a href="#cb1-988" aria-hidden="true" tabindex="-1"></a>**Korelasi Fisis:** Semakin besar nilai $\kappa$, semakin banyak muatan yang dapat disimpan pada tegangan yang sama, karena molekul-molekul di dalam dielektrik terpolarisasi dan menghasilkan medan listrik internal yang melawan medan listrik luar, sehingga beda potensial antar pelat menurun dan kapasitansi naik.</span>
-<span id="cb1-989"><a href="#cb1-989" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-990"><a href="#cb1-990" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.3 Energi Potensial yang Tersimpan ($U_C$)</span></span>
-<span id="cb1-991"><a href="#cb1-991" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-992"><a href="#cb1-992" aria-hidden="true" tabindex="-1"></a>Kapasitor tidak hanya menyimpan muatan, tetapi juga menyimpan energi dalam bentuk medan listrik di antara pelatnya.</span>
-<span id="cb1-993"><a href="#cb1-993" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-994"><a href="#cb1-994" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3.1 Derivasi Melalui Grafik $V$ vs $Q$</span></span>
-<span id="cb1-995"><a href="#cb1-995" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-996"><a href="#cb1-996" aria-hidden="true" tabindex="-1"></a>Jika kita memplot hubungan antara beda potensial ($V$) dan muatan ($Q$), kita akan mendapatkan garis lurus dengan kemiringan ($1/C$).</span>
-<span id="cb1-997"><a href="#cb1-997" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-998"><a href="#cb1-998" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Usaha (**$W$**):** Untuk menambahkan muatan kecil $\Delta Q$ pada potensial $V$, diperlukan usaha sebesar $\Delta W = V \Delta Q$.</span>
-<span id="cb1-999"><a href="#cb1-999" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Energi Total:** Usaha total untuk mengisi kapasitor dari nol hingga muatan $Q$ adalah **luas daerah di bawah kurva** tersebut.</span>
-<span id="cb1-1000"><a href="#cb1-1000" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1001"><a href="#cb1-1001" aria-hidden="true" tabindex="-1"></a>Karena bentuk daerah di bawah garis tersebut adalah **segitiga**, maka energinya adalah:</span>
-<span id="cb1-1002"><a href="#cb1-1002" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1003"><a href="#cb1-1003" aria-hidden="true" tabindex="-1"></a>$$U_C = \frac{1}{2} \times \text{alas} \times \text{tinggi} = \frac{1}{2} Q V$$</span>
-<span id="cb1-1004"><a href="#cb1-1004" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1005"><a href="#cb1-1005" aria-hidden="true" tabindex="-1"></a><span class="al">![V vs Charge Q.](attachments/Materi%20Kuliah%201%20Fisika%20Dasar%20II%20%E2%80%93%20Elektrostatika%202-1770784170976.png)</span></span>
-<span id="cb1-1006"><a href="#cb1-1006" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1007"><a href="#cb1-1007" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3.2 Tiga Bentuk Persamaan Energi</span></span>
-<span id="cb1-1008"><a href="#cb1-1008" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1009"><a href="#cb1-1009" aria-hidden="true" tabindex="-1"></a>Dengan mensubstitusikan $Q = CV$, kita mendapatkan tiga cara untuk menghitung energi yang tersimpan:</span>
-<span id="cb1-1010"><a href="#cb1-1010" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1011"><a href="#cb1-1011" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Dasar:** $U_C = \frac{1}{2} Q V$</span>
-<span id="cb1-1012"><a href="#cb1-1012" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Berbasis Kapasitansi dan Tegangan:** $U_C = \frac{1}{2} C V^2$</span>
-<span id="cb1-1013"><a href="#cb1-1013" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Berbasis Muatan dan Kapasitansi:** $U_C = \frac{Q^2}{2C}$</span>
-<span id="cb1-1014"><a href="#cb1-1014" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1015"><a href="#cb1-1015" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.4 Ringkasan Hubungan Fisis</span></span>
-<span id="cb1-1016"><a href="#cb1-1016" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1017"><a href="#cb1-1017" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                                 <span class="pp">|</span>                                                                             <span class="pp">|</span></span>
-<span id="cb1-1018"><a href="#cb1-1018" aria-hidden="true" tabindex="-1"></a><span class="pp">| -------------------------------</span> <span class="pp">| ---------------------------------------------------------------------------</span> <span class="pp">|</span></span>
-<span id="cb1-1019"><a href="#cb1-1019" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Fenomena**                    | **Efek Penyisipan Dielektrik**                                              <span class="pp">|</span></span>
-<span id="cb1-1020"><a href="#cb1-1020" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Kapasitansi (**$C$**)**       <span class="pp">|</span> Meningkat sebesar faktor $\kappa$ ($C = \kappa C_0$)                        <span class="pp">|</span></span>
-<span id="cb1-1021"><a href="#cb1-1021" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Medan Listrik (**$E$**)**     <span class="pp">|</span> Menurun (jika muatan tetap) karena polarisasi bahan.                        <span class="pp">|</span></span>
-<span id="cb1-1022"><a href="#cb1-1022" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Beda Potensial (**$V$**)**    <span class="pp">|</span> Menurun (jika muatan tetap) karena $V = Q/C$.                               <span class="pp">|</span></span>
-<span id="cb1-1023"><a href="#cb1-1023" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Energi Ter simpan (**$U$**)** <span class="pp">|</span> Berubah bergantung pada kondisi (apakah terhubung baterai atau terisolasi). <span class="pp">|</span></span>
-<span id="cb1-1024"><a href="#cb1-1024" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1025"><a href="#cb1-1025" aria-hidden="true" tabindex="-1"></a>**Ingat!:**</span>
-<span id="cb1-1026"><a href="#cb1-1026" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1027"><a href="#cb1-1027" aria-hidden="true" tabindex="-1"></a>Tanpa dielektrik, kapasitor 1 Farad akan sebesar kota kecil. Dielektrik adalah "pahlawan tersembunyi" yang memungkinkan ponsel pintar Anda memiliki ribuan kapasitor di dalamnya tanpa membuatnya menjadi raksasa.</span>
-<span id="cb1-1028"><a href="#cb1-1028" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1029"><a href="#cb1-1029" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.5 Analisis Geometri: Kasus Kapasitor 1 Farad</span></span>
-<span id="cb1-1030"><a href="#cb1-1030" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1031"><a href="#cb1-1031" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Berapa LUAS kapasitor 1 F yang jarak antar pelatnya 1 mm?</span></span>
-<span id="cb1-1032"><a href="#cb1-1032" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1033"><a href="#cb1-1033" aria-hidden="true" tabindex="-1"></a>Soal ini bertujuan untuk menunjukkan ketidakmungkinan praktis membangun kapasitor berkapasitas besar hanya dengan mengandalkan udara/hampa sebagai pemisah.</span>
-<span id="cb1-1034"><a href="#cb1-1034" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1035"><a href="#cb1-1035" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Identifikasi Data</span></span>
-<span id="cb1-1036"><a href="#cb1-1036" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1037"><a href="#cb1-1037" aria-hidden="true" tabindex="-1"></a>Parameter yang diketahui adalah:</span>
-<span id="cb1-1038"><a href="#cb1-1038" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1039"><a href="#cb1-1039" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Kapasitansi (**$C$**):** $1 \text{ F}$ (Farad).</span>
-<span id="cb1-1040"><a href="#cb1-1040" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Jarak antar pelat (**$d$**):** $1 \text{ mm} = 0,001 \text{ m} = 10^{-3} \text{ m}$.</span>
-<span id="cb1-1041"><a href="#cb1-1041" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Konstanta Permitivitas Ruang Hampa (**$\epsilon_0$**):** $8,85 \times 10^{-12} \text{ C}^2/(\text{N}\cdot\text{m}^2)$.</span>
-<span id="cb1-1042"><a href="#cb1-1042" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1043"><a href="#cb1-1043" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Langkah Perhitungan Luas ($A$)</span></span>
-<span id="cb1-1044"><a href="#cb1-1044" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1045"><a href="#cb1-1045" aria-hidden="true" tabindex="-1"></a>Kita menggunakan rumus kapasitansi untuk kapasitor plat paralel:</span>
-<span id="cb1-1046"><a href="#cb1-1046" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1047"><a href="#cb1-1047" aria-hidden="true" tabindex="-1"></a>$$C = \frac{\epsilon_0 A}{d}$$</span>
-<span id="cb1-1048"><a href="#cb1-1048" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1049"><a href="#cb1-1049" aria-hidden="true" tabindex="-1"></a>Untuk mencari Luas ($A$), kita atur ulang persamaannya:</span>
-<span id="cb1-1050"><a href="#cb1-1050" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1051"><a href="#cb1-1051" aria-hidden="true" tabindex="-1"></a>$$A = \frac{C \cdot d}{\epsilon_0}$$</span>
-<span id="cb1-1052"><a href="#cb1-1052" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1053"><a href="#cb1-1053" aria-hidden="true" tabindex="-1"></a>Masukkan nilai-nilai yang diketahui:</span>
-<span id="cb1-1054"><a href="#cb1-1054" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1055"><a href="#cb1-1055" aria-hidden="true" tabindex="-1"></a>$$A = \frac{(1 \text{ F}) \times (0,001 \text{ m})}{8,85 \times 10^{-12} \text{ C}^2/(\text{N}\cdot\text{m}^2)}$$$$A = \frac{10^{-3}}{8,85 \times 10^{-12}}$$$$A \approx 1,13 \times 10^8 \text{ m}^2$$</span>
-<span id="cb1-1056"><a href="#cb1-1056" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1057"><a href="#cb1-1057" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Visualisasi Dimensi (Panjang Sisi)</span></span>
-<span id="cb1-1058"><a href="#cb1-1058" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1059"><a href="#cb1-1059" aria-hidden="true" tabindex="-1"></a>Agar lebih mudah dibayangkan, asumsikan pelat kapasitor tersebut berbentuk persegi. Maka panjang sisinya ($s$) adalah:</span>
-<span id="cb1-1060"><a href="#cb1-1060" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1061"><a href="#cb1-1061" aria-hidden="true" tabindex="-1"></a>$$s = \sqrt{A}$$$$s = \sqrt{1,13 \times 10^8 \text{ m}^2}$$$$s \approx 10.629 \text{ m} \approx 10,6 \text{ km}$$</span>
-<span id="cb1-1062"><a href="#cb1-1062" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1063"><a href="#cb1-1063" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Analisis Fisis dan Kesimpulan</span></span>
-<span id="cb1-1064"><a href="#cb1-1064" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1065"><a href="#cb1-1065" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mengapa ini tidak praktis?</span></span>
-<span id="cb1-1066"><a href="#cb1-1066" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1067"><a href="#cb1-1067" aria-hidden="true" tabindex="-1"></a>Hasil perhitungan menunjukkan bahwa untuk membuat kapasitor $1 \text{ F}$ dengan jarak antar pelat $1 \text{ mm}$ di udara, kita membutuhkan pelat logam raksasa dengan panjang sisi lebih dari **10 kilometer**. Sebagai perbandingan, ini hampir seluas satu kota kecil.</span>
-<span id="cb1-1068"><a href="#cb1-1068" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1069"><a href="#cb1-1069" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Bagaimana solusi teknisnya? (Loncatan ke Konsep Dielektrik)</span></span>
-<span id="cb1-1070"><a href="#cb1-1070" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1071"><a href="#cb1-1071" aria-hidden="true" tabindex="-1"></a>Pertanyaan retoris: _"Is this a practical capacitor to build? NO!"_.</span>
-<span id="cb1-1072"><a href="#cb1-1072" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1073"><a href="#cb1-1073" aria-hidden="true" tabindex="-1"></a>Untuk mendapatkan kapasitas $1 \text{ F}$ dalam ukuran yang bisa digenggam tangan (seperti kapasitor yang ada di laboratorium), para insinyur fisika melakukan dua hal:</span>
-<span id="cb1-1074"><a href="#cb1-1074" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1075"><a href="#cb1-1075" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Memperkecil** $d$**:** Menggunakan lapisan isolator yang sangat tipis (skala mikrometer).</span>
-<span id="cb1-1076"><a href="#cb1-1076" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Menambahkan Dielektrik (**$\kappa$**):** Menggunakan bahan dengan konstanta dielektrik tinggi. Dengan menyisipkan bahan dielektrik, rumus berubah menjadi:</span>
-<span id="cb1-1077"><a href="#cb1-1077" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1078"><a href="#cb1-1078" aria-hidden="true" tabindex="-1"></a>    $$C = \frac{\kappa \epsilon_0 A}{d}$$</span>
-<span id="cb1-1079"><a href="#cb1-1079" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1080"><a href="#cb1-1080" aria-hidden="true" tabindex="-1"></a>    Jika kita menggunakan bahan dengan $\kappa = 1000$ (seperti beberapa keramik khusus), maka luas pelat yang dibutuhkan bisa dipotong menjadi $1/1000$-nya, sehingga ukurannya menjadi masuk akal untuk diproduksi.</span>
-<span id="cb1-1081"><a href="#cb1-1081" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1082"><a href="#cb1-1082" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Pesan</span></span>
-<span id="cb1-1083"><a href="#cb1-1083" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-1084"><a href="#cb1-1084" aria-hidden="true" tabindex="-1"></a>Penyelesaian ini membuktikan mengapa satuan **Farad** adalah satuan yang sangat masif. Inilah alasan mengapa sebagian besar komponen elektronik yang kita temui menggunakan satuan mikrofarad ($\mu\text{F}$), nanofarad ($\text{nF}$), atau pikofarad ($\text{pF}$).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../Fisika Dasar II/materi-01-elektrostatika-1/index.html" class="pagination-link" aria-label="Elektrostatika 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Elektrostatika 1</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2024 Departemen Fisika, FMIPA UGM. Konten berlisensi <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-02-elektrostatika-2/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Dibuat dengan <a href="https://quarto.org">Quarto</a> • <a href="https://github.com/Shidiq/open-lectures">Kode sumber</a></p>
+</div>
+  </div>
+</footer>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-02-elektrostatika-2/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
