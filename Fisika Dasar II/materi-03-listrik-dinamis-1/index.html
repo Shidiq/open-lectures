@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Listrik Dinamis 1 – Open Lectures</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html" rel="next">
+<link href="../../Fisika Dasar II/materi-02-elektrostatika-2/index.html" rel="prev">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-91c45283b718f403a183c55e401e34c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5a1d57d030698fde18e1e7cd86106da8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Listrik Dinamis 1 – Open Lectures">
+<meta property="og:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta property="og:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-03-listrik-dinamis-1/attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771571401644.png">
+<meta property="og:site_name" content="Open Lectures">
+<meta property="og:image:height" content="664">
+<meta property="og:image:width" content="2542">
+<meta name="twitter:title" content="Listrik Dinamis 1 – Open Lectures">
+<meta name="twitter:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta name="twitter:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-03-listrik-dinamis-1/attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771571401644.png">
+<meta name="twitter:creator" content="@shidiq">
+<meta name="twitter:site" content="@shidiq">
+<meta name="twitter:image-height" content="664">
+<meta name="twitter:image-width" content="2542">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo light-content">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">Beranda</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mata-kuliah" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Mata Kuliah</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mata-kuliah">    
+        <li>
+    <a class="dropdown-item" href="../../Fisika Dasar II/index.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">Fisika Dasar II</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Shidiq/open-lectures"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html">Listrik Dinamis</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html">Listrik Dinamis 1</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisika Dasar II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Elektrostatika</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-01-elektrostatika-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elektrostatika 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-02-elektrostatika-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elektrostatika 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Listrik Dinamis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Listrik Dinamis 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Listrik Dinamis 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">kemagnetan</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-06-kemagnetan-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-07-kemagnetan-3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Daftar Isi</h2>
+   
+  <ul>
+  <li><a href="#pendahuluan-arus-listrik" id="toc-pendahuluan-arus-listrik" class="nav-link active" data-scroll-target="#pendahuluan-arus-listrik">1. Pendahuluan Arus Listrik</a>
+  <ul class="collapse">
+  <li><a href="#definisi-arus-listrik" id="toc-definisi-arus-listrik" class="nav-link" data-scroll-target="#definisi-arus-listrik">1.1 Definisi Arus Listrik</a></li>
+  <li><a href="#mekanisme-dan-arah-arus" id="toc-mekanisme-dan-arah-arus" class="nav-link" data-scroll-target="#mekanisme-dan-arah-arus">1.2 Mekanisme dan Arah Arus</a>
+  <ul class="collapse">
+  <li><a href="#peran-baterai-sebagai-sumber-energi-gaya-gerak-listrik" id="toc-peran-baterai-sebagai-sumber-energi-gaya-gerak-listrik" class="nav-link" data-scroll-target="#peran-baterai-sebagai-sumber-energi-gaya-gerak-listrik">Peran Baterai sebagai Sumber Energi (Gaya Gerak Listrik)</a></li>
+  <li><a href="#konvensi-arah-arus-arus-konvensional" id="toc-konvensi-arah-arus-arus-konvensional" class="nav-link" data-scroll-target="#konvensi-arah-arus-arus-konvensional">Konvensi Arah Arus (Arus Konvensional)</a></li>
+  <li><a href="#realitas-fisik-aliran-elektron" id="toc-realitas-fisik-aliran-elektron" class="nav-link" data-scroll-target="#realitas-fisik-aliran-elektron">Realitas Fisik: Aliran Elektron</a></li>
+  <li><a href="#ringkasan-mekanisme-kerja-rangkaian" id="toc-ringkasan-mekanisme-kerja-rangkaian" class="nav-link" data-scroll-target="#ringkasan-mekanisme-kerja-rangkaian">Ringkasan Mekanisme Kerja Rangkaian</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#densitas-arus-listrik-dan-laju-hanyut" id="toc-densitas-arus-listrik-dan-laju-hanyut" class="nav-link" data-scroll-target="#densitas-arus-listrik-dan-laju-hanyut">2. Densitas Arus Listrik dan Laju Hanyut</a>
+  <ul class="collapse">
+  <li><a href="#densitas-arus-vecj" id="toc-densitas-arus-vecj" class="nav-link" data-scroll-target="#densitas-arus-vecj">2.1 Densitas Arus (<span class="math inline">\(\vec{J}\)</span>)</a>
+  <ul class="collapse">
+  <li><a href="#definisi-dasar" id="toc-definisi-dasar" class="nav-link" data-scroll-target="#definisi-dasar">1. Definisi Dasar</a></li>
+  <li><a href="#formulasi-matematika" id="toc-formulasi-matematika" class="nav-link" data-scroll-target="#formulasi-matematika">2. Formulasi Matematika</a></li>
+  <li><a href="#sifat-vektor-dan-arah" id="toc-sifat-vektor-dan-arah" class="nav-link" data-scroll-target="#sifat-vektor-dan-arah">3. Sifat Vektor dan Arah</a></li>
+  <li><a href="#tinjauan-mikroskopis" id="toc-tinjauan-mikroskopis" class="nav-link" data-scroll-target="#tinjauan-mikroskopis">4. Tinjauan Mikroskopis</a></li>
+  <li><a href="#visualisasi-streamlines-garis-alir" id="toc-visualisasi-streamlines-garis-alir" class="nav-link" data-scroll-target="#visualisasi-streamlines-garis-alir">5. Visualisasi Streamlines (Garis Alir)</a></li>
+  <li><a href="#pentingnya-konsep-densitas-arus-dalam-teknik" id="toc-pentingnya-konsep-densitas-arus-dalam-teknik" class="nav-link" data-scroll-target="#pentingnya-konsep-densitas-arus-dalam-teknik">6. Pentingnya Konsep Densitas Arus dalam Teknik</a></li>
+  </ul></li>
+  <li><a href="#laju-hanyut-drift-velocity" id="toc-laju-hanyut-drift-velocity" class="nav-link" data-scroll-target="#laju-hanyut-drift-velocity">2.2 Laju Hanyut (Drift Velocity)</a>
+  <ul class="collapse">
+  <li><a href="#arus-sebagai-gerakan-muatan-neto" id="toc-arus-sebagai-gerakan-muatan-neto" class="nav-link" data-scroll-target="#arus-sebagai-gerakan-muatan-neto">1. Arus sebagai Gerakan Muatan Neto</a></li>
+  <li><a href="#konsep-laju-hanyut-drift-velocity-v_d" id="toc-konsep-laju-hanyut-drift-velocity-v_d" class="nav-link" data-scroll-target="#konsep-laju-hanyut-drift-velocity-v_d">2. Konsep Laju Hanyut (Drift Velocity, <span class="math inline">\(v_d\)</span>)</a></li>
+  <li><a href="#penurunan-rumus-arus-listrik-tinjauan-mikroskopis" id="toc-penurunan-rumus-arus-listrik-tinjauan-mikroskopis" class="nav-link" data-scroll-target="#penurunan-rumus-arus-listrik-tinjauan-mikroskopis">3. Penurunan Rumus Arus Listrik (Tinjauan Mikroskopis)</a></li>
+  <li><a href="#hubungan-dengan-densitas-arus-vecj" id="toc-hubungan-dengan-densitas-arus-vecj" class="nav-link" data-scroll-target="#hubungan-dengan-densitas-arus-vecj">4. Hubungan dengan Densitas Arus (<span class="math inline">\(\vec{J}\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#analisis-detail-penyelesaian-soal-laju-hanyut" id="toc-analisis-detail-penyelesaian-soal-laju-hanyut" class="nav-link" data-scroll-target="#analisis-detail-penyelesaian-soal-laju-hanyut">2.3 Analisis Detail Penyelesaian Soal Laju Hanyut</a>
+  <ul class="collapse">
+  <li><a href="#pertanyaan-soal" id="toc-pertanyaan-soal" class="nav-link" data-scroll-target="#pertanyaan-soal">Pertanyaan Soal</a></li>
+  <li><a href="#langkah-1-identifikasi-data-dan-konversi-satuan" id="toc-langkah-1-identifikasi-data-dan-konversi-satuan" class="nav-link" data-scroll-target="#langkah-1-identifikasi-data-dan-konversi-satuan">Langkah 1: Identifikasi Data dan Konversi Satuan</a></li>
+  <li><a href="#langkah-2-menghitung-densitas-atom-n_a" id="toc-langkah-2-menghitung-densitas-atom-n_a" class="nav-link" data-scroll-target="#langkah-2-menghitung-densitas-atom-n_a">Langkah 2: Menghitung Densitas Atom (<span class="math inline">\(n_a\)</span>)</a></li>
+  <li><a href="#langkah-3-menentukan-densitas-elektron-bebas-n" id="toc-langkah-3-menentukan-densitas-elektron-bebas-n" class="nav-link" data-scroll-target="#langkah-3-menentukan-densitas-elektron-bebas-n">Langkah 3: Menentukan Densitas Elektron Bebas (<span class="math inline">\(n\)</span>)</a></li>
+  <li><a href="#langkah-4-menghitung-luas-penampang-a" id="toc-langkah-4-menghitung-luas-penampang-a" class="nav-link" data-scroll-target="#langkah-4-menghitung-luas-penampang-a">Langkah 4: Menghitung Luas Penampang (<span class="math inline">\(A\)</span>)</a></li>
+  <li><a href="#langkah-5-menghitung-kecepatan-drift-v_d" id="toc-langkah-5-menghitung-kecepatan-drift-v_d" class="nav-link" data-scroll-target="#langkah-5-menghitung-kecepatan-drift-v_d">Langkah 5: Menghitung Kecepatan Drift (<span class="math inline">\(v_d\)</span>)</a></li>
+  <li><a href="#interpretasi-hasil-penting-untuk-buku-referensi" id="toc-interpretasi-hasil-penting-untuk-buku-referensi" class="nav-link" data-scroll-target="#interpretasi-hasil-penting-untuk-buku-referensi">Interpretasi Hasil (Penting untuk Buku Referensi)</a></li>
+  <li><a href="#mengapa-lampu-langsung-menyala" id="toc-mengapa-lampu-langsung-menyala" class="nav-link" data-scroll-target="#mengapa-lampu-langsung-menyala">Mengapa Lampu Langsung Menyala?</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#resistansi-dan-resistivitas" id="toc-resistansi-dan-resistivitas" class="nav-link" data-scroll-target="#resistansi-dan-resistivitas">3. Resistansi dan Resistivitas</a>
+  <ul class="collapse">
+  <li><a href="#hukum-ohm" id="toc-hukum-ohm" class="nav-link" data-scroll-target="#hukum-ohm">3.1 Hukum Ohm</a></li>
+  <li><a href="#resistansi-hambatan-listrik-r" id="toc-resistansi-hambatan-listrik-r" class="nav-link" data-scroll-target="#resistansi-hambatan-listrik-r">3.2 Resistansi (Hambatan Listrik, <span class="math inline">\(R\)</span>)</a></li>
+  <li><a href="#resistivitas-hambatan-jenis-rho" id="toc-resistivitas-hambatan-jenis-rho" class="nav-link" data-scroll-target="#resistivitas-hambatan-jenis-rho">3.3 Resistivitas (Hambatan Jenis, <span class="math inline">\(\rho\)</span>)</a></li>
+  <li><a href="#hubungan-resistansi-dan-resistivitas" id="toc-hubungan-resistansi-dan-resistivitas" class="nav-link" data-scroll-target="#hubungan-resistansi-dan-resistivitas">3.4 Hubungan Resistansi dan Resistivitas</a></li>
+  <li><a href="#perbedaan-kuantitas-makroskopik-vs-mikroskopik" id="toc-perbedaan-kuantitas-makroskopik-vs-mikroskopik" class="nav-link" data-scroll-target="#perbedaan-kuantitas-makroskopik-vs-mikroskopik">3.5 Perbedaan Kuantitas: Makroskopik vs Mikroskopik</a></li>
+  <li><a href="#nilai-resistivitas-berbagai-material" id="toc-nilai-resistivitas-berbagai-material" class="nav-link" data-scroll-target="#nilai-resistivitas-berbagai-material">3.6 Nilai Resistivitas Berbagai Material</a></li>
+  <li><a href="#analisis-detail-menghitung-dimensi-fisik-resistor" id="toc-analisis-detail-menghitung-dimensi-fisik-resistor" class="nav-link" data-scroll-target="#analisis-detail-menghitung-dimensi-fisik-resistor">3.7 Analisis Detail: Menghitung Dimensi Fisik Resistor</a>
+  <ul class="collapse">
+  <li><a href="#deskripsi-soal" id="toc-deskripsi-soal" class="nav-link" data-scroll-target="#deskripsi-soal">Deskripsi Soal</a></li>
+  <li><a href="#langkah-1-identifikasi-data-input" id="toc-langkah-1-identifikasi-data-input" class="nav-link" data-scroll-target="#langkah-1-identifikasi-data-input">Langkah 1: Identifikasi Data (Input)</a></li>
+  <li><a href="#langkah-2-menghitung-luas-penampang-a" id="toc-langkah-2-menghitung-luas-penampang-a" class="nav-link" data-scroll-target="#langkah-2-menghitung-luas-penampang-a">Langkah 2: Menghitung Luas Penampang (<span class="math inline">\(A\)</span>)</a></li>
+  <li><a href="#langkah-3-menentukan-panjang-kawat-l" id="toc-langkah-3-menentukan-panjang-kawat-l" class="nav-link" data-scroll-target="#langkah-3-menentukan-panjang-kawat-l">Langkah 3: Menentukan Panjang Kawat (<span class="math inline">\(L\)</span>)</a></li>
+  <li><a href="#kesimpulan-dan-makna-fisis" id="toc-kesimpulan-dan-makna-fisis" class="nav-link" data-scroll-target="#kesimpulan-dan-makna-fisis">Kesimpulan dan Makna Fisis</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#pengaruh-suhu-terhadap-sifat-kelistrikan-material" id="toc-pengaruh-suhu-terhadap-sifat-kelistrikan-material" class="nav-link" data-scroll-target="#pengaruh-suhu-terhadap-sifat-kelistrikan-material">4. Pengaruh Suhu terhadap Sifat Kelistrikan Material</a>
+  <ul class="collapse">
+  <li><a href="#variasi-suhu-pada-resistivitas-rho" id="toc-variasi-suhu-pada-resistivitas-rho" class="nav-link" data-scroll-target="#variasi-suhu-pada-resistivitas-rho">4.1 Variasi Suhu pada Resistivitas (<span class="math inline">\(\rho\)</span>)</a>
+  <ul class="collapse">
+  <li><a href="#formulasi-empiris" id="toc-formulasi-empiris" class="nav-link" data-scroll-target="#formulasi-empiris">Formulasi Empiris</a></li>
+  </ul></li>
+  <li><a href="#variasi-suhu-pada-resistansi-r" id="toc-variasi-suhu-pada-resistansi-r" class="nav-link" data-scroll-target="#variasi-suhu-pada-resistansi-r">4.2 Variasi Suhu pada Resistansi (<span class="math inline">\(R\)</span>)</a>
+  <ul class="collapse">
+  <li><a href="#formulasi-resistansi" id="toc-formulasi-resistansi" class="nav-link" data-scroll-target="#formulasi-resistansi">Formulasi Resistansi</a></li>
+  </ul></li>
+  <li><a href="#analisis-grafik-perilaku-pada-suhu-ekstrem" id="toc-analisis-grafik-perilaku-pada-suhu-ekstrem" class="nav-link" data-scroll-target="#analisis-grafik-perilaku-pada-suhu-ekstrem">4.3 Analisis Grafik: Perilaku pada Suhu Ekstrem</a>
+  <ul class="collapse">
+  <li><a href="#a.-wilayah-suhu-tinggi-linear" id="toc-a.-wilayah-suhu-tinggi-linear" class="nav-link" data-scroll-target="#a.-wilayah-suhu-tinggi-linear">A. Wilayah Suhu Tinggi (Linear)</a></li>
+  <li><a href="#b.-wilayah-suhu-rendah-non-linear" id="toc-b.-wilayah-suhu-rendah-non-linear" class="nav-link" data-scroll-target="#b.-wilayah-suhu-rendah-non-linear">B. Wilayah Suhu Rendah (Non-linear)</a></li>
+  <li><a href="#c.-titik-kritis-dan-superkonduktivitas" id="toc-c.-titik-kritis-dan-superkonduktivitas" class="nav-link" data-scroll-target="#c.-titik-kritis-dan-superkonduktivitas">C. Titik Kritis dan Superkonduktivitas</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#superkonduktor-konduksi-tanpa-kehilangan-energi" id="toc-superkonduktor-konduksi-tanpa-kehilangan-energi" class="nav-link" data-scroll-target="#superkonduktor-konduksi-tanpa-kehilangan-energi">5. Superkonduktor – Konduksi Tanpa Kehilangan Energi</a>
+  <ul class="collapse">
+  <li><a href="#definisi-dan-karakteristik-utama" id="toc-definisi-dan-karakteristik-utama" class="nav-link" data-scroll-target="#definisi-dan-karakteristik-utama">5.1 Definisi dan Karakteristik Utama</a>
+  <ul class="collapse">
+  <li><a href="#suhu-kritis-t_c" id="toc-suhu-kritis-t_c" class="nav-link" data-scroll-target="#suhu-kritis-t_c">Suhu Kritis (<span class="math inline">\(T_c\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#sifat-sifat-unik-superkonduktor" id="toc-sifat-sifat-unik-superkonduktor" class="nav-link" data-scroll-target="#sifat-sifat-unik-superkonduktor">5.2 Sifat-Sifat Unik Superkonduktor</a>
+  <ul class="collapse">
+  <li><a href="#resistansi-nol-r-0" id="toc-resistansi-nol-r-0" class="nav-link" data-scroll-target="#resistansi-nol-r-0">Resistansi Nol (<span class="math inline">\(R = 0\)</span>)</a></li>
+  <li><a href="#arus-persisten-persistent-current" id="toc-arus-persisten-persistent-current" class="nav-link" data-scroll-target="#arus-persisten-persistent-current">Arus Persisten (Persistent Current)</a></li>
+  <li><a href="#efek-meissner-levitasi-magnetik" id="toc-efek-meissner-levitasi-magnetik" class="nav-link" data-scroll-target="#efek-meissner-levitasi-magnetik">Efek Meissner (Levitasi Magnetik)</a></li>
+  </ul></li>
+  <li><a href="#faktor-yang-memengaruhi-suhu-kritis-t_c" id="toc-faktor-yang-memengaruhi-suhu-kritis-t_c" class="nav-link" data-scroll-target="#faktor-yang-memengaruhi-suhu-kritis-t_c">5.3 Faktor yang Memengaruhi Suhu Kritis (<span class="math inline">\(T_c\)</span>)</a></li>
+  <li><a href="#aplikasi-dalam-teknologi-modern" id="toc-aplikasi-dalam-teknologi-modern" class="nav-link" data-scroll-target="#aplikasi-dalam-teknologi-modern">5.4 Aplikasi dalam Teknologi Modern</a></li>
+  </ul></li>
+  <li><a href="#hukum-ohm-dan-mekanisme-konduksi" id="toc-hukum-ohm-dan-mekanisme-konduksi" class="nav-link" data-scroll-target="#hukum-ohm-dan-mekanisme-konduksi">6. Hukum Ohm dan Mekanisme Konduksi</a>
+  <ul class="collapse">
+  <li><a href="#hukum-ohm-pandangan-makroskopik" id="toc-hukum-ohm-pandangan-makroskopik" class="nav-link" data-scroll-target="#hukum-ohm-pandangan-makroskopik">6.1 Hukum Ohm: Pandangan Makroskopik</a>
+  <ul class="collapse">
+  <li><a href="#material-ohmik-vs.-non-ohmik" id="toc-material-ohmik-vs.-non-ohmik" class="nav-link" data-scroll-target="#material-ohmik-vs.-non-ohmik">Material Ohmik vs.&nbsp;Non-Ohmik</a></li>
+  </ul></li>
+  <li><a href="#pandangan-mikroskopik-mengapa-hukum-ohm-terjadi" id="toc-pandangan-mikroskopik-mengapa-hukum-ohm-terjadi" class="nav-link" data-scroll-target="#pandangan-mikroskopik-mengapa-hukum-ohm-terjadi">6.2 Pandangan Mikroskopik: Mengapa Hukum Ohm Terjadi?</a>
+  <ul class="collapse">
+  <li><a href="#model-drude-logam-sebagai-gas-elektron" id="toc-model-drude-logam-sebagai-gas-elektron" class="nav-link" data-scroll-target="#model-drude-logam-sebagai-gas-elektron">1. Model Drude: Logam sebagai “Gas Elektron”</a></li>
+  <li><a href="#gerakan-acak-vs.-gerakan-hanyut" id="toc-gerakan-acak-vs.-gerakan-hanyut" class="nav-link" data-scroll-target="#gerakan-acak-vs.-gerakan-hanyut">2. Gerakan Acak vs.&nbsp;Gerakan Hanyut</a></li>
+  <li><a href="#penurunan-matematis-hukum-ohm" id="toc-penurunan-matematis-hukum-ohm" class="nav-link" data-scroll-target="#penurunan-matematis-hukum-ohm">3. Penurunan Matematis Hukum Ohm</a></li>
+  <li><a href="#analisis-numerik-pada-tembaga" id="toc-analisis-numerik-pada-tembaga" class="nav-link" data-scroll-target="#analisis-numerik-pada-tembaga">4. Analisis Numerik pada Tembaga</a></li>
+  </ul></li>
+  <li><a href="#analogi-fenomena-transpor-hukum-ohm-dan-hukum-poiseuille" id="toc-analogi-fenomena-transpor-hukum-ohm-dan-hukum-poiseuille" class="nav-link" data-scroll-target="#analogi-fenomena-transpor-hukum-ohm-dan-hukum-poiseuille">6.3 Analogi Fenomena Transpor: Hukum Ohm dan Hukum Poiseuille</a>
+  <ul class="collapse">
+  <li><a href="#perbandingan-struktural" id="toc-perbandingan-struktural" class="nav-link" data-scroll-target="#perbandingan-struktural">1. Perbandingan Struktural</a></li>
+  <li><a href="#pemetaan-besaran-fisis" id="toc-pemetaan-besaran-fisis" class="nav-link" data-scroll-target="#pemetaan-besaran-fisis">2. Pemetaan Besaran Fisis</a></li>
+  <li><a href="#analogi-rangkaian-dc-dan-aliran-tertutup" id="toc-analogi-rangkaian-dc-dan-aliran-tertutup" class="nav-link" data-scroll-target="#analogi-rangkaian-dc-dan-aliran-tertutup">3. Analogi Rangkaian DC dan Aliran Tertutup</a></li>
+  <li><a href="#mengapa-analogi-ini-penting" id="toc-mengapa-analogi-ini-penting" class="nav-link" data-scroll-target="#mengapa-analogi-ini-penting">4. Mengapa Analogi Ini Penting?</a></li>
+  <li><a href="#perbandingan-besaran-fisis" id="toc-perbandingan-besaran-fisis" class="nav-link" data-scroll-target="#perbandingan-besaran-fisis">5. Perbandingan Besaran Fisis</a></li>
+  <li><a href="#persamaan-identik" id="toc-persamaan-identik" class="nav-link" data-scroll-target="#persamaan-identik">6. Persamaan Identik</a></li>
+  <li><a href="#batasan-analogi" id="toc-batasan-analogi" class="nav-link" data-scroll-target="#batasan-analogi">7. Batasan Analogi</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#komponen-resistor-dan-analisis-rangkaian" id="toc-komponen-resistor-dan-analisis-rangkaian" class="nav-link" data-scroll-target="#komponen-resistor-dan-analisis-rangkaian">7. Komponen Resistor dan Analisis Rangkaian</a>
+  <ul class="collapse">
+  <li><a href="#resistor-pengendali-arus-listrik" id="toc-resistor-pengendali-arus-listrik" class="nav-link" data-scroll-target="#resistor-pengendali-arus-listrik">7.1 Resistor: Pengendali Arus Listrik</a></li>
+  <li><a href="#identifikasi-nilai-resistor-cara-membaca" id="toc-identifikasi-nilai-resistor-cara-membaca" class="nav-link" data-scroll-target="#identifikasi-nilai-resistor-cara-membaca">7.2 Identifikasi Nilai Resistor (Cara Membaca)</a>
+  <ul class="collapse">
+  <li><a href="#resistor-pita-warna-through-hole" id="toc-resistor-pita-warna-through-hole" class="nav-link" data-scroll-target="#resistor-pita-warna-through-hole">Resistor Pita Warna (Through-Hole)</a></li>
+  <li><a href="#resistor-smd-surface-mount-device" id="toc-resistor-smd-surface-mount-device" class="nav-link" data-scroll-target="#resistor-smd-surface-mount-device">Resistor SMD (Surface Mount Device)</a></li>
+  </ul></li>
+  <li><a href="#rangkaian-resistor-seri" id="toc-rangkaian-resistor-seri" class="nav-link" data-scroll-target="#rangkaian-resistor-seri">7.3 Rangkaian Resistor Seri</a></li>
+  <li><a href="#rangkaian-resistor-paralel" id="toc-rangkaian-resistor-paralel" class="nav-link" data-scroll-target="#rangkaian-resistor-paralel">7.4 Rangkaian Resistor Paralel</a></li>
+  <li><a href="#rangkaian-kombinasi-seri-paralel" id="toc-rangkaian-kombinasi-seri-paralel" class="nav-link" data-scroll-target="#rangkaian-kombinasi-seri-paralel">7.5 Rangkaian Kombinasi (Seri-Paralel)</a></li>
+  </ul></li>
+  <li><a href="#daya-dalam-rangkaian-listrik" id="toc-daya-dalam-rangkaian-listrik" class="nav-link" data-scroll-target="#daya-dalam-rangkaian-listrik">8. Daya dalam Rangkaian Listrik</a>
+  <ul class="collapse">
+  <li><a href="#mekanisme-perubahan-energi" id="toc-mekanisme-perubahan-energi" class="nav-link" data-scroll-target="#mekanisme-perubahan-energi">8.1 Mekanisme Perubahan Energi</a></li>
+  <li><a href="#definisi-dan-formulasi-daya" id="toc-definisi-dan-formulasi-daya" class="nav-link" data-scroll-target="#definisi-dan-formulasi-daya">8.2 Definisi dan Formulasi Daya</a>
+  <ul class="collapse">
+  <li><a href="#persamaan-dasar" id="toc-persamaan-dasar" class="nav-link" data-scroll-target="#persamaan-dasar">Persamaan Dasar</a></li>
+  <li><a href="#variasi-rumus-dengan-hukum-ohm-disipasi-daya" id="toc-variasi-rumus-dengan-hukum-ohm-disipasi-daya" class="nav-link" data-scroll-target="#variasi-rumus-dengan-hukum-ohm-disipasi-daya">Variasi Rumus dengan Hukum Ohm (Disipasi Daya)</a></li>
+  </ul></li>
+  <li><a href="#aplikasi-transmisi-tenaga-listrik" id="toc-aplikasi-transmisi-tenaga-listrik" class="nav-link" data-scroll-target="#aplikasi-transmisi-tenaga-listrik">8.3 Aplikasi: Transmisi Tenaga Listrik</a></li>
+  <li><a href="#analisis-contoh-soal" id="toc-analisis-contoh-soal" class="nav-link" data-scroll-target="#analisis-contoh-soal">8.4 Analisis Contoh Soal</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-03-listrik-dinamis-1/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html">Listrik Dinamis</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html">Listrik Dinamis 1</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Listrik Dinamis 1</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="pendahuluan-arus-listrik" class="level1">
+<h1>1. Pendahuluan Arus Listrik</h1>
+<p>Listrik dinamis mempelajari muatan-muatan listrik yang bergerak. Berbeda dengan elektrostatika di mana muatan berada dalam kondisi diam, pada listrik dinamis, muatan mengalir melalui suatu konduktor karena adanya perbedaan potensial.</p>
+<section id="definisi-arus-listrik" class="level2">
+<h2 class="anchored" data-anchor-id="definisi-arus-listrik">1.1 Definisi Arus Listrik</h2>
+<p>Arus listrik (<span class="math inline">\(I\)</span>) didefinisikan sebagai jumlah total muatan listrik (<span class="math inline">\(Q\)</span>) yang melewati suatu titik pada kawat penghantar dalam tiap satuan waktu. Secara matematis, arus rata-rata dirumuskan sebagai:</p>
+<p><span class="math display">\[I = \frac{\Delta Q}{t}\]</span></p>
+<p>Satuan internasional untuk arus listrik adalah <strong>Ampere (A)</strong>, di mana <span class="math inline">\(1\text{ Ampere} = 1\text{ Coulomb/detik}\)</span>.</p>
+</section>
+<section id="mekanisme-dan-arah-arus" class="level2">
+<h2 class="anchored" data-anchor-id="mekanisme-dan-arah-arus">1.2 Mekanisme dan Arah Arus</h2>
+<p>Arus terjadi karena baterai atau sumber tegangan memberikan beda potensial yang menghasilkan medan listrik di dalam rangkaian. Medan ini memaksa muatan untuk bergerak.</p>
+<ul>
+<li><strong>Arah Arus Konvensional:</strong> Digambarkan searah dengan pergerakan pembawa muatan positif (dari kutub positif ke negatif).</li>
+<li><strong>Kenyataan Fisik:</strong> Dalam konduktor logam, pembawa muatan sebenarnya adalah elektron (negatif) yang bergerak berlawanan arah dengan panah arus konvensional.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771571401644.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi arus listrik baterai dalam kawat.</figcaption>
+</figure>
+</div>
+<p>Figure 1 ini mengilustrasikan sebuah rangkaian listrik sederhana (loop) yang terdiri dari sumber tegangan (baterai) dan konduktor. Terdapat tiga poin utama yang dijelaskan melalui visualisasi ini:</p>
+<section id="peran-baterai-sebagai-sumber-energi-gaya-gerak-listrik" class="level3">
+<h3 class="anchored" data-anchor-id="peran-baterai-sebagai-sumber-energi-gaya-gerak-listrik">Peran Baterai sebagai Sumber Energi (Gaya Gerak Listrik)</h3>
+<p>Baterai dalam rangkaian ini berfungsi sebagai penyedia <strong>beda potensial</strong> (<span class="math inline">\(V\)</span>).</p>
+<ul>
+<li><strong>Proses Fisika:</strong> Ketika ujung-ujung kawat (loop) dihubungkan ke terminal baterai, terjadi pemisahan muatan di dalam baterai secara kimiawi. Hal ini menyebabkan satu terminal menjadi kaya akan muatan positif (+) dan terminal lainnya kaya akan muatan negatif (-).</li>
+<li><strong>Pembentukan Medan Listrik:</strong> Beda potensial ini menciptakan <strong>medan listrik</strong> (<span class="math inline">\(\vec{E}\)</span>) yang merambat melalui seluruh bagian kawat konduktor hampir seketika (setara kecepatan cahaya). Medan listrik inilah yang memberikan gaya pada muatan-muatan bebas di dalam kawat.</li>
+</ul>
+</section>
+<section id="konvensi-arah-arus-arus-konvensional" class="level3">
+<h3 class="anchored" data-anchor-id="konvensi-arah-arus-arus-konvensional">Konvensi Arah Arus (Arus Konvensional)</h3>
+<p>Pada gambar, terlihat panah arus (<span class="math inline">\(i\)</span>) keluar dari terminal positif dan masuk ke terminal negatif. Ini disebut sebagai <strong>Arus Konvensional</strong>.</p>
+<ul>
+<li><strong>Asal-Usul:</strong> Konvensi ini ditetapkan sebelum para ilmuwan mengetahui keberadaan elektron. Secara historis (sejak zaman Benjamin Franklin), arus dianggap sebagai aliran “fluida” bermuatan positif.</li>
+<li><strong>Aturan Penulisan:</strong> Dalam semua analisis rangkaian listrik (Hukum Kirchhoff, Hukum Ohm, dll.), kita <strong>selalu</strong> menggunakan arah arus konvensional ini, yaitu dari potensial tinggi (+) ke potensial rendah (-).</li>
+</ul>
+</section>
+<section id="realitas-fisik-aliran-elektron" class="level3">
+<h3 class="anchored" data-anchor-id="realitas-fisik-aliran-elektron">Realitas Fisik: Aliran Elektron</h3>
+<p>Meskipun panah arus digambarkan searah jarum jam (dari + ke -), terdapat catatan penting mengenai apa yang sebenarnya terjadi di tingkat mikroskopis.</p>
+<ul>
+<li><strong>Pembawa Muatan:</strong> Pada konduktor logam (seperti tembaga), muatan yang bebas bergerak adalah <strong>elektron</strong> (bermuatan negatif).</li>
+<li><strong>Arah Gerak:</strong> Karena elektron bermuatan negatif, mereka ditarik oleh terminal positif dan ditolak oleh terminal negatif. Jadi, elektron sebenarnya mengalir <strong>berlawanan arah</strong> dengan arah arus konvensional (dari - ke +).</li>
+<li><strong>Mengapa Tetap Menggunakan Konvensi?</strong> Secara matematis, aliran muatan positif ke kanan setara dengan aliran muatan negatif ke kiri. Oleh karena itu, penggunaan arus konvensional tidak mengubah hasil perhitungan fisis dalam rangkaian.</li>
+</ul>
+</section>
+<section id="ringkasan-mekanisme-kerja-rangkaian" class="level3">
+<h3 class="anchored" data-anchor-id="ringkasan-mekanisme-kerja-rangkaian">Ringkasan Mekanisme Kerja Rangkaian</h3>
+<ol type="1">
+<li><strong>Baterai</strong> menciptakan beda potensial.</li>
+<li><strong>Medan Listrik</strong> terbentuk di sepanjang kawat.</li>
+<li><strong>Gaya Elektrostatik</strong> dari medan listrik mendorong muatan.</li>
+<li><strong>Arus Listrik</strong> (<span class="math inline">\(i\)</span>) didefinisikan searah dengan medan listrik (dari + ke -), meskipun elektron bergerak ke arah sebaliknya.</li>
+</ol>
+<p><strong>Informasi:</strong> Seringkali bingung antara kecepatan arus dan kecepatan elektron. Ingatlah bahwa <strong>arus</strong> (sinyal listrik) merambat sangat cepat, namun <strong>elektron</strong> individual bergerak sangat lambat (kecepatan drift) karena sering bertumbukan dengan atom-atom di dalam kabel.</p>
+</section>
+</section>
+</section>
+<section id="densitas-arus-listrik-dan-laju-hanyut" class="level1">
+<h1>2. Densitas Arus Listrik dan Laju Hanyut</h1>
+<p>Untuk memahami bagaimana arus mengalir di dalam materi, kita perlu melihat pergerakan elektron secara mikroskopis.</p>
+<section id="densitas-arus-vecj" class="level2">
+<h2 class="anchored" data-anchor-id="densitas-arus-vecj">2.1 Densitas Arus (<span class="math inline">\(\vec{J}\)</span>)</h2>
+<blockquote class="blockquote">
+<p>[!summary] Densitas arus adalah arus per satuan luas penampang. Jika arus seragam dan tegak lurus terhadap luas penampang <span class="math inline">\(A\)</span>, maka:</p>
+<p><span class="math display">\[J = \frac{i}{A}\]</span></p>
+<p>Secara vektor, hubungan antara densitas arus dan kecepatan hanyut elektron (<span class="math inline">\(\vec{v}_d\)</span>) adalah:</p>
+<p><span class="math display">\[\vec{J} = (ne)\vec{v}_d\]</span></p>
+<p>Di mana <span class="math inline">\(n\)</span> adalah jumlah muatan per satuan volume dan <span class="math inline">\(e\)</span> adalah muatan elektron.</p>
+</blockquote>
+<section id="definisi-dasar" class="level3">
+<h3 class="anchored" data-anchor-id="definisi-dasar">1. Definisi Dasar</h3>
+<p>Secara sederhana, <strong>Densitas Arus</strong> (<span class="math inline">\(\vec{J}\)</span>) adalah ukuran seberapa “padat” arus listrik yang mengalir melalui suatu luasan penampang tertentu. Berbeda dengan arus listrik (<span class="math inline">\(i\)</span>) yang merupakan besaran skalar, densitas arus adalah <strong>besaran vektor</strong>.</p>
+</section>
+<section id="formulasi-matematika" class="level3">
+<h3 class="anchored" data-anchor-id="formulasi-matematika">2. Formulasi Matematika</h3>
+<section id="a.-kondisi-umum-fluks-muatan" class="level4">
+<h4 class="anchored" data-anchor-id="a.-kondisi-umum-fluks-muatan">A. Kondisi Umum (Fluks Muatan)</h4>
+<p>Arus listrik yang melalui suatu permukaan dianggap sebagai “fluks” dari vektor densitas arus. Jika kita memiliki elemen luas <span class="math inline">\(d\vec{A}\)</span> yang sangat kecil, maka arus yang melaluinya adalah:</p>
+<p><span class="math display">\[di = \vec{J} \cdot d\vec{A}\]</span></p>
+<p>Untuk mencari arus total (<span class="math inline">\(i\)</span>) yang melalui seluruh permukaan, kita melakukan integrasi:</p>
+<p><span class="math display">\[i = \int \vec{J} \cdot d\vec{A}\]</span></p>
+</section>
+<section id="b.-kondisi-seragam-simplifikasi" class="level4">
+<h4 class="anchored" data-anchor-id="b.-kondisi-seragam-simplifikasi">B. Kondisi Seragam (Simplifikasi)</h4>
+<p>Dalam banyak kasus praktis di mana arus mengalir secara merata (seragam) dan tegak lurus terhadap luas penampang (<span class="math inline">\(A\)</span>), maka rumus di atas dapat disederhanakan menjadi:</p>
+<p><span class="math display">\[i = J \cdot A \implies J = \frac{i}{A}\]</span></p>
+<ul>
+<li><strong>Satuan SI:</strong> Ampere per meter persegi (<span class="math inline">\(A/m^2\)</span>).</li>
+</ul>
+</section>
+</section>
+<section id="sifat-vektor-dan-arah" class="level3">
+<h3 class="anchored" data-anchor-id="sifat-vektor-dan-arah">3. Sifat Vektor dan Arah</h3>
+<p>Bagian ini menjelaskan bahwa arah vektor <span class="math inline">\(\vec{J}\)</span> sangat bergantung pada jenis pembawa muatannya:</p>
+<ul>
+<li><strong>Muatan Positif:</strong> <span class="math inline">\(\vec{J}\)</span> searah dengan kecepatan gerak muatan (<span class="math inline">\(\vec{v}\)</span>).</li>
+<li><strong>Muatan Negatif (Elektron):</strong> <span class="math inline">\(\vec{J}\)</span> berlawanan arah dengan kecepatan gerak elektron.</li>
+<li><strong>Konvensi:</strong> Dalam rangkaian listrik, arah <span class="math inline">\(\vec{J}\)</span> selalu dianggap sama dengan arah arus konvensional (dari kutub positif ke negatif).</li>
+</ul>
+</section>
+<section id="tinjauan-mikroskopis" class="level3">
+<h3 class="anchored" data-anchor-id="tinjauan-mikroskopis">4. Tinjauan Mikroskopis</h3>
+<p>Bagaimana Densitas Arus berhubungan dengan atom-atom di dalam kabel? Hubungannya dinyatakan dengan rumus:</p>
+<p><span class="math display">\[\vec{J} = (ne)\vec{v}_d\]</span></p>
+<p>Di mana:</p>
+<ul>
+<li><span class="math inline">\(n\)</span>: jumlah pembawa muatan per satuan volume (konsentrasi).</li>
+<li><span class="math inline">\(e\)</span>: muatan listrik (elektron).</li>
+<li><span class="math inline">\(\vec{v}_d\)</span>: kecepatan hanyut (<em>drift velocity</em>).</li>
+</ul>
+<p>Ini menunjukkan bahwa kita bisa meningkatkan densitas arus dengan dua cara: mempercepat gerak muatan atau menambah jumlah muatan yang tersedia di dalam material tersebut.</p>
+</section>
+<section id="visualisasi-streamlines-garis-alir" class="level3">
+<h3 class="anchored" data-anchor-id="visualisasi-streamlines-garis-alir">5. Visualisasi Streamlines (Garis Alir)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771572150983.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi arus listrik.</figcaption>
+</figure>
+</div>
+<p>Perhatikan gambar tersebut yang menunjukkan konduktor yang menyempit:</p>
+<ul>
+<li><strong>Garis yang merapat:</strong> Ketika konduktor menyempit, garis-garis aliran menjadi lebih rapat. Ini secara visual merepresentasikan bahwa nilai <span class="math inline">\(J\)</span> meningkat (arus menjadi lebih padat karena luas penampang <span class="math inline">\(A\)</span> mengecil, sementara arus <span class="math inline">\(i\)</span> tetap konstan berdasarkan hukum kekekalan muatan).</li>
+<li><strong>Analogi Fluida:</strong> Bayangkan air yang mengalir dari pipa lebar ke pipa sempit; air akan bergerak lebih cepat dan lebih “padat” di bagian yang sempit tersebut.</li>
+</ul>
+</section>
+<section id="pentingnya-konsep-densitas-arus-dalam-teknik" class="level3">
+<h3 class="anchored" data-anchor-id="pentingnya-konsep-densitas-arus-dalam-teknik">6. Pentingnya Konsep Densitas Arus dalam Teknik</h3>
+<p>Mengapa kita tidak cukup hanya menggunakan Arus (<span class="math inline">\(i\)</span>)?</p>
+<ul>
+<li><strong>Batas Keamanan (Current Rating):</strong> Setiap kabel memiliki batas densitas arus maksimum. Jika <span class="math inline">\(J\)</span> terlalu tinggi, tumbukan elektron dengan ion kisi akan menghasilkan panas berlebih (efek Joule) yang bisa melelehkan isolasi kabel.</li>
+<li><strong>Mikroelektronika:</strong> Dalam chip komputer, jalur penghantarnya sangat tipis. Insinyur harus menghitung <span class="math inline">\(J\)</span> dengan sangat teliti agar jalur tersebut tidak terbakar akibat densitas arus yang ekstrem.</li>
+</ul>
+<p><strong>Kesimpulan:</strong></p>
+<p>Arus (<span class="math inline">\(i\)</span>) adalah totalitas, sedangkan Densitas Arus (<span class="math inline">\(\vec{J}\)</span>) adalah detail distribusi. Memahami <span class="math inline">\(\vec{J}\)</span> berarti memahami bagaimana material merespons aliran listrik di tingkat mikroskopis.</p>
+</section>
+</section>
+<section id="laju-hanyut-drift-velocity" class="level2">
+<h2 class="anchored" data-anchor-id="laju-hanyut-drift-velocity">2.2 Laju Hanyut (Drift Velocity)</h2>
+<p>Setelah memahami arus secara makroskopis (Ampere), kita perlu melihat apa yang terjadi di dalam kabel pada skala atom. Bagian ini menjelaskan hubungan antara gerakan partikel subatomik dengan arus yang kita ukur.</p>
+<section id="arus-sebagai-gerakan-muatan-neto" class="level3">
+<h3 class="anchored" data-anchor-id="arus-sebagai-gerakan-muatan-neto">1. Arus sebagai Gerakan Muatan Neto</h3>
+<p>Tidak semua gerakan muatan menghasilkan arus listrik. Di dalam logam, elektron bebas bergerak secara acak dengan kecepatan termal yang sangat tinggi (sekitar <span class="math inline">\(10^{6} m/s\)</span>), namun karena arahnya acak, tidak ada perpindahan muatan bersih (<strong>net flow</strong>).</p>
+<ul>
+<li><strong>Tanpa Medan Listrik:</strong> Elektron bergerak acak, arus neto = 0.</li>
+<li><strong>Dengan Medan Listrik (</strong><span class="math inline">\(\vec{E}\)</span><strong>):</strong> Medan listrik memberikan gaya pada elektron, menyebabkan mereka “hanyut” perlahan ke satu arah tertentu sambil tetap bertumbukan. Inilah yang menghasilkan <strong>arus neto</strong>.</li>
+<li><strong>Kuantisasi:</strong> Ingat bahwa muatan bersifat terkuantisasi (<span class="math inline">\(q = ne\)</span>), artinya arus adalah aliran dari paket-paket muatan diskret (elektron).</li>
+</ul>
+</section>
+<section id="konsep-laju-hanyut-drift-velocity-v_d" class="level3">
+<h3 class="anchored" data-anchor-id="konsep-laju-hanyut-drift-velocity-v_d">2. Konsep Laju Hanyut (Drift Velocity, <span class="math inline">\(v_d\)</span>)</h3>
+<p>Laju hanyut adalah kecepatan rata-rata muatan (elektron) saat bergerak melalui konduktor di bawah pengaruh medan listrik. Kecepatan ini sangat lambat jika dibandingkan dengan kecepatan cahaya atau kecepatan termal elektron itu sendiri.</p>
+</section>
+<section id="penurunan-rumus-arus-listrik-tinjauan-mikroskopis" class="level3">
+<h3 class="anchored" data-anchor-id="penurunan-rumus-arus-listrik-tinjauan-mikroskopis">3. Penurunan Rumus Arus Listrik (Tinjauan Mikroskopis)</h3>
+<p>Mari kita tinjau sebuah segmen kawat dengan luas penampang <span class="math inline">\(A\)</span> dan panjang <span class="math inline">\(L\)</span>:</p>
+<ol type="1">
+<li><p><strong>Volume Segmen:</strong> Volume bagian kawat tersebut adalah <span class="math inline">\(V = A \cdot L\)</span>.</p></li>
+<li><p><strong>Kerapatan Muatan (</strong><span class="math inline">\(n\)</span><strong>):</strong> Misalkan <span class="math inline">\(n\)</span> adalah jumlah pembawa muatan bebas per satuan volume.</p></li>
+<li><p><strong>Total Muatan (</strong><span class="math inline">\(q\)</span><strong>):</strong> Jumlah total muatan yang tersedia untuk bergerak dalam segmen tersebut adalah:</p>
+<p><span class="math display">\[q = (n \cdot A \cdot L)e\]</span></p>
+<p><em>(Di mana</em> <span class="math inline">\(e\)</span> <em>adalah muatan satu elektron)</em>.</p></li>
+<li><p><strong>Waktu Tempuh (</strong><span class="math inline">\(t\)</span><strong>):</strong> Waktu yang dibutuhkan muatan untuk menempuh jarak <span class="math inline">\(L\)</span> dengan kecepatan <span class="math inline">\(v_d\)</span> adalah:</p>
+<p><span class="math display">\[t = \frac{L}{v_d}\]</span></p></li>
+<li><p><strong>Arus Listrik (</strong><span class="math inline">\(i\)</span><strong>):</strong> Berdasarkan definisi <span class="math inline">\(i = q/t\)</span>, maka:</p>
+<p><span class="math display">\[i = \frac{nALe}{L/v_d}\]</span></p>
+<p>Sehingga didapatkan hubungan:</p>
+<p><span class="math display">\[i = nAev_d\]</span></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771572602173.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi laju hanyut.</figcaption>
+</figure>
+</div>
+</section>
+<section id="hubungan-dengan-densitas-arus-vecj" class="level3">
+<h3 class="anchored" data-anchor-id="hubungan-dengan-densitas-arus-vecj">4. Hubungan dengan Densitas Arus (<span class="math inline">\(\vec{J}\)</span>)</h3>
+<p>Densitas arus adalah arus per satuan luas (<span class="math inline">\(J = i/A\)</span>). Jika kita masukkan rumus di atas:</p>
+<p><span class="math display">\[J = \frac{nAev_d}{A} \implies J = nev_d\]</span></p>
+<p>Secara vektor, hubungannya dituliskan sebagai:</p>
+<p><span class="math display">\[\vec{J} = (ne)\vec{v}_d\]</span></p>
+<p><strong>Analisis Arah Vektor:</strong></p>
+<ul>
+<li><strong>Pembawa Muatan Positif:</strong> Jika <span class="math inline">\(ne\)</span> positif, maka <span class="math inline">\(\vec{J}\)</span> searah dengan <span class="math inline">\(\vec{v}_d\)</span>.</li>
+<li><strong>Pembawa Muatan Negatif (Elektron):</strong> Karena muatan elektron negatif, maka hasil kali <span class="math inline">\(ne\)</span> menjadi negatif. Ini berarti secara matematis vektor <span class="math inline">\(\vec{J}\)</span> (densitas arus) memiliki arah yang <strong>berlawanan</strong> dengan vektor <span class="math inline">\(\vec{v}_d\)</span> (kecepatan hanyut elektron).</li>
+</ul>
+</section>
+</section>
+<section id="analisis-detail-penyelesaian-soal-laju-hanyut" class="level2">
+<h2 class="anchored" data-anchor-id="analisis-detail-penyelesaian-soal-laju-hanyut">2.3 Analisis Detail Penyelesaian Soal Laju Hanyut</h2>
+<section id="pertanyaan-soal" class="level3">
+<h3 class="anchored" data-anchor-id="pertanyaan-soal">Pertanyaan Soal</h3>
+<p>Berapakah kecepatan <em>drift</em> (laju hanyut) elektron pada suatu kawat tembaga berjari-jari <span class="math inline">\(0,815\text{ mm}\)</span> yang dialiri arus <span class="math inline">\(1\text{ A}\)</span>?</p>
+</section>
+<section id="langkah-1-identifikasi-data-dan-konversi-satuan" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-1-identifikasi-data-dan-konversi-satuan">Langkah 1: Identifikasi Data dan Konversi Satuan</h3>
+<p>Langkah pertama yang krusial dalam fisika adalah menyamakan satuan ke dalam Standar Internasional (SI).</p>
+<ul>
+<li>Arus (<span class="math inline">\(i\)</span>) = <span class="math inline">\(1\text{ A}\)</span></li>
+<li>Jari-jari (<span class="math inline">\(r\)</span>) = <span class="math inline">\(0,815\text{ mm} = 0,815 \times 10^{-3}\text{ m}\)</span></li>
+<li>Rapat massa tembaga (<span class="math inline">\(\rho\)</span>) = <span class="math inline">\(8,93\text{ g/cm}^3\)</span></li>
+<li>Massa molar tembaga (<span class="math inline">\(M\)</span>) = <span class="math inline">\(63,5\text{ g/mol}\)</span></li>
+<li>Bilangan Avogadro (<span class="math inline">\(N_A\)</span>) = <span class="math inline">\(6,02 \times 10^{23}\text{ atom/mol}\)</span></li>
+<li>Muatan elektron (<span class="math inline">\(e\)</span>) = <span class="math inline">\(1,6 \times 10^{-19}\text{ C}\)</span></li>
+</ul>
+</section>
+<section id="langkah-2-menghitung-densitas-atom-n_a" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-2-menghitung-densitas-atom-n_a">Langkah 2: Menghitung Densitas Atom (<span class="math inline">\(n_a\)</span>)</h3>
+<p>Kita perlu tahu berapa banyak atom tembaga dalam satu satuan volume. Rumus yang digunakan adalah:</p>
+<p><span class="math display">\[n_a = \frac{\rho \cdot N_A}{M}\]</span></p>
+<p><strong>Perhitungan:</strong></p>
+<p><span class="math display">\[n_a = \frac{(8,93\text{ g/cm}^3) \cdot (6,02 \times 10^{23}\text{ atom/mol})}{63,5\text{ g/mol}}\]</span><span class="math display">\[n_a = 8,47 \times 10^{22}\text{ atom/cm}^3\]</span></p>
+</section>
+<section id="langkah-3-menentukan-densitas-elektron-bebas-n" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-3-menentukan-densitas-elektron-bebas-n">Langkah 3: Menentukan Densitas Elektron Bebas (<span class="math inline">\(n\)</span>)</h3>
+<p>Dalam soal diasumsikan setiap 1 atom tembaga menyumbangkan 1 elektron bebas. Maka, nilai <span class="math inline">\(n = n_a\)</span>. Namun, kita harus mengubah satuannya dari <span class="math inline">\(\text{cm}^3\)</span> ke <span class="math inline">\(\text{m}^3\)</span>:</p>
+<ul>
+<li><span class="math inline">\(1\text{ cm}^3 = 10^{-6}\text{ m}^3\)</span></li>
+<li>Maka, <span class="math inline">\(n = 8,47 \times 10^{22} \cdot 10^6 = 8,47 \times 10^{28}\text{ elektron/m}^3\)</span></li>
+</ul>
+</section>
+<section id="langkah-4-menghitung-luas-penampang-a" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-4-menghitung-luas-penampang-a">Langkah 4: Menghitung Luas Penampang (<span class="math inline">\(A\)</span>)</h3>
+<p>Kawat berbentuk silinder, sehingga luas penampangnya adalah lingkaran:</p>
+<p><span class="math display">\[A = \pi \cdot r^2\]</span><span class="math display">\[A = \pi \cdot (0,000815\text{ m})^2\]</span><span class="math display">\[A \approx 2,086 \times 10^{-6}\text{ m}^2\]</span></p>
+</section>
+<section id="langkah-5-menghitung-kecepatan-drift-v_d" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-5-menghitung-kecepatan-drift-v_d">Langkah 5: Menghitung Kecepatan Drift (<span class="math inline">\(v_d\)</span>)</h3>
+<p>Gunakan rumus utama laju hanyut:</p>
+<p><span class="math display">\[v_d = \frac{i}{A \cdot n \cdot e}\]</span></p>
+<p><strong>Substitusi Nilai:</strong></p>
+<p><span class="math display">\[v_d = \frac{1\text{ A}}{(2,086 \times 10^{-6}\text{ m}^2) \cdot (8,47 \times 10^{28}\text{ m}^{-3}) \cdot (1,6 \times 10^{-19}\text{ C})}\]</span><span class="math display">\[v_d = 3,54 \times 10^{-5}\text{ m/s}\]</span></p>
+</section>
+<section id="interpretasi-hasil-penting-untuk-buku-referensi" class="level3">
+<h3 class="anchored" data-anchor-id="interpretasi-hasil-penting-untuk-buku-referensi">Interpretasi Hasil (Penting untuk Buku Referensi)</h3>
+<p>Hasil perhitungan menunjukkan <span class="math inline">\(v_d = 0,0000354\text{ m/s}\)</span> atau sekitar <span class="math inline">\(0,035\text{ mm/detik}\)</span>.</p>
+<p><strong>Mengapa ini penting?</strong></p>
+<ol type="1">
+<li><strong>Sangat Lambat:</strong> Elektron membutuhkan waktu sekitar 8 jam hanya untuk menempuh jarak 1 meter di dalam kawat tersebut.</li>
+<li><strong>Paradoks Lampu:</strong> Jika elektron selambat itu, mengapa lampu langsung menyala?</li>
+<li><strong>Kerapatan adalah Kunci:</strong> Meskipun gerakannya lambat, arusnya bisa besar (1 Ampere) karena jumlah elektron bebas (<span class="math inline">\(n\)</span>) di dalam tembaga sangat fantastis banyaknya (<span class="math inline">\(10^{28}\)</span> per meter kubik).</li>
+</ol>
+</section>
+<section id="mengapa-lampu-langsung-menyala" class="level3">
+<h3 class="anchored" data-anchor-id="mengapa-lampu-langsung-menyala">Mengapa Lampu Langsung Menyala?</h3>
+<p><em>“Jika kecepatan elektron (<em><span class="math inline">\(v_d\)</span></em>) sangat lambat (sekitar 0,01 mm/s), mengapa lampu langsung menyala saat saklar ditekan?”</em></p>
+<p><strong>Penjelasan:</strong></p>
+<p>Saat saklar ditekan, bukan elektron dari saklar yang harus sampai ke lampu. Baterai menciptakan <strong>medan listrik</strong> yang merambat di sepanjang kabel dengan kecepatan mendekati kecepatan cahaya. Medan listrik ini mendorong <em>seluruh</em> elektron yang sudah ada di sepanjang kabel secara bersamaan. Analogi yang tepat adalah pipa yang sudah penuh air; jika Anda mendorong air di satu ujung, air di ujung lainnya akan langsung keluar.</p>
+<p><strong>Pesan:</strong> Pemahaman tentang <span class="math inline">\(v_d\)</span> menunjukkan betapa luar biasanya alam semesta; arus yang besar bisa dihasilkan dari gerakan partikel yang sangat lambat, asalkan jumlah partikelnya (<span class="math inline">\(n\)</span>) sangat banyak.</p>
+</section>
+</section>
+</section>
+<section id="resistansi-dan-resistivitas" class="level1">
+<h1>3. Resistansi dan Resistivitas</h1>
+<p>Dalam mempelajari listrik dinamis, kita harus memahami mengapa material yang berbeda memberikan respon yang berbeda terhadap tegangan yang sama. Di sinilah peran konsep resistansi dan resistivitas.</p>
+<section id="hukum-ohm" class="level2">
+<h2 class="anchored" data-anchor-id="hukum-ohm">3.1 Hukum Ohm</h2>
+<p>Hukum Ohm menyatakan bahwa beda potensial (<span class="math inline">\(V\)</span>) pada suatu material sebanding dengan arus (<span class="math inline">\(I\)</span>) yang melaluinya, dengan konstanta pembanding yang disebut resistansi (<span class="math inline">\(R\)</span>):</p>
+<p><span class="math display">\[V = IR\]</span></p>
+<p>Material yang memiliki nilai <span class="math inline">\(R\)</span> konstan disebut material <strong>Ohmik</strong> (contoh: logam). Material yang nilai <span class="math inline">\(R\)</span>-nya berubah terhadap tegangan disebut <strong>Non-Ohmik</strong> (contoh: semikonduktor).</p>
+</section>
+<section id="resistansi-hambatan-listrik-r" class="level2">
+<h2 class="anchored" data-anchor-id="resistansi-hambatan-listrik-r">3.2 Resistansi (Hambatan Listrik, <span class="math inline">\(R\)</span>)</h2>
+<p>Resistansi adalah besaran makroskopik yang mengukur seberapa besar suatu <strong>benda atau komponen</strong> melawan aliran arus listrik.</p>
+<p><strong>Definisi Matematis</strong></p>
+<p>Kita menentukan nilai resistansi <span class="math inline">\(R\)</span> dengan menerapkan beda potensial (<span class="math inline">\(V\)</span>) pada benda tersebut dan mengukur arus (<span class="math inline">\(i\)</span>) yang mengalir:</p>
+<p><span class="math display">\[R = \frac{V}{i}\]</span></p>
+<ul>
+<li><strong>Satuan:</strong> Ohm (<span class="math inline">\(\Omega\)</span>), di mana <span class="math inline">\(1\ \Omega = 1\ \text{Volt}/\text{Ampere}\)</span>.</li>
+<li><strong>Komponen:</strong> Benda yang dibuat khusus untuk memberikan nilai hambatan tertentu dalam rangkaian disebut <strong>Resistor</strong>.</li>
+</ul>
+</section>
+<section id="resistivitas-hambatan-jenis-rho" class="level2">
+<h2 class="anchored" data-anchor-id="resistivitas-hambatan-jenis-rho">3.3 Resistivitas (Hambatan Jenis, <span class="math inline">\(\rho\)</span>)</h2>
+<p>Resistivitas adalah besaran mikroskopik yang menggambarkan sifat hambatan intrinsik dari suatu <strong>bahan/material</strong>, tidak peduli apa pun bentuk atau ukurannya.</p>
+<p><strong>Definisi Mikroskopik</strong></p>
+<p>Resistivitas didefinisikan sebagai rasio antara medan listrik (<span class="math inline">\(E\)</span>) dan densitas arus (<span class="math inline">\(J\)</span>):</p>
+<p><span class="math display">\[\rho = \frac{E}{J}\]</span></p>
+<ul>
+<li><strong>Material Isotropik:</strong> Persamaan ini berlaku untuk material yang sifat listriknya sama ke segala arah.</li>
+<li><strong>Konduktivitas (</strong><span class="math inline">\(\sigma\)</span><strong>):</strong> Kebalikan dari resistivitas disebut konduktivitas (<span class="math inline">\(\sigma = 1/\rho\)</span>), yang mengukur seberapa baik suatu bahan menghantarkan listrik.</li>
+</ul>
+</section>
+<section id="hubungan-resistansi-dan-resistivitas" class="level2">
+<h2 class="anchored" data-anchor-id="hubungan-resistansi-dan-resistivitas">3.4 Hubungan Resistansi dan Resistivitas</h2>
+<p>Meskipun berbeda, keduanya saling berhubungan melalui geometri benda (panjang dan luas penampang).</p>
+<p>Untuk kawat penghantar dengan panjang <span class="math inline">\(L\)</span> dan luas penampang <span class="math inline">\(A\)</span>, resistansinya dinyatakan dengan:</p>
+<p><span class="math display">\[R = \rho \frac{L}{A}\]</span></p>
+<p><strong>Analogi Fisik:</strong></p>
+<p>Bayangkan aliran air dalam pipa:</p>
+<ul>
+<li><span class="math inline">\(L\)</span> <strong>(Panjang):</strong> Semakin panjang pipa, semakin sulit air mengalir (hambatan besar).</li>
+<li><span class="math inline">\(A\)</span> <strong>(Luas Penampang):</strong> Semakin lebar pipa, semakin mudah air mengalir (hambatan kecil).</li>
+<li><span class="math inline">\(\rho\)</span> <strong>(Resistivitas):</strong> Ini setara dengan “kekasaran” dinding dalam pipa. Pipa tembaga lebih “licin” (resistivitas rendah) dibanding pipa besi.</li>
+</ul>
+</section>
+<section id="perbedaan-kuantitas-makroskopik-vs-mikroskopik" class="level2">
+<h2 class="anchored" data-anchor-id="perbedaan-kuantitas-makroskopik-vs-mikroskopik">3.5 Perbedaan Kuantitas: Makroskopik vs Mikroskopik</h2>
+<p>Penting untuk membedakan kategori pengukuran ini:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Kategori</strong></td>
+<td><strong>Besaran Makroskopik</strong></td>
+<td><strong>Besaran Mikroskopik</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Definisi</strong></td>
+<td>Berkaitan dengan pengukuran pada objek utuh.</td>
+<td>Berkaitan dengan sifat mendasar di dalam material.</td>
+</tr>
+<tr class="odd">
+<td><strong>Variabel</strong></td>
+<td>Tegangan (<span class="math inline">\(V\)</span>), Arus (<span class="math inline">\(i\)</span>), Resistansi (<span class="math inline">\(R\)</span>)</td>
+<td>Medan Listrik (<span class="math inline">\(E\)</span>), Rapat Arus (<span class="math inline">\(J\)</span>), Resistivitas (<span class="math inline">\(\rho\)</span>)</td>
+</tr>
+<tr class="even">
+<td><strong>Ketergantungan</strong></td>
+<td>Bergantung pada bentuk, ukuran, dan bahan.</td>
+<td>Hanya bergantung pada jenis bahan dan suhu.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nilai-resistivitas-berbagai-material" class="level2">
+<h2 class="anchored" data-anchor-id="nilai-resistivitas-berbagai-material">3.6 Nilai Resistivitas Berbagai Material</h2>
+<p>Berdasarkan data tabel, material diklasifikasikan menjadi:</p>
+<ol type="1">
+<li><strong>Konduktor Baik:</strong> Memiliki resistivitas sangat rendah (orde <span class="math inline">\(10^{-8}\ \Omega\cdot\text{m}\)</span>), contoh: Perak, Tembaga, Emas.</li>
+<li><strong>Semikonduktor:</strong> Memiliki resistivitas menengah (0,46 s.d. 2300 <span class="math inline">\(\Omega\cdot\text{m}\)</span>), contoh: Germanium, Silikon.</li>
+<li><strong>Isolator:</strong> Memiliki resistivitas sangat tinggi (orde <span class="math inline">\(10^{10}\)</span> s.d. <span class="math inline">\(10^{16}\ \Omega\cdot\text{m}\)</span>), contoh: Kaca, Karet, Kuarsa.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Ingatlah kalimat kunci ini: <em>“Resistance is a property of an object. Resistivity is a property of a material.”</em> (Resistansi adalah properti sebuah objek. Resistivitas adalah properti sebuah material). Sebuah kawat tembaga sepanjang 10m dan 1m memiliki <strong>resistivitas yang sama</strong>, tetapi <strong>resistansi yang berbeda</strong>.</p>
+</blockquote>
+</section>
+<section id="analisis-detail-menghitung-dimensi-fisik-resistor" class="level2">
+<h2 class="anchored" data-anchor-id="analisis-detail-menghitung-dimensi-fisik-resistor">3.7 Analisis Detail: Menghitung Dimensi Fisik Resistor</h2>
+<p><strong>Pertanyaan:</strong></p>
+<p>Suatu kawat nikrom (resisitivitas <span class="math inline">\(10^{-6} \, \Omega \cdot \text{m}\)</span>) memiliki jari-jari <span class="math inline">\(0,65 \, \text{mm}\)</span>. Berapakah panjang kawat yang dibutuhkan untuk memperoleh resistansi <span class="math inline">\(2 \, \Omega\)</span>?</p>
+<hr>
+<section id="deskripsi-soal" class="level3">
+<h3 class="anchored" data-anchor-id="deskripsi-soal">Deskripsi Soal</h3>
+<p>Kita diminta untuk menentukan berapa panjang kawat Nikrom yang dibutuhkan agar menghasilkan hambatan sebesar <span class="math inline">\(2\ \Omega\)</span>. Ini adalah simulasi sederhana bagaimana pabrik komponen menentukan panjang kawat di dalam sebuah resistor atau elemen pemanas.</p>
+</section>
+<section id="langkah-1-identifikasi-data-input" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-1-identifikasi-data-input">Langkah 1: Identifikasi Data (Input)</h3>
+<p>Penting untuk memastikan semua satuan berada dalam Standar Internasional (SI) sebelum melakukan perhitungan.</p>
+<ul>
+<li><strong>Material:</strong> Nikrom (umum digunakan untuk elemen pemanas karena resistivitasnya tinggi).</li>
+<li><strong>Resistivitas (</strong><span class="math inline">\(\rho\)</span><strong>):</strong> <span class="math inline">\(10^{-6}\ \Omega\cdot\text{m}\)</span>.</li>
+<li><strong>Jari-jari (</strong><span class="math inline">\(r\)</span><strong>):</strong> <span class="math inline">\(0,65\ \text{mm}\)</span>.
+<ul>
+<li><em>Konversi ke meter:</em> <span class="math inline">\(0,65 \times 10^{-3}\ \text{m}\)</span> atau <span class="math inline">\(6,5 \times 10^{-4}\ \text{m}\)</span>.</li>
+</ul></li>
+<li><strong>Target Resistansi (</strong><span class="math inline">\(R\)</span><strong>):</strong> <span class="math inline">\(2\ \Omega\)</span>.</li>
+</ul>
+</section>
+<section id="langkah-2-menghitung-luas-penampang-a" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-2-menghitung-luas-penampang-a">Langkah 2: Menghitung Luas Penampang (<span class="math inline">\(A\)</span>)</h3>
+<p>Karena kawat berbentuk silinder panjang, luas penampang yang dilalui arus adalah luas lingkaran.</p>
+<p><span class="math display">\[A = \pi r^2\]</span></p>
+<p><strong>Perhitungan:</strong></p>
+<p><span class="math display">\[A = 3,14 \cdot (6,5 \times 10^{-4}\ \text{m})^2\]</span><span class="math display">\[A = 3,14 \cdot (42,25 \times 10^{-8}\ \text{m}^2)\]</span><span class="math display">\[A \approx 1,33 \times 10^{-6}\ \text{m}^2\]</span></p>
+<blockquote class="blockquote">
+<p>Luas penampang ini sangat kecil (orde mikrometer persegi), yang wajar untuk sebuah kawat tipis.</p>
+</blockquote>
+</section>
+<section id="langkah-3-menentukan-panjang-kawat-l" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-3-menentukan-panjang-kawat-l">Langkah 3: Menentukan Panjang Kawat (<span class="math inline">\(L\)</span>)</h3>
+<p>Gunakan rumus hubungan resistansi dan resistivitas:</p>
+<p><span class="math display">\[R = \rho \frac{L}{A}\]</span></p>
+<p>Untuk mencari <span class="math inline">\(L\)</span>, kita pindahkan ruasnya (isolasi variabel <span class="math inline">\(L\)</span>):</p>
+<p><span class="math display">\[L = \frac{R \cdot A}{\rho}\]</span></p>
+<p><strong>Substitusi Nilai:</strong></p>
+<p><span class="math display">\[L = \frac{2\ \Omega \cdot 1,33 \times 10^{-6}\ \text{m}^2}{10^{-6}\ \Omega\cdot\text{m}}\]</span></p>
+<p><strong>Penyederhanaan:</strong></p>
+<p>Perhatikan bahwa nilai <span class="math inline">\(10^{-6}\)</span> pada pembilang dan penyebut saling meniadakan (cancel out). Ini adalah keuntungan numerik dari penggunaan bahan dengan resistivitas orde mikrometer seperti Nikrom.</p>
+<p><span class="math display">\[L = 2 \cdot 1,33\]</span><span class="math display">\[L = 2,66\ \text{meter}\]</span></p>
+</section>
+<section id="kesimpulan-dan-makna-fisis" class="level3">
+<h3 class="anchored" data-anchor-id="kesimpulan-dan-makna-fisis">Kesimpulan dan Makna Fisis</h3>
+<p>Untuk mendapatkan hambatan sebesar <span class="math inline">\(2\ \Omega\)</span> dengan kawat Nikrom setebal <span class="math inline">\(1,3\ \text{mm}\)</span> (diameter), kita membutuhkan kawat sepanjang <strong>2,66 meter</strong>.</p>
+<p><strong>Mengapa menggunakan Nikrom?</strong></p>
+<p>Jika kita menggunakan <strong>Tembaga</strong> (<span class="math inline">\(\rho \approx 1,7 \times 10^{-8}\ \Omega\cdot\text{m}\)</span>) dengan ketebalan yang sama, kita akan membutuhkan kawat yang jauh lebih panjang (sekitar 150 meter!) untuk mendapatkan hambatan yang sama. Itulah sebabnya alat pemanas (seperti setrika atau pemanggang) menggunakan kawat Nikrom: kita bisa mendapatkan hambatan yang cukup tinggi dalam ruang yang sangat terbatas (pendek).</p>
+</section>
+</section>
+</section>
+<section id="pengaruh-suhu-terhadap-sifat-kelistrikan-material" class="level1">
+<h1>4. Pengaruh Suhu terhadap Sifat Kelistrikan Material</h1>
+<p>Dalam aplikasi nyata, suhu operasi sebuah perangkat elektronik akan memengaruhi kinerjanya. Fenomena ini terjadi karena perubahan suhu mengubah intensitas getaran atom-atom di dalam struktur kristal konduktor.</p>
+<section id="variasi-suhu-pada-resistivitas-rho" class="level2">
+<h2 class="anchored" data-anchor-id="variasi-suhu-pada-resistivitas-rho">4.1 Variasi Suhu pada Resistivitas (<span class="math inline">\(\rho\)</span>)</h2>
+<p>Resistivitas logam pada umumnya meningkat secara linear terhadap kenaikan suhu dalam rentang yang cukup luas. Hal ini disebabkan karena semakin tinggi suhu, semakin besar amplitudo getaran ion-ion kisi logam, yang meningkatkan kemungkinan terjadinya tumbukan dengan elektron yang mengalir (pembawa muatan).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771726264174.png" class="img-fluid figure-img"></p>
+<figcaption>Kurva resistivitas vs temperatur.</figcaption>
+</figure>
+</div>
+<section id="formulasi-empiris" class="level3">
+<h3 class="anchored" data-anchor-id="formulasi-empiris">Formulasi Empiris</h3>
+<p>Pendekatan linear untuk menghitung perubahan resistivitas terhadap suhu dinyatakan dalam persamaan:</p>
+<p><span class="math display">\[\rho - \rho_0 = \rho_0 \alpha (T - T_0)\]</span></p>
+<p>Atau sering ditulis sebagai:</p>
+<p><span class="math display">\[\rho = \rho_0 [1 + \alpha (T - T_0)]\]</span></p>
+<p><strong>Keterangan Variabel:</strong></p>
+<ul>
+<li><span class="math inline">\(\rho\)</span>: Resistivitas pada suhu <span class="math inline">\(T\)</span>.</li>
+<li><span class="math inline">\(\rho_0\)</span>: Resistivitas referensi pada suhu <span class="math inline">\(T_0\)</span> (biasanya suhu ruang, <span class="math inline">\(293\text{ K}\)</span> atau <span class="math inline">\(20^\circ\text{C}\)</span>).</li>
+<li><span class="math inline">\(\alpha\)</span>: <strong>Koefisien suhu resistivitas</strong>, yaitu konstanta yang bergantung pada jenis material (Satuan: <span class="math inline">\(K^{-1}\)</span> atau <span class="math inline">\(^\circ\text{C}^{-1}\)</span>).</li>
+<li><span class="math inline">\(T - T_0\)</span>: Perubahan suhu.</li>
+</ul>
+</section>
+</section>
+<section id="variasi-suhu-pada-resistansi-r" class="level2">
+<h2 class="anchored" data-anchor-id="variasi-suhu-pada-resistansi-r">4.2 Variasi Suhu pada Resistansi (<span class="math inline">\(R\)</span>)</h2>
+<p>Karena resistansi kawat (<span class="math inline">\(R\)</span>) berbanding lurus dengan resistivitasnya (<span class="math inline">\(R = \rho \frac{L}{A}\)</span>), maka perubahan suhu juga akan mengubah nilai hambatan total benda tersebut secara proporsional.</p>
+<section id="formulasi-resistansi" class="level3">
+<h3 class="anchored" data-anchor-id="formulasi-resistansi">Formulasi Resistansi</h3>
+<p><span class="math display">\[R = R_0 [1 + \alpha (T - T_0)]\]</span></p>
+<p><strong>Aplikasi Praktis:</strong></p>
+<p>Sifat ini tidak hanya menjadi kendala (seperti panas pada kabel), tetapi juga dimanfaatkan dalam teknologi:</p>
+<ul>
+<li><strong>Sensor Suhu (RTD - Resistance Temperature Detector):</strong> Dengan memantau perubahan nilai <span class="math inline">\(R\)</span> pada bahan tertentu (misal Platinum), kita dapat mengukur suhu dengan tingkat presisi yang sangat tinggi.</li>
+<li><strong>Termistor:</strong> Komponen yang nilai hambatannya sangat sensitif terhadap perubahan suhu kecil.</li>
+</ul>
+</section>
+</section>
+<section id="analisis-grafik-perilaku-pada-suhu-ekstrem" class="level2">
+<h2 class="anchored" data-anchor-id="analisis-grafik-perilaku-pada-suhu-ekstrem">4.3 Analisis Grafik: Perilaku pada Suhu Ekstrem</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771726153867.png" class="img-fluid figure-img"></p>
+<figcaption>Kurva titik ekstrim saat 0 K.</figcaption>
+</figure>
+</div>
+<p>Gambar ini memberikan gambaran yang lebih mendalam mengenai perilaku material di luar rentang linear tradisional:</p>
+<section id="a.-wilayah-suhu-tinggi-linear" class="level3">
+<h3 class="anchored" data-anchor-id="a.-wilayah-suhu-tinggi-linear">A. Wilayah Suhu Tinggi (Linear)</h3>
+<p>Pada suhu tinggi, resistivitas didominasi oleh tumbukan antara elektron dan atom logam yang bergetar hebat. Di sinilah grafik terlihat lurus (linear) dan hukum pendekatan di atas berlaku dengan sangat akurat.</p>
+</section>
+<section id="b.-wilayah-suhu-rendah-non-linear" class="level3">
+<h3 class="anchored" data-anchor-id="b.-wilayah-suhu-rendah-non-linear">B. Wilayah Suhu Rendah (Non-linear)</h3>
+<p>Mendekati suhu nol absolut (<span class="math inline">\(0\text{ K}\)</span>), grafik tidak lagi linear. Terdapat fenomena yang disebut <strong>Resistivitas Sisa (Residual Resistivity)</strong>.</p>
+<ul>
+<li>Secara teoretis, jika logam sempurna tanpa cacat didinginkan hingga <span class="math inline">\(0\text{ K}\)</span>, hambatannya harus nol.</li>
+<li><strong>Kenyataannya:</strong> Resistivitas mendekati nilai tetap (<span class="math inline">\(\rho_0\)</span>) yang tidak nol. Hal ini disebabkan oleh tumbukan elektron dengan <strong>pengotor (impurities)</strong> dan ketidaksempurnaan struktur kristal logam, bukan lagi karena getaran termal atom.</li>
+</ul>
+</section>
+<section id="c.-titik-kritis-dan-superkonduktivitas" class="level3">
+<h3 class="anchored" data-anchor-id="c.-titik-kritis-dan-superkonduktivitas">C. Titik Kritis dan Superkonduktivitas</h3>
+<p>Perlu dicatat bahwa pada beberapa material khusus, resistivitas tidak hanya melandai, tetapi jatuh secara drastis menjadi nol tepat pada suhu tertentu yang disebut <strong>suhu kritis (</strong><span class="math inline">\(T_c\)</span><strong>)</strong>. Fenomena ini disebut Superkonduktivitas, yang memungkinkan arus mengalir tanpa kehilangan energi sama sekali (akan dibahas pada sub-bab berikutnya).</p>
+<p><strong>Rangkuman:</strong></p>
+<ol type="1">
+<li><strong>Konduktor Logam:</strong> <span class="math inline">\(T \uparrow \implies \rho \uparrow\)</span> (Hubungan positif/linear).</li>
+<li><strong>Semikonduktor:</strong> (Seringkali berlawanan) <span class="math inline">\(T \uparrow \implies \rho \downarrow\)</span> karena lebih banyak muatan yang terbebaskan untuk mengalir.</li>
+<li><strong>Batas Nol Absolut:</strong> Hambatan tidak pernah benar-benar nol pada logam biasa karena adanya cacat material.</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="superkonduktor-konduksi-tanpa-kehilangan-energi" class="level1">
+<h1>5. Superkonduktor – Konduksi Tanpa Kehilangan Energi</h1>
+<p>Superkonduktivitas adalah fase unik dari suatu materi di mana hambatan listriknya benar-benar hilang (<span class="math inline">\(R = 0\)</span>). Fenomena ini pertama kali ditemukan oleh Heike Kamerlingh Onnes pada tahun 1911 saat ia mendinginkan merkuri (raksa) hingga suhu helium cair.</p>
+<section id="definisi-dan-karakteristik-utama" class="level2">
+<h2 class="anchored" data-anchor-id="definisi-dan-karakteristik-utama">5.1 Definisi dan Karakteristik Utama</h2>
+<p>Superkonduktor didefinisikan sebagai material yang kehilangan seluruh resistansi listriknya saat berada di bawah suhu tertentu.</p>
+<section id="suhu-kritis-t_c" class="level3">
+<h3 class="anchored" data-anchor-id="suhu-kritis-t_c">Suhu Kritis (<span class="math inline">\(T_c\)</span>)</h3>
+<p>Suhu di mana perubahan fase dari konduktor normal menjadi superkonduktor terjadi disebut <strong>Suhu Kritis (</strong><span class="math inline">\(T_c\)</span><strong>)</strong>.</p>
+<ul>
+<li><strong>Perilaku Grafik:</strong> Berbeda dengan logam normal yang resistansinya melandai perlahan saat didinginkan, pada superkonduktor, resistansi turun secara <strong>diskontinu</strong> (tiba-tiba) menjadi tepat nol saat menyentuh <span class="math inline">\(T_c\)</span>.</li>
+<li><strong>Contoh Klasik:</strong> Untuk merkuri (Hg), suhu kritisnya adalah <span class="math inline">\(4,15\text{ K}\)</span>. Di atas suhu ini, merkuri berperan sebagai logam normal; di bawah suhu ini, ia menjadi superkonduktor.</li>
+</ul>
+</section>
+</section>
+<section id="sifat-sifat-unik-superkonduktor" class="level2">
+<h2 class="anchored" data-anchor-id="sifat-sifat-unik-superkonduktor">5.2 Sifat-Sifat Unik Superkonduktor</h2>
+<section id="resistansi-nol-r-0" class="level3">
+<h3 class="anchored" data-anchor-id="resistansi-nol-r-0">Resistansi Nol (<span class="math inline">\(R = 0\)</span>)</h3>
+<p>Karena tidak ada hambatan, maka tidak ada energi yang terbuang sebagai panas (efek Joule). Dalam logam biasa, elektron bertumbukan dengan ion kisi, namun dalam fase superkonduktor, elektron mengalir dalam “pasangan” (dikenal sebagai Pasangan Cooper dalam teori BCS) yang bergerak tanpa gesekan.</p>
+</section>
+<section id="arus-persisten-persistent-current" class="level3">
+<h3 class="anchored" data-anchor-id="arus-persisten-persistent-current">Arus Persisten (Persistent Current)</h3>
+<p>Konsekuensi dari <span class="math inline">\(R = 0\)</span> adalah arus listrik yang diberikan ke dalam loop superkonduktor akan terus mengalir selamanya meskipun sumber tegangan dilepaskan. Hal ini terjadi karena menurut Hukum Ohm (<span class="math inline">\(V = IR\)</span>), jika <span class="math inline">\(R = 0\)</span>, maka tidak diperlukan tegangan (<span class="math inline">\(V\)</span>) untuk mempertahankan arus yang sudah ada.</p>
+</section>
+<section id="efek-meissner-levitasi-magnetik" class="level3">
+<h3 class="anchored" data-anchor-id="efek-meissner-levitasi-magnetik">Efek Meissner (Levitasi Magnetik)</h3>
+<p>Gambar ini menunjukkan fenomena levitasi. Superkonduktor adalah diamagnetik sempurna; mereka menolak medan magnet luar dari bagian dalamnya. Hal ini menyebabkan magnet dapat “melayang” di atas material superkonduktor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771726524057.jpg" class="img-fluid figure-img"></p>
+<figcaption>Fenomena levitasi.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="faktor-yang-memengaruhi-suhu-kritis-t_c" class="level2">
+<h2 class="anchored" data-anchor-id="faktor-yang-memengaruhi-suhu-kritis-t_c">5.3 Faktor yang Memengaruhi Suhu Kritis (<span class="math inline">\(T_c\)</span>)</h2>
+<p>Nilai <span class="math inline">\(T_c\)</span> bukanlah angka mati, melainkan sangat sensitif terhadap kondisi fisik dan kimia material tersebut:</p>
+<ol type="1">
+<li><strong>Komposisi Kimia:</strong> Penambahan atau perubahan atom penyusun (doping) dapat menaikkan atau menurunkan <span class="math inline">\(T_c\)</span>.</li>
+<li><strong>Tekanan:</strong> Memberikan tekanan ekstrem pada material tertentu dapat memaksa mereka menjadi superkonduktor pada suhu yang lebih tinggi.</li>
+<li><strong>Struktur Molekul:</strong> Susunan geometri atom dalam kristal sangat menentukan stabilitas fase superkonduktor.</li>
+</ol>
+</section>
+<section id="aplikasi-dalam-teknologi-modern" class="level2">
+<h2 class="anchored" data-anchor-id="aplikasi-dalam-teknologi-modern">5.4 Aplikasi dalam Teknologi Modern</h2>
+<p>Beberapa aplikasi krusial yang sudah digunakan saat ini:</p>
+<ul>
+<li><strong>Magnet Superkonduktor:</strong> Digunakan untuk menghasilkan medan magnet yang sangat kuat (sekitar 10 kali lebih kuat dari elektromagnet konvensional). Keunggulannya adalah magnet ini tidak membutuhkan daya listrik besar untuk mempertahankan medannya setelah arus awal dialirkan.</li>
+<li><strong>Mesin MRI (Magnetic Resonance Imaging):</strong> Di dunia medis, koil superkonduktor digunakan untuk menciptakan medan magnet stabil dan kuat yang diperlukan untuk memindai organ dalam tubuh manusia tanpa menghasilkan panas berlebih pada mesin.</li>
+<li><strong>Penyimpanan Energi:</strong> Karena arus bisa mengalir tanpa henti, superkonduktor dianggap sebagai kandidat ideal untuk alat penyimpan energi masa depan (SMES - Superconducting Magnetic Energy Storage).</li>
+</ul>
+<p><strong>Catatan:</strong></p>
+<p>Salah satu impian terbesar fisikawan saat ini adalah menemukan <strong>Superkonduktor Suhu Ruang</strong>. Saat ini, sebagian besar superkonduktor membutuhkan pendinginan ekstrem menggunakan Nitrogen Cair atau Helium Cair yang sangat mahal. Jika kita bisa menemukan material yang bersifat superkonduktor pada suhu ruang (<span class="math inline">\(300\text{ K}\)</span>), seluruh sistem transmisi listrik di dunia akan menjadi 100% efisien tanpa ada kehilangan daya di jalan.</p>
+</section>
+</section>
+<section id="hukum-ohm-dan-mekanisme-konduksi" class="level1">
+<h1>6. Hukum Ohm dan Mekanisme Konduksi</h1>
+<p>Hukum Ohm adalah prinsip dasar yang menjelaskan bagaimana muatan listrik merespons tekanan elektrik (tegangan). Untuk memahami mengapa hukum ini bekerja, kita harus melihat ke dalam struktur atom material dan membandingkannya dengan aliran fluida di dalam pipa.</p>
+<section id="hukum-ohm-pandangan-makroskopik" class="level2">
+<h2 class="anchored" data-anchor-id="hukum-ohm-pandangan-makroskopik">6.1 Hukum Ohm: Pandangan Makroskopik</h2>
+<p>Hukum Ohm menyatakan bahwa arus listrik (<span class="math inline">\(I\)</span>) yang mengalir melalui suatu konduktor berbanding lurus dengan beda potensial (<span class="math inline">\(V\)</span>) yang diberikan.</p>
+<p><span class="math display">\[V = I \cdot R\]</span></p>
+<section id="material-ohmik-vs.-non-ohmik" class="level3">
+<h3 class="anchored" data-anchor-id="material-ohmik-vs.-non-ohmik">Material Ohmik vs.&nbsp;Non-Ohmik</h3>
+<p>Kita membedakan material menjadi dua kategori:</p>
+<ul>
+<li><strong>Material Ohmik:</strong> Material (seperti logam) yang memiliki resistansi (<span class="math inline">\(R\)</span>) konstan. Grafiknya berupa garis lurus melalui titik asal, di mana kemiringannya (<em>slope</em>) adalah <span class="math inline">\(1/R\)</span>.</li>
+<li><strong>Material Non-Ohmik:</strong> Material yang resistansinya berubah-ubah bergantung pada besar arus atau tegangan yang diberikan (contoh: dioda, transistor, atau gas terionisasi). Grafiknya berbentuk kurva melengkung.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771727352348.png" class="img-fluid figure-img"></p>
+<figcaption>Kurva IV untuk material ohmik dan non-ohmik.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="pandangan-mikroskopik-mengapa-hukum-ohm-terjadi" class="level2">
+<h2 class="anchored" data-anchor-id="pandangan-mikroskopik-mengapa-hukum-ohm-terjadi">6.2 Pandangan Mikroskopik: Mengapa Hukum Ohm Terjadi?</h2>
+<p>Mengapa arus sebanding dengan tegangan? Hal ini dapat dijelaskan melalui <strong>Model Klasik Konduksi (Model Drude)</strong>:</p>
+<ol type="1">
+<li><p><strong>Kisi Ion dan Elektron Bebas:</strong> Logam digambarkan sebagai kisi-kisi ion positif yang diam, dikelilingi oleh “gas” elektron bebas yang bergerak acak akibat energi termal.</p></li>
+<li><p><strong>Tumbukan dan Waktu Relaksasi (</strong><span class="math inline">\(\tau\)</span><strong>):</strong> Tanpa medan listrik, gerakan neto elektron adalah nol. Saat medan listrik (<span class="math inline">\(E\)</span>) diberikan, elektron mengalami percepatan <span class="math inline">\(a = \frac{eE}{m_e}\)</span>, namun pergerakannya terhambat oleh tumbukan dengan ion kisi.</p></li>
+<li><p><strong>Waktu Tumbukan Rata-rata (</strong><span class="math inline">\(\tau\)</span><strong>):</strong> Kecepatan hanyut (<span class="math inline">\(v_d\)</span>) tercapai dalam waktu rata-rata antar tumbukan (<span class="math inline">\(\tau\)</span>):</p>
+<p><span class="math display">\[v_d = \frac{eE}{m_e} \tau\]</span></p></li>
+<li><p><strong>Penurunan Resistivitas (</strong><span class="math inline">\(\rho\)</span><strong>):</strong> Dari hubungan <span class="math inline">\(J = n e v_d\)</span>, kita mendapatkan:</p>
+<p><span class="math display">\[\rho = \frac{m_e}{e^2 n \tau}\]</span></p>
+<p>Hukum Ohm berlaku jika <span class="math inline">\(\rho\)</span> (dan <span class="math inline">\(\tau\)</span>) tidak bergantung pada medan listrik <span class="math inline">\(E\)</span>.</p></li>
+</ol>
+<p>Secara lebih lengkap, mengapa Hukum Ohm (<span class="math inline">\(V = IR\)</span>) bisa terjadi? Mengapa arus sebanding dengan tegangan? Untuk menjawabnya, kita menggunakan <strong>Model Drude</strong> (Model Klasik Konduksi Listrik) yang diusulkan oleh Paul Drude pada tahun 1900.</p>
+<section id="model-drude-logam-sebagai-gas-elektron" class="level3">
+<h3 class="anchored" data-anchor-id="model-drude-logam-sebagai-gas-elektron">1. Model Drude: Logam sebagai “Gas Elektron”</h3>
+<p>Sebuah logam konduktor digambarkan secara mikroskopis sebagai berikut:</p>
+<ul>
+<li><strong>Kisi Ion (Ion Lattice):</strong> Atom-atom logam yang telah melepaskan elektron valensinya tersusun rapi dalam kisi tiga dimensi. Ion-ion ini bermuatan positif dan dianggap diam di tempat (hanya bergetar karena suhu).</li>
+<li><strong>Elektron Bebas:</strong> Elektron valensi yang lepas bergerak bebas di seluruh bagian logam, mirip dengan molekul gas dalam wadah.</li>
+<li><strong>Kesetimbangan Termal:</strong> Tanpa adanya medan listrik, elektron bergerak acak dengan kecepatan termal yang sangat tinggi, yang disebut laju <em>root-mean-square</em> (<span class="math inline">\(v_{rms}\)</span>).</li>
+</ul>
+</section>
+<section id="gerakan-acak-vs.-gerakan-hanyut" class="level3">
+<h3 class="anchored" data-anchor-id="gerakan-acak-vs.-gerakan-hanyut">2. Gerakan Acak vs.&nbsp;Gerakan Hanyut</h3>
+<section id="a.-laju-termal-v_rms" class="level4">
+<h4 class="anchored" data-anchor-id="a.-laju-termal-v_rms">A. Laju Termal (<span class="math inline">\(v_{rms}\)</span>)</h4>
+<p>Elektron selalu bergerak karena energi panas. Pada suhu ruang (<span class="math inline">\(300\text{ K}\)</span>), laju rata-rata elektron sangat fantastis:</p>
+<p><span class="math display">\[v_{rms} = \sqrt{\frac{3kT}{m_e}} \approx 1,17 \times 10^5 \text{ m/s}\]</span></p>
+<p>Namun, karena gerakannya acak ke segala arah, perpindahan neto muatannya adalah <strong>nol</strong>.</p>
+</section>
+<section id="b.-pengaruh-medan-listrik-e" class="level4">
+<h4 class="anchored" data-anchor-id="b.-pengaruh-medan-listrik-e">B. Pengaruh Medan Listrik (<span class="math inline">\(E\)</span>)</h4>
+<p>Ketika beda potensial diberikan, muncul medan listrik (<span class="math inline">\(E\)</span>) di dalam kawat. Medan ini memberikan gaya elektrostatik pada elektron:</p>
+<p><span class="math display">\[F = eE\]</span></p>
+<p>Gaya ini menghasilkan percepatan (<span class="math inline">\(a\)</span>):</p>
+<p><span class="math display">\[a = \frac{F}{m_e} = \frac{eE}{m_e}\]</span></p>
+</section>
+<section id="c.-kecepatan-hanyut-v_d-dan-waktu-relaksasi-tau" class="level4">
+<h4 class="anchored" data-anchor-id="c.-kecepatan-hanyut-v_d-dan-waktu-relaksasi-tau">C. Kecepatan Hanyut (<span class="math inline">\(v_d\)</span>) dan Waktu Relaksasi (<span class="math inline">\(\tau\)</span>)</h4>
+<p>Elektron tidak terus bertambah cepat hingga tak terhingga karena mereka menabrak ion-ion kisi. Waktu rata-rata antara dua tumbukan disebut <strong>Waktu Relaksasi</strong> atau <strong>Waktu Tumbukan</strong> (<span class="math inline">\(\tau\)</span>). Kecepatan tambahan yang didapat elektron akibat medan listrik sebelum menabrak sesuatu disebut laju hanyut:</p>
+<p><span class="math display">\[v_d = a\tau = \frac{eE}{m_e}\tau\]</span></p>
+</section>
+</section>
+<section id="penurunan-matematis-hukum-ohm" class="level3">
+<h3 class="anchored" data-anchor-id="penurunan-matematis-hukum-ohm">3. Penurunan Matematis Hukum Ohm</h3>
+<p>Dari pelajaran sebelumnya, kita tahu bahwa densitas arus (<span class="math inline">\(J\)</span>) adalah:</p>
+<p><span class="math display">\[J = n e v_d\]</span></p>
+<p>Jika kita substitusikan nilai <span class="math inline">\(v_d\)</span> dari model Drude ke dalam persamaan <span class="math inline">\(J\)</span>:</p>
+<p><span class="math display">\[J = n e \left(\frac{eE}{m_e}\tau \right) \implies J = \left(\frac{n e^2 \tau}{m_e} \right) E\]</span></p>
+<p>Persamaan ini dapat disusun ulang menjadi:</p>
+<p><span class="math display">\[E = \left(\frac{m_e}{n e^2 \tau} \right) J\]</span></p>
+<p>Dalam Fisika, hubungan ini sering ditulis sebagai <span class="math inline">\(E = \rho J\)</span>. Maka, kita berhasil menemukan definisi mikroskopis dari <strong>Resistivitas (</strong><span class="math inline">\(\rho\)</span><strong>)</strong>:</p>
+<p><span class="math display">\[\rho = \frac{m_e}{n e^2 \tau}\]</span></p>
+<p><strong>Kesimpulan Penting:</strong></p>
+<p>Logam dikatakan mematuhi <strong>Hukum Ohm</strong> jika nilai <span class="math inline">\(\rho\)</span> tetap konstan, yang berarti waktu relaksasi (<span class="math inline">\(\tau\)</span>) tidak bergantung pada kuat medan listrik (<span class="math inline">\(E\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771728295737.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi tumbukan elektron.</figcaption>
+</figure>
+</div>
+</section>
+<section id="analisis-numerik-pada-tembaga" class="level3">
+<h3 class="anchored" data-anchor-id="analisis-numerik-pada-tembaga">4. Analisis Numerik pada Tembaga</h3>
+<p>Mari kita lihat angka-angka nyata untuk kawat tembaga (Cu) sepanjang <span class="math inline">\(10\text{ m}\)</span> yang diberi tegangan <span class="math inline">\(10\text{ V}\)</span>:</p>
+<ul>
+<li><p><strong>Medan Listrik (</strong><span class="math inline">\(E\)</span><strong>):</strong> <span class="math inline">\(V/L = 10\text{ V} / 10\text{ m} = 1\text{ V/m}\)</span>.</p></li>
+<li><p><strong>Waktu Relaksasi (</strong><span class="math inline">\(\tau\)</span><strong>):</strong> Sekitar <span class="math inline">\(3 \times 10^{-14}\text{ s}\)</span> (sangat singkat!).</p></li>
+<li><p><strong>Laju Hanyut (</strong><span class="math inline">\(v_d\)</span><strong>):</strong></p>
+<p><span class="math display">\[v_d = \frac{(1,6 \times 10^{-19}\text{ C})(1\text{ V/m})}{9,1 \times 10^{-31}\text{ kg}} (3 \times 10^{-14}\text{ s}) \approx 5 \times 10^{-3}\text{ m/s}\]</span></p></li>
+</ul>
+<p><strong>Makna Hasil:</strong></p>
+<p>Elektron hanya “bergeser” sejauh <span class="math inline">\(5\text{ mm}\)</span> <strong>setiap detiknya</strong>. Bandingkan dengan kecepatan acaknya (<span class="math inline">\(v_{rms}\)</span>) yang mencapai <span class="math inline">\(117.000\text{ meter}\)</span> <strong>per detik</strong>.</p>
+<p><strong>Analogi:</strong></p>
+<p>Bayangkan elektron sebagai segerombolan lebah yang sangat agresif terbang acak dengan kecepatan tinggi di dalam sebuah terowongan (<span class="math inline">\(v_{rms}\)</span>). Kemudian, ada angin sepoi-sepoi yang meniup mereka perlahan ke satu arah (<span class="math inline">\(v_d\)</span>). Meskipun setiap lebah terbang sangat cepat ke sana kemari, seluruh kawanan lebah tersebut hanya berpindah secara perlahan di sepanjang terowongan. Angin sepoi-sepoi inilah yang kita sebut sebagai arus listrik.</p>
+</section>
+</section>
+<section id="analogi-fenomena-transpor-hukum-ohm-dan-hukum-poiseuille" class="level2">
+<h2 class="anchored" data-anchor-id="analogi-fenomena-transpor-hukum-ohm-dan-hukum-poiseuille">6.3 Analogi Fenomena Transpor: Hukum Ohm dan Hukum Poiseuille</h2>
+<p>Dalam fisika, kita sering menemukan bahwa alam bekerja dengan pola yang serupa meskipun dalam medium yang berbeda. Hubungan antara listrik dinamis dan mekanika fluida adalah contoh klasik dari “Fenomena Transpor”, di mana sesuatu (muatan atau massa) berpindah karena adanya dorongan.</p>
+<section id="perbandingan-struktural" class="level3">
+<h3 class="anchored" data-anchor-id="perbandingan-struktural">1. Perbandingan Struktural</h3>
+<p>Kedua hukum ini memiliki bentuk matematika yang identik: <strong>Aliran = (Dorongan) / Hambatan</strong>.</p>
+<section id="a.-hukum-poiseuille-fluida" class="level4">
+<h4 class="anchored" data-anchor-id="a.-hukum-poiseuille-fluida">A. Hukum Poiseuille (Fluida)</h4>
+<p>Mengatur aliran fluida laminer (tenang) di dalam pipa:</p>
+<p><span class="math display">\[F = \frac{P_1 - P_2}{R}\]</span></p>
+<ul>
+<li><span class="math inline">\(F\)</span> <strong>(Debit):</strong> Laju aliran volume (berapa banyak air yang lewat per detik).</li>
+<li><span class="math inline">\(P_1 - P_2\)</span> <strong>(Beda Tekanan):</strong> Gaya dorong yang disebabkan oleh pompa atau gravitasi.</li>
+<li><span class="math inline">\(R\)</span> <strong>(Hambatan Fluida):</strong> Bergantung pada viskositas cairan dan geometri pipa (panjang dan radius).</li>
+</ul>
+</section>
+<section id="b.-hukum-ohm-listrik" class="level4">
+<h4 class="anchored" data-anchor-id="b.-hukum-ohm-listrik">B. Hukum Ohm (Listrik)</h4>
+<p>Mengatur aliran muatan listrik di dalam konduktor:</p>
+<p><span class="math display">\[I = \frac{V_1 - V_2}{R}\]</span></p>
+<ul>
+<li><span class="math inline">\(I\)</span> <strong>(Arus):</strong> Laju aliran muatan (berapa banyak Coulomb yang lewat per detik).</li>
+<li><span class="math inline">\(V_1 - V_2\)</span> <strong>(Beda Potensial):</strong> Gaya dorong (GGL) yang disediakan oleh baterai atau generator.</li>
+<li><span class="math inline">\(R\)</span> <strong>(Hambatan Listrik):</strong> Bergantung pada resistivitas bahan dan geometri kawat.</li>
+</ul>
+</section>
+</section>
+<section id="pemetaan-besaran-fisis" class="level3">
+<h3 class="anchored" data-anchor-id="pemetaan-besaran-fisis">2. Pemetaan Besaran Fisis</h3>
+<p>Untuk mempermudah pemahaman, kita dapat memetakan setiap komponen listrik ke komponen fluida:</p>
+<ol type="1">
+<li><p><strong>Arus (</strong><span class="math inline">\(I\)</span><strong>)</strong> <span class="math inline">\(\leftrightarrow\)</span> <strong>Debit (</strong><span class="math inline">\(F\)</span><strong>):</strong></p>
+<p>Arus dalam Ampere (<span class="math inline">\(C/s\)</span>) secara langsung analog dengan debit air dalam liter/menit atau <span class="math inline">\(m^3/s\)</span>. Keduanya mengukur “berapa banyak sesuatu yang lewat melalui penampang dalam satu satuan waktu.”</p></li>
+<li><p><strong>Konduktor/Kawat</strong> <span class="math inline">\(\leftrightarrow\)</span> <strong>Pipa:</strong></p>
+<p>Kabel dengan resistansi kecil diibaratkan sebagai pipa yang sangat panjang namun memiliki diameter besar sehingga hambatan geseknya kecil.</p></li>
+<li><p><strong>Beda Potensial (</strong><span class="math inline">\(V\)</span><strong>)</strong> <span class="math inline">\(\leftrightarrow\)</span> <strong>Beda Tekanan (</strong><span class="math inline">\(P\)</span><strong>):</strong></p>
+<p>Tegangan adalah “tekanan elektrik”. Tanpa beda tekanan, air tidak mengalir. Tanpa beda potensial, elektron tidak akan bergerak secara neto.</p></li>
+</ol>
+</section>
+<section id="analogi-rangkaian-dc-dan-aliran-tertutup" class="level3">
+<h3 class="anchored" data-anchor-id="analogi-rangkaian-dc-dan-aliran-tertutup">3. Analogi Rangkaian DC dan Aliran Tertutup</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771733415589.png" class="img-fluid figure-img"></p>
+<figcaption>Analogi untai DC dengan aliran air.</figcaption>
+</figure>
+</div>
+<p>Gambar ini mengilustrasikan sebuah sistem loop tertutup yang sangat elegan untuk menjelaskan hukum kekekalan:</p>
+<section id="a.-pompa-vs-baterai" class="level4">
+<h4 class="anchored" data-anchor-id="a.-pompa-vs-baterai">A. Pompa vs Baterai</h4>
+<ul>
+<li>Dalam sistem air, <strong>Pompa</strong> meningkatkan tekanan air untuk memulai sirkulasi.</li>
+<li>Dalam sistem listrik, <strong>Baterai</strong> meningkatkan potensial muatan untuk memulai arus.</li>
+</ul>
+</section>
+<section id="b.-hukum-kekekalan-conservation-laws" class="level4">
+<h4 class="anchored" data-anchor-id="b.-hukum-kekekalan-conservation-laws">B. Hukum Kekekalan (Conservation Laws)</h4>
+<p>Ini adalah poin yang paling fundamental dalam bab ini:</p>
+<ul>
+<li><p><strong>Kekekalan Cairan (Conservation of Liquid):</strong></p>
+<p>Dalam pipa tertutup, debit air harus sama di setiap penampang pipa. Jika pipa menyempit, air mengalir lebih cepat, tetapi jumlah liter per detiknya tetap sama. Air tidak bisa bocor atau menumpuk di dalam pipa yang solid.</p></li>
+<li><p><strong>Kekekalan Muatan (Conservation of Charge):</strong></p>
+<p>Dikenal sebagai <strong>Hukum Arus Kirchhoff</strong>. Arus listrik harus sama di setiap titik pada rangkaian seri. Muatan listrik tidak diciptakan atau dimusnahkan di dalam kawat; jumlah muatan yang keluar dari terminal positif baterai harus sama dengan yang kembali ke terminal negatif.</p></li>
+</ul>
+</section>
+</section>
+<section id="mengapa-analogi-ini-penting" class="level3">
+<h3 class="anchored" data-anchor-id="mengapa-analogi-ini-penting">4. Mengapa Analogi Ini Penting?</h3>
+<p>Analogi ini membantu ilmuwan dan insinyur untuk:</p>
+<ol type="1">
+<li><strong>Memvisualisasikan Arus:</strong> Karena elektron tidak terlihat, membayangkan mereka sebagai aliran air membantu mencegah miskonsepsi (seperti anggapan bahwa muatan “habis” setelah melewati lampu).</li>
+<li><strong>Desain Sistem:</strong> Konsep hambatan pada pipa (seperti penyempitan) membantu menjelaskan mengapa kawat yang tipis (luas penampang <span class="math inline">\(A\)</span> kecil) memiliki resistansi <span class="math inline">\(R\)</span> yang besar, persis seperti pipa kecil yang sulit dialiri air.</li>
+</ol>
+<p><strong>Catatan:</strong></p>
+<p>Meskipun analoginya sangat kuat, ingatlah satu perbedaan fisis: Dalam pipa, air memerlukan ruang kosong untuk mengalir. Dalam listrik, kawat sudah “penuh” dengan elektron bebas; arus terjadi seketika saat beda potensial diberikan karena semua elektron bergeser bersamaan seperti gerbong kereta api yang saling tersambung.</p>
+</section>
+<section id="perbandingan-besaran-fisis" class="level3">
+<h3 class="anchored" data-anchor-id="perbandingan-besaran-fisis">5. Perbandingan Besaran Fisis</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Besaran</strong></td>
+<td><strong>Listrik (Hukum Ohm)</strong></td>
+<td><strong>Fluida (Hukum Poiseuille)</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Laju Aliran</strong></td>
+<td>Arus (<span class="math inline">\(I\)</span>) dalam Ampere (<span class="math inline">\(C/s\)</span>)</td>
+<td>Debit Aliran (<span class="math inline">\(F\)</span>) dalam <span class="math inline">\(m^3/s\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Pendorong</strong></td>
+<td>Beda Potensial (<span class="math inline">\(\Delta V\)</span>)</td>
+<td>Beda Tekanan (<span class="math inline">\(\Delta P\)</span>)</td>
+</tr>
+<tr class="even">
+<td><strong>Penghambat</strong></td>
+<td>Resistansi Listrik (<span class="math inline">\(R\)</span>)</td>
+<td>Hambatan Pipa (<span class="math inline">\(R_{f}\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Sumber</strong></td>
+<td>Baterai / Generator</td>
+<td>Pompa</td>
+</tr>
+<tr class="even">
+<td><strong>Media</strong></td>
+<td>Kawat Konduktor</td>
+<td>Pipa</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="persamaan-identik" class="level3">
+<h3 class="anchored" data-anchor-id="persamaan-identik">6. Persamaan Identik</h3>
+<ul>
+<li><strong>Hukum Ohm:</strong> <span class="math inline">\(I = \frac{V_1 - V_2}{R}\)</span></li>
+<li><strong>Hukum Poiseuille:</strong> <span class="math inline">\(F = \frac{P_1 - P_2}{R}\)</span></li>
+</ul>
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771733220272.png" class="img-fluid"></p>
+</section>
+<section id="batasan-analogi" class="level3">
+<h3 class="anchored" data-anchor-id="batasan-analogi">7. Batasan Analogi</h3>
+<p>Sebagai catatan kritis, meskipun sangat membantu, analogi ini memiliki batas:</p>
+<ul>
+<li>Dalam pipa, molekul air bergerak seragam. Dalam kabel, elektron bergerak acak dengan kecepatan termal tinggi, namun “hanyut” (drift) sangat lambat secara neto.</li>
+<li>Aliran air memerlukan pipa yang kosong untuk mengalir, sementara elektron sudah “siap tersedia” di seluruh bagian konduktor logam bahkan sebelum tegangan diberikan.</li>
+</ul>
+<p><strong>Simpulan:</strong></p>
+<p>Hukum Ohm dan Hukum Poiseuille mencerminkan prinsip universal alam: bahwa <strong>Aliran</strong> selalu sebanding dengan <strong>Dorongan</strong> dan berbanding terbalik dengan <strong>Hambatan</strong>.</p>
+</section>
+</section>
+</section>
+<section id="komponen-resistor-dan-analisis-rangkaian" class="level1">
+<h1>7. Komponen Resistor dan Analisis Rangkaian</h1>
+<p>Dalam praktek elektronika dan fisika eksperimental, kita memerlukan alat untuk mengontrol besar arus yang mengalir. Komponen ini disebut <strong>Resistor</strong>. Bab ini akan membahas bagaimana kita mengenali nilai sebuah resistor dan bagaimana perilakunya saat disusun dalam berbagai konfigurasi.</p>
+<section id="resistor-pengendali-arus-listrik" class="level2">
+<h2 class="anchored" data-anchor-id="resistor-pengendali-arus-listrik">7.1 Resistor: Pengendali Arus Listrik</h2>
+<p>Resistor adalah komponen elektronika pasif yang didesain untuk memberikan nilai hambatan (<span class="math inline">\(R\)</span>) tertentu. Fungsi utama resistor adalah:</p>
+<ul>
+<li><strong>Mengontrol Arus:</strong> Membatasi aliran muatan di berbagai bagian rangkaian agar komponen sensitif (seperti LED atau IC) tidak terbakar.</li>
+<li><strong>Pembagi Tegangan:</strong> Menurunkan potensial listrik sesuai kebutuhan sirkuit.</li>
+</ul>
+<p>Resistor dapat ditemukan dalam bentuk diskret (memiliki kaki untuk disolder) atau terintegrasi di dalam chip silikon (IC).</p>
+</section>
+<section id="identifikasi-nilai-resistor-cara-membaca" class="level2">
+<h2 class="anchored" data-anchor-id="identifikasi-nilai-resistor-cara-membaca">7.2 Identifikasi Nilai Resistor (Cara Membaca)</h2>
+<p>Karena ukuran resistor seringkali sangat kecil, nilainya tidak dicetak dalam angka biasa, melainkan menggunakan kode warna atau kode angka (SMD).</p>
+<section id="resistor-pita-warna-through-hole" class="level3">
+<h3 class="anchored" data-anchor-id="resistor-pita-warna-through-hole">Resistor Pita Warna (Through-Hole)</h3>
+<p>Nilai resistansi ditunjukkan oleh urutan gelang warna pada tubuh resistor.</p>
+<p><strong>A. Sistem 4 Pita Warna:</strong></p>
+<ol type="1">
+<li><strong>Pita 1:</strong> Digit angka pertama.</li>
+<li><strong>Pita 2:</strong> Digit angka kedua.</li>
+<li><strong>Pita 3:</strong> Faktor pengali (Multiplier) – pangkat dari 10.</li>
+<li><strong>Pita 4:</strong> Toleransi (Emas = 5%, Perak = 10%, Tanpa warna = 20%).</li>
+</ol>
+<p><em>Contoh:</em> Merah (2), Biru (6), Hijau (<span class="math inline">\(10^5\)</span>), Perak (10%).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771742690315.png" class="img-fluid figure-img"></p>
+<figcaption>Resistor 4 warna.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Nilai: <span class="math inline">\(26 \times 10^5\ \Omega = 2,6\ \text{M}\Omega\)</span>.</li>
+<li>Artinya, nilai asli resistor berada di rentang <span class="math inline">\(2,6\ \text{M}\Omega \pm 10\%\)</span>.</li>
+</ul>
+<p><strong>B. Sistem 5 Pita Warna:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771742630858.png" class="img-fluid figure-img"></p>
+<figcaption>Resistor 5 pita warna.</figcaption>
+</figure>
+</div>
+<p>Digunakan untuk resistor presisi tinggi.</p>
+<ol type="1">
+<li><strong>Pita 1, 2, 3:</strong> Tiga digit angka pertama.</li>
+<li><strong>Pita 4:</strong> Multiplier.</li>
+<li><strong>Pita 5:</strong> Toleransi (Cokelat biasanya <span class="math inline">\(\pm 1\%\)</span>).</li>
+</ol>
+</section>
+<section id="resistor-smd-surface-mount-device" class="level3">
+<h3 class="anchored" data-anchor-id="resistor-smd-surface-mount-device">Resistor SMD (Surface Mount Device)</h3>
+<p>Ditemukan pada perangkat modern seperti HP atau laptop. Menggunakan kode angka:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771742740424.png" class="img-fluid figure-img"></p>
+<figcaption>Resistor SMD.</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Model 3 Digit (ABC):</strong> AB adalah angka, C adalah jumlah nol.
+<ul>
+<li>Contoh: <code>101</code> <span class="math inline">\(\implies 10 \times 10^1 = 100\ \Omega\)</span>.</li>
+</ul></li>
+<li><strong>Model 4 Digit (ABCD):</strong> ABC adalah angka, D adalah jumlah nol.
+<ul>
+<li>Contoh: <code>1002</code> <span class="math inline">\(\implies 100 \times 10^2 = 10.000\ \Omega\)</span> atau <span class="math inline">\(10\ \text{k}\Omega\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="rangkaian-resistor-seri" class="level2">
+<h2 class="anchored" data-anchor-id="rangkaian-resistor-seri">7.3 Rangkaian Resistor Seri</h2>
+<p>Rangkaian seri adalah susunan di mana resistor dihubungkan ujung-ke-ujung sehingga hanya ada <strong>satu jalur</strong> untuk arus mengalir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771742854704.png" class="img-fluid figure-img"></p>
+<figcaption>Rangkaian resistor seri.</figcaption>
+</figure>
+</div>
+<p><strong>Karakteristik Utama:</strong></p>
+<ol type="1">
+<li><p><strong>Arus Sama:</strong> Arus yang melewati setiap resistor adalah identik (<span class="math inline">\(I_{tot} = I_1 = I_2 =...\)</span>).</p></li>
+<li><p><strong>Tegangan Terbagi:</strong> Total tegangan baterai adalah jumlah dari tegangan pada tiap resistor (<span class="math inline">\(\Delta V = \Delta V_1 + \Delta V_2 +...\)</span>).</p></li>
+<li><p><strong>Hambatan Pengganti (</strong><span class="math inline">\(R_{eq}\)</span><strong>):</strong></p>
+<p><span class="math display">\[R_{eq} = R_1 + R_2 + R_3 +...\]</span></p>
+<p><em>Catatan:</em> <span class="math inline">\(R_{eq}\)</span> <em>seri selalu lebih besar dari hambatan individu terbesar.</em></p></li>
+</ol>
+<p><strong>Risiko:</strong> Jika satu komponen putus (sirkuit terbuka), maka seluruh rangkaian akan mati.</p>
+</section>
+<section id="rangkaian-resistor-paralel" class="level2">
+<h2 class="anchored" data-anchor-id="rangkaian-resistor-paralel">7.4 Rangkaian Resistor Paralel</h2>
+<p>Rangkaian paralel adalah susunan di mana semua ujung resistor dihubungkan pada dua titik yang sama.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771742941335.png" class="img-fluid figure-img"></p>
+<figcaption>Rangkaian resistor paralel</figcaption>
+</figure>
+</div>
+<p><strong>Karakteristik Utama:</strong></p>
+<ol type="1">
+<li><p><strong>Tegangan Sama:</strong> Setiap resistor mendapatkan beda potensial yang sama dari sumber (<span class="math inline">\(\Delta V_{tot} = \Delta V_1 = \Delta V_2 =...\)</span>).</p></li>
+<li><p><strong>Arus Terbagi:</strong> Arus total akan terbagi ke setiap cabang sesuai nilai hambatannya (<span class="math inline">\(I_{tot} = I_1 + I_2 +...\)</span>).</p></li>
+<li><p><strong>Hambatan Pengganti (</strong><span class="math inline">\(R_{eq}\)</span><strong>):</strong></p>
+<p><span class="math display">\[\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} +...\]</span></p>
+<p><em>Catatan:</em> <span class="math inline">\(R_{eq}\)</span> <em>paralel selalu lebih kecil dari hambatan individu terkecil.</em></p></li>
+</ol>
+<p><strong>Keuntungan:</strong> Perangkat beroperasi secara independen. Jika satu lampu mati, lampu lain di cabang berbeda tetap menyala. Ini adalah standar instalasi listrik rumah tangga.</p>
+</section>
+<section id="rangkaian-kombinasi-seri-paralel" class="level2">
+<h2 class="anchored" data-anchor-id="rangkaian-kombinasi-seri-paralel">7.5 Rangkaian Kombinasi (Seri-Paralel)</h2>
+<p>Dalam banyak kasus, kita menemui rangkaian campuran. Untuk menyelesaikannya, kita harus menggunakan metode <strong>penyederhanaan bertahap</strong>.</p>
+<p><strong>Langkah Penyelesaian:</strong></p>
+<ol type="1">
+<li>Identifikasi bagian terkecil yang murni seri atau murni paralel.</li>
+<li>Hitung hambatan ekuivalen bagian tersebut dan ganti dengan satu resistor imajiner.</li>
+<li>Ulangi langkah tersebut hingga rangkaian hanya menyisakan satu resistor tunggal (<span class="math inline">\(R_{eq}\)</span> akhir).</li>
+</ol>
+<p><em>Contoh Analisis:</em></p>
+<ul>
+<li>Tahap 1: Resistor <span class="math inline">\(8,0\ \Omega\)</span> dan <span class="math inline">\(4,0\ \Omega\)</span> (Seri) <span class="math inline">\(\implies 12,0\ \Omega\)</span>.</li>
+<li>Tahap 2: Resistor <span class="math inline">\(6,0\ \Omega\)</span> dan <span class="math inline">\(3,0\ \Omega\)</span> (Paralel) <span class="math inline">\(\implies \frac{1}{R} = \frac{1}{6} + \frac{1}{3} = \frac{3}{6} \implies 2,0\ \Omega\)</span>.</li>
+<li>Tahap 3: Hasil tahap 1 dan 2 sekarang tersusun seri (<span class="math inline">\(12,0\ \Omega + 2,0\ \Omega\)</span>) <span class="math inline">\(\implies R_{eq}\)</span> total adalah <span class="math inline">\(14,0\ \Omega\)</span>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 3 Fisika Dasar II – Listrik Dinamis 1-1771743658157.png" class="img-fluid figure-img"></p>
+<figcaption>Rangkaian kombinasi.</figcaption>
+</figure>
+</div>
+<p><strong>Simpulan Konseptual:</strong></p>
+<p>Rangkaian seri digunakan untuk menjumlahkan hambatan, sedangkan rangkaian paralel digunakan untuk menyediakan jalur alternatif bagi arus dan menjaga tegangan tetap stabil di setiap beban.</p>
+</section>
+</section>
+<section id="daya-dalam-rangkaian-listrik" class="level1">
+<h1>8. Daya dalam Rangkaian Listrik</h1>
+<p>Daya listrik adalah konsep yang menghubungkan fenomena kelistrikan dengan hukum kekekalan energi. Konsep ini menjelaskan seberapa cepat energi listrik diubah menjadi bentuk energi lain.</p>
+<section id="mekanisme-perubahan-energi" class="level2">
+<h2 class="anchored" data-anchor-id="mekanisme-perubahan-energi">8.1 Mekanisme Perubahan Energi</h2>
+<p>Dalam sebuah rangkaian tertutup yang terdiri dari baterai dan resistor, terjadi transformasi energi secara terus-menerus:</p>
+<ol type="1">
+<li><strong>Energi Kimia ke Energi Potensial:</strong> Di dalam baterai, energi kimia diubah menjadi energi potensial listrik saat muatan bergerak dari terminal rendah ke terminal tinggi.</li>
+<li><strong>Peningkatan Energi Potensial:</strong> Saat muatan <span class="math inline">\(Q\)</span> bergerak melewati baterai (dari <span class="math inline">\(a\)</span> ke <span class="math inline">\(b\)</span>), energi potensial sistem meningkat sebesar <span class="math inline">\(\Delta U = Q \Delta V\)</span>.</li>
+<li><strong>Disipasi menjadi Energi Internal:</strong> Saat muatan tersebut mengalir melewati resistor (<span class="math inline">\(R\)</span>), energi potensial listrik tersebut “hilang” karena bertumbukan dengan atom-atom dalam resistor. Energi ini tidak musnah, melainkan berubah menjadi <strong>energi internal</strong> (getaran atom meningkat), yang kita rasakan sebagai <strong>panas</strong>.</li>
+<li><strong>Arah Arus:</strong> Sesuai konvensi, aliran muatan positif efektif bergerak searah jarum jam (dari kutub + ke -).</li>
+</ol>
+</section>
+<section id="definisi-dan-formulasi-daya" class="level2">
+<h2 class="anchored" data-anchor-id="definisi-dan-formulasi-daya">8.2 Definisi dan Formulasi Daya</h2>
+<p><strong>Daya Listrik (</strong><span class="math inline">\(P\)</span><strong>)</strong> didefinisikan sebagai laju energi yang diubah dari energi listrik menjadi bentuk lain (panas, mekanik, cahaya, atau medan magnet/listrik).</p>
+<section id="persamaan-dasar" class="level3">
+<h3 class="anchored" data-anchor-id="persamaan-dasar">Persamaan Dasar</h3>
+<p>Secara matematis, daya adalah perubahan energi per satuan waktu:</p>
+<p><span class="math display">\[P = \frac{dU}{dt} = \frac{d(QV)}{dt} = V \frac{dQ}{dt}\]</span></p>
+<p>Karena <span class="math inline">\(I = dQ/dt\)</span>, maka:</p>
+<p><span class="math display">\[P = I \cdot V\]</span></p>
+</section>
+<section id="variasi-rumus-dengan-hukum-ohm-disipasi-daya" class="level3">
+<h3 class="anchored" data-anchor-id="variasi-rumus-dengan-hukum-ohm-disipasi-daya">Variasi Rumus dengan Hukum Ohm (Disipasi Daya)</h3>
+<p>Dengan mensubstitusikan Hukum Ohm (<span class="math inline">\(V = IR\)</span>), kita mendapatkan dua rumus turunan yang sangat berguna untuk menghitung daya pada resistor:</p>
+<ol type="1">
+<li><strong>Jika arus diketahui:</strong> <span class="math inline">\(P = I(IR) = I^2 R\)</span></li>
+<li><strong>Jika tegangan diketahui:</strong> <span class="math inline">\(P = \frac{V}{R} \cdot V = \frac{V^2}{R}\)</span></li>
+</ol>
+<ul>
+<li><strong>Satuan SI:</strong> Watt (<span class="math inline">\(W\)</span>), di mana <span class="math inline">\(1\text{ Watt} = 1\text{ Joule/detik}\)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="aplikasi-transmisi-tenaga-listrik" class="level2">
+<h2 class="anchored" data-anchor-id="aplikasi-transmisi-tenaga-listrik">8.3 Aplikasi: Transmisi Tenaga Listrik</h2>
+<p>Konsep daya menjelaskan mengapa jaringan listrik PLN menggunakan tegangan ekstra tinggi (SUTET).</p>
+<ul>
+<li><strong>Masalah:</strong> Kabel transmisi memiliki hambatan (<span class="math inline">\(R\)</span>) yang cukup besar karena panjangnya ribuan kilometer.</li>
+<li><strong>Kehilangan Daya:</strong> Daya yang hilang di kabel (menjadi panas) dirumuskan dengan <span class="math inline">\(P_{loss} = I^2 R\)</span>.</li>
+<li><strong>Solusi:</strong> Untuk mengirimkan daya yang sama (<span class="math inline">\(P = VI\)</span>), jika kita menaikkan tegangan (<span class="math inline">\(V\)</span>) setinggi mungkin, maka arus (<span class="math inline">\(I\)</span>) akan menjadi sangat kecil. Karena arus kecil, maka nilai <span class="math inline">\(I^2\)</span> akan mengecil secara drastis, sehingga kehilangan daya di kabel dapat diminimalkan.</li>
+</ul>
+</section>
+<section id="analisis-contoh-soal" class="level2">
+<h2 class="anchored" data-anchor-id="analisis-contoh-soal">8.4 Analisis Contoh Soal</h2>
+<p>Mari kita bedah penyelesaian soal untuk memperkuat pemahaman:</p>
+<p><strong>Soal:</strong> Kawat <span class="math inline">\(R = 5\ \Omega\)</span>, arus <span class="math inline">\(I = 3\text{ A}\)</span>, waktu <span class="math inline">\(t = 6\text{ s}\)</span>.</p>
+<ul>
+<li><p><strong>a. Daya yang diberikan (</strong><span class="math inline">\(P\)</span><strong>):</strong></p>
+<p><span class="math display">\[P = I^2 R = (3)^2 \cdot 5 = 9 \cdot 5 = 45\text{ Watt}\]</span></p>
+<p><em>Artinya, kawat ini mengubah energi listrik menjadi panas sebesar 45 Joule setiap detiknya.</em></p></li>
+<li><p><strong>b. Panas yang dihasilkan (</strong><span class="math inline">\(Q\)</span> <strong>atau</strong> <span class="math inline">\(E\)</span><strong>):</strong></p>
+<p>Energi adalah daya dikali waktu (<span class="math inline">\(E = P \cdot t\)</span>):</p>
+<p><span class="math display">\[E = 45\text{ W} \cdot 6\text{ s} = 270\text{ Joule}\]</span></p>
+<ul>
+<li><p><strong>Konversi ke Kalori:</strong> Karena <span class="math inline">\(1\text{ Joule} \approx 0,239\text{ kalori}\)</span>, maka:</p>
+<p><span class="math display">\[270 \cdot 0,239 = 64,53\text{ kalori}\]</span></p></li>
+</ul></li>
+</ul>
+<p><strong>Simpulan:</strong></p>
+<p>Daya listrik memberi tahu kita tentang efisiensi dan kapasitas. Dalam memilih komponen, kita tidak hanya melihat hambatannya, tetapi juga daya maksimumnya (wattage) agar komponen tidak terbakar akibat panas yang dihasilkan oleh rumus <span class="math inline">\(I^2 R\)</span>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/Shidiq\.github\.io\/open-lectures\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../Fisika Dasar II/materi-02-elektrostatika-2/index.html" class="pagination-link" aria-label="Elektrostatika 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Elektrostatika 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html" class="pagination-link" aria-label="Listrik Dinamis 2">
+        <span class="nav-page-text">Listrik Dinamis 2</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2024 Departemen Fisika, FMIPA UGM. Konten berlisensi <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-03-listrik-dinamis-1/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Dibuat dengan <a href="https://quarto.org">Quarto</a> • <a href="https://github.com/Shidiq/open-lectures">Kode sumber</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

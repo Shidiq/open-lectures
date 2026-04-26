@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Listrik Dinamis 2 – Open Lectures</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html" rel="next">
+<link href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html" rel="prev">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-91c45283b718f403a183c55e401e34c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5a1d57d030698fde18e1e7cd86106da8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Listrik Dinamis 2 – Open Lectures">
+<meta property="og:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta property="og:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-04-listrik-dinamis-2/attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772250093348.png">
+<meta property="og:site_name" content="Open Lectures">
+<meta property="og:image:height" content="646">
+<meta property="og:image:width" content="2100">
+<meta name="twitter:title" content="Listrik Dinamis 2 – Open Lectures">
+<meta name="twitter:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta name="twitter:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-04-listrik-dinamis-2/attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772250093348.png">
+<meta name="twitter:creator" content="@shidiq">
+<meta name="twitter:site" content="@shidiq">
+<meta name="twitter:image-height" content="646">
+<meta name="twitter:image-width" content="2100">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo light-content">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">Beranda</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mata-kuliah" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Mata Kuliah</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mata-kuliah">    
+        <li>
+    <a class="dropdown-item" href="../../Fisika Dasar II/index.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">Fisika Dasar II</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Shidiq/open-lectures"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html">Listrik Dinamis</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html">Listrik Dinamis 2</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisika Dasar II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Elektrostatika</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-01-elektrostatika-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elektrostatika 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-02-elektrostatika-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elektrostatika 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Listrik Dinamis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Listrik Dinamis 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Listrik Dinamis 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">kemagnetan</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-06-kemagnetan-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-07-kemagnetan-3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Daftar Isi</h2>
+   
+  <ul>
+  <li><a href="#bab-1.-analisis-teknis-rangkaian-arus-searah-direct-current" id="toc-bab-1.-analisis-teknis-rangkaian-arus-searah-direct-current" class="nav-link active" data-scroll-target="#bab-1.-analisis-teknis-rangkaian-arus-searah-direct-current">BAB 1. Analisis Teknis Rangkaian Arus Searah (Direct Current)</a>
+  <ul class="collapse">
+  <li><a href="#filosofi-arus-searah-direct-current---dc-dan-kondisi-tunak" id="toc-filosofi-arus-searah-direct-current---dc-dan-kondisi-tunak" class="nav-link" data-scroll-target="#filosofi-arus-searah-direct-current---dc-dan-kondisi-tunak">1. Filosofi Arus Searah (Direct Current - DC) dan Kondisi Tunak</a></li>
+  <li><a href="#elemen-dasar-gaya-gerak-listrik-ggl-dan-hambatan-dalam" id="toc-elemen-dasar-gaya-gerak-listrik-ggl-dan-hambatan-dalam" class="nav-link" data-scroll-target="#elemen-dasar-gaya-gerak-listrik-ggl-dan-hambatan-dalam">2. Elemen Dasar: Gaya Gerak Listrik (GGL) dan Hambatan Dalam</a>
+  <ul class="collapse">
+  <li><a href="#gaya-gerak-listrik-ggl" id="toc-gaya-gerak-listrik-ggl" class="nav-link" data-scroll-target="#gaya-gerak-listrik-ggl">2.1 Gaya Gerak Listrik (GGL)</a></li>
+  <li><a href="#hambatan-dalam-baterai" id="toc-hambatan-dalam-baterai" class="nav-link" data-scroll-target="#hambatan-dalam-baterai">2.2 Hambatan Dalam Baterai</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bab-2.-analisis-mendalam-hukum-kirchhoff" id="toc-bab-2.-analisis-mendalam-hukum-kirchhoff" class="nav-link" data-scroll-target="#bab-2.-analisis-mendalam-hukum-kirchhoff">BAB 2. Analisis Mendalam: Hukum Kirchhoff</a>
+  <ul class="collapse">
+  <li><a href="#hukum-pertama-kirchhoff-kaidah-percabangan-kcl" id="toc-hukum-pertama-kirchhoff-kaidah-percabangan-kcl" class="nav-link" data-scroll-target="#hukum-pertama-kirchhoff-kaidah-percabangan-kcl">1. Hukum Pertama Kirchhoff (Kaidah Percabangan / KCL)</a>
+  <ul class="collapse">
+  <li><a href="#dasar-fisika-kelestarian-muatan" id="toc-dasar-fisika-kelestarian-muatan" class="nav-link" data-scroll-target="#dasar-fisika-kelestarian-muatan">Dasar Fisika: Kelestarian Muatan</a></li>
+  <li><a href="#bunyi-hukum" id="toc-bunyi-hukum" class="nav-link" data-scroll-target="#bunyi-hukum">Bunyi Hukum</a></li>
+  <li><a href="#persamaan-matematis" id="toc-persamaan-matematis" class="nav-link" data-scroll-target="#persamaan-matematis">Persamaan Matematis</a></li>
+  <li><a href="#konvensi-tanda" id="toc-konvensi-tanda" class="nav-link" data-scroll-target="#konvensi-tanda">Konvensi Tanda</a></li>
+  </ul></li>
+  <li><a href="#hukum-kedua-kirchhoff-kaidah-simpal-kvl" id="toc-hukum-kedua-kirchhoff-kaidah-simpal-kvl" class="nav-link" data-scroll-target="#hukum-kedua-kirchhoff-kaidah-simpal-kvl">2. Hukum Kedua Kirchhoff (Kaidah Simpal / KVL)</a>
+  <ul class="collapse">
+  <li><a href="#dasar-fisika-kelestarian-energi" id="toc-dasar-fisika-kelestarian-energi" class="nav-link" data-scroll-target="#dasar-fisika-kelestarian-energi">Dasar Fisika: Kelestarian Energi</a></li>
+  <li><a href="#bunyi-hukum-1" id="toc-bunyi-hukum-1" class="nav-link" data-scroll-target="#bunyi-hukum-1">Bunyi Hukum</a></li>
+  <li><a href="#persamaan-matematis-1" id="toc-persamaan-matematis-1" class="nav-link" data-scroll-target="#persamaan-matematis-1">Persamaan Matematis</a></li>
+  <li><a href="#aturan-tanda-konvensi-penting" id="toc-aturan-tanda-konvensi-penting" class="nav-link" data-scroll-target="#aturan-tanda-konvensi-penting">Aturan Tanda (Konvensi Penting)</a></li>
+  </ul></li>
+  <li><a href="#penjelasan-analisis-rangkaian-listrik-hukum-kirchhoff" id="toc-penjelasan-analisis-rangkaian-listrik-hukum-kirchhoff" class="nav-link" data-scroll-target="#penjelasan-analisis-rangkaian-listrik-hukum-kirchhoff">Penjelasan Analisis Rangkaian Listrik (Hukum Kirchhoff)</a>
+  <ul class="collapse">
+  <li><a href="#konsep-dasar" id="toc-konsep-dasar" class="nav-link" data-scroll-target="#konsep-dasar">1. Konsep Dasar</a></li>
+  <li><a href="#langkah-langkah-analisis-berdasarkan-slide" id="toc-langkah-langkah-analisis-berdasarkan-slide" class="nav-link" data-scroll-target="#langkah-langkah-analisis-berdasarkan-slide">2. Langkah-Langkah Analisis (Berdasarkan Slide)</a></li>
+  <li><a href="#hasil-akhir-langkah-6" id="toc-hasil-akhir-langkah-6" class="nav-link" data-scroll-target="#hasil-akhir-langkah-6">3. Hasil Akhir (Langkah 6)</a></li>
+  </ul></li>
+  <li><a href="#penyelesaian-contoh-soal-1" id="toc-penyelesaian-contoh-soal-1" class="nav-link" data-scroll-target="#penyelesaian-contoh-soal-1">Penyelesaian Contoh Soal 1</a>
+  <ul class="collapse">
+  <li><a href="#langkah-langkah-penyelesaian-rangkaian-satu-loop" id="toc-langkah-langkah-penyelesaian-rangkaian-satu-loop" class="nav-link" data-scroll-target="#langkah-langkah-penyelesaian-rangkaian-satu-loop">Langkah-Langkah Penyelesaian Rangkaian Satu Loop</a></li>
+  </ul></li>
+  <li><a href="#penyelesaian-contoh-soal-2" id="toc-penyelesaian-contoh-soal-2" class="nav-link" data-scroll-target="#penyelesaian-contoh-soal-2">Penyelesaian Contoh Soal 2</a>
+  <ul class="collapse">
+  <li><a href="#langkah-penyelesaian-contoh-soal-2-dengan-hukum-kirchhoff" id="toc-langkah-penyelesaian-contoh-soal-2-dengan-hukum-kirchhoff" class="nav-link" data-scroll-target="#langkah-penyelesaian-contoh-soal-2-dengan-hukum-kirchhoff">Langkah Penyelesaian Contoh Soal 2 dengan Hukum Kirchhoff</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bab-3.-rangkaian-rc" id="toc-bab-3.-rangkaian-rc" class="nav-link" data-scroll-target="#bab-3.-rangkaian-rc">BAB 3. Rangkaian RC</a>
+  <ul class="collapse">
+  <li><a href="#pendahuluan-rangkaian-rc" id="toc-pendahuluan-rangkaian-rc" class="nav-link" data-scroll-target="#pendahuluan-rangkaian-rc">1. Pendahuluan Rangkaian RC</a></li>
+  <li><a href="#proses-pemuatan-kapasitor-charging" id="toc-proses-pemuatan-kapasitor-charging" class="nav-link" data-scroll-target="#proses-pemuatan-kapasitor-charging">2. Proses Pemuatan Kapasitor (Charging)</a>
+  <ul class="collapse">
+  <li><a href="#penurunan-rumus-arus-listrik-rangkaian-rc-pemuatan" id="toc-penurunan-rumus-arus-listrik-rangkaian-rc-pemuatan" class="nav-link" data-scroll-target="#penurunan-rumus-arus-listrik-rangkaian-rc-pemuatan">Penurunan Rumus Arus Listrik Rangkaian RC (Pemuatan)</a></li>
+  </ul></li>
+  <li><a href="#proses-pelucutan-kapasitor-discharging" id="toc-proses-pelucutan-kapasitor-discharging" class="nav-link" data-scroll-target="#proses-pelucutan-kapasitor-discharging">3. Proses Pelucutan Kapasitor (Discharging)</a></li>
+  <li><a href="#konstanta-waktu-tau-rc" id="toc-konstanta-waktu-tau-rc" class="nav-link" data-scroll-target="#konstanta-waktu-tau-rc">4. Konstanta Waktu (<span class="math inline">\(\tau = RC\)</span>)</a></li>
+  <li><a href="#analisis-tegangan-hukum-kirchhoff" id="toc-analisis-tegangan-hukum-kirchhoff" class="nav-link" data-scroll-target="#analisis-tegangan-hukum-kirchhoff">5. Analisis Tegangan (Hukum Kirchhoff)</a></li>
+  <li><a href="#ringkasan-tabel-perbandingan" id="toc-ringkasan-tabel-perbandingan" class="nav-link" data-scroll-target="#ringkasan-tabel-perbandingan">Ringkasan Tabel Perbandingan</a></li>
+  <li><a href="#penyelesaian-soal-fisika-dasar-rangkaian-rc" id="toc-penyelesaian-soal-fisika-dasar-rangkaian-rc" class="nav-link" data-scroll-target="#penyelesaian-soal-fisika-dasar-rangkaian-rc">Penyelesaian Soal Fisika Dasar: Rangkaian RC</a>
+  <ul class="collapse">
+  <li><a href="#soal-1-energi-tersimpan-setengah-maksimum" id="toc-soal-1-energi-tersimpan-setengah-maksimum" class="nav-link" data-scroll-target="#soal-1-energi-tersimpan-setengah-maksimum">Soal 1: Energi Tersimpan Setengah Maksimum</a></li>
+  <li><a href="#soal-2-pemuatan-1-dari-muatan-setimbang" id="toc-soal-2-pemuatan-1-dari-muatan-setimbang" class="nav-link" data-scroll-target="#soal-2-pemuatan-1-dari-muatan-setimbang">Soal 2: Pemuatan 1% dari Muatan Setimbang</a></li>
+  <li><a href="#soal-3-resistansi-ekivalen-kapasitor-bocor" id="toc-soal-3-resistansi-ekivalen-kapasitor-bocor" class="nav-link" data-scroll-target="#soal-3-resistansi-ekivalen-kapasitor-bocor">Soal 3: Resistansi Ekivalen Kapasitor Bocor</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bab-4.-analisis-alat-ukur-listrik-ammeter-dan-voltmeter" id="toc-bab-4.-analisis-alat-ukur-listrik-ammeter-dan-voltmeter" class="nav-link" data-scroll-target="#bab-4.-analisis-alat-ukur-listrik-ammeter-dan-voltmeter">BAB 4. Analisis Alat Ukur Listrik: Ammeter dan Voltmeter</a>
+  <ul class="collapse">
+  <li><a href="#ammeter-amperemeter" id="toc-ammeter-amperemeter" class="nav-link" data-scroll-target="#ammeter-amperemeter">1. Ammeter (Amperemeter)</a>
+  <ul class="collapse">
+  <li><a href="#a.-cara-pemasangan" id="toc-a.-cara-pemasangan" class="nav-link" data-scroll-target="#a.-cara-pemasangan">A. Cara Pemasangan</a></li>
+  <li><a href="#b.-karakteristik-ideal-r_a" id="toc-b.-karakteristik-ideal-r_a" class="nav-link" data-scroll-target="#b.-karakteristik-ideal-r_a">B. Karakteristik Ideal (<span class="math inline">\(R_A\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#voltmeter" id="toc-voltmeter" class="nav-link" data-scroll-target="#voltmeter">2. Voltmeter</a>
+  <ul class="collapse">
+  <li><a href="#a.-cara-pemasangan-1" id="toc-a.-cara-pemasangan-1" class="nav-link" data-scroll-target="#a.-cara-pemasangan-1">A. Cara Pemasangan</a></li>
+  <li><a href="#b.-karakteristik-ideal-r_v" id="toc-b.-karakteristik-ideal-r_v" class="nav-link" data-scroll-target="#b.-karakteristik-ideal-r_v">B. Karakteristik Ideal (<span class="math inline">\(R_V\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#ringkasan-perbandingan" id="toc-ringkasan-perbandingan" class="nav-link" data-scroll-target="#ringkasan-perbandingan">Ringkasan Perbandingan</a></li>
+  <li><a href="#penyelesaian-soal-fisika-dasar-alat-ukur" id="toc-penyelesaian-soal-fisika-dasar-alat-ukur" class="nav-link" data-scroll-target="#penyelesaian-soal-fisika-dasar-alat-ukur">Penyelesaian Soal Fisika Dasar: Alat Ukur</a>
+  <ul class="collapse">
+  <li><a href="#mencari-r_1-metode-i---gambar-a" id="toc-mencari-r_1-metode-i---gambar-a" class="nav-link" data-scroll-target="#mencari-r_1-metode-i---gambar-a">Mencari <span class="math inline">\(R_1\)</span> (Metode I - Gambar a)</a></li>
+  <li><a href="#mencari-r_2-metode-ii---gambar-b" id="toc-mencari-r_2-metode-ii---gambar-b" class="nav-link" data-scroll-target="#mencari-r_2-metode-ii---gambar-b">Mencari <span class="math inline">\(R_2\)</span> (Metode II - Gambar b)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-04-listrik-dinamis-2/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html">Listrik Dinamis</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html">Listrik Dinamis 2</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Listrik Dinamis 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="bab-1.-analisis-teknis-rangkaian-arus-searah-direct-current" class="level1">
+<h1>BAB 1. Analisis Teknis Rangkaian Arus Searah (Direct Current)</h1>
+<p>Dalam studi fisika elektronika, kita membedakan metode analisis berdasarkan kompleksitas rangkaian. Rangkaian sederhana yang terdiri dari kombinasi seri-paralel resistor dapat diselesaikan dengan aturan penggabungan hambatan ekivalen. Namun, untuk rangkaian yang lebih rumit (multi-loop), kita memerlukan pendekatan yang lebih fundamental, yaitu <strong>Kaidah Kirchhoff</strong>. Kaidah ini berakar pada dua prinsip kelestarian universal: kelestarian muatan listrik dan kelestarian energi.</p>
+<section id="filosofi-arus-searah-direct-current---dc-dan-kondisi-tunak" class="level2">
+<h2 class="anchored" data-anchor-id="filosofi-arus-searah-direct-current---dc-dan-kondisi-tunak">1. Filosofi Arus Searah (Direct Current - DC) dan Kondisi Tunak</h2>
+<p>Arus searah didefinisikan sebagai aliran muatan listrik dengan arah yang konstan. Analisis rangkaian DC didasarkan pada asumsi <strong>kondisi tunak</strong> (<em>steady state</em>). Artinya, besaran arus (<span class="math inline">\(I\)</span>) dan tegangan (<span class="math inline">\(V\)</span>) tidak berubah terhadap waktu. Hal ini dimungkinkan karena sumber tegangan (GGL) seperti baterai memberikan beda potensial yang konstan. Secara fisik, ini berarti elektron mengalir dengan laju rata-rata yang tetap melalui konduktor.</p>
+</section>
+<section id="elemen-dasar-gaya-gerak-listrik-ggl-dan-hambatan-dalam" class="level2">
+<h2 class="anchored" data-anchor-id="elemen-dasar-gaya-gerak-listrik-ggl-dan-hambatan-dalam">2. Elemen Dasar: Gaya Gerak Listrik (GGL) dan Hambatan Dalam</h2>
+<section id="gaya-gerak-listrik-ggl" class="level3">
+<h3 class="anchored" data-anchor-id="gaya-gerak-listrik-ggl">2.1 Gaya Gerak Listrik (GGL)</h3>
+<p>Untuk mempertahankan beda potensial dan menghasilkan arus tetap, diperlukan sumber energi yang disebut sumber GGL (<span class="math inline">\(\epsilon\)</span>). GGL bukanlah sebuah gaya dalam pengertian mekanis, melainkan tegangan yang dihasilkan oleh alat (seperti baterai atau generator) yang mengubah energi non-listrik menjadi energi listrik.</p>
+<p>Sumber tegangan ideal tidak memiliki hambatan. Namun, sumber riil memiliki resistansi internal (<span class="math inline">\(r\)</span>).</p>
+<p>GGL didefinisikan secara matematis sebagai kerja (<span class="math inline">\(dW\)</span>) yang dilakukan untuk mengangkut muatan (<span class="math inline">\(dq\)</span>):</p>
+<p><span class="math display">\[\epsilon = \frac{dW}{dq}\]</span></p>
+<p>Satuan GGL adalah Joule/Coulomb (<span class="math inline">\(J/C\)</span>) atau Volt (<span class="math inline">\(V\)</span>).</p>
+</section>
+<section id="hambatan-dalam-baterai" class="level3">
+<h3 class="anchored" data-anchor-id="hambatan-dalam-baterai">2.2 Hambatan Dalam Baterai</h3>
+<p>Pada kenyataannya, sumber tegangan (baterai) dengan GGL sebesar <span class="math inline">\(\epsilon\)</span> memiliki hambatan internal (<span class="math inline">\(r\)</span>). Maka, tegangan terminal baterai saat mengalirkan arus <span class="math inline">\(I\)</span> adalah:</p>
+<p><span class="math display">\[\Delta V = \epsilon - Ir \text{ dengan } IR+Ir=\epsilon\]</span></p>
+<p>Arus total dalam rangkaian dengan beban luar <span class="math inline">\(R\)</span> menjadi:</p>
+<p><span class="math display">\[I = \frac{\epsilon}{R + r}\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772250093348.png" class="img-fluid figure-img"></p>
+<figcaption>Rangkaian baterai dengan hambatan dalam r.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="bab-2.-analisis-mendalam-hukum-kirchhoff" class="level1">
+<h1>BAB 2. Analisis Mendalam: Hukum Kirchhoff</h1>
+<p>Hukum Kirchhoff terdiri dari dua aturan utama yang dirumuskan oleh Gustav Kirchhoff. Aturan-aturan ini bukan sekadar rumus matematis, melainkan pengejawantahan dari hukum dasar fisika alam semesta: <strong>Hukum Kelestarian</strong>.</p>
+<section id="hukum-pertama-kirchhoff-kaidah-percabangan-kcl" class="level2">
+<h2 class="anchored" data-anchor-id="hukum-pertama-kirchhoff-kaidah-percabangan-kcl">1. Hukum Pertama Kirchhoff (Kaidah Percabangan / KCL)</h2>
+<p>Berdasarkan slide halaman 9, Hukum Pertama Kirchhoff berfokus pada apa yang terjadi di titik pertemuan kawat (percabangan).</p>
+<section id="dasar-fisika-kelestarian-muatan" class="level3">
+<h3 class="anchored" data-anchor-id="dasar-fisika-kelestarian-muatan">Dasar Fisika: Kelestarian Muatan</h3>
+<p>Hukum ini didasarkan pada prinsip bahwa muatan listrik tidak dapat diciptakan atau dimusnahkan. Jumlah muatan yang mengalir ke sebuah titik dalam satu detik harus sama dengan jumlah muatan yang keluar dari titik tersebut pada detik yang sama.</p>
+</section>
+<section id="bunyi-hukum" class="level3">
+<h3 class="anchored" data-anchor-id="bunyi-hukum">Bunyi Hukum</h3>
+<p><em>“Pada setiap percabangan dalam rangkaian listrik, jumlah aljabar dari arus-arus listrik haruslah sama dengan nol.”</em></p>
+</section>
+<section id="persamaan-matematis" class="level3">
+<h3 class="anchored" data-anchor-id="persamaan-matematis">Persamaan Matematis</h3>
+<p><span class="math display">\[\sum_{junction} I = 0\]</span></p>
+</section>
+<section id="konvensi-tanda" class="level3">
+<h3 class="anchored" data-anchor-id="konvensi-tanda">Konvensi Tanda</h3>
+<p>Dalam perhitungan, kita harus konsisten dengan tanda arus:</p>
+<ul>
+<li><strong>Arus Masuk (+):</strong> Arus yang menuju titik sambungan/percabangan.</li>
+<li><strong>Arus Keluar (-):</strong> Arus yang meninggalkan titik sambungan/percabangan.</li>
+</ul>
+<p><strong>Contoh pada slide:</strong></p>
+<p>Jika arus <span class="math inline">\(i_1\)</span> dan <span class="math inline">\(i_2\)</span> masuk, sedangkan <span class="math inline">\(i_3\)</span> keluar, maka: <span class="math inline">\(i_1 + i_2 - i_3 = 0\)</span>.</p>
+</section>
+</section>
+<section id="hukum-kedua-kirchhoff-kaidah-simpal-kvl" class="level2">
+<h2 class="anchored" data-anchor-id="hukum-kedua-kirchhoff-kaidah-simpal-kvl">2. Hukum Kedua Kirchhoff (Kaidah Simpal / KVL)</h2>
+<p>Berdasarkan slide halaman 10-12, Hukum Kedua Kirchhoff berfokus pada perubahan potensial di sepanjang lintasan tertutup (loop).</p>
+<section id="dasar-fisika-kelestarian-energi" class="level3">
+<h3 class="anchored" data-anchor-id="dasar-fisika-kelestarian-energi">Dasar Fisika: Kelestarian Energi</h3>
+<p>Hukum ini menyatakan bahwa jika suatu muatan bergerak dalam satu lintasan tertutup dan kembali ke titik asalnya, energi potensial sistem tidak berubah. Energi yang diberikan oleh sumber GGL harus sama dengan energi yang digunakan/dihabiskan oleh hambatan (resistor).</p>
+</section>
+<section id="bunyi-hukum-1" class="level3">
+<h3 class="anchored" data-anchor-id="bunyi-hukum-1">Bunyi Hukum</h3>
+<p><em>“Jumlahan aljabar dari perubahan-perubahan potensial sepanjang lintasan tertutup dalam suatu rangkaian listrik haruslah sama dengan nol.”</em></p>
+</section>
+<section id="persamaan-matematis-1" class="level3">
+<h3 class="anchored" data-anchor-id="persamaan-matematis-1">Persamaan Matematis</h3>
+<p><span class="math display">\[\sum_{closed} \Delta V = 0 \quad \text{atau} \quad \sum \epsilon + \sum (IR) = 0\]</span></p>
+</section>
+<section id="aturan-tanda-konvensi-penting" class="level3">
+<h3 class="anchored" data-anchor-id="aturan-tanda-konvensi-penting">Aturan Tanda (Konvensi Penting)</h3>
+<p>Ini adalah bagian yang paling sering membingungkan mahasiswa. Mari kita perjelas berdasarkan slide:</p>
+<ol type="1">
+<li><p><strong>Melintasi Resistor (</strong><span class="math inline">\(R\)</span><strong>):</strong></p>
+<ul>
+<li>Jika arah loop <strong>searah</strong> dengan arah arus: <span class="math inline">\(\Delta V = -IR\)</span> (Terjadi penurunan potensial karena energi digunakan oleh hambatan).</li>
+<li>Jika arah loop <strong>berlawanan</strong> dengan arah arus: <span class="math inline">\(\Delta V = +IR\)</span> (Terjadi kenaikan potensial secara relatif).</li>
+</ul></li>
+<li><p><strong>Melintasi Sumber GGL (</strong><span class="math inline">\(\epsilon\)</span><strong>):</strong></p>
+<ul>
+<li>Jika loop bergerak dari kutub <strong>negatif (-)</strong> ke <strong>positif (+)</strong>: <span class="math inline">\(\Delta V = +\epsilon\)</span> (Terjadi kenaikan potensial).</li>
+<li>Jika loop bergerak dari kutub <strong>positif (+)</strong> ke <strong>negatif (-)</strong>: <span class="math inline">\(\Delta V = -\epsilon\)</span> (Terjadi penurunan potensial).</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772504179552.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi aturan tanda.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="penjelasan-analisis-rangkaian-listrik-hukum-kirchhoff" class="level2">
+<h2 class="anchored" data-anchor-id="penjelasan-analisis-rangkaian-listrik-hukum-kirchhoff">Penjelasan Analisis Rangkaian Listrik (Hukum Kirchhoff)</h2>
+<p>Berdasarkan slide yang Anda berikan, rangkaian tersebut dianalisis menggunakan <strong>Hukum Kirchhoff</strong>, yang terdiri dari dua aturan utama: Hukum Arus Kirchhoff (KCL) dan Hukum Tegangan Kirchhoff (KVL).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772504971200.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi rangkaian.</figcaption>
+</figure>
+</div>
+<section id="konsep-dasar" class="level3">
+<h3 class="anchored" data-anchor-id="konsep-dasar">1. Konsep Dasar</h3>
+<p>Rangkaian pada gambar memiliki dua sumber tegangan (<span class="math inline">\(\varepsilon_1\)</span> dan <span class="math inline">\(\varepsilon_2\)</span>) serta tiga hambatan (<span class="math inline">\(R_1, R_2, R_3\)</span>). Tujuan utamanya adalah mencari nilai arus yang mengalir pada setiap cabang (<span class="math inline">\(i_1, i_2, i_3\)</span>).</p>
+<section id="hukum-i-kirchhoff-kaidah-percabangan-kcl" class="level4">
+<h4 class="anchored" data-anchor-id="hukum-i-kirchhoff-kaidah-percabangan-kcl">Hukum I Kirchhoff (Kaidah Percabangan / KCL)</h4>
+<p>Menyatakan bahwa jumlah arus yang masuk ke sebuah titik percabangan sama dengan jumlah arus yang keluar dari titik tersebut.</p>
+<p><span class="math display">\[\sum I_{masuk} = \sum I_{keluar}\]</span></p>
+</section>
+<section id="hukum-ii-kirchhoff-kaidah-simpul-kvl" class="level4">
+<h4 class="anchored" data-anchor-id="hukum-ii-kirchhoff-kaidah-simpul-kvl">Hukum II Kirchhoff (Kaidah Simpul / KVL)</h4>
+<p>Menyatakan bahwa dalam satu rangkaian tertutup (loop), jumlah aljabar gaya gerak listrik (GGL) dan penurunan tegangan (<span class="math inline">\(IR\)</span>) adalah nol.</p>
+<p><span class="math display">\[\sum \varepsilon + \sum (I \cdot R) = 0\]</span></p>
+</section>
+</section>
+<section id="langkah-langkah-analisis-berdasarkan-slide" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-langkah-analisis-berdasarkan-slide">2. Langkah-Langkah Analisis (Berdasarkan Slide)</h3>
+<section id="langkah-1-menentukan-arah-arus" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-1-menentukan-arah-arus">Langkah 1: Menentukan Arah Arus</h4>
+<p>Kita menentukan arah <span class="math inline">\(i_1, i_2,\)</span> dan <span class="math inline">\(i_3\)</span> secara sembarang. Jika hasil akhir bernilai negatif, itu hanya berarti arah arus sebenarnya berlawanan dengan asumsi awal kita.</p>
+</section>
+<section id="langkah-2-aplikasi-hukum-i-kirchhoff" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-2-aplikasi-hukum-i-kirchhoff">Langkah 2: Aplikasi Hukum I Kirchhoff</h4>
+<p>Pada titik percabangan <strong>D</strong>, diasumsikan arus <span class="math inline">\(i_1\)</span> dan <span class="math inline">\(i_3\)</span> masuk ke titik D, sedangkan <span class="math inline">\(i_2\)</span> keluar dari titik D.</p>
+<p>Persamaannya:</p>
+<p><span class="math display">\[i_1 + i_3 - i_2 = 0 \quad \dots (1)\]</span></p>
+<p>Atau dapat ditulis: <span class="math inline">\(i_2 = i_1 + i_3\)</span>.</p>
+</section>
+<section id="langkah-3-4-analisis-simpul-loop-i" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-3-4-analisis-simpul-loop-i">Langkah 3 &amp; 4: Analisis Simpul (Loop) I</h4>
+<p>Loop I adalah lintasan tertutup di sebelah kiri (A-B-D-A).</p>
+<p>Berdasarkan persamaan <span class="math inline">\((2)\)</span> di slide:</p>
+<p><span class="math display">\[\varepsilon_1 - i_1 R_1 + i_3 R_3 = 0 \quad \dots (2)\]</span></p>
+<ul>
+<li><span class="math inline">\(\varepsilon_1\)</span> <strong>positif:</strong> Karena arah putaran loop bertemu kutub positif baterai terlebih dahulu.</li>
+<li><span class="math inline">\(-i_1 R_1\)</span><strong>:</strong> Arus <span class="math inline">\(i_1\)</span> searah dengan loop.</li>
+<li><span class="math inline">\(+i_3 R_3\)</span><strong>:</strong> Arus <span class="math inline">\(i_3\)</span> berlawanan arah dengan loop (saat loop bergerak dari B ke D).</li>
+</ul>
+</section>
+<section id="langkah-5-analisis-simpul-loop-ii" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-5-analisis-simpul-loop-ii">Langkah 5: Analisis Simpul (Loop) II</h4>
+<p>Loop II adalah lintasan tertutup di sebelah kanan (B-C-D-B).</p>
+<p>Berdasarkan persamaan <span class="math inline">\((3)\)</span> di slide:</p>
+<p><span class="math display">\[-\varepsilon_2 - i_3 R_3 - i_2 R_2 = 0 \quad \dots (3)\]</span></p>
+<ul>
+<li><span class="math inline">\(-\varepsilon_2\)</span><strong>:</strong> Loop bertemu kutub negatif baterai <span class="math inline">\(\varepsilon_2\)</span>.</li>
+<li><span class="math inline">\(-i_3 R_3\)</span><strong>:</strong> Arah loop (D ke B) searah dengan arah arus <span class="math inline">\(i_3\)</span>.</li>
+<li><span class="math inline">\(-i_2 R_2\)</span><strong>:</strong> Arah loop searah dengan arus <span class="math inline">\(i_2\)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="hasil-akhir-langkah-6" class="level3">
+<h3 class="anchored" data-anchor-id="hasil-akhir-langkah-6">3. Hasil Akhir (Langkah 6)</h3>
+<p>Setelah melakukan substitusi dan eliminasi dari ketiga persamaan di atas, diperoleh rumus umum untuk masing-masing arus:</p>
+<ol type="1">
+<li><p><strong>Arus</strong> <span class="math inline">\(i_1\)</span><strong>:</strong></p>
+<p><span class="math display">\[i_1 = \frac{\varepsilon_1 (R_2 + R_3) - \varepsilon_2 R_3}{R_1 R_2 + R_1 R_3 + R_2 R_3}\]</span></p></li>
+<li><p><strong>Arus</strong> <span class="math inline">\(i_2\)</span><strong>:</strong></p>
+<p><span class="math display">\[i_2 = \frac{-\varepsilon_2 (R_1 + R_3) + \varepsilon_1 R_3}{R_1 R_2 + R_1 R_3 + R_2 R_3}\]</span></p></li>
+<li><p><strong>Arus</strong> <span class="math inline">\(i_3\)</span><strong>:</strong></p>
+<p><span class="math display">\[i_3 = \frac{-\varepsilon_1 R_2 - \varepsilon_2 R_1}{R_1 R_2 + R_1 R_3 + R_2 R_3}\]</span></p></li>
+</ol>
+<section id="catatan-penting" class="level4">
+<h4 class="anchored" data-anchor-id="catatan-penting">Catatan Penting</h4>
+<ul>
+<li><strong>Penyebut Sama:</strong> Perhatikan bahwa semua penyebut untuk <span class="math inline">\(i_1, i_2,\)</span> dan <span class="math inline">\(i_3\)</span> adalah sama (<span class="math inline">\(R_1 R_2 + R_1 R_3 + R_2 R_3\)</span>), yang merupakan kombinasi paralel dari hambatan-hambatan tersebut.</li>
+<li><strong>Tanda Negatif:</strong> Jika Anda memasukkan angka dan hasilnya negatif, arah arus fisik yang sebenarnya adalah kebalikan dari panah yang digambar di awal.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="penyelesaian-contoh-soal-1" class="level2">
+<h2 class="anchored" data-anchor-id="penyelesaian-contoh-soal-1">Penyelesaian Contoh Soal 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772505278513.png" class="img-fluid figure-img"></p>
+<figcaption>Soal 1</figcaption>
+</figure>
+</div>
+<section id="langkah-langkah-penyelesaian-rangkaian-satu-loop" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-langkah-penyelesaian-rangkaian-satu-loop">Langkah-Langkah Penyelesaian Rangkaian Satu Loop</h3>
+<section id="a-menentukan-besar-dan-arah-arus-listrik" class="level4">
+<h4 class="anchored" data-anchor-id="a-menentukan-besar-dan-arah-arus-listrik">(a) Menentukan Besar dan Arah Arus Listrik</h4>
+<p>Pertama, kita tentukan arah loop secara sembarang. Mari kita asumsikan arah loop <strong>searah jarum jam</strong> (C <span class="math inline">\(\to\)</span> A <span class="math inline">\(\to\)</span> B <span class="math inline">\(\to\)</span> C).</p>
+<p>Menggunakan Hukum II Kirchhoff:</p>
+<p><span class="math display">\[\sum \varepsilon + \sum (I \cdot R_{total}) = 0\]</span></p>
+<p>Mari kita telusuri loop dari titik C:</p>
+<ol type="1">
+<li>Melewati <span class="math inline">\(\varepsilon_1\)</span> dari kutub negatif ke positif (sesuai arah panah GGL): <span class="math inline">\(+\varepsilon_1\)</span></li>
+<li>Melewati hambatan dalam <span class="math inline">\(r_1\)</span>: <span class="math inline">\(-I \cdot r_1\)</span></li>
+<li>Melewati <span class="math inline">\(\varepsilon_2\)</span> dari kutub positif ke negatif (berlawanan arah panah GGL): <span class="math inline">\(-\varepsilon_2\)</span></li>
+<li>Melewati hambatan dalam <span class="math inline">\(r_2\)</span>: <span class="math inline">\(-I \cdot r_2\)</span></li>
+<li>Melewati hambatan luar <span class="math inline">\(R\)</span>: <span class="math inline">\(-I \cdot R\)</span></li>
+</ol>
+<p><strong>Persamaan:</strong></p>
+<p><span class="math display">\[\varepsilon_1 - \varepsilon_2 - I(r_1 + r_2 + R) = 0\]</span><span class="math display">\[2 - 4 - I(1 + 2 + 5) = 0\]</span><span class="math display">\[-2 - 8I = 0\]</span><span class="math display">\[8I = -2\]</span><span class="math display">\[I = -0,25 \text{ A}\]</span></p>
+<p><strong>Kesimpulan Arus:</strong></p>
+<ul>
+<li><strong>Besar Arus:</strong> <span class="math inline">\(0,25 \text{ A}\)</span></li>
+<li><strong>Arah Arus:</strong> Karena hasilnya negatif, maka arah arus yang benar adalah <strong>Berlawanan Arah Jarum Jam</strong> (C <span class="math inline">\(\to\)</span> B <span class="math inline">\(\to\)</span> A <span class="math inline">\(\to\)</span> C).</li>
+</ul>
+</section>
+<section id="b-beda-potensial-antara-titik-a-dan-titik-b-v_ab" class="level4">
+<h4 class="anchored" data-anchor-id="b-beda-potensial-antara-titik-a-dan-titik-b-v_ab">(b) Beda Potensial antara Titik A dan Titik B (<span class="math inline">\(V_{AB}\)</span>)</h4>
+<p>Kita gunakan rumus beda potensial antara dua titik: <span class="math inline">\(V_{AB} = V_A - V_B = \sum \varepsilon + \sum (I \cdot R)\)</span>.</p>
+<p>Mari kita ambil jalan dari B ke A (melalui baterai <span class="math inline">\(\varepsilon_2\)</span>).</p>
+<p>Karena arus asli (<span class="math inline">\(I' = 0,25 \text{ A}\)</span>) mengalir dari B ke A:</p>
+<ul>
+<li>Kita bergerak dari B ke A: searah dengan panah <span class="math inline">\(\varepsilon_2\)</span> (<span class="math inline">\(+4 \text{ V}\)</span>).</li>
+<li>Kita bergerak searah dengan arus <span class="math inline">\(I'\)</span> melewati <span class="math inline">\(r_2\)</span> (<span class="math inline">\(-I' \cdot r_2\)</span>).</li>
+</ul>
+<p><span class="math display">\[V_{AB} = \varepsilon_2 - I' \cdot r_2\]</span><span class="math display">\[V_{AB} = 4 - (0,25 \cdot 2)\]</span><span class="math display">\[V_{AB} = 4 - 0,5 = 3,5 \text{ V}\]</span></p>
+</section>
+<section id="c-beda-potensial-antara-titik-a-dan-titik-c-v_ac" class="level4">
+<h4 class="anchored" data-anchor-id="c-beda-potensial-antara-titik-a-dan-titik-c-v_ac">(c) Beda Potensial antara Titik A dan Titik C (<span class="math inline">\(V_{AC}\)</span>)</h4>
+<p>Mari kita ambil jalan dari C ke A.</p>
+<p>Ingat, arus asli <span class="math inline">\(I'\)</span> mengalir dari A ke C di cabang atas. Jadi, perjalanan C ke A adalah <strong>melawan</strong> arah arus.</p>
+<ul>
+<li>Bergerak dari C ke A: searah panah <span class="math inline">\(\varepsilon_1\)</span> (<span class="math inline">\(+2 \text{ V}\)</span>).</li>
+<li>Bergerak melawan arah arus melewati <span class="math inline">\(r_1\)</span> (<span class="math inline">\(+I' \cdot r_1\)</span>).</li>
+</ul>
+<p><span class="math display">\[V_{AC} = \varepsilon_1 + I' \cdot r_1\]</span><span class="math display">\[V_{AC} = 2 + (0,25 \cdot 1)\]</span><span class="math display">\[V_{AC} = 2,25 \text{ V}\]</span></p>
+</section>
+<section id="d-apakah-v_b-v_c-atau-v_b-v_c" class="level4">
+<h4 class="anchored" data-anchor-id="d-apakah-v_b-v_c-atau-v_b-v_c">(d) Apakah <span class="math inline">\(V_B &gt; V_C\)</span> atau <span class="math inline">\(V_B &lt; V_C\)</span>?</h4>
+<p>Mari kita hitung beda potensial antara C dan B melalui hambatan <span class="math inline">\(R\)</span>.</p>
+<p>Arus <span class="math inline">\(I'\)</span> mengalir dari C ke B melalui hambatan <span class="math inline">\(R\)</span>.</p>
+<p><span class="math display">\[V_C - V_B = I' \cdot R\]</span><span class="math display">\[V_C - V_B = 0,25 \cdot 5 = 1,25 \text{ V}\]</span></p>
+<p>Karena hasil <span class="math inline">\(V_C - V_B\)</span> adalah positif (<span class="math inline">\(1,25 \text{ V}\)</span>), maka nilai <span class="math inline">\(V_C\)</span> lebih besar dari <span class="math inline">\(V_B\)</span>.</p>
+<p><strong>Jawaban:</strong> <span class="math inline">\(V_B &lt; V_C\)</span></p>
+</section>
+</section>
+</section>
+<section id="penyelesaian-contoh-soal-2" class="level2">
+<h2 class="anchored" data-anchor-id="penyelesaian-contoh-soal-2">Penyelesaian Contoh Soal 2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772505853091.png" class="img-fluid figure-img"></p>
+<figcaption>Soal 2.</figcaption>
+</figure>
+</div>
+<section id="langkah-penyelesaian-contoh-soal-2-dengan-hukum-kirchhoff" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-penyelesaian-contoh-soal-2-dengan-hukum-kirchhoff">Langkah Penyelesaian Contoh Soal 2 dengan Hukum Kirchhoff</h3>
+<p>Kita akan menggunakan data: <span class="math inline">\(\varepsilon_1=3\text{V}\)</span>, <span class="math inline">\(\varepsilon_2=1\text{V}\)</span>, <span class="math inline">\(R_1=5\Omega\)</span> (tengah), <span class="math inline">\(R_2=2\Omega\)</span> (kanan), dan <span class="math inline">\(R_3=4\Omega\)</span> (kiri).</p>
+<section id="langkah-1-menentukan-arah-arus-sembarang" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-1-menentukan-arah-arus-sembarang">Langkah 1: Menentukan Arah Arus Sembarang</h4>
+<p>Kita asumsikan titik percabangan atas adalah <strong>Titik B</strong> dan titik bawah adalah <strong>Titik D</strong>.</p>
+<ul>
+<li><span class="math inline">\(i_3\)</span>: Arus di cabang kiri (lewat <span class="math inline">\(R_3\)</span>), arah ke kanan (masuk ke titik B).</li>
+<li><span class="math inline">\(i_1\)</span>: Arus di cabang tengah (lewat <span class="math inline">\(R_1\)</span>), arah ke bawah (keluar dari titik B).</li>
+<li><span class="math inline">\(i_2\)</span>: Arus di cabang kanan (lewat <span class="math inline">\(R_2\)</span>), arah ke kanan (keluar dari titik B).</li>
+</ul>
+</section>
+<section id="langkah-2-kaidah-percabangan-hukum-i-kirchhoff-di-titik-b" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-2-kaidah-percabangan-hukum-i-kirchhoff-di-titik-b">Langkah 2: Kaidah Percabangan (Hukum I Kirchhoff) di Titik B</h4>
+<p>Jumlah arus masuk = jumlah arus keluar:</p>
+<p><span class="math display">\[i_3 = i_1 + i_2 \quad \text{atau} \quad i_1 + i_2 - i_3 = 0 \dots (1)\]</span></p>
+</section>
+<section id="langkah-3-4-kaidah-simpul-hukum-ii-kirchhoff-pada-loop-i-kiri" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-3-4-kaidah-simpul-hukum-ii-kirchhoff-pada-loop-i-kiri">Langkah 3 &amp; 4: Kaidah Simpul (Hukum II Kirchhoff) pada Loop I (Kiri)</h4>
+<p>Kita pilih arah loop <strong>searah jarum jam</strong>. Mulai dari titik D ke atas lewat <span class="math inline">\(\varepsilon_1\)</span>:</p>
+<ul>
+<li>Melewati <span class="math inline">\(\varepsilon_1\)</span> (kutub - ke +): <span class="math inline">\(+\varepsilon_1\)</span></li>
+<li>Melewati <span class="math inline">\(R_3\)</span> (searah arus <span class="math inline">\(i_3\)</span>): <span class="math inline">\(-i_3 R_3\)</span></li>
+<li>Melewati <span class="math inline">\(R_1\)</span> (searah arus <span class="math inline">\(i_1\)</span>): <span class="math inline">\(-i_1 R_1\)</span></li>
+</ul>
+<p><strong>Persamaan Loop I:</strong></p>
+<p><span class="math display">\[\varepsilon_1 - i_3 R_3 - i_1 R_1 = 0\]</span><span class="math display">\[3 - 4i_3 - 5i_1 = 0 \implies 5i_1 + 4i_3 = 3 \dots (2)\]</span></p>
+</section>
+<section id="langkah-5-kaidah-simpul-pada-loop-ii-kanan" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-5-kaidah-simpul-pada-loop-ii-kanan">Langkah 5: Kaidah Simpul pada Loop II (Kanan)</h4>
+<p>Kita pilih arah loop <strong>searah jarum jam</strong>. Mulai dari titik B ke kanan:</p>
+<ul>
+<li>Melewati <span class="math inline">\(R_2\)</span> (searah arus <span class="math inline">\(i_2\)</span>): <span class="math inline">\(-i_2 R_2\)</span></li>
+<li>Melewati <span class="math inline">\(\varepsilon_2\)</span> (kutub + ke -): <span class="math inline">\(-\varepsilon_2\)</span></li>
+<li>Melewati <span class="math inline">\(R_1\)</span> (berlawanan arus <span class="math inline">\(i_1\)</span>): <span class="math inline">\(+i_1 R_1\)</span></li>
+</ul>
+<p><strong>Persamaan Loop II:</strong></p>
+<p><span class="math display">\[-i_2 R_2 - \varepsilon_2 + i_1 R_1 = 0\]</span><span class="math display">\[-2i_2 - 1 + 5i_1 = 0 \implies 5i_1 - 2i_2 = 1 \dots (3)\]</span></p>
+</section>
+<section id="langkah-6-mengolah-persamaan-substitusi-eliminasi" class="level4">
+<h4 class="anchored" data-anchor-id="langkah-6-mengolah-persamaan-substitusi-eliminasi">Langkah 6: Mengolah Persamaan (Substitusi &amp; Eliminasi)</h4>
+<section id="a.-substitusi-persamaan-1-ke-persamaan-2" class="level5">
+<h5 class="anchored" data-anchor-id="a.-substitusi-persamaan-1-ke-persamaan-2">A. Substitusi Persamaan (1) ke Persamaan (2)</h5>
+<p>Ganti <span class="math inline">\(i_3\)</span> dengan <span class="math inline">\((i_1 + i_2)\)</span>:</p>
+<p><span class="math display">\[5i_1 + 4(i_1 + i_2) = 3\]</span><span class="math display">\[5i_1 + 4i_1 + 4i_2 = 3\]</span><span class="math display">\[9i_1 + 4i_2 = 3 \dots (4)\]</span></p>
+</section>
+<section id="b.-eliminasi-persamaan-3-dan-4" class="level5">
+<h5 class="anchored" data-anchor-id="b.-eliminasi-persamaan-3-dan-4">B. Eliminasi Persamaan (3) dan (4)</h5>
+<p>Kita ingin mencari <span class="math inline">\(i_1\)</span>, maka samakan koefisien <span class="math inline">\(i_2\)</span>:</p>
+<ul>
+<li><p>Pers (3) x 2: <span class="math inline">\(10i_1 - 4i_2 = 2\)</span></p></li>
+<li><p>Pers (4) x 1: <span class="math inline">\(9i_1 + 4i_2 = 3\)</span></p>
+<p>———————————– (+)</p>
+<p><span class="math display">\[19i_1 = 5\]</span><span class="math display">\[i_1 = \frac{5}{19} \text{ A} \approx 0,263 \text{ A}\]</span></p></li>
+</ul>
+</section>
+<section id="c.-mencari-i_2-dan-i_3" class="level5">
+<h5 class="anchored" data-anchor-id="c.-mencari-i_2-dan-i_3">C. Mencari <span class="math inline">\(i_2\)</span> dan <span class="math inline">\(i_3\)</span></h5>
+<p>Dari Pers (3): <span class="math inline">\(2i_2 = 5i_1 - 1\)</span></p>
+<p><span class="math display">\[2i_2 = 5\left(\frac{5}{19}\right) - 1 = \frac{25}{19} - \frac{19}{19} = \frac{6}{19}\]</span><span class="math display">\[i_2 = \frac{3}{19} \text{ A} \approx 0,158 \text{ A}\]</span></p>
+<p>Dari Pers (1): <span class="math inline">\(i_3 = i_1 + i_2\)</span></p>
+<p><span class="math display">\[i_3 = \frac{5}{19} + \frac{3}{19} = \frac{8}{19} \text{ A} \approx 0,421 \text{ A}\]</span></p>
+</section>
+</section>
+<section id="hasil-akhir-daya" class="level4">
+<h4 class="anchored" data-anchor-id="hasil-akhir-daya">Hasil Akhir (Daya)</h4>
+<p><strong>(a) Daya Termal (</strong><span class="math inline">\(P = i^2 R\)</span><strong>):</strong></p>
+<ul>
+<li><span class="math inline">\(P_{R1} = (5/19)^2 \cdot 5 = \mathbf{0,346 \text{ W}}\)</span></li>
+<li><span class="math inline">\(P_{R2} = (3/19)^2 \cdot 2 = \mathbf{0,050 \text{ W}}\)</span></li>
+<li><span class="math inline">\(P_{R3} = (8/19)^2 \cdot 4 = \mathbf{0,709 \text{ W}}\)</span></li>
+</ul>
+<p><strong>(b) Daya GGL (</strong><span class="math inline">\(P = \varepsilon \cdot i\)</span><strong>):</strong></p>
+<ul>
+<li><span class="math inline">\(P_{\varepsilon1} = 3 \cdot (8/19) = \mathbf{1,263 \text{ W}}\)</span> (Memberikan energi)</li>
+<li><span class="math inline">\(P_{\varepsilon2} = 1 \cdot (3/19) = \mathbf{0,158 \text{ W}}\)</span> (Menyerap energi karena arus masuk ke kutub +)</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="bab-3.-rangkaian-rc" class="level1">
+<h1>BAB 3. Rangkaian RC</h1>
+<p>Materi ini merupakan bagian krusial dalam fisika listrik dinamis karena menjelaskan bagaimana arus dan muatan berubah terhadap waktu (tidak konstan seperti pada rangkaian resistor murni).</p>
+<section id="pendahuluan-rangkaian-rc" class="level2">
+<h2 class="anchored" data-anchor-id="pendahuluan-rangkaian-rc">1. Pendahuluan Rangkaian RC</h2>
+<p>Rangkaian RC adalah rangkaian listrik yang terdiri dari sebuah resistor (<span class="math inline">\(R\)</span>) dan sebuah kapasitor (<span class="math inline">\(C\)</span>). Berbeda dengan rangkaian resistor murni di mana arus langsung mencapai nilai maksimum saat saklar ditutup, pada rangkaian RC, <strong>arus dan muatan berubah secara eksponensial terhadap waktu</strong>.</p>
+<p>Terdapat dua kondisi utama yang dibahas:</p>
+<ul>
+<li><strong>Pemuatan (Charging):</strong> Mengisi kapasitor dengan energi dari sumber tegangan (GGL).</li>
+<li><strong>Pelucutan (Discharging):</strong> Mengosongkan muatan yang tersimpan di kapasitor melalui resistor.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772506137184.png" class="img-fluid figure-img"></p>
+<figcaption>(a) Rangkaian RC, (b) pemuatan dan (c) pelucutan.</figcaption>
+</figure>
+</div>
+</section>
+<section id="proses-pemuatan-kapasitor-charging" class="level2">
+<h2 class="anchored" data-anchor-id="proses-pemuatan-kapasitor-charging">2. Proses Pemuatan Kapasitor (Charging)</h2>
+<p>Ketika saklar dihubungkan ke terminal <strong>a</strong>, baterai (GGL <span class="math inline">\(\epsilon\)</span>) mulai mengalirkan muatan ke kapasitor.</p>
+<ul>
+<li><p><strong>Hukum Kekekalan Energi:</strong> Kerja yang dilakukan oleh GGL (<span class="math inline">\(\epsilon dq\)</span>) sebagian diubah menjadi panas pada resistor (<span class="math inline">\(i^2 R dt\)</span>) dan sebagian lagi disimpan sebagai energi potensial listrik dalam kapasitor (<span class="math inline">\(dU\)</span>).</p></li>
+<li><p><strong>Persamaan Diferensial:</strong> Berdasarkan Hukum Kirchhoff (KVL), diperoleh persamaan:</p>
+<p><span class="math display">\[\epsilon = iR + \frac{q}{C}\]</span></p>
+<p>Karena arus adalah laju perubahan muatan terhadap waktu (<span class="math inline">\(i = \frac{dq}{dt}\)</span>), maka:</p>
+<p><span class="math display">\[\epsilon = R \frac{dq}{dt} + \frac{q}{C}\]</span></p></li>
+<li><p><strong>Solusi Muatan dan Arus:</strong></p>
+<ul>
+<li><p><strong>Muatan (<span class="math inline">\(q\)</span>):</strong> Muatan bertambah secara eksponensial dari nol hingga nilai maksimum (<span class="math inline">\(C\epsilon\)</span>).</p>
+<p><span class="math display">\[q(t) = C\epsilon (1 - e^{-\frac{t}{RC}})\]</span></p></li>
+<li><p><strong>Arus (<span class="math inline">\(i\)</span>):</strong> Arus dimulai dari nilai maksimum (<span class="math inline">\(\frac{\epsilon}{R}\)</span>) dan menurun secara eksponensial menuju nol saat kapasitor penuh.</p>
+<p><span class="math display">\[i(t) = \frac{\epsilon}{R} e^{-\frac{t}{RC}}\]</span></p></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772506518674.png" class="img-fluid figure-img"></p>
+<figcaption>Grafik pemuatan kapasitor. Muatan yang tersimpan dalam kapasitor bertambah secara eksponensial. Konstanta waktu (RC) menunjukkan waktu yang diperlukan tersimpan muatan sekitar 63,2% dari muatan maksimum Ce. Arus listrik mula-mula maksimum sebesar e/R, akan menurun secara eksponensial hingga akhirnya nol.</figcaption>
+</figure>
+</div>
+<section id="penurunan-rumus-arus-listrik-rangkaian-rc-pemuatan" class="level3">
+<h3 class="anchored" data-anchor-id="penurunan-rumus-arus-listrik-rangkaian-rc-pemuatan">Penurunan Rumus Arus Listrik Rangkaian RC (Pemuatan)</h3>
+<p>Untuk memahami bagaimana rumus <span class="math inline">\(i(t) = \frac{\epsilon}{R} e^{-\frac{t}{RC}}\)</span> diperoleh, kita harus mulai dari hukum dasar rangkaian listrik dan menyelesaikan persamaan diferensial yang muncul.</p>
+<section id="hukum-loop-kirchhoff-kvl" class="level4">
+<h4 class="anchored" data-anchor-id="hukum-loop-kirchhoff-kvl">1. Hukum Loop Kirchhoff (KVL)</h4>
+<p>Pada saat saklar dihubungkan ke terminal <strong>a</strong> (proses pemuatan), total tegangan dalam loop tertutup adalah nol:</p>
+<p><span class="math display">\[\epsilon - V_R - V_C = 0\]</span></p>
+<p>Atau dapat ditulis:</p>
+<p><span class="math display">\[\epsilon = iR + \frac{q}{C}\]</span></p>
+<p>Di mana:</p>
+<ul>
+<li><span class="math inline">\(\epsilon\)</span> = GGL sumber (V)</li>
+<li><span class="math inline">\(i\)</span> = Arus sesaat (A)</li>
+<li><span class="math inline">\(R\)</span> = Resistansi (<span class="math inline">\(\Omega\)</span>)</li>
+<li><span class="math inline">\(q\)</span> = Muatan sesaat pada kapasitor (C)</li>
+<li><span class="math inline">\(C\)</span> = Kapasitansi (F)</li>
+</ul>
+</section>
+<section id="menyusun-persamaan-diferensial" class="level4">
+<h4 class="anchored" data-anchor-id="menyusun-persamaan-diferensial">2. Menyusun Persamaan Diferensial</h4>
+<p>Karena arus adalah laju perubahan muatan terhadap waktu (<span class="math inline">\(i = \frac{dq}{dt}\)</span>), kita substitusikan ke dalam persamaan:</p>
+<p><span class="math display">\[\epsilon = R \frac{dq}{dt} + \frac{q}{C}\]</span></p>
+<p>Untuk menyelesaikannya, kita atur ulang persamaan agar variabel <span class="math inline">\(q\)</span> dan <span class="math inline">\(t\)</span> dapat dipisahkan:</p>
+<p><span class="math display">\[\epsilon - \frac{q}{C} = R \frac{dq}{dt}\]</span><span class="math display">\[\frac{C\epsilon - q}{C} = R \frac{dq}{dt}\]</span><span class="math display">\[\frac{dt}{RC} = \frac{dq}{C\epsilon - q}\]</span></p>
+</section>
+<section id="integrasi" class="level4">
+<h4 class="anchored" data-anchor-id="integrasi">3. Integrasi</h4>
+<p>Kita integralkan kedua ruas. Pada saat <span class="math inline">\(t = 0\)</span>, muatan kapasitor kosong (<span class="math inline">\(q = 0\)</span>). Pada saat <span class="math inline">\(t\)</span>, muatannya adalah <span class="math inline">\(q\)</span>.</p>
+<p><span class="math display">\[\int_{0}^{t} \frac{1}{RC} dt' = \int_{0}^{q} \frac{1}{C\epsilon - q'} dq'\]</span></p>
+<p>Gunakan substitusi <span class="math inline">\(u = C\epsilon - q\)</span>, maka <span class="math inline">\(du = -dq\)</span>:</p>
+<p><span class="math display">\[\frac{t}{RC} = \left[-\ln(C\epsilon - q') \right]_{0}^{q}\]</span><span class="math display">\[\frac{t}{RC} = -\ln(C\epsilon - q) - (-\ln(C\epsilon))\]</span><span class="math display">\[\frac{t}{RC} = -\ln\left(\frac{C\epsilon - q}{C\epsilon}\right)\]</span></p>
+<p>Hilangkan logaritma dengan fungsi eksponensial (<span class="math inline">\(e\)</span>):</p>
+<p><span class="math display">\[e^{-\frac{t}{RC}} = \frac{C\epsilon - q}{C\epsilon}\]</span><span class="math display">\[C\epsilon e^{-\frac{t}{RC}} = C\epsilon - q\]</span><span class="math display">\[q(t) = C\epsilon (1 - e^{-\frac{t}{RC}})\]</span></p>
+</section>
+<section id="mendapatkan-rumus-arus-it" class="level4">
+<h4 class="anchored" data-anchor-id="mendapatkan-rumus-arus-it">4. Mendapatkan Rumus Arus <span class="math inline">\(i(t)\)</span></h4>
+<p>Arus listrik diperoleh dengan mendiferensialkan muatan <span class="math inline">\(q(t)\)</span> terhadap waktu:</p>
+<p><span class="math display">\[i(t) = \frac{dq}{dt}\]</span><span class="math display">\[i(t) = \frac{d}{dt} \left[C\epsilon (1 - e^{-\frac{t}{RC}}) \right]\]</span></p>
+<p>Turunkan suku per suku:</p>
+<ul>
+<li>Turunan dari konstanta <span class="math inline">\(C\epsilon\)</span> adalah <span class="math inline">\(0\)</span>.</li>
+<li>Turunan dari <span class="math inline">\(-C\epsilon e^{-\frac{t}{RC}}\)</span> adalah <span class="math inline">\(-C\epsilon \cdot \left(-\frac{1}{RC} \right) e^{-\frac{t}{RC}}\)</span>.</li>
+</ul>
+<p>Maka:</p>
+<p><span class="math display">\[i(t) = C\epsilon \left(\frac{1}{RC} \right) e^{-\frac{t}{RC}}\]</span></p>
+<p>Sederhanakan dengan mencoret <span class="math inline">\(C\)</span>:</p>
+<p><span class="math display">\[i(t) = \frac{\epsilon}{R} e^{-\frac{t}{RC}}\]</span></p>
+</section>
+<section id="kesimpulan" class="level4">
+<h4 class="anchored" data-anchor-id="kesimpulan">Kesimpulan</h4>
+<p>Rumus ini menunjukkan bahwa:</p>
+<ol type="1">
+<li>Pada saat <span class="math inline">\(t = 0\)</span>, arus bernilai maksimum <span class="math inline">\(i = \frac{\epsilon}{R}\)</span> (kapasitor bertindak seperti kawat biasa).</li>
+<li>Seiring bertambahnya <span class="math inline">\(t\)</span>, arus menurun secara eksponensial.</li>
+<li>Pada saat <span class="math inline">\(t \to \infty\)</span>, arus menjadi <span class="math inline">\(0\)</span> (kapasitor penuh dan memutus aliran arus DC).</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="proses-pelucutan-kapasitor-discharging" class="level2">
+<h2 class="anchored" data-anchor-id="proses-pelucutan-kapasitor-discharging">3. Proses Pelucutan Kapasitor (Discharging)</h2>
+<p>Ketika saklar dipindah ke terminal <strong>b</strong>, sumber tegangan (GGL) diputus dari rangkaian, sehingga kapasitor yang sudah terisi muatan akan mengalirkan muatannya kembali melalui resistor.</p>
+<ul>
+<li><p><strong>Persamaan Dasar:</strong> Karena tidak ada baterai (<span class="math inline">\(\epsilon = 0\)</span>), maka:</p>
+<p><span class="math display">\[0 = iR + \frac{q}{C} \implies R \frac{dq}{dt} + \frac{q}{C} = 0\]</span></p></li>
+<li><p><strong>Solusi Muatan dan Arus:</strong></p>
+<ul>
+<li><p><strong>Muatan (<span class="math inline">\(q\)</span>):</strong> Muatan berkurang dari nilai awal (<span class="math inline">\(q_0\)</span>) menuju nol.</p>
+<p><span class="math display">\[q(t) = q_0 e^{-\frac{t}{RC}}\]</span></p></li>
+<li><p><strong>Arus (<span class="math inline">\(i\)</span>):</strong> Arus mengalir dalam arah berlawanan dari proses pemuatan (ditandai dengan tanda negatif) dan juga berkurang secara eksponensial.</p>
+<p><span class="math display">\[i(t) = -\frac{\epsilon}{R} e^{-\frac{t}{RC}}\]</span></p></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772506591756.png" class="img-fluid figure-img"></p>
+<figcaption>Grafik pelucutan kapasitor. Muatan yang tersimpan dalam kapasitor berkurang secara eksponensial. Dalam waktu t = RC, muatan kapasitor telah berkurang menjadi sekitar 36,8% dari muatan mula-mula. Arus dalam proses pelucutan kapasitor juga menurun secara eksponensial terhadap waktu.</figcaption>
+</figure>
+</div>
+</section>
+<section id="konstanta-waktu-tau-rc" class="level2">
+<h2 class="anchored" data-anchor-id="konstanta-waktu-tau-rc">4. Konstanta Waktu (<span class="math inline">\(\tau = RC\)</span>)</h2>
+<p>Salah satu konsep terpenting dalam pdf ini adalah <strong>Tetapan Waktu Kapasitif</strong> (<span class="math inline">\(\tau\)</span>):</p>
+<p><span class="math display">\[\tau = RC\]</span></p>
+<p>Tetapan ini menentukan seberapa cepat kapasitor terisi atau terlucuti:</p>
+<ul>
+<li><strong>Saat Pemuatan:</strong> Dalam waktu <span class="math inline">\(t = \tau\)</span>, muatan kapasitor mencapai sekitar <strong>63,2%</strong> dari muatan maksimumnya.</li>
+<li><strong>Saat Pelucutan:</strong> Dalam waktu <span class="math inline">\(t = \tau\)</span>, muatan kapasitor berkurang hingga tersisa sekitar <strong>36,8%</strong> dari muatan awalnya.</li>
+</ul>
+</section>
+<section id="analisis-tegangan-hukum-kirchhoff" class="level2">
+<h2 class="anchored" data-anchor-id="analisis-tegangan-hukum-kirchhoff">5. Analisis Tegangan (Hukum Kirchhoff)</h2>
+<p>Hubungan tegangan pada komponen:</p>
+<ol type="1">
+<li><strong>Tegangan Kapasitor (<span class="math inline">\(V_C\)</span>):</strong> <span class="math inline">\(V_C = \frac{q}{C}\)</span></li>
+<li><strong>Tegangan Resistor (<span class="math inline">\(V_R\)</span>):</strong> <span class="math inline">\(V_R = iR\)</span></li>
+</ol>
+<p><strong>Hukum Loop Kirchhoff:</strong></p>
+<ul>
+<li><strong>Pemuatan:</strong> <span class="math inline">\(V_C + V_R = \epsilon\)</span> (Total tegangan komponen sama dengan tegangan baterai).</li>
+<li><strong>Pelucutan:</strong> <span class="math inline">\(V_C + V_R = 0\)</span> (Energi dari kapasitor sepenuhnya habis digunakan oleh resistor).</li>
+</ul>
+</section>
+<section id="ringkasan-tabel-perbandingan" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-tabel-perbandingan">Ringkasan Tabel Perbandingan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Fitur</strong></th>
+<th><strong>Pemuatan (Charging)</strong></th>
+<th><strong>Pelucutan (Discharging)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Saklar</strong></td>
+<td>Posisi <strong>a</strong></td>
+<td>Posisi <strong>b</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Muatan <span class="math inline">\(q(t)\)</span></strong></td>
+<td>Naik: <span class="math inline">\(C\epsilon (1 - e^{-\frac{t}{RC}})\)</span></td>
+<td>Turun: <span class="math inline">\(Q_0 e^{-\frac{t}{RC}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Arus <span class="math inline">\(i(t)\)</span></strong></td>
+<td>Turun dari <span class="math inline">\(I_{max}\)</span> ke <span class="math inline">\(0\)</span></td>
+<td>Turun dari <span class="math inline">\(-I_{max}\)</span> ke <span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Tujuan Akhir</strong></td>
+<td>Kapasitor penuh (<span class="math inline">\(V_C = \epsilon\)</span>)</td>
+<td>Kapasitor kosong (<span class="math inline">\(V_C = 0\)</span>)</td>
+</tr>
+</tbody>
+</table>
+<p>Materi ini sangat penting untuk memahami cara kerja <em>timer</em>, sirkuit <em>flash</em> pada kamera, dan sistem penyaringan (filter) dalam elektronika.</p>
+</section>
+<section id="penyelesaian-soal-fisika-dasar-rangkaian-rc" class="level2">
+<h2 class="anchored" data-anchor-id="penyelesaian-soal-fisika-dasar-rangkaian-rc">Penyelesaian Soal Fisika Dasar: Rangkaian RC</h2>
+<p>Dokumen ini berisi langkah-langkah detail untuk menyelesaikan tiga contoh soal mengenai pengisian dan pengosongan kapasitor.</p>
+<section id="soal-1-energi-tersimpan-setengah-maksimum" class="level3">
+<h3 class="anchored" data-anchor-id="soal-1-energi-tersimpan-setengah-maksimum">Soal 1: Energi Tersimpan Setengah Maksimum</h3>
+<p><strong>Pertanyaan:</strong> Berapakah waktu yang diperlukan suatu rangkaian <span class="math inline">\(RC\)</span> agar energi yang tersimpan dalam kapasitor akan mencapai setengah dari nilai setimbangnya (maksimum)?</p>
+<p><strong>Langkah-langkah:</strong></p>
+<ol type="1">
+<li><p><strong>Rumus Energi Kapasitor:</strong></p>
+<p>Energi (<span class="math inline">\(U\)</span>) yang tersimpan dalam kapasitor dinyatakan sebagai:</p>
+<p><span class="math display">\[U(t) = \frac{q(t)^2}{2C}\]</span></p>
+<p>Energi maksimum (<span class="math inline">\(U_{max}\)</span>) saat setimbang adalah:</p>
+<p><span class="math display">\[U_{max} = \frac{q_{max}^2}{2C}\]</span></p></li>
+<li><p><strong>Kondisi yang diinginkan:</strong></p>
+<p><span class="math display">\[U(t) = \frac{1}{2} U_{max}\]</span><span class="math display">\[\frac{q(t)^2}{2C} = \frac{1}{2} \frac{q_{max}^2}{2C}\]</span><span class="math display">\[q(t)^2 = \frac{1}{2} q_{max}^2 \implies q(t) = \frac{q_{max}}{\sqrt{2}}\]</span></p></li>
+<li><p><strong>Substitusi Rumus Pemuatan Muatan:</strong></p>
+<p>Rumus muatan pada proses pemuatan adalah <span class="math inline">\(q(t) = q_{max}(1 - e^{-t/RC})\)</span>.</p>
+<p><span class="math display">\[\frac{q_{max}}{\sqrt{2}} = q_{max}(1 - e^{-t/RC})\]</span><span class="math display">\[\frac{1}{\sqrt{2}} = 1 - e^{-t/RC}\]</span><span class="math display">\[e^{-t/RC} = 1 - \frac{1}{\sqrt{2}} \approx 1 - 0,707 = 0,293\]</span></p></li>
+<li><p><strong>Mencari Waktu (</strong><span class="math inline">\(t\)</span><strong>):</strong></p>
+<p>Gunakan logaritma natural (<span class="math inline">\(\ln\)</span>):</p>
+<p><span class="math display">\[-\frac{t}{RC} = \ln(0,293)\]</span><span class="math display">\[t = -RC \cdot \ln(0,293) \approx -RC \cdot (-1,227)\]</span></p>
+<p><span class="math inline">\(t \approx 1,227 RC\)</span> atau sekitar <span class="math inline">\(1,23\)</span> kali tetapan waktu.</p></li>
+</ol>
+</section>
+<section id="soal-2-pemuatan-1-dari-muatan-setimbang" class="level3">
+<h3 class="anchored" data-anchor-id="soal-2-pemuatan-1-dari-muatan-setimbang">Soal 2: Pemuatan 1% dari Muatan Setimbang</h3>
+<p><strong>Pertanyaan:</strong> Hitunglah berapa kali tetapan waktu (kapasitif) yang harus dilalui sehingga sebuah kapasitor dimuati sebanyak 1% dari muatan setimbangnya?</p>
+<p><strong>Langkah-langkah:</strong></p>
+<ol type="1">
+<li><p><strong>Kondisi yang diinginkan:</strong></p>
+<p><span class="math display">\[q(t) = 1\% \cdot q_{max} = 0,01 q_{max}\]</span></p></li>
+<li><p><strong>Substitusi Rumus Pemuatan:</strong></p>
+<p><span class="math display">\[0,01 q_{max} = q_{max}(1 - e^{-t/\tau})\]</span><span class="math display">\[0,01 = 1 - e^{-t/\tau}\]</span><span class="math display">\[e^{-t/\tau} = 1 - 0,01 = 0,99\]</span></p></li>
+<li><p><strong>Mencari Rasio</strong> <span class="math inline">\(t/\tau\)</span><strong>:</strong></p>
+<p><span class="math display">\[-\frac{t}{\tau} = \ln(0,99)\]</span><span class="math display">\[\frac{t}{\tau} = -\ln(0,99) \approx 0,01005\]</span></p></li>
+</ol>
+<p><strong>Jawaban:</strong> Waktu yang harus dilalui adalah sekitar <span class="math inline">\(0,01\)</span> <strong>kali tetapan waktu</strong> (<span class="math inline">\(\tau\)</span>). (Catatan: 1% muatan dicapai sangat cepat di awal proses pengisian).</p>
+</section>
+<section id="soal-3-resistansi-ekivalen-kapasitor-bocor" class="level3">
+<h3 class="anchored" data-anchor-id="soal-3-resistansi-ekivalen-kapasitor-bocor">Soal 3: Resistansi Ekivalen Kapasitor Bocor</h3>
+<p><strong>Pertanyaan:</strong> Beda potensial kapasitor (<span class="math inline">\(C = 2 \text{ mF}\)</span>) menurun dari <span class="math inline">\(V_0\)</span> menjadi <span class="math inline">\(V = \frac{1}{4} V_0\)</span> dalam waktu <span class="math inline">\(t = 2 \text{ s}\)</span>. Hitunglah berapa resistansi ekivalennya?</p>
+<p><strong>Langkah-langkah:</strong></p>
+<ol type="1">
+<li><p><strong>Identifikasi Proses:</strong></p>
+<p>Penurunan tegangan tanpa sumber luar berarti proses <strong>pelucutan</strong> (discharging).</p></li>
+<li><p><strong>Rumus Pelucutan Tegangan:</strong></p>
+<p><span class="math display">\[V(t) = V_0 e^{-t/RC}\]</span></p></li>
+<li><p><strong>Substitusi Nilai yang Diketahui:</strong></p>
+<ul>
+<li><p><span class="math inline">\(V(t) = \frac{1}{4} V_0\)</span></p></li>
+<li><p><span class="math inline">\(t = 2 \text{ s}\)</span></p></li>
+<li><p><span class="math inline">\(C = 2 \text{ mF} = 2 \times 10^{-3} \text{ F}\)</span></p>
+<p><span class="math display">\[\frac{1}{4} V_0 = V_0 e^{-2 / (R \cdot 0,002)}\]</span><span class="math display">\[\frac{1}{4} = e^{-1000/R}\]</span></p></li>
+</ul></li>
+<li><p><strong>Mencari Resistansi (</strong><span class="math inline">\(R\)</span><strong>):</strong></p>
+<p>Ambil <span class="math inline">\(\ln\)</span> pada kedua ruas:</p>
+<p><span class="math display">\[\ln(1/4) = -\frac{1000}{R}\]</span><span class="math display">\[- \ln(4) = -\frac{1000}{R}\]</span><span class="math display">\[R = \frac{1000}{\ln(4)} \approx \frac{1000}{1,386}\]</span></p>
+<p><span class="math inline">\(R \approx 721,34 \text{ } \Omega\)</span></p></li>
+</ol>
+<p><strong>Jawaban:</strong> Resistansi ekivalen di antara plat-plat kapasitor adalah sekitar <span class="math inline">\(721,3 \text{ } \Omega\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="bab-4.-analisis-alat-ukur-listrik-ammeter-dan-voltmeter" class="level1">
+<h1>BAB 4. Analisis Alat Ukur Listrik: Ammeter dan Voltmeter</h1>
+<p>Materi ini menjelaskan prinsip kerja, cara pemasangan, dan karakteristik ideal dari alat ukur arus dan tegangan agar hasil pengukuran akurat dan tidak mengganggu kondisi asli rangkaian.</p>
+<section id="ammeter-amperemeter" class="level2">
+<h2 class="anchored" data-anchor-id="ammeter-amperemeter">1. Ammeter (Amperemeter)</h2>
+<p>Ammeter adalah alat yang digunakan untuk mengukur kuat arus listrik (<span class="math inline">\(I\)</span>) yang mengalir dalam suatu percabangan atau rangkaian.</p>
+<section id="a.-cara-pemasangan" class="level3">
+<h3 class="anchored" data-anchor-id="a.-cara-pemasangan">A. Cara Pemasangan</h3>
+<ul>
+<li><strong>Secara Seri:</strong> Ammeter harus dipasang secara seri dengan beban atau resistor (<span class="math inline">\(R_L\)</span>). Hal ini dilakukan agar arus yang melewati Ammeter sama persis dengan arus yang melewati beban tersebut.</li>
+<li><strong>Prinsip Kerja:</strong> Karena dipasang seri, Ammeter menjadi bagian dari jalur aliran elektron.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772527128047.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi pemasangan ammeter.</figcaption>
+</figure>
+</div>
+</section>
+<section id="b.-karakteristik-ideal-r_a" class="level3">
+<h3 class="anchored" data-anchor-id="b.-karakteristik-ideal-r_a">B. Karakteristik Ideal (<span class="math inline">\(R_A\)</span>)</h3>
+<ul>
+<li><p><strong>Hambatan Sangat Kecil:</strong> Idealnya, hambatan dalam Ammeter (<span class="math inline">\(R_A\)</span>) harus mendekati nol (<span class="math inline">\(R_A \approx 0\)</span>).</p></li>
+<li><p><strong>Mengapa?</strong> Berdasarkan Hukum Ohm, total hambatan rangkaian saat diukur adalah <span class="math inline">\(R_{total} = R_L + R_A\)</span>.</p>
+<ul>
+<li>Jika <span class="math inline">\(R_A\)</span> besar, maka hambatan total rangkaian meningkat, yang menyebabkan arus (<span class="math inline">\(I\)</span>) mengecil.</li>
+<li>Jadi, Ammeter yang “buruk” akan mengubah (mengurangi) nilai arus yang sebenarnya ingin ia ukur.</li>
+</ul></li>
+<li><p><strong>Rumus Arus Terukur:</strong></p>
+<p><span class="math display">\[\epsilon = I(R_L + R_A)\]</span></p>
+<p>Jika <span class="math inline">\(R_A \approx 0\)</span>, maka <span class="math inline">\(I = \frac{\epsilon}{R_L}\)</span> (Nilai arus sebenarnya).</p></li>
+</ul>
+</section>
+</section>
+<section id="voltmeter" class="level2">
+<h2 class="anchored" data-anchor-id="voltmeter">2. Voltmeter</h2>
+<p>Voltmeter adalah alat yang digunakan untuk mengukur beda potensial atau tegangan (<span class="math inline">\(V\)</span>) antara dua titik dalam rangkaian.</p>
+<section id="a.-cara-pemasangan-1" class="level3">
+<h3 class="anchored" data-anchor-id="a.-cara-pemasangan-1">A. Cara Pemasangan</h3>
+<ul>
+<li><strong>Secara Paralel:</strong> Voltmeter harus dipasang secara paralel dengan komponen yang ingin diukur tegangannya (misalnya di ujung-ujung resistor <span class="math inline">\(R_L\)</span>).</li>
+<li><strong>Prinsip Kerja:</strong> Dengan dipasang paralel, Voltmeter akan merasakan beda potensial yang sama dengan beban tersebut tanpa harus memutus rangkaian utama.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772526940181.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi pemasangan voltmeter.|697</figcaption>
+</figure>
+</div>
+</section>
+<section id="b.-karakteristik-ideal-r_v" class="level3">
+<h3 class="anchored" data-anchor-id="b.-karakteristik-ideal-r_v">B. Karakteristik Ideal (<span class="math inline">\(R_V\)</span>)</h3>
+<ul>
+<li><p><strong>Hambatan Sangat Besar:</strong> Idealnya, hambatan dalam Voltmeter (<span class="math inline">\(R_V\)</span>) harus mendekati tak hingga (<span class="math inline">\(R_V \approx \infty\)</span>).</p></li>
+<li><p><strong>Mengapa?</strong> Jika Voltmeter memiliki hambatan kecil, maka sebagian arus dari rangkaian utama akan “bocor” masuk ke dalam Voltmeter.</p>
+<ul>
+<li>Hal ini akan mengubah konfigurasi rangkaian menjadi rangkaian paralel, yang menurunkan hambatan ekivalen di titik tersebut dan mengubah tegangan yang diukur.</li>
+</ul></li>
+<li><p><strong>Rumus Tegangan Terukur:</strong></p>
+<p>Jika <span class="math inline">\(R_V\)</span> sangat besar (<span class="math inline">\(R_V \gg R_L\)</span>), maka arus yang masuk ke Voltmeter hampir nol (<span class="math inline">\(I_V \approx 0\)</span>), sehingga tegangan yang terukur murni merupakan tegangan pada beban:</p>
+<p><span class="math display">\[V = I \cdot R_L\]</span></p></li>
+</ul>
+</section>
+</section>
+<section id="ringkasan-perbandingan" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-perbandingan">Ringkasan Perbandingan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Fitur</strong></td>
+<td><strong>Ammeter (Amperemeter)</strong></td>
+<td><strong>Voltmeter</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Fungsi</strong></td>
+<td>Mengukur Arus Listrik (<span class="math inline">\(I\)</span>)</td>
+<td>Mengukur Tegangan/Beda Potensial (<span class="math inline">\(V\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Pemasangan</strong></td>
+<td><strong>Seri</strong> dengan beban</td>
+<td><strong>Paralel</strong> dengan beban</td>
+</tr>
+<tr class="even">
+<td><strong>Hambatan Dalam (</strong><span class="math inline">\(R_{dalam}\)</span><strong>)</strong></td>
+<td>Harus <strong>Sangat Kecil</strong> (<span class="math inline">\(R_A \to 0\)</span>)</td>
+<td>Harus <strong>Sangat Besar</strong> (<span class="math inline">\(R_V \to \infty\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Tujuan Karakteristik</strong></td>
+<td>Agar tidak menambah hambatan total</td>
+<td>Agar tidak menyedot arus dari rangkaian</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Penting:</strong></p>
+<p>Alat ukur yang tidak ideal akan bertindak sebagai “beban tambahan” yang mengubah kondisi asli rangkaian. Oleh karena itu, dalam praktikum, penting untuk memilih alat ukur dengan spesifikasi hambatan dalam yang sesuai dengan beban yang diukur.</p>
+</section>
+<section id="penyelesaian-soal-fisika-dasar-alat-ukur" class="level2">
+<h2 class="anchored" data-anchor-id="penyelesaian-soal-fisika-dasar-alat-ukur">Penyelesaian Soal Fisika Dasar: Alat Ukur</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 4 Fisika Dasar II – Listrik Dinamis 2-1772528320921.png" class="img-fluid figure-img"></p>
+<figcaption>Ilustrasi soal.</figcaption>
+</figure>
+</div>
+<p>Diketahui: <span class="math inline">\(R_V = 307 \text{ } \Omega\)</span>, <span class="math inline">\(R_A = 3,62 \text{ } \Omega\)</span>.</p>
+<section id="mencari-r_1-metode-i---gambar-a" class="level3">
+<h3 class="anchored" data-anchor-id="mencari-r_1-metode-i---gambar-a">Mencari <span class="math inline">\(R_1\)</span> (Metode I - Gambar a)</h3>
+<p>Pada gambar (a), Voltmeter mengukur tegangan total dari deret Resistor <span class="math inline">\(R_1\)</span> dan Ammeter. Ammeter mengukur arus yang mengalir melalui keduanya.</p>
+<ol type="1">
+<li><p><strong>Data:</strong> <span class="math inline">\(I_a = 0,317 \text{ A}\)</span>, <span class="math inline">\(V_a = 28,1 \text{ V}\)</span>.</p></li>
+<li><p><strong>Persamaan:</strong> <span class="math inline">\(V_a = I_a (R_1 + R_A)\)</span>.</p>
+<p><span class="math display">\[28,1 = 0,317 (R_1 + 3,62)\]</span><span class="math display">\[R_1 + 3,62 = \frac{28,1}{0,317} \approx 88,64\]</span><span class="math display">\[R_1 = 88,64 - 3,62 = 85,02 \text{ } \Omega\]</span></p>
+<p><strong>Jawaban:</strong> <span class="math inline">\(R_1 \approx 85,02 \text{ } \Omega\)</span>.</p></li>
+</ol>
+</section>
+<section id="mencari-r_2-metode-ii---gambar-b" class="level3">
+<h3 class="anchored" data-anchor-id="mencari-r_2-metode-ii---gambar-b">Mencari <span class="math inline">\(R_2\)</span> (Metode II - Gambar b)</h3>
+<p>Pada gambar (b), Voltmeter terpasang paralel langsung dengan <span class="math inline">\(R_2\)</span>. Ammeter berada di luar, mengukur arus total rangkaian.</p>
+<ol type="1">
+<li><p><strong>Data:</strong> <span class="math inline">\(I_b = 0,356 \text{ A}\)</span>, <span class="math inline">\(V_b = 23,7 \text{ V}\)</span>.</p></li>
+<li><p><strong>Arus pada Voltmeter (</strong><span class="math inline">\(I_V\)</span><strong>):</strong></p>
+<p><span class="math display">\[I_V = \frac{V_b}{R_V} = \frac{23,7}{307} \approx 0,0772 \text{ A}\]</span></p></li>
+<li><p><strong>Arus pada Resistor (</strong><span class="math inline">\(I_{R2}\)</span><strong>):</strong></p>
+<p><span class="math display">\[I_{R2} = I_b - I_V = 0,356 - 0,0772 = 0,2788 \text{ A}\]</span></p></li>
+<li><p><strong>Hitung</strong> <span class="math inline">\(R_2\)</span><strong>:</strong></p>
+<p><span class="math display">\[R_2 = \frac{V_b}{I_{R2}} = \frac{23,7}{0,2788} \approx 85,01 \text{ } \Omega\]</span></p>
+<p><strong>Jawaban:</strong> <span class="math inline">\(R_2 \approx 85,01 \text{ } \Omega\)</span>.</p></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/Shidiq\.github\.io\/open-lectures\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html" class="pagination-link" aria-label="Listrik Dinamis 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Listrik Dinamis 1</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html" class="pagination-link" aria-label="Kemagnetan 1">
+        <span class="nav-page-text">Kemagnetan 1</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2024 Departemen Fisika, FMIPA UGM. Konten berlisensi <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-04-listrik-dinamis-2/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Dibuat dengan <a href="https://quarto.org">Quarto</a> • <a href="https://github.com/Shidiq/open-lectures">Kode sumber</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

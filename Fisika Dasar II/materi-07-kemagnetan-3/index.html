@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Kemagnetan 3 – Open Lectures</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Fisika Dasar II/materi-06-kemagnetan-2/index.html" rel="prev">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-91c45283b718f403a183c55e401e34c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-5a1d57d030698fde18e1e7cd86106da8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Kemagnetan 3 – Open Lectures">
+<meta property="og:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta property="og:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-07-kemagnetan-3/attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774502510864.png">
+<meta property="og:site_name" content="Open Lectures">
+<meta property="og:image:height" content="876">
+<meta property="og:image:width" content="1964">
+<meta name="twitter:title" content="Kemagnetan 3 – Open Lectures">
+<meta name="twitter:description" content="Materi kuliah terbuka dari Departemen Fisika, FMIPA UGM">
+<meta name="twitter:image" content="https://Shidiq.github.io/open-lectures/Fisika Dasar II/materi-07-kemagnetan-3/attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774502510864.png">
+<meta name="twitter:creator" content="@shidiq">
+<meta name="twitter:site" content="@shidiq">
+<meta name="twitter:image-height" content="876">
+<meta name="twitter:image-width" content="1964">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo light-content">
+    <img src="../../assets/logo.svg" alt="Open Lectures logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">Beranda</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mata-kuliah" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Mata Kuliah</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mata-kuliah">    
+        <li>
+    <a class="dropdown-item" href="../../Fisika Dasar II/index.html"><i class="bi bi-book" role="img">
+</i> 
+ <span class="dropdown-text">Fisika Dasar II</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Shidiq/open-lectures"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html">kemagnetan</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-07-kemagnetan-3/index.html">Kemagnetan 3</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fisika Dasar II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Elektrostatika</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-01-elektrostatika-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elektrostatika 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-02-elektrostatika-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elektrostatika 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Listrik Dinamis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-03-listrik-dinamis-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Listrik Dinamis 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-04-listrik-dinamis-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Listrik Dinamis 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">kemagnetan</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-06-kemagnetan-2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kemagnetan 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Fisika Dasar II/materi-07-kemagnetan-3/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Kemagnetan 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Daftar Isi</h2>
+   
+  <ul>
+  <li><a href="#bagian-1-pengantar-dan-aplikasi-dasar" id="toc-bagian-1-pengantar-dan-aplikasi-dasar" class="nav-link active" data-scroll-target="#bagian-1-pengantar-dan-aplikasi-dasar">Bagian 1: Pengantar dan Aplikasi Dasar</a>
+  <ul class="collapse">
+  <li><a href="#mengubah-arus-menjadi-sinyal-analogi-detektor-logam" id="toc-mengubah-arus-menjadi-sinyal-analogi-detektor-logam" class="nav-link" data-scroll-target="#mengubah-arus-menjadi-sinyal-analogi-detektor-logam">1.1. Mengubah Arus Menjadi Sinyal: Analogi Detektor Logam</a></li>
+  <li><a href="#penjaga-stabilitas-listrik-menjinakkan-petir" id="toc-penjaga-stabilitas-listrik-menjinakkan-petir" class="nav-link" data-scroll-target="#penjaga-stabilitas-listrik-menjinakkan-petir">1.2. Penjaga Stabilitas Listrik: Menjinakkan Petir</a></li>
+  </ul></li>
+  <li><a href="#bagian-2-konsep-dasar-induktor-dan-induktansi" id="toc-bagian-2-konsep-dasar-induktor-dan-induktansi" class="nav-link" data-scroll-target="#bagian-2-konsep-dasar-induktor-dan-induktansi">Bagian 2: Konsep Dasar Induktor dan Induktansi</a>
+  <ul class="collapse">
+  <li><a href="#induktansi-solenoida" id="toc-induktansi-solenoida" class="nav-link" data-scroll-target="#induktansi-solenoida">Induktansi Solenoida</a>
+  <ul class="collapse">
+  <li><a href="#karakteristik-fisik-solenoida" id="toc-karakteristik-fisik-solenoida" class="nav-link" data-scroll-target="#karakteristik-fisik-solenoida">1. Karakteristik Fisik Solenoida</a></li>
+  <li><a href="#menghitung-fluks-magnetik-phi_b" id="toc-menghitung-fluks-magnetik-phi_b" class="nav-link" data-scroll-target="#menghitung-fluks-magnetik-phi_b">2. Menghitung Fluks Magnetik (<span class="math inline">\(\Phi_B\)</span>)</a></li>
+  <li><a href="#definisi-induktansi-l" id="toc-definisi-induktansi-l" class="nav-link" data-scroll-target="#definisi-induktansi-l">3. Definisi Induktansi (<span class="math inline">\(L\)</span>)</a></li>
+  <li><a href="#penurunan-rumus-akhir-induktansi" id="toc-penurunan-rumus-akhir-induktansi" class="nav-link" data-scroll-target="#penurunan-rumus-akhir-induktansi">4. Penurunan Rumus Akhir Induktansi</a></li>
+  <li><a href="#poin-penting-yang-harus-diperhatikan" id="toc-poin-penting-yang-harus-diperhatikan" class="nav-link" data-scroll-target="#poin-penting-yang-harus-diperhatikan">Poin Penting yang Harus Diperhatikan</a></li>
+  </ul></li>
+  <li><a href="#induksi-diri-self-induction" id="toc-induksi-diri-self-induction" class="nav-link" data-scroll-target="#induksi-diri-self-induction">Induksi Diri (<em>Self-Induction</em>)</a>
+  <ul class="collapse">
+  <li><a href="#mekanisme-perubahan-arus" id="toc-mekanisme-perubahan-arus" class="nav-link" data-scroll-target="#mekanisme-perubahan-arus">1. Mekanisme Perubahan Arus</a></li>
+  <li><a href="#terjadinya-ggl-induksi-sendiri-epsilon_l" id="toc-terjadinya-ggl-induksi-sendiri-epsilon_l" class="nav-link" data-scroll-target="#terjadinya-ggl-induksi-sendiri-epsilon_l">2. Terjadinya GGL Induksi Sendiri (<span class="math inline">\(\epsilon_L\)</span>)</a></li>
+  <li><a href="#analisis-rumus" id="toc-analisis-rumus" class="nav-link" data-scroll-target="#analisis-rumus">3. Analisis Rumus</a></li>
+  <li><a href="#makna-tanda-minus-hukum-lenz" id="toc-makna-tanda-minus-hukum-lenz" class="nav-link" data-scroll-target="#makna-tanda-minus-hukum-lenz">4. Makna Tanda Minus (Hukum Lenz)</a></li>
+  <li><a href="#kesimpulan-sederhana" id="toc-kesimpulan-sederhana" class="nav-link" data-scroll-target="#kesimpulan-sederhana">Kesimpulan Sederhana</a></li>
+  </ul></li>
+  <li><a href="#potensial-melintasi-induktor" id="toc-potensial-melintasi-induktor" class="nav-link" data-scroll-target="#potensial-melintasi-induktor">Potensial Melintasi Induktor</a>
+  <ul class="collapse">
+  <li><a href="#perbandingan-induktor-vs-resistor" id="toc-perbandingan-induktor-vs-resistor" class="nav-link" data-scroll-target="#perbandingan-induktor-vs-resistor">1. Perbandingan Induktor vs Resistor</a></li>
+  <li><a href="#kondisi-arus-berubah" id="toc-kondisi-arus-berubah" class="nav-link" data-scroll-target="#kondisi-arus-berubah">2. Kondisi Arus Berubah</a></li>
+  <li><a href="#ringkasan-eksekutif-untuk-mahasiswa" id="toc-ringkasan-eksekutif-untuk-mahasiswa" class="nav-link" data-scroll-target="#ringkasan-eksekutif-untuk-mahasiswa">Ringkasan Eksekutif untuk Mahasiswa</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bagian-3-energi-dalam-medan-magnet" id="toc-bagian-3-energi-dalam-medan-magnet" class="nav-link" data-scroll-target="#bagian-3-energi-dalam-medan-magnet">Bagian 3: Energi dalam Medan Magnet</a>
+  <ul class="collapse">
+  <li><a href="#bagaimana-induktor-menyimpan-energi" id="toc-bagaimana-induktor-menyimpan-energi" class="nav-link" data-scroll-target="#bagaimana-induktor-menyimpan-energi">3.1. Bagaimana Induktor Menyimpan Energi?</a></li>
+  <li><a href="#kerapatan-energi-magnetik" id="toc-kerapatan-energi-magnetik" class="nav-link" data-scroll-target="#kerapatan-energi-magnetik">3.2. Kerapatan Energi Magnetik</a></li>
+  </ul></li>
+  <li><a href="#bagian-4-induktansi-mutual-timbal-balik" id="toc-bagian-4-induktansi-mutual-timbal-balik" class="nav-link" data-scroll-target="#bagian-4-induktansi-mutual-timbal-balik">Bagian 4: Induktansi Mutual (Timbal Balik)</a>
+  <ul class="collapse">
+  <li><a href="#prinsip-kerja-aksi-dan-reaksi-magnetik" id="toc-prinsip-kerja-aksi-dan-reaksi-magnetik" class="nav-link" data-scroll-target="#prinsip-kerja-aksi-dan-reaksi-magnetik">4.1. Prinsip Kerja: “Aksi dan Reaksi” Magnetik</a></li>
+  <li><a href="#aplikasi-nyata-pengisian-daya-nirkabel-wireless-charging" id="toc-aplikasi-nyata-pengisian-daya-nirkabel-wireless-charging" class="nav-link" data-scroll-target="#aplikasi-nyata-pengisian-daya-nirkabel-wireless-charging">4.2. Aplikasi Nyata: Pengisian Daya Nirkabel (<em>Wireless Charging</em>)</a></li>
+  <li><a href="#ringkasan-konsep" id="toc-ringkasan-konsep" class="nav-link" data-scroll-target="#ringkasan-konsep">Ringkasan Konsep</a></li>
+  </ul></li>
+  <li><a href="#bagian-5-rangkaian-rl-resistor-induktor" id="toc-bagian-5-rangkaian-rl-resistor-induktor" class="nav-link" data-scroll-target="#bagian-5-rangkaian-rl-resistor-induktor">Bagian 5: Rangkaian RL (Resistor-Induktor)</a>
+  <ul class="collapse">
+  <li><a href="#sifat-dasar-inersia-elektrik" id="toc-sifat-dasar-inersia-elektrik" class="nav-link" data-scroll-target="#sifat-dasar-inersia-elektrik">5.1. Sifat Dasar: Inersia Elektrik</a></li>
+  <li><a href="#fenomena-kenaikan-arus-current-growth" id="toc-fenomena-kenaikan-arus-current-growth" class="nav-link" data-scroll-target="#fenomena-kenaikan-arus-current-growth">5.2. Fenomena Kenaikan Arus (<em>Current Growth</em>)</a></li>
+  <li><a href="#konstanta-waktu-induksi-tau_l" id="toc-konstanta-waktu-induksi-tau_l" class="nav-link" data-scroll-target="#konstanta-waktu-induksi-tau_l">5.3. Konstanta Waktu Induksi (<span class="math inline">\(\tau_L\)</span>)</a></li>
+  <li><a href="#fenomena-penurunan-arus-current-decay" id="toc-fenomena-penurunan-arus-current-decay" class="nav-link" data-scroll-target="#fenomena-penurunan-arus-current-decay">5.4. Fenomena Penurunan Arus (Current Decay)</a></li>
+  <li><a href="#ringkasan-konsep-untuk-diskusi" id="toc-ringkasan-konsep-untuk-diskusi" class="nav-link" data-scroll-target="#ringkasan-konsep-untuk-diskusi">Ringkasan Konsep untuk Diskusi</a></li>
+  </ul></li>
+  <li><a href="#bagian-6-rangkaian-lc-dan-osilasi-listrik" id="toc-bagian-6-rangkaian-lc-dan-osilasi-listrik" class="nav-link" data-scroll-target="#bagian-6-rangkaian-lc-dan-osilasi-listrik">Bagian 6: Rangkaian LC dan Osilasi Listrik</a>
+  <ul class="collapse">
+  <li><a href="#prinsip-osilasi-analogy-pegas-dan-massa" id="toc-prinsip-osilasi-analogy-pegas-dan-massa" class="nav-link" data-scroll-target="#prinsip-osilasi-analogy-pegas-dan-massa">6.1. Prinsip Osilasi: Analogy Pegas dan Massa</a></li>
+  <li><a href="#siklus-tahapan-osilasi" id="toc-siklus-tahapan-osilasi" class="nav-link" data-scroll-target="#siklus-tahapan-osilasi">6.2. Siklus Tahapan Osilasi</a></li>
+  <li><a href="#frekuensi-sudut-osilasi" id="toc-frekuensi-sudut-osilasi" class="nav-link" data-scroll-target="#frekuensi-sudut-osilasi">6.3. Frekuensi Sudut Osilasi</a></li>
+  <li><a href="#mengapa-ini-penting" id="toc-mengapa-ini-penting" class="nav-link" data-scroll-target="#mengapa-ini-penting">Mengapa Ini Penting?</a></li>
+  <li><a href="#ringkasan-konsep-1" id="toc-ringkasan-konsep-1" class="nav-link" data-scroll-target="#ringkasan-konsep-1">Ringkasan Konsep</a></li>
+  </ul></li>
+  <li><a href="#bagian-7-rangkaian-rlc-seri-dan-arus-ac" id="toc-bagian-7-rangkaian-rlc-seri-dan-arus-ac" class="nav-link" data-scroll-target="#bagian-7-rangkaian-rlc-seri-dan-arus-ac">Bagian 7: Rangkaian RLC Seri dan Arus AC</a>
+  <ul class="collapse">
+  <li><a href="#osilasi-teredam-r-l-c-ketika-energi-menghilang" id="toc-osilasi-teredam-r-l-c-ketika-energi-menghilang" class="nav-link" data-scroll-target="#osilasi-teredam-r-l-c-ketika-energi-menghilang">7.1. Osilasi Teredam R-L-C: Ketika Energi Menghilang</a></li>
+  <li><a href="#sistem-arus-bolak-balik-ac" id="toc-sistem-arus-bolak-balik-ac" class="nav-link" data-scroll-target="#sistem-arus-bolak-balik-ac">7.2. Sistem Arus Bolak-Balik (AC)</a></li>
+  <li><a href="#resonansi-titik-efisiensi-maksimum" id="toc-resonansi-titik-efisiensi-maksimum" class="nav-link" data-scroll-target="#resonansi-titik-efisiensi-maksimum">7.3. Resonansi: Titik Efisiensi Maksimum</a></li>
+  <li><a href="#nilai-rms-dan-daya-rata-rata" id="toc-nilai-rms-dan-daya-rata-rata" class="nav-link" data-scroll-target="#nilai-rms-dan-daya-rata-rata">7.4. Nilai RMS dan Daya Rata-rata</a></li>
+  <li><a href="#ringkasan-akhir-materi-kemagnetan-iii" id="toc-ringkasan-akhir-materi-kemagnetan-iii" class="nav-link" data-scroll-target="#ringkasan-akhir-materi-kemagnetan-iii">Ringkasan Akhir Materi Kemagnetan III</a></li>
+  </ul></li>
+  <li><a href="#bagian-8-teknologi-dan-aplikasi-terkait" id="toc-bagian-8-teknologi-dan-aplikasi-terkait" class="nav-link" data-scroll-target="#bagian-8-teknologi-dan-aplikasi-terkait">Bagian 8: Teknologi dan Aplikasi Terkait</a>
+  <ul class="collapse">
+  <li><a href="#motor-ac-mengubah-listrik-menjadi-gerak" id="toc-motor-ac-mengubah-listrik-menjadi-gerak" class="nav-link" data-scroll-target="#motor-ac-mengubah-listrik-menjadi-gerak">8.1. Motor AC: Mengubah Listrik Menjadi Gerak</a></li>
+  <li><a href="#transformator-trafo-jantung-distribusi-listrik" id="toc-transformator-trafo-jantung-distribusi-listrik" class="nav-link" data-scroll-target="#transformator-trafo-jantung-distribusi-listrik">8.2. Transformator (Trafo): Jantung Distribusi Listrik</a></li>
+  </ul></li>
+  <li><a href="#penutup-kuliah" id="toc-penutup-kuliah" class="nav-link" data-scroll-target="#penutup-kuliah">Penutup Kuliah</a></li>
+  <li><a href="#penyelesaian-latihan-soal" id="toc-penyelesaian-latihan-soal" class="nav-link" data-scroll-target="#penyelesaian-latihan-soal">Penyelesaian Latihan Soal</a>
+  <ul class="collapse">
+  <li><a href="#soal-1-mengapa-frekuensi-rendah-pada-rangkaian-lc-sulit-dibuat" id="toc-soal-1-mengapa-frekuensi-rendah-pada-rangkaian-lc-sulit-dibuat" class="nav-link" data-scroll-target="#soal-1-mengapa-frekuensi-rendah-pada-rangkaian-lc-sulit-dibuat">Soal 1: Mengapa Frekuensi Rendah pada Rangkaian LC Sulit Dibuat?</a>
+  <ul class="collapse">
+  <li><a href="#langkah-1-memahami-rumus-dasar-frekuensi" id="toc-langkah-1-memahami-rumus-dasar-frekuensi" class="nav-link" data-scroll-target="#langkah-1-memahami-rumus-dasar-frekuensi">Langkah 1: Memahami Rumus Dasar Frekuensi</a></li>
+  <li><a href="#langkah-2-analisis-kebutuhan-komponen-untuk-frekuensi-rendah" id="toc-langkah-2-analisis-kebutuhan-komponen-untuk-frekuensi-rendah" class="nav-link" data-scroll-target="#langkah-2-analisis-kebutuhan-komponen-untuk-frekuensi-rendah">Langkah 2: Analisis Kebutuhan Komponen untuk Frekuensi Rendah</a></li>
+  <li><a href="#langkah-3-kendala-fisik-pada-induktor-l-besar" id="toc-langkah-3-kendala-fisik-pada-induktor-l-besar" class="nav-link" data-scroll-target="#langkah-3-kendala-fisik-pada-induktor-l-besar">Langkah 3: Kendala Fisik pada Induktor (<span class="math inline">\(L\)</span>) Besar</a></li>
+  <li><a href="#langkah-4-kendala-fisik-pada-kapasitor-c-besar" id="toc-langkah-4-kendala-fisik-pada-kapasitor-c-besar" class="nav-link" data-scroll-target="#langkah-4-kendala-fisik-pada-kapasitor-c-besar">Langkah 4: Kendala Fisik pada Kapasitor (<span class="math inline">\(C\)</span>) Besar</a></li>
+  <li><a href="#langkah-5-perbandingan-dengan-frekuensi-tinggi" id="toc-langkah-5-perbandingan-dengan-frekuensi-tinggi" class="nav-link" data-scroll-target="#langkah-5-perbandingan-dengan-frekuensi-tinggi">Langkah 5: Perbandingan dengan Frekuensi Tinggi</a></li>
+  <li><a href="#kesimpulan" id="toc-kesimpulan" class="nav-link" data-scroll-target="#kesimpulan">Kesimpulan</a></li>
+  </ul></li>
+  <li><a href="#soal-2-penyelesaian-langkah-demi-langkah-desain-rangkaian-lcr-seri" id="toc-soal-2-penyelesaian-langkah-demi-langkah-desain-rangkaian-lcr-seri" class="nav-link" data-scroll-target="#soal-2-penyelesaian-langkah-demi-langkah-desain-rangkaian-lcr-seri">Soal 2: Penyelesaian Langkah-demi-Langkah: Desain Rangkaian LCR Seri</a>
+  <ul class="collapse">
+  <li><a href="#identifikasi-data-yang-diketahui" id="toc-identifikasi-data-yang-diketahui" class="nav-link" data-scroll-target="#identifikasi-data-yang-diketahui">1. Identifikasi Data yang Diketahui</a></li>
+  <li><a href="#menghitung-frekuensi-sudut-resonansi-omega_r" id="toc-menghitung-frekuensi-sudut-resonansi-omega_r" class="nav-link" data-scroll-target="#menghitung-frekuensi-sudut-resonansi-omega_r">2. Menghitung Frekuensi Sudut Resonansi (<span class="math inline">\(\omega_r\)</span>)</a></li>
+  <li><a href="#menghitung-nilai-hambatan-r" id="toc-menghitung-nilai-hambatan-r" class="nav-link" data-scroll-target="#menghitung-nilai-hambatan-r">3. Menghitung Nilai Hambatan (<span class="math inline">\(R\)</span>)</a></li>
+  <li><a href="#menghitung-nilai-kapasitansi-c" id="toc-menghitung-nilai-kapasitansi-c" class="nav-link" data-scroll-target="#menghitung-nilai-kapasitansi-c">4. Menghitung Nilai Kapasitansi (<span class="math inline">\(C\)</span>)</a></li>
+  <li><a href="#kesimpulan-akhir" id="toc-kesimpulan-akhir" class="nav-link" data-scroll-target="#kesimpulan-akhir">Kesimpulan Akhir</a></li>
+  </ul></li>
+  <li><a href="#penyelesaian-langkah-demi-langkah-soal-latihan-kemagnetan-iii" id="toc-penyelesaian-langkah-demi-langkah-soal-latihan-kemagnetan-iii" class="nav-link" data-scroll-target="#penyelesaian-langkah-demi-langkah-soal-latihan-kemagnetan-iii">Penyelesaian Langkah-demi-Langkah Soal Latihan Kemagnetan III</a>
+  <ul class="collapse">
+  <li><a href="#soal-3-pengaruh-induktansi-terhadap-konstanta-waktu" id="toc-soal-3-pengaruh-induktansi-terhadap-konstanta-waktu" class="nav-link" data-scroll-target="#soal-3-pengaruh-induktansi-terhadap-konstanta-waktu">Soal 3: Pengaruh Induktansi terhadap Konstanta Waktu</a></li>
+  <li><a href="#soal-4-pengaruh-resistansi-terhadap-konstanta-waktu" id="toc-soal-4-pengaruh-resistansi-terhadap-konstanta-waktu" class="nav-link" data-scroll-target="#soal-4-pengaruh-resistansi-terhadap-konstanta-waktu">Soal 4: Pengaruh Resistansi terhadap Konstanta Waktu</a></li>
+  <li><a href="#soal-5-istilah-induksi-antar-rangkaian" id="toc-soal-5-istilah-induksi-antar-rangkaian" class="nav-link" data-scroll-target="#soal-5-istilah-induksi-antar-rangkaian">Soal 5: Istilah Induksi Antar Rangkaian</a></li>
+  <li><a href="#ringkasan-jawaban-soal-1-2-ulasan-singkat" id="toc-ringkasan-jawaban-soal-1-2-ulasan-singkat" class="nav-link" data-scroll-target="#ringkasan-jawaban-soal-1-2-ulasan-singkat">Ringkasan Jawaban Soal 1 &amp; 2 (Ulasan Singkat)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-07-kemagnetan-3/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-05-kemagnetan-1/index.html">kemagnetan</a></li><li class="breadcrumb-item"><a href="../../Fisika Dasar II/materi-07-kemagnetan-3/index.html">Kemagnetan 3</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Kemagnetan 3</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="bagian-1-pengantar-dan-aplikasi-dasar" class="level1">
+<h1>Bagian 1: Pengantar dan Aplikasi Dasar</h1>
+<p>Kita akan membahas topik yang sering kali dianggap abstrak, yaitu&nbsp;<strong>Induktansi</strong>. Jika sebelumnya kita telah belajar bagaimana arus listrik menghasilkan medan magnet, hari ini kita akan melihat bagaimana komponen bernama&nbsp;<strong>Induktor</strong>&nbsp;mampu “menyimpan” pengaruh tersebut dan bagaimana ia menjadi sangat vital dalam teknologi modern.</p>
+<section id="mengubah-arus-menjadi-sinyal-analogi-detektor-logam" class="level2">
+<h2 class="anchored" data-anchor-id="mengubah-arus-menjadi-sinyal-analogi-detektor-logam">1.1. Mengubah Arus Menjadi Sinyal: Analogi Detektor Logam</h2>
+<p>Bayangkan Anda sedang berada di sebuah pantai, melihat seseorang membawa sebuah lingkaran kawat di ujung tongkat—sebuah detektor logam. Bagaimana alat itu bisa tahu ada koin emas di bawah pasir tanpa menyentuhnya?</p>
+<p>Di sinilah peran&nbsp;<strong>Induktansi</strong>. Lingkaran kawat tersebut sebenarnya adalah sebuah kumparan (induktor). Saat arus listrik dialirkan melaluinya, ia menciptakan medan magnet. Jika di bawah tanah terdapat benda logam, keberadaan logam tersebut akan mengganggu distribusi medan magnet di sekitar kumparan.</p>
+<p>Perubahan medan magnet ini menyebabkan nilai&nbsp;<strong>induktansi</strong>&nbsp;kumparan berubah. Perubahan kecil pada induktansi ini segera direspons oleh rangkaian elektronik sebagai perubahan arus, yang kemudian diubah menjadi sinyal suara (bip) di&nbsp;<em>earphone</em>&nbsp;pencari harta karun tersebut. Dalam hal ini, induktansi bertindak sebagai “jembatan” yang menerjemahkan keberadaan benda fisik menjadi sinyal elektrik.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774502510864.png" class="img-fluid figure-img"></p>
+<figcaption>Sketsa metal detector.</figcaption>
+</figure>
+</div>
+</section>
+<section id="penjaga-stabilitas-listrik-menjinakkan-petir" class="level2">
+<h2 class="anchored" data-anchor-id="penjaga-stabilitas-listrik-menjinakkan-petir">1.2. Penjaga Stabilitas Listrik: Menjinakkan Petir</h2>
+<p>Aplikasi kedua jauh lebih besar skalanya. Pernahkah Anda membayangkan apa yang terjadi pada jaringan listrik kota ketika petir menyambar kabel transmisi tegangan tinggi? Petir adalah lonjakan arus listrik yang luar biasa besar dalam waktu yang sangat singkat (<span class="math inline">\(\frac{di}{dt}\)</span>&nbsp;yang sangat tinggi).</p>
+<p>Jika lonjakan arus ini langsung masuk ke rumah-rumah, seluruh peralatan elektronik kita akan hancur seketika. Untuk mencegah hal ini, insinyur listrik memasang&nbsp;<strong>induktor raksasa</strong>&nbsp;pada sistem transmisi.</p>
+<p>Sifat dasar induktor adalah&nbsp;<strong>inersia elektrik</strong>. Sama seperti benda berat yang sulit digerakkan tiba-tiba, induktor akan “melawan” setiap perubahan arus yang mendadak. Ketika petir menyambar, induktor tersebut akan menciptakan gaya gerak listrik (ggl) balik yang menahan lonjakan arus tersebut agar tidak merambat lebih jauh. Induktor berfungsi sebagai peredam kejut (<em>shock absorber</em>) bagi aliran listrik, memastikan bahwa energi dari petir tidak menghanguskan infrastruktur penting kita.</p>
+</section>
+</section>
+<section id="bagian-2-konsep-dasar-induktor-dan-induktansi" class="level1">
+<h1>Bagian 2: Konsep Dasar Induktor dan Induktansi</h1>
+<ul>
+<li><strong>Definisi Induktansi:</strong> Induktor digunakan untuk menghasilkan medan magnet dari arus listrik (<span class="math inline">\(L = \frac{N\Phi_B}{i}\)</span>) dengan satuan ukur Henry.</li>
+<li><strong>Induktansi Solenoida:</strong> Besarnya induktansi berbanding lurus dengan kuadrat jumlah lilitan dan luas penampang, serta berbanding terbalik dengan panjang solenoida (<span class="math inline">\(L = \mu_0\frac{N^2}{l}A\)</span>).</li>
+<li><strong>Induksi Diri:</strong> Setiap perubahan arus pada kumparan akan menghasilkan gaya gerak listrik (ggl) induksi diri yang menentang arah perubahan arus tersebut (<span class="math inline">\(\mathcal{E}_L = -L\frac{di}{dt}\)</span>).</li>
+<li><strong>Beda Potensial Induktor:</strong> Beda potensial pada induktor bernilai nol jika arus konstan, berpotensial turun jika arus sedang meningkat, dan berpotensial naik jika arus menurun.</li>
+</ul>
+<section id="induktansi-solenoida" class="level2">
+<h2 class="anchored" data-anchor-id="induktansi-solenoida">Induktansi Solenoida</h2>
+<p>Sebuah kumparan kawat panjang (solenoida) dapat dihitung nilai induktansinya berdasarkan karakteristik fisiknya.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774502809004.png" class="img-fluid figure-img"></p>
+<figcaption>Induktani solenoida.</figcaption>
+</figure>
+</div>
+<section id="karakteristik-fisik-solenoida" class="level3">
+<h3 class="anchored" data-anchor-id="karakteristik-fisik-solenoida">1. Karakteristik Fisik Solenoida</h3>
+<p>Jika sebuah solenoida dengan spesifikasi:</p>
+<ul>
+<li><span class="math inline">\(N\)</span>: Jumlah total lilitan kawat.</li>
+<li><span class="math inline">\(l\)</span>: Panjang total solenoida.</li>
+<li><span class="math inline">\(A\)</span>: Luas penampang dari setiap lilitan.</li>
+<li><strong>Asumsi</strong>: Solenoida dianggap sangat panjang dibanding jari-jarinya dan intinya adalah udara (untuk menyederhanakan perhitungan).</li>
+</ul>
+</section>
+<section id="menghitung-fluks-magnetik-phi_b" class="level3">
+<h3 class="anchored" data-anchor-id="menghitung-fluks-magnetik-phi_b">2. Menghitung Fluks Magnetik (<span class="math inline">\(\Phi_B\)</span>)</h3>
+<p>Maka sebelum mendapatkan nilai induktansi, kita harus tahu dulu berapa medan magnet (<span class="math inline">\(B\)</span>) yang dihasilkan.</p>
+<ul>
+<li><p>Medan magnet di dalam solenoida ideal adalah&nbsp;<span class="math inline">\(B = \mu_0 n i\)</span>, di mana&nbsp;<span class="math inline">\(n\)</span>&nbsp;adalah jumlah lilitan per satuan panjang (<span class="math inline">\(n = N/l\)</span>).</p></li>
+<li><p><strong>Fluks Magnetik (</strong><span class="math inline">\(\Phi_B\)</span><strong>)</strong>&nbsp;melalui satu lilitan adalah hasil kali medan magnet (<span class="math inline">\(B\)</span>) dengan luas penampang (<span class="math inline">\(A\)</span>):</p>
+<p><span class="math display">\[\Phi_B = BA = \left(\mu_0 \frac{N}{l} i \right) A\]</span></p></li>
+</ul>
+</section>
+<section id="definisi-induktansi-l" class="level3">
+<h3 class="anchored" data-anchor-id="definisi-induktansi-l">3. Definisi Induktansi (<span class="math inline">\(L\)</span>)</h3>
+<p>Induktansi adalah perbandingan antara total fluks magnetik yang menembus seluruh lilitan (<span class="math inline">\(N\Phi_B\)</span>) dengan arus (<span class="math inline">\(i\)</span>) yang mengalir.</p>
+<p><span class="math display">\[L = \frac{N\Phi_B}{i}\]</span></p>
+</section>
+<section id="penurunan-rumus-akhir-induktansi" class="level3">
+<h3 class="anchored" data-anchor-id="penurunan-rumus-akhir-induktansi">4. Penurunan Rumus Akhir Induktansi</h3>
+<p>Jika kita substitusikan rumus fluks (<span class="math inline">\(\Phi_B\)</span>) ke dalam definisi induktansi, kita akan mendapatkan:</p>
+<p><span class="math display">\[L = \frac{N \times (\mu_0 \frac{N}{l} i A)}{i}\]</span></p>
+<p>Arus (<span class="math inline">\(i\)</span>) di pembilang dan penyebut saling meniadakan, sehingga menyisakan:</p>
+<p><span class="math display">\[L = \mu_0 \frac{N^2}{l} A\]</span></p>
+</section>
+<section id="poin-penting-yang-harus-diperhatikan" class="level3">
+<h3 class="anchored" data-anchor-id="poin-penting-yang-harus-diperhatikan">Poin Penting yang Harus Diperhatikan</h3>
+<ul>
+<li><strong>Sifat Geometris</strong>: Perhatikan bahwa nilai&nbsp;<span class="math inline">\(L\)</span>&nbsp;sama sekali tidak bergantung pada arus (<span class="math inline">\(i\)</span>). Induktansi hanya bergantung pada&nbsp;<strong>bentuk fisik</strong>&nbsp;(jumlah lilitan, panjang, dan luas).</li>
+<li><strong>Kuadrat Lilitan (</strong><span class="math inline">\(N^2\)</span><strong>)</strong>: Ini adalah bagian paling krusial. Karena&nbsp;<span class="math inline">\(N\)</span>&nbsp;muncul sebagai kuadrat, jika Anda menggandakan jumlah lilitan pada panjang yang sama, induktansinya akan naik&nbsp;<strong>empat kali lipat</strong>.</li>
+<li><strong>Visualisasi</strong>: Gambar di kanan menunjukkan bagaimana arus (<span class="math inline">\(I\)</span>) yang mengalir menghasilkan medan magnet (<span class="math inline">\(B\)</span>) yang terkonsentrasi di dalam kumparan, yang mendasari penyimpanan energi magnetik tersebut.</li>
+</ul>
+</section>
+</section>
+<section id="induksi-diri-self-induction" class="level2">
+<h2 class="anchored" data-anchor-id="induksi-diri-self-induction">Induksi Diri (<em>Self-Induction</em>)</h2>
+<p>Sebuah kumparan “melawan” dirinya sendiri ketika arus listrik di dalamnya berubah.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774502990477.png" class="img-fluid figure-img"></p>
+<figcaption>Skema rangkaian percobaan induksi diri.</figcaption>
+</figure>
+</div>
+<section id="mekanisme-perubahan-arus" class="level3">
+<h3 class="anchored" data-anchor-id="mekanisme-perubahan-arus">1. Mekanisme Perubahan Arus</h3>
+<p>Pada diagram rangkaian, terlihat sebuah baterai dihubungkan dengan&nbsp;<strong>resistor variabel (</strong><span class="math inline">\(R\)</span><strong>)</strong>&nbsp;dan&nbsp;<strong>induktor (</strong><span class="math inline">\(L\)</span><strong>)</strong>.</p>
+<ul>
+<li><strong>Resistor Variabel:</strong>&nbsp;Digunakan untuk mengubah nilai hambatan secara manual dengan menggeser kontak (tanda panah).</li>
+<li><strong>Proses:</strong>&nbsp;Ketika kontak digeser, nilai hambatan&nbsp;<span class="math inline">\(R\)</span>&nbsp;berubah. Sesuai Hukum Ohm, perubahan&nbsp;<span class="math inline">\(R\)</span>&nbsp;akan menyebabkan nilai&nbsp;<strong>arus (</strong><span class="math inline">\(i\)</span><strong>)</strong>&nbsp;yang mengalir dalam rangkaian ikut berubah.</li>
+</ul>
+</section>
+<section id="terjadinya-ggl-induksi-sendiri-epsilon_l" class="level3">
+<h3 class="anchored" data-anchor-id="terjadinya-ggl-induksi-sendiri-epsilon_l">2. Terjadinya GGL Induksi Sendiri (<span class="math inline">\(\epsilon_L\)</span>)</h3>
+<p>Berdasarkan teks di slide: “Jika arus dalam kumparan diubah… ggl induksi sendiri&nbsp;<span class="math inline">\(\epsilon_L\)</span>&nbsp;akan muncul di kumparan.”</p>
+<ul>
+<li>Ketika arus (<span class="math inline">\(i\)</span>) berubah, medan magnet yang dihasilkan oleh kumparan juga berubah.</li>
+<li>Perubahan medan magnet ini menyebabkan perubahan fluks magnetik yang menembus kumparan itu sendiri.</li>
+<li>Menurut Hukum Faraday, perubahan fluks ini menghasilkan tegangan yang disebut&nbsp;<strong>Gaya Gerak Listrik (GGL) Induksi Diri</strong>.</li>
+</ul>
+</section>
+<section id="analisis-rumus" class="level3">
+<h3 class="anchored" data-anchor-id="analisis-rumus">3. Analisis Rumus</h3>
+<p>Slide menampilkan rumus fundamental:</p>
+<p><span class="math display">\[\epsilon_L = -L \frac{di}{dt}\]</span></p>
+<ul>
+<li><span class="math inline">\(\epsilon_L\)</span>: Tegangan atau GGL yang dihasilkan oleh induktor.</li>
+<li><span class="math inline">\(L\)</span>: Induktansi diri (satuan Henry).</li>
+<li><span class="math inline">\(di/dt\)</span>: Laju perubahan arus terhadap waktu. Semakin cepat arus berubah, semakin besar tegangan yang dihasilkan.</li>
+</ul>
+</section>
+<section id="makna-tanda-minus-hukum-lenz" class="level3">
+<h3 class="anchored" data-anchor-id="makna-tanda-minus-hukum-lenz">4. Makna Tanda Minus (Hukum Lenz)</h3>
+<p>Poin terakhir di slide menekankan bahwa: “Tanda minus menunjukkan bahwa ggl… mempunyai orientasi yang&nbsp;<strong>menentang</strong>&nbsp;perubahan arus&nbsp;<span class="math inline">\(i\)</span>.”</p>
+<ul>
+<li>Ini adalah inti dari&nbsp;<strong>Hukum Lenz</strong>.</li>
+<li><strong>Jika arus meningkat:</strong>&nbsp;Induktor akan menghasilkan ggl yang arahnya berlawanan dengan arus baterai (mencoba menahan kenaikan).</li>
+<li><strong>Jika arus menurun:</strong>&nbsp;Induktor akan menghasilkan ggl yang arahnya searah dengan arus (mencoba mencegah penurunan).</li>
+</ul>
+</section>
+<section id="kesimpulan-sederhana" class="level3">
+<h3 class="anchored" data-anchor-id="kesimpulan-sederhana">Kesimpulan Sederhana</h3>
+<p>Induktor bertindak seperti “inersia” dalam dunia listrik. Ia tidak menyukai perubahan. Slide ini menjelaskan bahwa setiap kali kita mencoba mengubah aliran listrik dalam kumparan, kumparan tersebut akan menciptakan tegangan sendiri untuk mempertahankan kondisi arus sebelumnya.</p>
+</section>
+</section>
+<section id="potensial-melintasi-induktor" class="level2">
+<h2 class="anchored" data-anchor-id="potensial-melintasi-induktor">Potensial Melintasi Induktor</h2>
+<p>Konsep beda potensial (tegangan) pada induktor dalam tiga kondisi arus yang berbeda: konstan, meningkat, dan menurun.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774503313240.png" class="img-fluid figure-img"></p>
+<figcaption>Potensial melintasi induktor, untuk arus konstan, naik dan turun.</figcaption>
+</figure>
+</div>
+<section id="perbandingan-induktor-vs-resistor" class="level3">
+<h3 class="anchored" data-anchor-id="perbandingan-induktor-vs-resistor">1. Perbandingan Induktor vs Resistor</h3>
+<p>Fondasi dengan membandingkan induktor dengan resistor:</p>
+<ul>
+<li><p><strong>Pada Resistor (</strong><span class="math inline">\(R\)</span><strong>):</strong>&nbsp;Beda potensial (<span class="math inline">\(V_{ab}\)</span>) murni bergantung pada besarnya arus yang mengalir. Berdasarkan Hukum Ohm,&nbsp;<span class="math inline">\(V_{ab} = iR\)</span>. Selama ada arus, pasti ada tegangan.</p></li>
+<li><p><strong>Pada Induktor (</strong><span class="math inline">\(L\)</span><strong>) dengan Arus Konstan:</strong>&nbsp;Ini adalah poin krusial. Jika arus (<span class="math inline">\(i\)</span>) yang mengalir dari titik&nbsp;<span class="math inline">\(a\)</span>&nbsp;ke&nbsp;<span class="math inline">\(b\)</span>&nbsp;bersifat&nbsp;<strong>konstan</strong>&nbsp;(tetap), maka laju perubahannya adalah nol (<span class="math inline">\(di/dt = 0\)</span>). Karena tegangan induktor bergantung pada perubahan arus, maka:</p>
+<p><span class="math display">\[V_{ab} = L \frac{di}{dt} = 0\]</span></p>
+<p><strong>Kesimpulan:</strong>&nbsp;Induktor yang dialiri arus DC stabil tidak memiliki beda potensial dan berfungsi seperti kawat penghantar biasa (<em>short circuit</em>).</p></li>
+</ul>
+</section>
+<section id="kondisi-arus-berubah" class="level3">
+<h3 class="anchored" data-anchor-id="kondisi-arus-berubah">2. Kondisi Arus Berubah</h3>
+<p>Apa yang terjadi jika arus tidak konstan. Di sinilah sifat “perlawanan” induktor muncul.</p>
+<section id="a.-arus-meningkat-i-increasing-didt-0" class="level4">
+<h4 class="anchored" data-anchor-id="a.-arus-meningkat-i-increasing-didt-0">A. Arus Meningkat (<span class="math inline">\(i\)</span>&nbsp;increasing,&nbsp;<span class="math inline">\(di/dt &gt; 0\)</span>)</h4>
+<ul>
+<li><p><strong>Kejadian:</strong>&nbsp;Arus mengalir dari&nbsp;<span class="math inline">\(a\)</span>&nbsp;ke&nbsp;<span class="math inline">\(b\)</span>&nbsp;dan nilainya semakin besar.</p></li>
+<li><p><strong>Respon Induktor:</strong>&nbsp;Sesuai Hukum Lenz, induktor menciptakan ggl (<span class="math inline">\(\mathcal{E}\)</span>) yang arahnya berlawanan dengan arah arus untuk menahan kenaikan tersebut (lihat panah biru&nbsp;<span class="math inline">\(\mathcal{E}\)</span>&nbsp;yang mengarah ke kiri).</p></li>
+<li><p><strong>Hasilnya:</strong>&nbsp;Potensial di titik&nbsp;<span class="math inline">\(a\)</span>&nbsp;menjadi lebih tinggi daripada di&nbsp;<span class="math inline">\(b\)</span>. Terjadi penurunan potensial dari&nbsp;<span class="math inline">\(a\)</span>&nbsp;ke&nbsp;<span class="math inline">\(b\)</span>.</p>
+<p><span class="math display">\[V_{ab} = L \frac{di}{dt} &gt; 0\]</span></p></li>
+</ul>
+</section>
+<section id="b.-arus-menurun-i-decreasing-didt-0" class="level4">
+<h4 class="anchored" data-anchor-id="b.-arus-menurun-i-decreasing-didt-0">B. Arus Menurun (<span class="math inline">\(i\)</span>&nbsp;decreasing,&nbsp;<span class="math inline">\(di/dt &lt; 0\)</span>)</h4>
+<ul>
+<li><p><strong>Kejadian:</strong>&nbsp;Arus mengalir dari&nbsp;<span class="math inline">\(a\)</span>&nbsp;ke&nbsp;<span class="math inline">\(b\)</span>&nbsp;tetapi nilainya semakin kecil (misalnya saat sakelar baru dibuka).</p></li>
+<li><p><strong>Respon Induktor:</strong>&nbsp;Induktor tidak ingin arus hilang. Ia menciptakan ggl (<span class="math inline">\(\mathcal{E}\)</span>) yang searah dengan arus untuk mencoba mempertahankan aliran arus tersebut (panah biru&nbsp;<span class="math inline">\(\mathcal{E}\)</span>&nbsp;mengarah ke kanan).</p></li>
+<li><p><strong>Hasilnya:</strong>&nbsp;Titik&nbsp;<span class="math inline">\(b\)</span>&nbsp;sekarang memiliki potensial yang lebih tinggi daripada&nbsp;<span class="math inline">\(a\)</span>. Terjadi kenaikan potensial dari&nbsp;<span class="math inline">\(a\)</span>&nbsp;ke&nbsp;<span class="math inline">\(b\)</span>.</p>
+<p><span class="math display">\[V_{ab} = L \frac{di}{dt} &lt; 0\]</span></p></li>
+</ul>
+</section>
+</section>
+<section id="ringkasan-eksekutif-untuk-mahasiswa" class="level3">
+<h3 class="anchored" data-anchor-id="ringkasan-eksekutif-untuk-mahasiswa">Ringkasan Eksekutif untuk Mahasiswa</h3>
+<ol type="1">
+<li><strong>Resistor</strong>&nbsp;peduli pada&nbsp;<strong>“Berapa besar arusnya?”</strong>&nbsp;(<span class="math inline">\(V \propto i\)</span>).</li>
+<li><strong>Induktor</strong>&nbsp;hanya peduli pada&nbsp;<strong>“Seberapa cepat arus berubah?”</strong>&nbsp;(<span class="math inline">\(V \propto di/dt\)</span>).</li>
+<li>Induktor akan menjadi&nbsp;<strong>positif (+)</strong>&nbsp;di sisi arus datang jika arus sedang naik, dan akan menjadi&nbsp;<strong>negatif (-)</strong>&nbsp;di sisi tersebut jika arus sedang turun.</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="bagian-3-energi-dalam-medan-magnet" class="level1">
+<h1>Bagian 3: Energi dalam Medan Magnet</h1>
+<p>Dalam bab-bab sebelumnya, kita tahu bahwa resistor “memakan” energi dan mengubahnya menjadi panas (disipasi). Namun, induktor memiliki perilaku yang lebih mirip dengan kapasitor: ia adalah penyimpan energi. Jika kapasitor menyimpan energi dalam&nbsp;<strong>medan listrik</strong>, maka induktor menyimpannya dalam&nbsp;<strong>medan magnet</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774503479847.png" class="img-fluid figure-img"></p>
+<figcaption>Energi yang tersimpan dalam induktor berupa medan magnet, sedangkan energi yang tersimpan di kapasitor adalah medan listrik</figcaption>
+</figure>
+</div>
+<section id="bagaimana-induktor-menyimpan-energi" class="level2">
+<h2 class="anchored" data-anchor-id="bagaimana-induktor-menyimpan-energi">3.1. Bagaimana Induktor Menyimpan Energi?</h2>
+<p>Ketika kita mulai mengalirkan arus pada sebuah induktor, muncul gaya gerak listrik (ggl) balik yang melawan aliran tersebut. Untuk menjaga arus tetap mengalir dan meningkat, sumber tegangan (baterai) harus melakukan kerja. Kerja yang dilakukan untuk melawan ggl induksi inilah yang kemudian “tertabung” sebagai energi potensial magnetik.</p>
+<p>Secara matematis, energi (<span class="math inline">\(U\)</span>) yang tersimpan dalam induktor dengan induktansi&nbsp;<span class="math inline">\(L\)</span>&nbsp;dan arus&nbsp;<span class="math inline">\(I\)</span>&nbsp;dirumuskan sebagai:</p>
+<p><span class="math display">\[U = \frac{1}{2}LI^2\]</span></p>
+<p><strong>Poin Penting untuk Diingat:</strong></p>
+<p>Energi ini bersifat dinamis. Selama arus mengalir konstan, energi tetap tersimpan. Namun, begitu arus mencoba turun, induktor akan melepaskan kembali energi ini ke rangkaian untuk mempertahankan arus tersebut. Inilah alasan mengapa terjadi percikan api jika kita mencabut kabel perangkat yang memiliki induktor besar saat masih menyala; energi magnetik yang tersimpan “meledak” keluar seketika.</p>
+</section>
+<section id="kerapatan-energi-magnetik" class="level2">
+<h2 class="anchored" data-anchor-id="kerapatan-energi-magnetik">3.2. Kerapatan Energi Magnetik</h2>
+<p>Fisika juga tertarik pada “lokasi” energi tersebut. Untuk sebuah solenoida, kita bisa menghitung berapa banyak energi yang tersimpan per satuan volume ruang di dalamnya. Konsep ini disebut&nbsp;<strong>Kerapatan Energi (</strong><span class="math inline">\(u\)</span><strong>)</strong>.</p>
+<p>Dalam ruang hampa (atau udara), kerapatan energi magnetik didefinisikan sebagai:</p>
+<p><span class="math display">\[u = \frac{B^2}{2\mu_0}\]</span></p>
+<p>Artinya, setiap titik di ruang angkasa yang memiliki medan magnet sebesar&nbsp;<span class="math inline">\(B\)</span>&nbsp;sebenarnya mengandung energi tersembunyi. Semakin kuat medan magnetnya, semakin padat energinya.</p>
+</section>
+</section>
+<section id="bagian-4-induktansi-mutual-timbal-balik" class="level1">
+<h1>Bagian 4: Induktansi Mutual (Timbal Balik)</h1>
+<p>Setelah memahami bagaimana satu kumparan mempengaruhi dirinya sendiri (induksi diri), sekarang kita akan melihat fenomena yang lebih “sosial”: bagaimana satu kumparan mempengaruhi kumparan lain di dekatnya tanpa menyentuhnya sama sekali. Fenomena ini disebut&nbsp;<strong>Induktansi Mutual (</strong><span class="math inline">\(M\)</span><strong>)</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774503645015.png" class="img-fluid figure-img"></p>
+<figcaption>Dua coil saling menginduksi.</figcaption>
+</figure>
+</div>
+<section id="prinsip-kerja-aksi-dan-reaksi-magnetik" class="level2">
+<h2 class="anchored" data-anchor-id="prinsip-kerja-aksi-dan-reaksi-magnetik">4.1. Prinsip Kerja: “Aksi dan Reaksi” Magnetik</h2>
+<p>Bayangkan ada dua kumparan, Kumparan 1 dan Kumparan 2, diletakkan berdampingan.</p>
+<ol type="1">
+<li>Jika kita mengubah arus pada Kumparan 1 (<span class="math inline">\(i_1\)</span>), maka medan magnet yang dihasilkannya juga berubah.</li>
+<li>Karena Kumparan 2 berada di dekatnya, ia akan “merasakan” perubahan fluks magnetik dari Kumparan 1 tersebut.</li>
+<li>Berdasarkan Hukum Faraday, Kumparan 2 akan menghasilkan ggl induksi (<span class="math inline">\(\mathcal{E}_2\)</span>) meskipun ia tidak terhubung ke baterai Kumparan 1.</li>
+</ol>
+<p>Besarnya ggl yang diinduksi pada kumparan kedua sebanding dengan laju perubahan arus pada kumparan pertama:</p>
+<p><span class="math display">\[\mathcal{E}_2 = -M \frac{di_1}{dt}\]</span></p>
+<p>Di sini,&nbsp;<span class="math inline">\(M\)</span>&nbsp;adalah konstanta&nbsp;<strong>Induktansi Mutual</strong>. Hal yang luar biasa adalah hubungan ini bersifat timbal balik: pengaruh Kumparan 1 ke Kumparan 2 sama besarnya dengan pengaruh Kumparan 2 ke Kumparan 1.</p>
+</section>
+<section id="aplikasi-nyata-pengisian-daya-nirkabel-wireless-charging" class="level2">
+<h2 class="anchored" data-anchor-id="aplikasi-nyata-pengisian-daya-nirkabel-wireless-charging">4.2. Aplikasi Nyata: Pengisian Daya Nirkabel (<em>Wireless Charging</em>)</h2>
+<p>Aplikasi paling populer dari konsep ini adalah pada sikat gigi elektrik atau pengisi daya&nbsp;<em>smartphone</em>&nbsp;nirkabel.</p>
+<ul>
+<li><strong>Basis Pengisi Daya:</strong>&nbsp;Di dalam dudukan sikat gigi, terdapat kumparan primer yang dialiri arus bolak-balik (AC). Arus ini terus-menerus berubah, menciptakan medan magnet yang juga terus berubah.</li>
+<li><strong>Sikat Gigi:</strong>&nbsp;Di dalam gagang sikat gigi, terdapat kumparan sekunder. Saat sikat gigi diletakkan di atas dudukan, perubahan medan magnet dari dudukan menginduksi arus listrik di dalam gagang sikat gigi melalui induktansi mutual.</li>
+<li><strong>Hasilnya:</strong>&nbsp;Baterai sikat gigi terisi tanpa ada logam yang bersentuhan (kontak listrik). Ini sangat aman untuk perangkat yang sering terkena air karena tidak ada risiko korsleting pada terminal logam yang terbuka.</li>
+</ul>
+</section>
+<section id="ringkasan-konsep" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-konsep">Ringkasan Konsep</h2>
+<ol type="1">
+<li><strong>Penyimpanan:</strong>&nbsp;Induktor menyimpan energi dalam medan magnet (<span class="math inline">\(U = \frac{1}{2}LI^2\)</span>).</li>
+<li><strong>Lokasi:</strong>&nbsp;Energi berada dalam ruang yang mengandung medan magnet (<span class="math inline">\(u = \frac{B^2}{2\mu_0}\)</span>).</li>
+<li><strong>Interaksi:</strong>&nbsp;Dua kumparan dapat mentransfer energi melalui perubahan arus tanpa kontak fisik (<span class="math inline">\(M\)</span>).</li>
+</ol>
+<p><strong>Langkah Selanjutnya:</strong></p>
+<p>Setelah memahami bagaimana induktor menyimpan dan mentransfer energi, kita akan mempelajari apa yang terjadi jika induktor dikombinasikan dengan resistor dalam sebuah rangkaian. Kita akan masuk ke&nbsp;<strong>Bagian 5: Rangkaian RL</strong>.</p>
+</section>
+</section>
+<section id="bagian-5-rangkaian-rl-resistor-induktor" class="level1">
+<h1>Bagian 5: Rangkaian RL (Resistor-Induktor)</h1>
+<p>Setelah memahami bagaimana induktor bekerja secara mandiri, sekarang kita akan melihat perilakunya saat digabungkan dengan resistor dalam sebuah rangkaian DC sederhana. Rangkaian ini disebut&nbsp;<strong>Rangkaian RL</strong>.</p>
+<section id="sifat-dasar-inersia-elektrik" class="level2">
+<h2 class="anchored" data-anchor-id="sifat-dasar-inersia-elektrik">5.1. Sifat Dasar: Inersia Elektrik</h2>
+<p>Hal terpenting yang harus dipahami tentang rangkaian RL adalah bahwa&nbsp;<strong>arus tidak bisa berubah secara instan</strong>. Jika pada rangkaian yang hanya berisi resistor arus akan langsung melompat ke nilai maksimum saat sakelar ditutup, pada rangkaian RL hal ini tidak terjadi.</p>
+<p>Kehadiran induktor menyebabkan munculnya ggl balik (<span class="math inline">\(\mathcal{E}_L\)</span>) yang menentang perubahan arus. Akibatnya, rangkaian ini memiliki semacam “inersia” atau sifat lamban. Induktor memaksa arus untuk berubah secara bertahap, bukan seketika.</p>
+</section>
+<section id="fenomena-kenaikan-arus-current-growth" class="level2">
+<h2 class="anchored" data-anchor-id="fenomena-kenaikan-arus-current-growth">5.2. Fenomena Kenaikan Arus (<em>Current Growth</em>)</h2>
+<p>Bayangkan Anda menutup sakelar pada rangkaian RL yang terhubung ke baterai. Pada detik&nbsp;<span class="math inline">\(t=0\)</span>, arus adalah nol. Secara matematis, arus akan naik mengikuti fungsi eksponensial:</p>
+<p><span class="math display">\[i(t) = \frac{\epsilon}{R} (1 - e^{-(R/L)t})\]</span></p>
+<ul>
+<li><strong>Pada awal (</strong><span class="math inline">\(t=0\)</span><strong>):</strong>&nbsp;Induktor memberikan perlawanan maksimum. Arus mulai dari nol. Induktor bertindak seolah-olah ia adalah hambatan tak terhingga (sakelar terbuka).</li>
+<li><strong>Seiring berjalannya waktu:</strong>&nbsp;Perlawanan induktor perlahan berkurang seiring dengan melambatnya laju kenaikan arus.</li>
+<li><strong>Kondisi Tunak (</strong><span class="math inline">\(t \to \infty\)</span><strong>):</strong>&nbsp;Setelah waktu yang lama, arus mencapai nilai maksimumnya&nbsp;<span class="math inline">\(I = \frac{\epsilon}{R}\)</span>. Pada titik ini, arus sudah konstan, sehingga induktor tidak lagi melawan dan berfungsi seperti kawat biasa.</li>
+</ul>
+</section>
+<section id="konstanta-waktu-induksi-tau_l" class="level2">
+<h2 class="anchored" data-anchor-id="konstanta-waktu-induksi-tau_l">5.3. Konstanta Waktu Induksi (<span class="math inline">\(\tau_L\)</span>)</h2>
+<p>Seberapa cepat arus tersebut naik? Hal ini ditentukan oleh sebuah parameter yang disebut&nbsp;<strong>Konstanta Waktu (</strong><span class="math inline">\(\tau_L\)</span><strong>)</strong>:</p>
+<p><span class="math display">\[\tau_L = \frac{L}{R}\]</span></p>
+<p>Konstanta waktu ini memberi tahu kita berapa lama waktu yang dibutuhkan arus untuk mencapai sekitar&nbsp;<span class="math inline">\(63\%\)</span>&nbsp;dari nilai maksimumnya.</p>
+<ul>
+<li>Jika&nbsp;<span class="math inline">\(L\)</span>&nbsp;besar,&nbsp;<span class="math inline">\(\tau_L\)</span>&nbsp;besar, maka rangkaian sangat lamban (butuh waktu lama untuk stabil).</li>
+<li>Jika&nbsp;<span class="math inline">\(R\)</span>&nbsp;besar,&nbsp;<span class="math inline">\(\tau_L\)</span>&nbsp;kecil, maka rangkaian lebih cepat mencapai kondisi stabil.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774503944416.png" class="img-fluid figure-img"></p>
+<figcaption>Kurva arus listrik terhadap waktu untuk sumber tegangan.</figcaption>
+</figure>
+</div>
+</section>
+<section id="fenomena-penurunan-arus-current-decay" class="level2">
+<h2 class="anchored" data-anchor-id="fenomena-penurunan-arus-current-decay">5.4. Fenomena Penurunan Arus (Current Decay)</h2>
+<p>Apa yang terjadi jika kita sudah memiliki arus yang mengalir stabil, lalu kita melepas baterai tetapi tetap membiarkan rangkaian tertutup (loop tertutup)?</p>
+<p>Arus tidak langsung menjadi nol. Ingat, induktor telah menyimpan energi dalam&nbsp;<strong>medan magnetnya</strong>. Saat baterai dilepas, medan magnet ini mulai “runtuh”. Runtuhnya medan magnet ini justru menghasilkan ggl yang mencoba mempertahankan arus agar tetap mengalir. Arus akan turun secara perlahan sesuai rumus:</p>
+<p><span class="math display">\[i(t) = I_0 e^{-(R/L)t}\]</span></p>
+<p>Arus akan meluruh secara eksponensial hingga akhirnya energi yang tersimpan di medan magnet habis terdisipasi menjadi panas di resistor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774504534961.png" class="img-fluid figure-img"></p>
+<figcaption>Kurva arus listrik terhadap waktu untuk sumber arus.</figcaption>
+</figure>
+</div>
+</section>
+<section id="ringkasan-konsep-untuk-diskusi" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-konsep-untuk-diskusi">Ringkasan Konsep untuk Diskusi</h2>
+<ol type="1">
+<li><strong>Induktor menunda perubahan:</strong>&nbsp;Ia menghambat kenaikan arus saat sakelar ditutup dan menghambat penurunan arus saat sakelar dibuka.</li>
+<li><strong>Energi adalah kunci:</strong>&nbsp;Arus tetap mengalir saat baterai dilepas karena induktor sedang mengembalikan energi yang ia simpan sebelumnya.</li>
+<li><strong>Aplikasi:</strong>&nbsp;Sifat ini digunakan dalam filter frekuensi, sistem penyalaan kendaraan, dan pelindung lonjakan arus.</li>
+</ol>
+<p><strong>Langkah Selanjutnya:</strong></p>
+<p>Bagaimana jika kita mengganti resistor dengan kapasitor? Kita akan melihat fenomena yang lebih luar biasa:&nbsp;<strong>Osilasi</strong>. Mari kita lanjut ke&nbsp;<strong>Bagian 6: Rangkaian LC</strong>.</p>
+</section>
+</section>
+<section id="bagian-6-rangkaian-lc-dan-osilasi-listrik" class="level1">
+<h1>Bagian 6: Rangkaian LC dan Osilasi Listrik</h1>
+<p>Jika pada rangkaian RL kita melihat arus yang naik atau turun secara perlahan, maka pada&nbsp;<strong>Rangkaian LC</strong>&nbsp;kita akan melihat fenomena yang jauh lebih dinamis:&nbsp;<strong>Osilasi Listrik</strong>. Rangkaian ini hanya terdiri dari sebuah kapasitor (<span class="math inline">\(C\)</span>) dan sebuah induktor (<span class="math inline">\(L\)</span>) yang dihubungkan secara seri dalam satu loop tertutup.</p>
+<section id="prinsip-osilasi-analogy-pegas-dan-massa" class="level2">
+<h2 class="anchored" data-anchor-id="prinsip-osilasi-analogy-pegas-dan-massa">6.1. Prinsip Osilasi: Analogy Pegas dan Massa</h2>
+<p>Untuk memahami Rangkaian LC, bayangkan sebuah sistem pegas dan massa di laboratorium mekanika.</p>
+<ul>
+<li><strong>Kapasitor (</strong><span class="math inline">\(C\)</span><strong>)</strong>&nbsp;ibarat&nbsp;<strong>Pegas</strong>: Ia menyimpan energi potensial (dalam bentuk medan listrik).</li>
+<li><strong>Induktor (</strong><span class="math inline">\(L\)</span><strong>)</strong>&nbsp;ibarat&nbsp;<strong>Massa</strong>: Ia memiliki inersia dan menyimpan energi kinetik (dalam bentuk medan magnet).</li>
+</ul>
+<p>Dalam sistem pegas, energi berpindah-pindah dari energi potensial ke energi kinetik secara terus-menerus. Hal yang persis sama terjadi pada rangkaian LC. Energi terus-menerus “memantul” bolak-balik antara kapasitor dan induktor.</p>
+</section>
+<section id="siklus-tahapan-osilasi" class="level2">
+<h2 class="anchored" data-anchor-id="siklus-tahapan-osilasi">6.2. Siklus Tahapan Osilasi</h2>
+<p>Mari kita telusuri apa yang terjadi dalam satu siklus penuh osilasi:</p>
+<ol type="1">
+<li><strong>Tahap Awal (</strong><span class="math inline">\(t=0\)</span><strong>):</strong>&nbsp;Kapasitor bermuatan penuh (<span class="math inline">\(Q_{max}\)</span>). Seluruh energi sistem tersimpan sebagai&nbsp;<strong>medan listrik</strong>&nbsp;di dalam kapasitor. Arus belum mengalir (<span class="math inline">\(i=0\)</span>).</li>
+<li><strong>Tahap Pengosongan:</strong>&nbsp;Kapasitor mulai membuang muatannya melalui induktor. Arus mulai mengalir dan meningkat. Karena ada arus, induktor mulai membangun&nbsp;<strong>medan magnet</strong>.</li>
+<li><strong>Tahap Energi Magnetik Maksimum:</strong>&nbsp;Saat kapasitor benar-benar kosong (<span class="math inline">\(Q=0\)</span>), arus mencapai nilai puncaknya (<span class="math inline">\(i_{max}\)</span>). Sekarang, seluruh energi sistem berpindah ke induktor dalam bentuk medan magnet.</li>
+<li><strong>Tahap Pengisian Ulang:</strong>&nbsp;Induktor (karena sifat inersianya) tidak ingin arus berhenti begitu saja. Ia terus memompa muatan ke kapasitor, tetapi sekarang dengan&nbsp;<strong>polaritas yang terbalik</strong>.</li>
+<li><strong>Tahap Pembalikan:</strong>&nbsp;Kapasitor kembali penuh, tetapi pelat yang tadinya positif kini menjadi negatif. Proses ini kemudian berulang kembali ke arah sebaliknya.</li>
+</ol>
+<p>Tanpa adanya hambatan (resistor), “tarian” energi ini akan berlangsung selamanya.</p>
+</section>
+<section id="frekuensi-sudut-osilasi" class="level2">
+<h2 class="anchored" data-anchor-id="frekuensi-sudut-osilasi">6.3. Frekuensi Sudut Osilasi</h2>
+<p>Seberapa cepat osilasi ini terjadi? Kecepatannya ditentukan oleh nilai komponen yang kita gunakan. Frekuensi sudut (<span class="math inline">\(\omega\)</span>) dari osilasi alami ini dirumuskan sebagai:</p>
+<p><span class="math display">\[\omega = \frac{1}{\sqrt{LC}}\]</span></p>
+<ul>
+<li>Jika kita memperbesar nilai&nbsp;<span class="math inline">\(L\)</span>&nbsp;atau&nbsp;<span class="math inline">\(C\)</span>, maka osilasi akan melambat (frekuensi rendah).</li>
+<li>Jika kita menggunakan&nbsp;<span class="math inline">\(L\)</span>&nbsp;dan&nbsp;<span class="math inline">\(C\)</span>&nbsp;yang kecil, osilasi akan terjadi sangat cepat (frekuensi tinggi).</li>
+</ul>
+</section>
+<section id="mengapa-ini-penting" class="level2">
+<h2 class="anchored" data-anchor-id="mengapa-ini-penting">Mengapa Ini Penting?</h2>
+<p>Rangkaian LC adalah jantung dari teknologi komunikasi.</p>
+<ul>
+<li><strong>Radio dan Televisi:</strong>&nbsp;Saat Anda “menala” (<em>tuning</em>) radio ke frekuensi tertentu, Anda sebenarnya sedang mengubah nilai kapasitansi (<span class="math inline">\(C\)</span>) agar frekuensi osilasi rangkaian di dalam radio sama dengan frekuensi gelombang stasiun radio tersebut.</li>
+<li><strong>Filter Sinyal:</strong>&nbsp;Digunakan untuk memilih sinyal tertentu dan membuang gangguan (<em>noise</em>) pada perangkat elektronik.</li>
+</ul>
+</section>
+<section id="ringkasan-konsep-1" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-konsep-1">Ringkasan Konsep</h2>
+<ol type="1">
+<li><strong>Osilasi</strong>&nbsp;adalah pertukaran energi secara periodik antara medan listrik (<span class="math inline">\(C\)</span>) dan medan magnet (<span class="math inline">\(L\)</span>).</li>
+<li><strong>Energi Total</strong>&nbsp;sistem bersifat kekal (<span class="math inline">\(U_{total} = U_B + U_E\)</span>) jika tidak ada resistor.</li>
+<li><strong>Frekuensi</strong>&nbsp;ditentukan oleh karakteristik fisik komponen melalui rumus&nbsp;<span class="math inline">\(\omega = 1/\sqrt{LC}\)</span>.</li>
+</ol>
+<p><strong>Langkah Selanjutnya:</strong></p>
+<p>Di dunia nyata, setiap kabel memiliki hambatan (resistor). Apa yang terjadi jika kita memasukkan resistor ke dalam “tarian” energi ini? Jawabannya adalah&nbsp;<strong>Osilasi Teredam</strong>. Kita akan mempelajarinya di&nbsp;<strong>Bagian 7: Rangkaian RLC Seri</strong>.</p>
+</section>
+</section>
+<section id="bagian-7-rangkaian-rlc-seri-dan-arus-ac" class="level1">
+<h1>Bagian 7: Rangkaian RLC Seri dan Arus AC</h1>
+<p>Pada bagian sebelumnya, kita telah mempelajari rangkaian LC yang ideal, di mana energi “memantul” bolak-balik tanpa henti. Namun, di dunia nyata, setiap kabel memiliki hambatan. Hari ini kita akan menggabungkan ketiga komponen utama—Resistor (<span class="math inline">\(R\)</span>), Induktor (<span class="math inline">\(L\)</span>), dan Kapasitor (<span class="math inline">\(C\)</span>)—untuk melihat bagaimana mereka berinteraksi dalam sistem tenaga listrik yang sesungguhnya.</p>
+<section id="osilasi-teredam-r-l-c-ketika-energi-menghilang" class="level2">
+<h2 class="anchored" data-anchor-id="osilasi-teredam-r-l-c-ketika-energi-menghilang">7.1. Osilasi Teredam R-L-C: Ketika Energi Menghilang</h2>
+<p>Dalam rangkaian LC ideal, grafik osilasi berbentuk sinus murni yang konstan. Namun, begitu kita menambahkan&nbsp;<strong>Resistor (</strong><span class="math inline">\(R\)</span><strong>)</strong>, situasi berubah. Resistor adalah “pencuri energi”. Setiap kali arus mengalir melaluinya, sebagian energi listrik diubah menjadi panas (disipasi).</p>
+<p>Fenomena ini disebut&nbsp;<strong>Osilasi Teredam</strong>. Bayangkan sebuah bandul yang berayun di dalam air; ayunannya akan semakin kecil dan akhirnya berhenti karena gesekan. Dalam rangkaian RLC:</p>
+<ul>
+<li>Energi total sistem terus berkurang.</li>
+<li>Amplitudo arus dan muatan menurun secara eksponensial terhadap waktu.</li>
+<li>Akhirnya, seluruh energi yang awalnya disimpan di kapasitor akan habis menjadi panas di resistor.</li>
+</ul>
+</section>
+<section id="sistem-arus-bolak-balik-ac" class="level2">
+<h2 class="anchored" data-anchor-id="sistem-arus-bolak-balik-ac">7.2. Sistem Arus Bolak-Balik (AC)</h2>
+<p>Sebagian besar sistem kelistrikan kita (seperti listrik PLN) menggunakan arus bolak-balik. Dalam sistem AC, hambatan tidak lagi hanya ditentukan oleh&nbsp;<span class="math inline">\(R\)</span>, tetapi juga oleh&nbsp;<strong>Reaktansi</strong>:</p>
+<ol type="1">
+<li><p><strong>Reaktansi Induktif (</strong><span class="math inline">\(X_L\)</span><strong>):</strong>&nbsp;Perlawanan induktor terhadap AC. Semakin tinggi frekuensi, semakin besar hambatannya (<span class="math inline">\(X_L = \omega L\)</span>).</p></li>
+<li><p><strong>Reaktansi Kapasitif (</strong><span class="math inline">\(X_C\)</span><strong>):</strong>&nbsp;Perlawanan kapasitor terhadap AC. Sebaliknya, semakin tinggi frekuensi, semakin kecil hambatannya (<span class="math inline">\(X_C = \frac{1}{\omega C}\)</span>).</p></li>
+<li><p><strong>Impedansi (</strong><span class="math inline">\(Z\)</span><strong>):</strong>&nbsp;Total hambatan gabungan dari&nbsp;<span class="math inline">\(R\)</span>,&nbsp;<span class="math inline">\(L\)</span>, dan&nbsp;<span class="math inline">\(C\)</span>.</p>
+<p><span class="math display">\[Z = \sqrt{R^2 + (X_L - X_C)^2}\]</span></p></li>
+</ol>
+<p><strong>Faktor Fase:</strong>&nbsp;Dalam AC, tegangan dan arus tidak selalu “kompak” (seirama). Induktor menyebabkan tegangan mendahului arus, sedangkan kapasitor menyebabkan arus mendahului tegangan. Perbedaan ini diukur dengan sudut fase (<span class="math inline">\(\phi\)</span>):</p>
+<p><span class="math display">\[\tan \phi = \frac{X_L - X_C}{R}\]</span></p>
+</section>
+<section id="resonansi-titik-efisiensi-maksimum" class="level2">
+<h2 class="anchored" data-anchor-id="resonansi-titik-efisiensi-maksimum">7.3. Resonansi: Titik Efisiensi Maksimum</h2>
+<p>Ada satu kondisi istimewa yang disebut&nbsp;<strong>Resonansi</strong>. Kondisi ini terjadi ketika reaktansi induktif tepat sama dengan reaktansi kapasitif (<span class="math inline">\(X_L = X_C\)</span>). Pada titik ini:</p>
+<ul>
+<li>Bagian imajiner dari hambatan saling meniadakan.</li>
+<li>Impedansi mencapai nilai&nbsp;<strong>minimum</strong>&nbsp;(hanya tersisa&nbsp;<span class="math inline">\(R\)</span>).</li>
+<li>Arus (<span class="math inline">\(I\)</span>) mencapai nilai&nbsp;<strong>maksimum</strong>.</li>
+</ul>
+<p>Frekuensi di mana hal ini terjadi disebut frekuensi resonansi:</p>
+<p><span class="math display">\[\omega_0 = \frac{1}{\sqrt{LC}}\]</span></p>
+<p><strong>Aplikasi:</strong>&nbsp;Inilah cara kerja&nbsp;<em>tuner</em>&nbsp;pada radio atau TV. Ketika Anda memutar kenop radio, Anda mengubah nilai&nbsp;<span class="math inline">\(C\)</span>&nbsp;hingga frekuensi resonansi rangkaian Anda “cocok” dengan frekuensi gelombang dari stasiun radio tersebut, sehingga arus sinyal menjadi maksimum dan suara terdengar jernih.</p>
+</section>
+<section id="nilai-rms-dan-daya-rata-rata" class="level2">
+<h2 class="anchored" data-anchor-id="nilai-rms-dan-daya-rata-rata">7.4. Nilai RMS dan Daya Rata-rata</h2>
+<p>Karena arus AC terus berubah arah, kita menggunakan nilai&nbsp;<strong>RMS (Root Mean Square)</strong>&nbsp;atau nilai efektif untuk menghitung daya. Nilai RMS adalah nilai AC yang setara dengan DC dalam hal menghasilkan panas.</p>
+<p><span class="math display">\[I_{rms} = \frac{I_{max}}{\sqrt{2}}\]</span><span class="math display">\[V_{rms} = \frac{V_{max}}{\sqrt{2}}\]</span></p>
+<p>Daya rata-rata (<span class="math inline">\(P_{avg}\)</span>) yang dikonsumsi oleh rangkaian tidak hanya bergantung pada tegangan dan arus, tetapi juga pada&nbsp;<strong>Faktor Daya</strong>&nbsp;(<span class="math inline">\(\cos \phi\)</span>):</p>
+<p><span class="math display">\[P_{avg} = V_{rms} I_{rms} \cos \phi\]</span></p>
+<p>Hanya resistor yang benar-benar “memakan” daya, sementara induktor dan kapasitor hanya meminjam dan mengembalikan energi.</p>
+</section>
+<section id="ringkasan-akhir-materi-kemagnetan-iii" class="level2">
+<h2 class="anchored" data-anchor-id="ringkasan-akhir-materi-kemagnetan-iii">Ringkasan Akhir Materi Kemagnetan III</h2>
+<p>Kita telah menempuh perjalanan dari memahami bagaimana satu lilitan kawat bisa melawan arus, hingga bagaimana rangkaian RLC menjadi dasar dari teknologi komunikasi dan transmisi daya global.</p>
+<ol type="1">
+<li><strong>Induktansi</strong>&nbsp;adalah inersia listrik.</li>
+<li><strong>Energi</strong>&nbsp;disimpan di medan magnet.</li>
+<li><strong>Rangkaian RLC</strong>&nbsp;memungkinkan kita mengontrol frekuensi dan aliran energi dengan presisi tinggi melalui fenomena resonansi.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774505251699.png" class="img-fluid figure-img"></p>
+<figcaption>Rangkaian R-L-C</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774505277512.png" class="img-fluid figure-img"></p>
+<figcaption>Rangkaian R-L-C seri.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="bagian-8-teknologi-dan-aplikasi-terkait" class="level1">
+<h1>Bagian 8: Teknologi dan Aplikasi Terkait</h1>
+<p>Setelah kita mempelajari bagaimana energi disimpan dalam medan magnet dan bagaimana rangkaian RLC berosilasi, sekarang kita akan melihat “raksasa-raksasa” teknologi yang bekerja berdasarkan prinsip tersebut. Dua aplikasi paling fundamental dalam peradaban modern adalah&nbsp;<strong>Motor AC</strong>&nbsp;dan&nbsp;<strong>Transformator</strong>.</p>
+<section id="motor-ac-mengubah-listrik-menjadi-gerak" class="level2">
+<h2 class="anchored" data-anchor-id="motor-ac-mengubah-listrik-menjadi-gerak">8.1. Motor AC: Mengubah Listrik Menjadi Gerak</h2>
+<p>Motor AC adalah mesin yang mengubah energi listrik arus bolak-balik menjadi energi mekanik (gerak rotasi). Hampir semua alat rumah tangga yang berputar—mulai dari kipas angin hingga mesin cuci—menggunakan prinsip ini.</p>
+<p><strong>Komponen Utama:</strong></p>
+<ol type="1">
+<li><strong>Stator:</strong>&nbsp;Bagian motor yang diam. Di sini terdapat kumparan kawat yang dialiri arus AC untuk menghasilkan medan magnet yang terus berubah atau berputar.</li>
+<li><strong>Rotor:</strong>&nbsp;Bagian motor yang berputar. Rotor diletakkan di dalam medan magnet stator. Berdasarkan Hukum Faraday, medan magnet stator menginduksi arus pada rotor, yang kemudian menghasilkan gaya magnet (Gaya Lorentz) untuk memutar poros motor.</li>
+</ol>
+<p><strong>Tipe Motor AC:</strong></p>
+<ul>
+<li><strong>Motor 1-Fase:</strong>&nbsp;Umumnya digunakan untuk peralatan rumah tangga kecil. Motor ini memerlukan kapasitor (ingat rangkaian RLC kita!) untuk membantu memulai putaran awal.</li>
+<li><strong>Motor 3-Fase:</strong>&nbsp;Digunakan dalam industri skala besar. Motor ini jauh lebih efisien dan bertenaga karena menggunakan tiga aliran arus AC yang fasenya berbeda&nbsp;<span class="math inline">\(120^\circ\)</span>, sehingga menciptakan medan magnet putar yang sangat stabil tanpa memerlukan bantuan tambahan untuk memulai putaran.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774505382514.png" class="img-fluid figure-img"></p>
+<figcaption>Aplikasi motor AC.</figcaption>
+</figure>
+</div>
+</section>
+<section id="transformator-trafo-jantung-distribusi-listrik" class="level2">
+<h2 class="anchored" data-anchor-id="transformator-trafo-jantung-distribusi-listrik">8.2. Transformator (Trafo): Jantung Distribusi Listrik</h2>
+<p>Pernahkah Anda bertanya-tanya mengapa tegangan listrik dari PLN di kabel jalan sangat tinggi (<span class="math inline">\(20.000\text{ V}\)</span>), tetapi saat masuk ke rumah kita hanya menjadi&nbsp;<span class="math inline">\(220\text{ V}\)</span>? Jawabannya adalah&nbsp;<strong>Transformator</strong>.</p>
+<p>Transformator bekerja murni berdasarkan prinsip&nbsp;<strong>Induktansi Mutual</strong>. Ia memindahkan energi listrik dari satu rangkaian ke rangkaian lain melalui medan magnet tanpa ada bagian yang bergerak.</p>
+<p><strong>Prinsip Kerja:</strong></p>
+<p>Trafo terdiri dari dua lilitan yang melingkari inti besi yang sama:&nbsp;<strong>Lilitan Primer</strong>&nbsp;dan&nbsp;<strong>Lilitan Sekunder</strong>.</p>
+<ul>
+<li>Arus AC pada lilitan primer menghasilkan fluks magnetik yang berubah-ubah di inti besi.</li>
+<li>Fluks yang berubah ini “menembus” lilitan sekunder dan menginduksi ggl di sana.</li>
+</ul>
+<p><strong>Jenis-Jenis Trafo:</strong></p>
+<p>Hubungan antara tegangan (<span class="math inline">\(V\)</span>) dan jumlah lilitan (<span class="math inline">\(N\)</span>) dirumuskan sebagai:</p>
+<p><span class="math display">\[\frac{V_p}{V_s} = \frac{N_p}{N_s}\]</span></p>
+<ol type="1">
+<li><strong>Trafo Step-Up:</strong>&nbsp;Memiliki lilitan sekunder lebih banyak daripada primer (<span class="math inline">\(N_s &gt; N_p\)</span>). Fungsinya untuk&nbsp;<strong>menaikkan tegangan</strong>. Digunakan di pembangkit listrik agar listrik bisa dikirim jarak jauh dengan rugi-rugi daya yang kecil.</li>
+<li><strong>Trafo Step-Down:</strong>&nbsp;Memiliki lilitan sekunder lebih sedikit (<span class="math inline">\(N_s &lt; N_p\)</span>). Fungsinya untuk&nbsp;<strong>menurunkan tegangan</strong>&nbsp;ke level yang aman untuk digunakan oleh peralatan elektronik kita.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="attachments/Materi Kuliah 7 Fisika Dasar II – Kemagnetan 3-1774505441766.png" class="img-fluid figure-img"></p>
+<figcaption>Transformator (Trafo).</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="penutup-kuliah" class="level1">
+<h1>Penutup Kuliah</h1>
+<p>Dengan memahami Motor AC dan Transformator, kita kini bisa melihat gambaran besarnya:</p>
+<ul>
+<li><strong>Induktansi</strong>&nbsp;memungkinkan kita mengubah level tegangan (Trafo).</li>
+<li><strong>Medan Magnet</strong>&nbsp;memungkinkan kita menciptakan gerak dari listrik (Motor).</li>
+<li><strong>Rangkaian RLC</strong>&nbsp;memungkinkan kita mengontrol frekuensi dan stabilitas sistem tersebut.</li>
+</ul>
+<p>Listrik yang Anda gunakan untuk membaca materi ini kemungkinan besar telah melewati setidaknya tiga atau empat transformator dan mungkin digerakkan oleh generator (kebalikan dari motor) di tempat yang sangat jauh. Semua itu bekerja berdasarkan hukum-hukum fisika yang kita diskusikan dalam modul ini.</p>
+</section>
+<section id="penyelesaian-latihan-soal" class="level1">
+<h1>Penyelesaian Latihan Soal</h1>
+<section id="soal-1-mengapa-frekuensi-rendah-pada-rangkaian-lc-sulit-dibuat" class="level2">
+<h2 class="anchored" data-anchor-id="soal-1-mengapa-frekuensi-rendah-pada-rangkaian-lc-sulit-dibuat">Soal 1: Mengapa Frekuensi Rendah pada Rangkaian LC Sulit Dibuat?</h2>
+<blockquote class="blockquote">
+<p>Adalah hal yang mudah membuat rangkaian LC yang memiliki frekuensi osilasi ribuan hertz atau lebih, tetapi sulit membuat rangkaian LC yang memiliki frekuensi rendah. Mengapa?</p>
+</blockquote>
+<p>Pertanyaan ini berkaitan dengan hubungan antara parameter fisik komponen (Induktor dan Kapasitor) dengan frekuensi alami yang dihasilkan oleh rangkaian tersebut. Berikut adalah penjelasan langkah-demi-langkahnya:</p>
+<section id="langkah-1-memahami-rumus-dasar-frekuensi" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-1-memahami-rumus-dasar-frekuensi">Langkah 1: Memahami Rumus Dasar Frekuensi</h3>
+<p>Frekuensi osilasi alami (<span class="math inline">\(f\)</span>) dari sebuah rangkaian LC ideal ditentukan oleh rumus:</p>
+<p><span class="math display">\[f = \frac{1}{2\pi\sqrt{LC}}\]</span></p>
+<p>Dari rumus ini, kita dapat melihat hubungan&nbsp;<strong>berbanding terbalik</strong>:</p>
+<ul>
+<li>Untuk mendapatkan&nbsp;<strong>frekuensi tinggi</strong>&nbsp;(<span class="math inline">\(f\)</span>&nbsp;besar), nilai hasil kali&nbsp;<span class="math inline">\(L \times C\)</span>&nbsp;harus&nbsp;<strong>kecil</strong>.</li>
+<li>Untuk mendapatkan&nbsp;<strong>frekuensi rendah</strong>&nbsp;(<span class="math inline">\(f\)</span>&nbsp;kecil), nilai hasil kali&nbsp;<span class="math inline">\(L \times C\)</span>&nbsp;harus&nbsp;<strong>sangat besar</strong>.</li>
+</ul>
+</section>
+<section id="langkah-2-analisis-kebutuhan-komponen-untuk-frekuensi-rendah" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-2-analisis-kebutuhan-komponen-untuk-frekuensi-rendah">Langkah 2: Analisis Kebutuhan Komponen untuk Frekuensi Rendah</h3>
+<p>Misalkan kita ingin membuat rangkaian dengan frekuensi sangat rendah (misal 1 Hz). Maka nilai&nbsp;<span class="math inline">\(\sqrt{LC}\)</span>&nbsp;harus bernilai sekitar&nbsp;<span class="math inline">\(0,159\)</span>. Ini berarti nilai&nbsp;<span class="math inline">\(L\)</span>&nbsp;(Induktansi) dan&nbsp;<span class="math inline">\(C\)</span>&nbsp;(Kapasitansi) haruslah sangat besar secara fisik.</p>
+</section>
+<section id="langkah-3-kendala-fisik-pada-induktor-l-besar" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-3-kendala-fisik-pada-induktor-l-besar">Langkah 3: Kendala Fisik pada Induktor (<span class="math inline">\(L\)</span>) Besar</h3>
+<p>Untuk mendapatkan nilai Induktansi (<span class="math inline">\(L\)</span>) yang sangat besar, kita membutuhkan:</p>
+<ol type="1">
+<li><strong>Jumlah lilitan (</strong><span class="math inline">\(N\)</span><strong>) yang sangat banyak.</strong></li>
+<li><strong>Inti besi yang sangat besar dan berat</strong>&nbsp;untuk meningkatkan permeabilitas magnetik.</li>
+</ol>
+<p><strong>Masalah yang muncul:</strong></p>
+<ul>
+<li><strong>Resistansi Parasitik:</strong>&nbsp;Semakin banyak lilitan kawat yang digunakan, semakin panjang kawat tersebut. Kawat yang sangat panjang memiliki hambatan jenis (Resistansi,&nbsp;<span class="math inline">\(R\)</span>) yang signifikan.</li>
+<li><strong>Dampak:</strong>&nbsp;Rangkaian tidak lagi menjadi LC murni, melainkan menjadi&nbsp;<strong>R-L-C</strong>. Karena&nbsp;<span class="math inline">\(R\)</span>&nbsp;yang besar, energi listrik akan cepat habis berubah menjadi panas (terdisipasi) sebelum osilasi yang stabil sempat terbentuk. Osilasi akan menjadi&nbsp;<strong>terlalu teredam</strong>&nbsp;(<em>overdamped</em>).</li>
+</ul>
+</section>
+<section id="langkah-4-kendala-fisik-pada-kapasitor-c-besar" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-4-kendala-fisik-pada-kapasitor-c-besar">Langkah 4: Kendala Fisik pada Kapasitor (<span class="math inline">\(C\)</span>) Besar</h3>
+<p>Untuk mendapatkan Kapasitansi (<span class="math inline">\(C\)</span>) yang sangat besar, kita membutuhkan:</p>
+<ol type="1">
+<li><strong>Luas pelat yang sangat lebar.</strong></li>
+<li><strong>Jarak antar pelat yang sangat tipis.</strong></li>
+</ol>
+<p><strong>Masalah yang muncul:</strong></p>
+<ul>
+<li><strong>Ukuran Fisik:</strong>&nbsp;Kapasitor non-polar yang berukuran besar (Farad) akan memiliki dimensi fisik yang sangat raksasa dan tidak praktis untuk diletakkan di papan rangkaian.</li>
+<li><strong>Arus Bocor:</strong>&nbsp;Kapasitor elektrolit besar cenderung memiliki arus bocor yang dapat mengganggu stabilitas osilasi pada frekuensi rendah.</li>
+</ul>
+</section>
+<section id="langkah-5-perbandingan-dengan-frekuensi-tinggi" class="level3">
+<h3 class="anchored" data-anchor-id="langkah-5-perbandingan-dengan-frekuensi-tinggi">Langkah 5: Perbandingan dengan Frekuensi Tinggi</h3>
+<p>Sebaliknya, untuk mencapai frekuensi tinggi (ribuan hingga jutaan Hertz):</p>
+<ul>
+<li>Kita hanya membutuhkan induktor berupa beberapa lilitan kawat kecil (tanpa inti besi yang berat).</li>
+<li>Kita hanya membutuhkan kapasitor berukuran pikofarad (<span class="math inline">\(pF\)</span>) yang ukurannya sangat mungil.</li>
+<li>Komponen-komponen ini mudah diproduksi, murah, dan memiliki resistansi parasitik yang sangat rendah, sehingga osilasi dapat berjalan dengan sangat efisien.</li>
+</ul>
+</section>
+<section id="kesimpulan" class="level3">
+<h3 class="anchored" data-anchor-id="kesimpulan">Kesimpulan</h3>
+<p>Secara matematis, frekuensi rendah membutuhkan nilai&nbsp;<span class="math inline">\(L\)</span>&nbsp;dan&nbsp;<span class="math inline">\(C\)</span>&nbsp;yang besar. Namun secara praktis, membuat komponen&nbsp;<span class="math inline">\(L\)</span>&nbsp;dan&nbsp;<span class="math inline">\(C\)</span>&nbsp;yang sangat besar akan menimbulkan&nbsp;<strong>hambatan dalam (resistansi)</strong>&nbsp;yang besar dan&nbsp;<strong>ukuran fisik yang tidak praktis</strong>. Resistansi yang tinggi ini menyebabkan energi hilang sebagai panas, sehingga sulit bagi rangkaian untuk mempertahankan osilasi yang stabil pada frekuensi rendah.</p>
+</section>
+</section>
+<section id="soal-2-penyelesaian-langkah-demi-langkah-desain-rangkaian-lcr-seri" class="level2">
+<h2 class="anchored" data-anchor-id="soal-2-penyelesaian-langkah-demi-langkah-desain-rangkaian-lcr-seri">Soal 2: Penyelesaian Langkah-demi-Langkah: Desain Rangkaian LCR Seri</h2>
+<blockquote class="blockquote">
+<p>Seseorang ingin mendesain rangkaian LCR seri dengan Q = 10 dan frekuensi resonansi 33 kHz. Orang tersebut memiliki induktor 45 mH dengan tahanan yang dapat diabaikan. Berapakah nilai tahanan R dan kapasitansi C yang harus digunakan?</p>
+</blockquote>
+<p>Untuk menyelesaikan masalah ini, kita akan menggunakan hubungan antara faktor kualitas (<span class="math inline">\(Q\)</span>), frekuensi resonansi (<span class="math inline">\(f_r\)</span>), induktansi (<span class="math inline">\(L\)</span>), kapasitansi (<span class="math inline">\(C\)</span>), dan hambatan (<span class="math inline">\(R\)</span>).</p>
+<section id="identifikasi-data-yang-diketahui" class="level3">
+<h3 class="anchored" data-anchor-id="identifikasi-data-yang-diketahui">1. Identifikasi Data yang Diketahui</h3>
+<ul>
+<li>Faktor Kualitas (<span class="math inline">\(Q\)</span>) =&nbsp;<span class="math inline">\(10\)</span></li>
+<li>Frekuensi Resonansi (<span class="math inline">\(f_r\)</span>) =&nbsp;<span class="math inline">\(33\text{ kHz} = 33.000\text{ Hz}\)</span></li>
+<li>Induktansi (<span class="math inline">\(L\)</span>) =&nbsp;<span class="math inline">\(45\text{ mH} = 0,045\text{ H}\)</span></li>
+</ul>
+</section>
+<section id="menghitung-frekuensi-sudut-resonansi-omega_r" class="level3">
+<h3 class="anchored" data-anchor-id="menghitung-frekuensi-sudut-resonansi-omega_r">2. Menghitung Frekuensi Sudut Resonansi (<span class="math inline">\(\omega_r\)</span>)</h3>
+<p>Frekuensi sudut (<span class="math inline">\(\omega_r\)</span>) dalam satuan radian per detik dihitung dengan rumus:</p>
+<p><span class="math display">\[\omega_r = 2\pi f_r\]</span><span class="math display">\[\omega_r = 2 \times \pi \times 33.000\]</span><span class="math display">\[\omega_r \approx 207.345,12\text{ rad/s}\]</span></p>
+</section>
+<section id="menghitung-nilai-hambatan-r" class="level3">
+<h3 class="anchored" data-anchor-id="menghitung-nilai-hambatan-r">3. Menghitung Nilai Hambatan (<span class="math inline">\(R\)</span>)</h3>
+<p>Pada rangkaian LCR seri, faktor kualitas (<span class="math inline">\(Q\)</span>) didefinisikan sebagai perbandingan antara reaktansi induktif pada saat resonansi dengan hambatan:</p>
+<p><span class="math display">\[Q = \frac{\omega_r L}{R}\]</span></p>
+<p>Maka, kita dapat mencari&nbsp;<span class="math inline">\(R\)</span>&nbsp;dengan mengubah rumus menjadi:</p>
+<p><span class="math display">\[R = \frac{\omega_r L}{Q}\]</span><span class="math display">\[R = \frac{207.345,12 \times 0,045}{10}\]</span><span class="math display">\[R = \frac{9.330,53}{10}\]</span><span class="math display">\[R \approx 933,05 \, \Omega\]</span></p>
+</section>
+<section id="menghitung-nilai-kapasitansi-c" class="level3">
+<h3 class="anchored" data-anchor-id="menghitung-nilai-kapasitansi-c">4. Menghitung Nilai Kapasitansi (<span class="math inline">\(C\)</span>)</h3>
+<p>Pada saat resonansi, frekuensi sudut memenuhi persamaan:</p>
+<p><span class="math display">\[\omega_r = \frac{1}{\sqrt{LC}}\]</span></p>
+<p>Kuadratkan kedua sisi untuk mencari&nbsp;<span class="math inline">\(C\)</span>:</p>
+<p><span class="math display">\[\omega_r^2 = \frac{1}{LC}\]</span><span class="math display">\[C = \frac{1}{L \cdot \omega_r^2}\]</span></p>
+<p>Substitusikan nilai yang diketahui:</p>
+<p><span class="math display">\[C = \frac{1}{0,045 \times (207.345,12)^2}\]</span><span class="math display">\[C = \frac{1}{0,045 \times 4,299 \times 10^{10}}\]</span><span class="math display">\[C = \frac{1}{1.934.550.000}\]</span><span class="math display">\[C \approx 5,17 \times 10^{-10}\text{ F}\]</span></p>
+<p>Untuk mempermudah pembacaan, kita konversi ke satuan&nbsp;<strong>pikofarad (pF)</strong>:</p>
+<p><span class="math display">\[C \approx 517\text{ pF}\]</span></p>
+</section>
+<section id="kesimpulan-akhir" class="level3">
+<h3 class="anchored" data-anchor-id="kesimpulan-akhir">Kesimpulan Akhir</h3>
+<p>Untuk mendapatkan rangkaian LCR seri dengan spesifikasi tersebut, Anda harus menggunakan:</p>
+<ul>
+<li><strong>Hambatan (</strong><span class="math inline">\(R\)</span><strong>):</strong>&nbsp;<span class="math inline">\(\approx 933,05 \, \Omega\)</span></li>
+<li><strong>Kapasitansi (</strong><span class="math inline">\(C\)</span><strong>):</strong>&nbsp;<span class="math inline">\(\approx 517\text{ pF}\)</span>&nbsp;(atau&nbsp;<span class="math inline">\(0,517\text{ nF}\)</span>)</li>
+</ul>
+</section>
+</section>
+<section id="penyelesaian-langkah-demi-langkah-soal-latihan-kemagnetan-iii" class="level2">
+<h2 class="anchored" data-anchor-id="penyelesaian-langkah-demi-langkah-soal-latihan-kemagnetan-iii">Penyelesaian Langkah-demi-Langkah Soal Latihan Kemagnetan III</h2>
+<p>Berikut adalah pembahasan detail untuk soal nomor 3, 4, dan 5 berdasarkan materi Induktansi dan Rangkaian RL/RLC.</p>
+<section id="soal-3-pengaruh-induktansi-terhadap-konstanta-waktu" class="level3">
+<h3 class="anchored" data-anchor-id="soal-3-pengaruh-induktansi-terhadap-konstanta-waktu">Soal 3: Pengaruh Induktansi terhadap Konstanta Waktu</h3>
+<p><strong>Pertanyaan:</strong>&nbsp;Bagaimana konstanta waktu induktor dipengaruhi oleh penggandaan induktansinya (<span class="math inline">\(L\)</span>)?</p>
+<p><strong>Langkah-langkah Penyelesaian:</strong></p>
+<ol type="1">
+<li><p><strong>Identifikasi Rumus:</strong>&nbsp;Konstanta waktu untuk rangkaian RL (<span class="math inline">\(\tau_L\)</span>) didefinisikan sebagai:</p>
+<p><span class="math display">\[\tau_L = \frac{L}{R}\]</span></p></li>
+<li><p><strong>Analisis Perubahan:</strong>&nbsp;Jika induktansi mula-mula adalah&nbsp;<span class="math inline">\(L\)</span>&nbsp;dan kemudian digandakan menjadi&nbsp;<span class="math inline">\(L' = 2L\)</span>, maka konstanta waktu yang baru (<span class="math inline">\(\tau_L'\)</span>) adalah:</p>
+<p><span class="math display">\[\tau_L' = \frac{L'}{R} = \frac{2L}{R}\]</span></p></li>
+<li><p><strong>Hubungan:</strong>&nbsp;Kita bisa melihat bahwa&nbsp;<span class="math inline">\(\tau_L' = 2 \times \tau_L\)</span>.</p></li>
+<li><p><strong>Kesimpulan:</strong>&nbsp;Konstanta waktu akan meningkat hingga&nbsp;<strong>dua kali lipat</strong>&nbsp;dari nilai aslinya.</p></li>
+</ol>
+<p><strong>Jawaban: B</strong></p>
+</section>
+<section id="soal-4-pengaruh-resistansi-terhadap-konstanta-waktu" class="level3">
+<h3 class="anchored" data-anchor-id="soal-4-pengaruh-resistansi-terhadap-konstanta-waktu">Soal 4: Pengaruh Resistansi terhadap Konstanta Waktu</h3>
+<p><strong>Pertanyaan:</strong>&nbsp;Bagaimana konstanta waktu induktor dipengaruhi oleh penggandaan resistansi (<span class="math inline">\(R\)</span>) dalam rangkaian?</p>
+<p><strong>Langkah-langkah Penyelesaian:</strong></p>
+<ol type="1">
+<li><p><strong>Identifikasi Rumus:</strong>&nbsp;Gunakan rumus yang sama:</p>
+<p><span class="math display">\[\tau_L = \frac{L}{R}\]</span></p></li>
+<li><p><strong>Analisis Perubahan:</strong>&nbsp;Jika resistansi mula-mula adalah&nbsp;<span class="math inline">\(R\)</span>&nbsp;dan digandakan menjadi&nbsp;<span class="math inline">\(R' = 2R\)</span>, maka konstanta waktu yang baru (<span class="math inline">\(\tau_L'\)</span>) adalah:</p>
+<p><span class="math display">\[\tau_L' = \frac{L}{R'} = \frac{L}{2R}\]</span></p></li>
+<li><p><strong>Hubungan:</strong>&nbsp;Kita bisa melihat bahwa&nbsp;<span class="math inline">\(\tau_L' = \frac{1}{2} \times \tau_L\)</span>.</p></li>
+<li><p><strong>Kesimpulan:</strong>&nbsp;Konstanta waktu akan menurun hingga&nbsp;<strong>setengah</strong>&nbsp;dari nilai aslinya.</p></li>
+</ol>
+<p><strong>Jawaban: D</strong></p>
+</section>
+<section id="soal-5-istilah-induksi-antar-rangkaian" class="level3">
+<h3 class="anchored" data-anchor-id="soal-5-istilah-induksi-antar-rangkaian">Soal 5: Istilah Induksi Antar Rangkaian</h3>
+<p><strong>Pertanyaan:</strong>&nbsp;Istilah manakah yang digunakan untuk efek di mana perubahan arus dalam satu rangkaian menginduksi ggl di rangkaian lain?</p>
+<p><strong>Langkah-langkah Penyelesaian:</strong></p>
+<ol type="1">
+<li><strong>Definisi Induksi Diri:</strong>&nbsp;Fenomena ggl induksi yang muncul pada kumparan itu sendiri akibat perubahan arus di kumparan tersebut.</li>
+<li><strong>Definisi Induksi Mutual (Timbal Balik):</strong>&nbsp;Fenomena di mana perubahan arus pada Kumparan 1 menciptakan perubahan fluks magnetik yang menembus Kumparan 2, sehingga menginduksi ggl pada Kumparan 2.</li>
+<li><strong>Analisis Soal:</strong>&nbsp;Soal menanyakan induksi pada “rangkaian lain”, yang sesuai dengan definisi induksi mutual.</li>
+</ol>
+<p><strong>Jawaban: E</strong></p>
+</section>
+<section id="ringkasan-jawaban-soal-1-2-ulasan-singkat" class="level3">
+<h3 class="anchored" data-anchor-id="ringkasan-jawaban-soal-1-2-ulasan-singkat">Ringkasan Jawaban Soal 1 &amp; 2 (Ulasan Singkat)</h3>
+<ul>
+<li><strong>Soal 1:</strong>&nbsp;Frekuensi rendah sulit dibuat karena membutuhkan nilai&nbsp;<span class="math inline">\(L\)</span>&nbsp;dan&nbsp;<span class="math inline">\(C\)</span>&nbsp;yang sangat besar. Induktor besar memiliki kawat sangat panjang yang menciptakan hambatan dalam (<span class="math inline">\(R\)</span>) tinggi, menyebabkan osilasi cepat habis (teredam).</li>
+<li><strong>Soal 2:</strong>&nbsp;Dengan&nbsp;<span class="math inline">\(Q=10, f_r=33\text{ kHz}, L=45\text{ mH}\)</span>:
+<ul>
+<li><span class="math inline">\(R = \frac{2\pi f_r L}{Q} \approx 933 \, \Omega\)</span></li>
+<li><span class="math inline">\(C = \frac{1}{L(2\pi f_r)^2} \approx 517\text{ pF}\)</span></li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/Shidiq\.github\.io\/open-lectures\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../Fisika Dasar II/materi-06-kemagnetan-2/index.html" class="pagination-link" aria-label="Kemagnetan 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Kemagnetan 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2024 Departemen Fisika, FMIPA UGM. Konten berlisensi <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Shidiq/open-lectures/edit/main/Fisika Dasar II/materi-07-kemagnetan-3/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Shidiq/open-lectures/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Dibuat dengan <a href="https://quarto.org">Quarto</a> • <a href="https://github.com/Shidiq/open-lectures">Kode sumber</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
