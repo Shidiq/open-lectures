@@ -1,5 +1,6 @@
 ---
 title: "Elektrostatika 1"
+code-tools: false
 ---
 
 # Bab 1: Material Kelistrikan dan Sifat Muatan

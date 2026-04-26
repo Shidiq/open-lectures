@@ -1,0 +1,929 @@
+---
+title: "Listrik Dinamis 1"
+code-tools: false
+---
+
+# 1. Pendahuluan Arus Listrik
+
+Listrik dinamis mempelajari muatan-muatan listrik yang bergerak. Berbeda dengan elektrostatika di mana muatan berada dalam kondisi diam, pada listrik dinamis, muatan mengalir melalui suatu konduktor karena adanya perbedaan potensial.
+
+## 1.1 Definisi Arus Listrik
+
+Arus listrik ($I$) didefinisikan sebagai jumlah total muatan listrik ($Q$) yang melewati suatu titik pada kawat penghantar dalam tiap satuan waktu. Secara matematis, arus rata-rata dirumuskan sebagai:
+
+$$I = \frac{\Delta Q}{t}$$
+
+Satuan internasional untuk arus listrik adalah **Ampere (A)**, di mana $1\text{ Ampere} = 1\text{ Coulomb/detik}$.
+
+## 1.2 Mekanisme dan Arah Arus
+
+Arus terjadi karena baterai atau sumber tegangan memberikan beda potensial yang menghasilkan medan listrik di dalam rangkaian. Medan ini memaksa muatan untuk bergerak.
+
+- **Arah Arus Konvensional:** Digambarkan searah dengan pergerakan pembawa muatan positif (dari kutub positif ke negatif).
+- **Kenyataan Fisik:** Dalam konduktor logam, pembawa muatan sebenarnya adalah elektron (negatif) yang bergerak berlawanan arah dengan panah arus konvensional.
+
+![Ilustrasi arus listrik baterai dalam kawat.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771571401644.png)
+
+Figure 1 ini mengilustrasikan sebuah rangkaian listrik sederhana (loop) yang terdiri dari sumber tegangan (baterai) dan konduktor. Terdapat tiga poin utama yang dijelaskan melalui visualisasi ini:
+
+### Peran Baterai sebagai Sumber Energi (Gaya Gerak Listrik)
+
+Baterai dalam rangkaian ini berfungsi sebagai penyedia **beda potensial** ($V$).
+
+- **Proses Fisika:** Ketika ujung-ujung kawat (loop) dihubungkan ke terminal baterai, terjadi pemisahan muatan di dalam baterai secara kimiawi. Hal ini menyebabkan satu terminal menjadi kaya akan muatan positif (+) dan terminal lainnya kaya akan muatan negatif (-).
+- **Pembentukan Medan Listrik:** Beda potensial ini menciptakan **medan listrik** ($\vec{E}$) yang merambat melalui seluruh bagian kawat konduktor hampir seketika (setara kecepatan cahaya). Medan listrik inilah yang memberikan gaya pada muatan-muatan bebas di dalam kawat.
+
+### Konvensi Arah Arus (Arus Konvensional)
+
+Pada gambar, terlihat panah arus ($i$) keluar dari terminal positif dan masuk ke terminal negatif. Ini disebut sebagai **Arus Konvensional**.
+
+- **Asal-Usul:** Konvensi ini ditetapkan sebelum para ilmuwan mengetahui keberadaan elektron. Secara historis (sejak zaman Benjamin Franklin), arus dianggap sebagai aliran "fluida" bermuatan positif.
+- **Aturan Penulisan:** Dalam semua analisis rangkaian listrik (Hukum Kirchhoff, Hukum Ohm, dll.), kita **selalu** menggunakan arah arus konvensional ini, yaitu dari potensial tinggi (+) ke potensial rendah (-).
+
+### Realitas Fisik: Aliran Elektron
+
+Meskipun panah arus digambarkan searah jarum jam (dari + ke -), terdapat catatan penting mengenai apa yang sebenarnya terjadi di tingkat mikroskopis.
+
+- **Pembawa Muatan:** Pada konduktor logam (seperti tembaga), muatan yang bebas bergerak adalah **elektron** (bermuatan negatif).
+- **Arah Gerak:** Karena elektron bermuatan negatif, mereka ditarik oleh terminal positif dan ditolak oleh terminal negatif. Jadi, elektron sebenarnya mengalir **berlawanan arah** dengan arah arus konvensional (dari - ke +).
+- **Mengapa Tetap Menggunakan Konvensi?** Secara matematis, aliran muatan positif ke kanan setara dengan aliran muatan negatif ke kiri. Oleh karena itu, penggunaan arus konvensional tidak mengubah hasil perhitungan fisis dalam rangkaian.
+
+### Ringkasan Mekanisme Kerja Rangkaian
+
+1. **Baterai** menciptakan beda potensial.
+2. **Medan Listrik** terbentuk di sepanjang kawat.
+3. **Gaya Elektrostatik** dari medan listrik mendorong muatan.
+4. **Arus Listrik** ($i$) didefinisikan searah dengan medan listrik (dari + ke -), meskipun elektron bergerak ke arah sebaliknya.
+
+**Informasi:** Seringkali bingung antara kecepatan arus dan kecepatan elektron. Ingatlah bahwa **arus** (sinyal listrik) merambat sangat cepat, namun **elektron** individual bergerak sangat lambat (kecepatan drift) karena sering bertumbukan dengan atom-atom di dalam kabel.
+
+# 2. Densitas Arus Listrik dan Laju Hanyut
+
+Untuk memahami bagaimana arus mengalir di dalam materi, kita perlu melihat pergerakan elektron secara mikroskopis.
+
+## 2.1 Densitas Arus ($\vec{J}$)
+
+> [!summary]
+> Densitas arus adalah arus per satuan luas penampang. Jika arus seragam dan tegak lurus terhadap luas penampang $A$, maka:
+>
+> $$J = \frac{i}{A}$$
+>
+> Secara vektor, hubungan antara densitas arus dan kecepatan hanyut elektron ($\vec{v}_d$) adalah:
+>
+> $$\vec{J} = (ne)\vec{v}_d$$
+>
+> Di mana $n$ adalah jumlah muatan per satuan volume dan $e$ adalah muatan elektron.
+
+### 1. Definisi Dasar
+
+Secara sederhana, **Densitas Arus** ($\vec{J}$) adalah ukuran seberapa "padat" arus listrik yang mengalir melalui suatu luasan penampang tertentu. Berbeda dengan arus listrik ($i$) yang merupakan besaran skalar, densitas arus adalah **besaran vektor**.
+
+### 2. Formulasi Matematika
+
+#### A. Kondisi Umum (Fluks Muatan)
+
+Arus listrik yang melalui suatu permukaan dianggap sebagai "fluks" dari vektor densitas arus. Jika kita memiliki elemen luas $d\vec{A}$ yang sangat kecil, maka arus yang melaluinya adalah:
+
+$$di = \vec{J} \cdot d\vec{A}$$
+
+Untuk mencari arus total ($i$) yang melalui seluruh permukaan, kita melakukan integrasi:
+
+$$i = \int \vec{J} \cdot d\vec{A}$$
+
+#### B. Kondisi Seragam (Simplifikasi)
+
+Dalam banyak kasus praktis di mana arus mengalir secara merata (seragam) dan tegak lurus terhadap luas penampang ($A$), maka rumus di atas dapat disederhanakan menjadi:
+
+$$i = J \cdot A \implies J = \frac{i}{A}$$
+
+- **Satuan SI:** Ampere per meter persegi ($A/m^2$).
+
+### 3. Sifat Vektor dan Arah
+
+Bagian ini menjelaskan bahwa arah vektor $\vec{J}$ sangat bergantung pada jenis pembawa muatannya:
+
+- **Muatan Positif:** $\vec{J}$ searah dengan kecepatan gerak muatan ($\vec{v}$).
+- **Muatan Negatif (Elektron):** $\vec{J}$ berlawanan arah dengan kecepatan gerak elektron.
+- **Konvensi:** Dalam rangkaian listrik, arah $\vec{J}$ selalu dianggap sama dengan arah arus konvensional (dari kutub positif ke negatif).
+
+### 4. Tinjauan Mikroskopis
+
+Bagaimana Densitas Arus berhubungan dengan atom-atom di dalam kabel? Hubungannya dinyatakan dengan rumus:
+
+$$\vec{J} = (ne)\vec{v}_d$$
+
+Di mana:
+
+- $n$: jumlah pembawa muatan per satuan volume (konsentrasi).
+- $e$: muatan listrik (elektron).
+- $\vec{v}_d$: kecepatan hanyut (_drift velocity_).
+
+Ini menunjukkan bahwa kita bisa meningkatkan densitas arus dengan dua cara: mempercepat gerak muatan atau menambah jumlah muatan yang tersedia di dalam material tersebut.
+
+### 5. Visualisasi Streamlines (Garis Alir)
+
+![Ilustrasi arus listrik.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771572150983.png)
+
+Perhatikan gambar tersebut yang menunjukkan konduktor yang menyempit:
+
+- **Garis yang merapat:** Ketika konduktor menyempit, garis-garis aliran menjadi lebih rapat. Ini secara visual merepresentasikan bahwa nilai $J$ meningkat (arus menjadi lebih padat karena luas penampang $A$ mengecil, sementara arus $i$ tetap konstan berdasarkan hukum kekekalan muatan).
+- **Analogi Fluida:** Bayangkan air yang mengalir dari pipa lebar ke pipa sempit; air akan bergerak lebih cepat dan lebih "padat" di bagian yang sempit tersebut.
+
+### 6. Pentingnya Konsep Densitas Arus dalam Teknik
+
+Mengapa kita tidak cukup hanya menggunakan Arus ($i$)?
+
+- **Batas Keamanan (Current Rating):** Setiap kabel memiliki batas densitas arus maksimum. Jika $J$ terlalu tinggi, tumbukan elektron dengan ion kisi akan menghasilkan panas berlebih (efek Joule) yang bisa melelehkan isolasi kabel.
+- **Mikroelektronika:** Dalam chip komputer, jalur penghantarnya sangat tipis. Insinyur harus menghitung $J$ dengan sangat teliti agar jalur tersebut tidak terbakar akibat densitas arus yang ekstrem.
+
+**Kesimpulan:**
+
+Arus ($i$) adalah totalitas, sedangkan Densitas Arus ($\vec{J}$) adalah detail distribusi. Memahami $\vec{J}$ berarti memahami bagaimana material merespons aliran listrik di tingkat mikroskopis.
+
+## 2.2 Laju Hanyut (Drift Velocity)
+
+Setelah memahami arus secara makroskopis (Ampere), kita perlu melihat apa yang terjadi di dalam kabel pada skala atom. Bagian ini menjelaskan hubungan antara gerakan partikel subatomik dengan arus yang kita ukur.
+
+### 1. Arus sebagai Gerakan Muatan Neto
+
+Tidak semua gerakan muatan menghasilkan arus listrik. Di dalam logam, elektron bebas bergerak secara acak dengan kecepatan termal yang sangat tinggi (sekitar $10^{6} m/s$), namun karena arahnya acak, tidak ada perpindahan muatan bersih (**net flow**).
+
+- **Tanpa Medan Listrik:** Elektron bergerak acak, arus neto = 0.
+- **Dengan Medan Listrik (**$\vec{E}$**):** Medan listrik memberikan gaya pada elektron, menyebabkan mereka "hanyut" perlahan ke satu arah tertentu sambil tetap bertumbukan. Inilah yang menghasilkan **arus neto**.
+- **Kuantisasi:** Ingat bahwa muatan bersifat terkuantisasi ($q = ne$), artinya arus adalah aliran dari paket-paket muatan diskret (elektron).
+
+### 2. Konsep Laju Hanyut (Drift Velocity, $v_d$)
+
+Laju hanyut adalah kecepatan rata-rata muatan (elektron) saat bergerak melalui konduktor di bawah pengaruh medan listrik. Kecepatan ini sangat lambat jika dibandingkan dengan kecepatan cahaya atau kecepatan termal elektron itu sendiri.
+
+### 3. Penurunan Rumus Arus Listrik (Tinjauan Mikroskopis)
+
+Mari kita tinjau sebuah segmen kawat dengan luas penampang $A$ dan panjang $L$:
+
+1. **Volume Segmen:** Volume bagian kawat tersebut adalah $V = A \cdot L$.
+2. **Kerapatan Muatan (**$n$**):** Misalkan $n$ adalah jumlah pembawa muatan bebas per satuan volume.
+3. **Total Muatan (**$q$**):** Jumlah total muatan yang tersedia untuk bergerak dalam segmen tersebut adalah:
+
+	$$q = (n \cdot A \cdot L)e$$
+
+	_(Di mana_ $e$ _adalah muatan satu elektron)_.
+
+4. **Waktu Tempuh (**$t$**):** Waktu yang dibutuhkan muatan untuk menempuh jarak $L$ dengan kecepatan $v_d$ adalah:
+
+	$$t = \frac{L}{v_d}$$
+
+5. **Arus Listrik (**$i$**):** Berdasarkan definisi $i = q/t$, maka:
+
+	$$i = \frac{nALe}{L/v_d}$$
+
+	Sehingga didapatkan hubungan:
+
+	$$i = nAev_d$$
+
+![Ilustrasi laju hanyut.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771572602173.png)
+
+### 4. Hubungan dengan Densitas Arus ($\vec{J}$)
+
+Densitas arus adalah arus per satuan luas ($J = i/A$). Jika kita masukkan rumus di atas:
+
+$$J = \frac{nAev_d}{A} \implies J = nev_d$$
+
+Secara vektor, hubungannya dituliskan sebagai:
+
+$$\vec{J} = (ne)\vec{v}_d$$
+
+**Analisis Arah Vektor:**
+
+- **Pembawa Muatan Positif:** Jika $ne$ positif, maka $\vec{J}$ searah dengan $\vec{v}_d$.
+- **Pembawa Muatan Negatif (Elektron):** Karena muatan elektron negatif, maka hasil kali $ne$ menjadi negatif. Ini berarti secara matematis vektor $\vec{J}$ (densitas arus) memiliki arah yang **berlawanan** dengan vektor $\vec{v}_d$ (kecepatan hanyut elektron).
+
+## 2.3 Analisis Detail Penyelesaian Soal Laju Hanyut
+
+### Pertanyaan Soal
+
+Berapakah kecepatan _drift_ (laju hanyut) elektron pada suatu kawat tembaga berjari-jari $0,815\text{ mm}$ yang dialiri arus $1\text{ A}$?
+
+### Langkah 1: Identifikasi Data dan Konversi Satuan
+
+Langkah pertama yang krusial dalam fisika adalah menyamakan satuan ke dalam Standar Internasional (SI).
+
+- Arus ($i$) = $1\text{ A}$
+- Jari-jari ($r$) = $0,815\text{ mm} = 0,815 \times 10^{-3}\text{ m}$
+- Rapat massa tembaga ($\rho$) = $8,93\text{ g/cm}^3$
+- Massa molar tembaga ($M$) = $63,5\text{ g/mol}$
+- Bilangan Avogadro ($N_A$) = $6,02 \times 10^{23}\text{ atom/mol}$
+- Muatan elektron ($e$) = $1,6 \times 10^{-19}\text{ C}$
+
+### Langkah 2: Menghitung Densitas Atom ($n_a$)
+
+Kita perlu tahu berapa banyak atom tembaga dalam satu satuan volume. Rumus yang digunakan adalah:
+
+$$n_a = \frac{\rho \cdot N_A}{M}$$
+
+**Perhitungan:**
+
+$$n_a = \frac{(8,93\text{ g/cm}^3) \cdot (6,02 \times 10^{23}\text{ atom/mol})}{63,5\text{ g/mol}}$$$$n_a = 8,47 \times 10^{22}\text{ atom/cm}^3$$
+
+### Langkah 3: Menentukan Densitas Elektron Bebas ($n$)
+
+Dalam soal diasumsikan setiap 1 atom tembaga menyumbangkan 1 elektron bebas. Maka, nilai $n = n_a$. Namun, kita harus mengubah satuannya dari $\text{cm}^3$ ke $\text{m}^3$:
+
+- $1\text{ cm}^3 = 10^{-6}\text{ m}^3$
+- Maka, $n = 8,47 \times 10^{22} \cdot 10^6 = 8,47 \times 10^{28}\text{ elektron/m}^3$
+
+### Langkah 4: Menghitung Luas Penampang ($A$)
+
+Kawat berbentuk silinder, sehingga luas penampangnya adalah lingkaran:
+
+$$A = \pi \cdot r^2$$$$A = \pi \cdot (0,000815\text{ m})^2$$$$A \approx 2,086 \times 10^{-6}\text{ m}^2$$
+
+### Langkah 5: Menghitung Kecepatan Drift ($v_d$)
+
+Gunakan rumus utama laju hanyut:
+
+$$v_d = \frac{i}{A \cdot n \cdot e}$$
+
+**Substitusi Nilai:**
+
+$$v_d = \frac{1\text{ A}}{(2,086 \times 10^{-6}\text{ m}^2) \cdot (8,47 \times 10^{28}\text{ m}^{-3}) \cdot (1,6 \times 10^{-19}\text{ C})}$$$$v_d = 3,54 \times 10^{-5}\text{ m/s}$$
+
+### Interpretasi Hasil (Penting untuk Buku Referensi)
+
+Hasil perhitungan menunjukkan $v_d = 0,0000354\text{ m/s}$ atau sekitar $0,035\text{ mm/detik}$.
+
+**Mengapa ini penting?**
+
+1. **Sangat Lambat:** Elektron membutuhkan waktu sekitar 8 jam hanya untuk menempuh jarak 1 meter di dalam kawat tersebut.
+2. **Paradoks Lampu:** Jika elektron selambat itu, mengapa lampu langsung menyala?
+3. **Kerapatan adalah Kunci:** Meskipun gerakannya lambat, arusnya bisa besar (1 Ampere) karena jumlah elektron bebas ($n$) di dalam tembaga sangat fantastis banyaknya ($10^{28}$ per meter kubik).
+
+### Mengapa Lampu Langsung Menyala?
+
+_"Jika kecepatan elektron (_$v_d$_) sangat lambat (sekitar 0,01 mm/s), mengapa lampu langsung menyala saat saklar ditekan?"_
+
+**Penjelasan:**
+
+Saat saklar ditekan, bukan elektron dari saklar yang harus sampai ke lampu. Baterai menciptakan **medan listrik** yang merambat di sepanjang kabel dengan kecepatan mendekati kecepatan cahaya. Medan listrik ini mendorong _seluruh_ elektron yang sudah ada di sepanjang kabel secara bersamaan. Analogi yang tepat adalah pipa yang sudah penuh air; jika Anda mendorong air di satu ujung, air di ujung lainnya akan langsung keluar.
+
+**Pesan:** Pemahaman tentang $v_d$ menunjukkan betapa luar biasanya alam semesta; arus yang besar bisa dihasilkan dari gerakan partikel yang sangat lambat, asalkan jumlah partikelnya ($n$) sangat banyak.
+
+# 3. Resistansi dan Resistivitas
+
+Dalam mempelajari listrik dinamis, kita harus memahami mengapa material yang berbeda memberikan respon yang berbeda terhadap tegangan yang sama. Di sinilah peran konsep resistansi dan resistivitas.
+
+## 3.1 Hukum Ohm
+
+Hukum Ohm menyatakan bahwa beda potensial ($V$) pada suatu material sebanding dengan arus ($I$) yang melaluinya, dengan konstanta pembanding yang disebut resistansi ($R$):
+
+$$V = IR$$
+
+Material yang memiliki nilai $R$ konstan disebut material **Ohmik** (contoh: logam). Material yang nilai $R$-nya berubah terhadap tegangan disebut **Non-Ohmik** (contoh: semikonduktor).
+
+## 3.2 Resistansi (Hambatan Listrik, $R$)
+
+Resistansi adalah besaran makroskopik yang mengukur seberapa besar suatu **benda atau komponen** melawan aliran arus listrik.
+
+**Definisi Matematis**
+
+Kita menentukan nilai resistansi $R$ dengan menerapkan beda potensial ($V$) pada benda tersebut dan mengukur arus ($i$) yang mengalir:
+
+$$R = \frac{V}{i}$$
+
+- **Satuan:** Ohm ($\Omega$), di mana $1\ \Omega = 1\ \text{Volt}/\text{Ampere}$.
+- **Komponen:** Benda yang dibuat khusus untuk memberikan nilai hambatan tertentu dalam rangkaian disebut **Resistor**.
+
+## 3.3 Resistivitas (Hambatan Jenis, $\rho$)
+
+Resistivitas adalah besaran mikroskopik yang menggambarkan sifat hambatan intrinsik dari suatu **bahan/material**, tidak peduli apa pun bentuk atau ukurannya.
+
+**Definisi Mikroskopik**
+
+Resistivitas didefinisikan sebagai rasio antara medan listrik ($E$) dan densitas arus ($J$):
+
+$$\rho = \frac{E}{J}$$
+
+- **Material Isotropik:** Persamaan ini berlaku untuk material yang sifat listriknya sama ke segala arah.
+- **Konduktivitas (**$\sigma$**):** Kebalikan dari resistivitas disebut konduktivitas ($\sigma = 1/\rho$), yang mengukur seberapa baik suatu bahan menghantarkan listrik.
+
+## 3.4 Hubungan Resistansi dan Resistivitas
+
+Meskipun berbeda, keduanya saling berhubungan melalui geometri benda (panjang dan luas penampang).
+
+Untuk kawat penghantar dengan panjang $L$ dan luas penampang $A$, resistansinya dinyatakan dengan:
+
+$$R = \rho \frac{L}{A}$$
+
+**Analogi Fisik:**
+
+Bayangkan aliran air dalam pipa:
+
+- $L$ **(Panjang):** Semakin panjang pipa, semakin sulit air mengalir (hambatan besar).
+- $A$ **(Luas Penampang):** Semakin lebar pipa, semakin mudah air mengalir (hambatan kecil).
+- $\rho$ **(Resistivitas):** Ini setara dengan "kekasaran" dinding dalam pipa. Pipa tembaga lebih "licin" (resistivitas rendah) dibanding pipa besi.
+
+## 3.5 Perbedaan Kuantitas: Makroskopik vs Mikroskopik
+
+Penting untuk membedakan kategori pengukuran ini:
+
+|   |   |   |
+|---|---|---|
+|**Kategori**|**Besaran Makroskopik**|**Besaran Mikroskopik**|
+|**Definisi**|Berkaitan dengan pengukuran pada objek utuh.|Berkaitan dengan sifat mendasar di dalam material.|
+|**Variabel**|Tegangan ($V$), Arus ($i$), Resistansi ($R$)|Medan Listrik ($E$), Rapat Arus ($J$), Resistivitas ($\rho$)|
+|**Ketergantungan**|Bergantung pada bentuk, ukuran, dan bahan.|Hanya bergantung pada jenis bahan dan suhu.|
+
+## 3.6 Nilai Resistivitas Berbagai Material
+
+Berdasarkan data tabel, material diklasifikasikan menjadi:
+
+1. **Konduktor Baik:** Memiliki resistivitas sangat rendah (orde $10^{-8}\ \Omega\cdot\text{m}$), contoh: Perak, Tembaga, Emas.
+2. **Semikonduktor:** Memiliki resistivitas menengah (0,46 s.d. 2300 $\Omega\cdot\text{m}$), contoh: Germanium, Silikon.
+3. **Isolator:** Memiliki resistivitas sangat tinggi (orde $10^{10}$ s.d. $10^{16}\ \Omega\cdot\text{m}$), contoh: Kaca, Karet, Kuarsa.
+
+> Ingatlah kalimat kunci ini: _"Resistance is a property of an object. Resistivity is a property of a material."_ (Resistansi adalah properti sebuah objek. Resistivitas adalah properti sebuah material). Sebuah kawat tembaga sepanjang 10m dan 1m memiliki **resistivitas yang sama**, tetapi **resistansi yang berbeda**.
+
+## 3.7 Analisis Detail: Menghitung Dimensi Fisik Resistor
+
+**Pertanyaan:**
+
+Suatu kawat nikrom (resisitivitas $10^{-6} \, \Omega \cdot \text{m}$) memiliki jari-jari $0,65 \, \text{mm}$. Berapakah panjang kawat yang dibutuhkan untuk memperoleh resistansi $2 \, \Omega$?
+
+---
+
+### Deskripsi Soal
+
+Kita diminta untuk menentukan berapa panjang kawat Nikrom yang dibutuhkan agar menghasilkan hambatan sebesar $2\ \Omega$. Ini adalah simulasi sederhana bagaimana pabrik komponen menentukan panjang kawat di dalam sebuah resistor atau elemen pemanas.
+
+### Langkah 1: Identifikasi Data (Input)
+
+Penting untuk memastikan semua satuan berada dalam Standar Internasional (SI) sebelum melakukan perhitungan.
+
+- **Material:** Nikrom (umum digunakan untuk elemen pemanas karena resistivitasnya tinggi).
+- **Resistivitas (**$\rho$**):** $10^{-6}\ \Omega\cdot\text{m}$.
+- **Jari-jari (**$r$**):** $0,65\ \text{mm}$.
+	- _Konversi ke meter:_ $0,65 \times 10^{-3}\ \text{m}$ atau $6,5 \times 10^{-4}\ \text{m}$.
+- **Target Resistansi (**$R$**):** $2\ \Omega$.
+
+### Langkah 2: Menghitung Luas Penampang ($A$)
+
+Karena kawat berbentuk silinder panjang, luas penampang yang dilalui arus adalah luas lingkaran.
+
+$$A = \pi r^2$$
+
+**Perhitungan:**
+
+$$A = 3,14 \cdot (6,5 \times 10^{-4}\ \text{m})^2$$$$A = 3,14 \cdot (42,25 \times 10^{-8}\ \text{m}^2)$$$$A \approx 1,33 \times 10^{-6}\ \text{m}^2$$
+
+> Luas penampang ini sangat kecil (orde mikrometer persegi), yang wajar untuk sebuah kawat tipis.
+
+### Langkah 3: Menentukan Panjang Kawat ($L$)
+
+Gunakan rumus hubungan resistansi dan resistivitas:
+
+$$R = \rho \frac{L}{A}$$
+
+Untuk mencari $L$, kita pindahkan ruasnya (isolasi variabel $L$):
+
+$$L = \frac{R \cdot A}{\rho}$$
+
+**Substitusi Nilai:**
+
+$$L = \frac{2\ \Omega \cdot 1,33 \times 10^{-6}\ \text{m}^2}{10^{-6}\ \Omega\cdot\text{m}}$$
+
+**Penyederhanaan:**
+
+Perhatikan bahwa nilai $10^{-6}$ pada pembilang dan penyebut saling meniadakan (cancel out). Ini adalah keuntungan numerik dari penggunaan bahan dengan resistivitas orde mikrometer seperti Nikrom.
+
+$$L = 2 \cdot 1,33$$$$L = 2,66\ \text{meter}$$
+
+### Kesimpulan dan Makna Fisis
+
+Untuk mendapatkan hambatan sebesar $2\ \Omega$ dengan kawat Nikrom setebal $1,3\ \text{mm}$ (diameter), kita membutuhkan kawat sepanjang **2,66 meter**.
+
+**Mengapa menggunakan Nikrom?**
+
+Jika kita menggunakan **Tembaga** ($\rho \approx 1,7 \times 10^{-8}\ \Omega\cdot\text{m}$) dengan ketebalan yang sama, kita akan membutuhkan kawat yang jauh lebih panjang (sekitar 150 meter!) untuk mendapatkan hambatan yang sama. Itulah sebabnya alat pemanas (seperti setrika atau pemanggang) menggunakan kawat Nikrom: kita bisa mendapatkan hambatan yang cukup tinggi dalam ruang yang sangat terbatas (pendek).
+
+# 4. Pengaruh Suhu terhadap Sifat Kelistrikan Material
+
+Dalam aplikasi nyata, suhu operasi sebuah perangkat elektronik akan memengaruhi kinerjanya. Fenomena ini terjadi karena perubahan suhu mengubah intensitas getaran atom-atom di dalam struktur kristal konduktor.
+
+## 4.1 Variasi Suhu pada Resistivitas ($\rho$)
+
+Resistivitas logam pada umumnya meningkat secara linear terhadap kenaikan suhu dalam rentang yang cukup luas. Hal ini disebabkan karena semakin tinggi suhu, semakin besar amplitudo getaran ion-ion kisi logam, yang meningkatkan kemungkinan terjadinya tumbukan dengan elektron yang mengalir (pembawa muatan).
+
+![Kurva resistivitas vs temperatur.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771726264174.png)
+
+### Formulasi Empiris
+
+Pendekatan linear untuk menghitung perubahan resistivitas terhadap suhu dinyatakan dalam persamaan:
+
+$$\rho - \rho_0 = \rho_0 \alpha (T - T_0)$$
+
+Atau sering ditulis sebagai:
+
+$$\rho = \rho_0 [1 + \alpha (T - T_0)]$$
+
+**Keterangan Variabel:**
+
+- $\rho$: Resistivitas pada suhu $T$.
+- $\rho_0$: Resistivitas referensi pada suhu $T_0$ (biasanya suhu ruang, $293\text{ K}$ atau $20^\circ\text{C}$).
+- $\alpha$: **Koefisien suhu resistivitas**, yaitu konstanta yang bergantung pada jenis material (Satuan: $K^{-1}$ atau $^\circ\text{C}^{-1}$).
+- $T - T_0$: Perubahan suhu.
+
+## 4.2 Variasi Suhu pada Resistansi ($R$)
+
+Karena resistansi kawat ($R$) berbanding lurus dengan resistivitasnya ($R = \rho \frac{L}{A}$), maka perubahan suhu juga akan mengubah nilai hambatan total benda tersebut secara proporsional.
+
+### Formulasi Resistansi
+
+$$R = R_0 [1 + \alpha (T - T_0)]$$
+
+**Aplikasi Praktis:**
+
+Sifat ini tidak hanya menjadi kendala (seperti panas pada kabel), tetapi juga dimanfaatkan dalam teknologi:
+
+- **Sensor Suhu (RTD - Resistance Temperature Detector):** Dengan memantau perubahan nilai $R$ pada bahan tertentu (misal Platinum), kita dapat mengukur suhu dengan tingkat presisi yang sangat tinggi.
+- **Termistor:** Komponen yang nilai hambatannya sangat sensitif terhadap perubahan suhu kecil.
+
+## 4.3 Analisis Grafik: Perilaku pada Suhu Ekstrem
+
+![Kurva titik ekstrim saat 0 K.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771726153867.png)
+
+Gambar ini memberikan gambaran yang lebih mendalam mengenai perilaku material di luar rentang linear tradisional:
+
+### A. Wilayah Suhu Tinggi (Linear)
+
+Pada suhu tinggi, resistivitas didominasi oleh tumbukan antara elektron dan atom logam yang bergetar hebat. Di sinilah grafik terlihat lurus (linear) dan hukum pendekatan di atas berlaku dengan sangat akurat.
+
+### B. Wilayah Suhu Rendah (Non-linear)
+
+Mendekati suhu nol absolut ($0\text{ K}$), grafik tidak lagi linear. Terdapat fenomena yang disebut **Resistivitas Sisa (Residual Resistivity)**.
+
+- Secara teoretis, jika logam sempurna tanpa cacat didinginkan hingga $0\text{ K}$, hambatannya harus nol.
+- **Kenyataannya:** Resistivitas mendekati nilai tetap ($\rho_0$) yang tidak nol. Hal ini disebabkan oleh tumbukan elektron dengan **pengotor (impurities)** dan ketidaksempurnaan struktur kristal logam, bukan lagi karena getaran termal atom.
+
+### C. Titik Kritis dan Superkonduktivitas
+
+Perlu dicatat bahwa pada beberapa material khusus, resistivitas tidak hanya melandai, tetapi jatuh secara drastis menjadi nol tepat pada suhu tertentu yang disebut **suhu kritis (**$T_c$**)**. Fenomena ini disebut Superkonduktivitas, yang memungkinkan arus mengalir tanpa kehilangan energi sama sekali (akan dibahas pada sub-bab berikutnya).
+
+**Rangkuman:**
+
+1. **Konduktor Logam:** $T \uparrow \implies \rho \uparrow$ (Hubungan positif/linear).
+2. **Semikonduktor:** (Seringkali berlawanan) $T \uparrow \implies \rho \downarrow$ karena lebih banyak muatan yang terbebaskan untuk mengalir.
+3. **Batas Nol Absolut:** Hambatan tidak pernah benar-benar nol pada logam biasa karena adanya cacat material.
+
+# 5. Superkonduktor – Konduksi Tanpa Kehilangan Energi
+
+Superkonduktivitas adalah fase unik dari suatu materi di mana hambatan listriknya benar-benar hilang ($R = 0$). Fenomena ini pertama kali ditemukan oleh Heike Kamerlingh Onnes pada tahun 1911 saat ia mendinginkan merkuri (raksa) hingga suhu helium cair.
+
+## 5.1 Definisi dan Karakteristik Utama
+
+Superkonduktor didefinisikan sebagai material yang kehilangan seluruh resistansi listriknya saat berada di bawah suhu tertentu.
+
+### Suhu Kritis ($T_c$)
+
+Suhu di mana perubahan fase dari konduktor normal menjadi superkonduktor terjadi disebut **Suhu Kritis (**$T_c$**)**.
+
+- **Perilaku Grafik:** Berbeda dengan logam normal yang resistansinya melandai perlahan saat didinginkan, pada superkonduktor, resistansi turun secara **diskontinu** (tiba-tiba) menjadi tepat nol saat menyentuh $T_c$.
+- **Contoh Klasik:** Untuk merkuri (Hg), suhu kritisnya adalah $4,15\text{ K}$. Di atas suhu ini, merkuri berperan sebagai logam normal; di bawah suhu ini, ia menjadi superkonduktor.
+
+## 5.2 Sifat-Sifat Unik Superkonduktor
+
+### Resistansi Nol ($R = 0$)
+
+Karena tidak ada hambatan, maka tidak ada energi yang terbuang sebagai panas (efek Joule). Dalam logam biasa, elektron bertumbukan dengan ion kisi, namun dalam fase superkonduktor, elektron mengalir dalam "pasangan" (dikenal sebagai Pasangan Cooper dalam teori BCS) yang bergerak tanpa gesekan.
+
+### Arus Persisten (Persistent Current)
+
+Konsekuensi dari $R = 0$ adalah arus listrik yang diberikan ke dalam loop superkonduktor akan terus mengalir selamanya meskipun sumber tegangan dilepaskan. Hal ini terjadi karena menurut Hukum Ohm ($V = IR$), jika $R = 0$, maka tidak diperlukan tegangan ($V$) untuk mempertahankan arus yang sudah ada.
+
+### Efek Meissner (Levitasi Magnetik)
+
+Gambar ini menunjukkan fenomena levitasi. Superkonduktor adalah diamagnetik sempurna; mereka menolak medan magnet luar dari bagian dalamnya. Hal ini menyebabkan magnet dapat "melayang" di atas material superkonduktor.
+
+![Fenomena levitasi.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771726524057.jpg)
+
+## 5.3 Faktor yang Memengaruhi Suhu Kritis ($T_c$)
+
+Nilai $T_c$ bukanlah angka mati, melainkan sangat sensitif terhadap kondisi fisik dan kimia material tersebut:
+
+1. **Komposisi Kimia:** Penambahan atau perubahan atom penyusun (doping) dapat menaikkan atau menurunkan $T_c$.
+2. **Tekanan:** Memberikan tekanan ekstrem pada material tertentu dapat memaksa mereka menjadi superkonduktor pada suhu yang lebih tinggi.
+3. **Struktur Molekul:** Susunan geometri atom dalam kristal sangat menentukan stabilitas fase superkonduktor.
+
+## 5.4 Aplikasi dalam Teknologi Modern
+
+Beberapa aplikasi krusial yang sudah digunakan saat ini:
+
+- **Magnet Superkonduktor:** Digunakan untuk menghasilkan medan magnet yang sangat kuat (sekitar 10 kali lebih kuat dari elektromagnet konvensional). Keunggulannya adalah magnet ini tidak membutuhkan daya listrik besar untuk mempertahankan medannya setelah arus awal dialirkan.
+- **Mesin MRI (Magnetic Resonance Imaging):** Di dunia medis, koil superkonduktor digunakan untuk menciptakan medan magnet stabil dan kuat yang diperlukan untuk memindai organ dalam tubuh manusia tanpa menghasilkan panas berlebih pada mesin.
+- **Penyimpanan Energi:** Karena arus bisa mengalir tanpa henti, superkonduktor dianggap sebagai kandidat ideal untuk alat penyimpan energi masa depan (SMES - Superconducting Magnetic Energy Storage).
+
+**Catatan:**
+
+Salah satu impian terbesar fisikawan saat ini adalah menemukan **Superkonduktor Suhu Ruang**. Saat ini, sebagian besar superkonduktor membutuhkan pendinginan ekstrem menggunakan Nitrogen Cair atau Helium Cair yang sangat mahal. Jika kita bisa menemukan material yang bersifat superkonduktor pada suhu ruang ($300\text{ K}$), seluruh sistem transmisi listrik di dunia akan menjadi 100% efisien tanpa ada kehilangan daya di jalan.
+
+# 6. Hukum Ohm dan Mekanisme Konduksi
+
+Hukum Ohm adalah prinsip dasar yang menjelaskan bagaimana muatan listrik merespons tekanan elektrik (tegangan). Untuk memahami mengapa hukum ini bekerja, kita harus melihat ke dalam struktur atom material dan membandingkannya dengan aliran fluida di dalam pipa.
+
+## 6.1 Hukum Ohm: Pandangan Makroskopik
+
+Hukum Ohm menyatakan bahwa arus listrik ($I$) yang mengalir melalui suatu konduktor berbanding lurus dengan beda potensial ($V$) yang diberikan.
+
+$$V = I \cdot R$$
+
+### Material Ohmik vs. Non-Ohmik
+
+Kita membedakan material menjadi dua kategori:
+
+- **Material Ohmik:** Material (seperti logam) yang memiliki resistansi ($R$) konstan. Grafiknya berupa garis lurus melalui titik asal, di mana kemiringannya (_slope_) adalah $1/R$.
+- **Material Non-Ohmik:** Material yang resistansinya berubah-ubah bergantung pada besar arus atau tegangan yang diberikan (contoh: dioda, transistor, atau gas terionisasi). Grafiknya berbentuk kurva melengkung.
+
+![Kurva IV untuk material ohmik dan non-ohmik.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771727352348.png)
+
+## 6.2 Pandangan Mikroskopik: Mengapa Hukum Ohm Terjadi?
+
+Mengapa arus sebanding dengan tegangan? Hal ini dapat dijelaskan melalui **Model Klasik Konduksi (Model Drude)**:
+
+1. **Kisi Ion dan Elektron Bebas:** Logam digambarkan sebagai kisi-kisi ion positif yang diam, dikelilingi oleh "gas" elektron bebas yang bergerak acak akibat energi termal.
+2. **Tumbukan dan Waktu Relaksasi (**$\tau$**):** Tanpa medan listrik, gerakan neto elektron adalah nol. Saat medan listrik ($E$) diberikan, elektron mengalami percepatan $a = \frac{eE}{m_e}$, namun pergerakannya terhambat oleh tumbukan dengan ion kisi.
+3. **Waktu Tumbukan Rata-rata (**$\tau$**):** Kecepatan hanyut ($v_d$) tercapai dalam waktu rata-rata antar tumbukan ($\tau$):
+
+	$$v_d = \frac{eE}{m_e} \tau$$
+
+4. **Penurunan Resistivitas (**$\rho$**):** Dari hubungan $J = n e v_d$, kita mendapatkan:
+
+	$$\rho = \frac{m_e}{e^2 n \tau}$$
+
+	Hukum Ohm berlaku jika $\rho$ (dan $\tau$) tidak bergantung pada medan listrik $E$.
+
+Secara lebih lengkap, mengapa Hukum Ohm ($V = IR$) bisa terjadi? Mengapa arus sebanding dengan tegangan? Untuk menjawabnya, kita menggunakan **Model Drude** (Model Klasik Konduksi Listrik) yang diusulkan oleh Paul Drude pada tahun 1900.
+
+### 1. Model Drude: Logam sebagai "Gas Elektron"
+
+Sebuah logam konduktor digambarkan secara mikroskopis sebagai berikut:
+
+- **Kisi Ion (Ion Lattice):** Atom-atom logam yang telah melepaskan elektron valensinya tersusun rapi dalam kisi tiga dimensi. Ion-ion ini bermuatan positif dan dianggap diam di tempat (hanya bergetar karena suhu).
+- **Elektron Bebas:** Elektron valensi yang lepas bergerak bebas di seluruh bagian logam, mirip dengan molekul gas dalam wadah.
+- **Kesetimbangan Termal:** Tanpa adanya medan listrik, elektron bergerak acak dengan kecepatan termal yang sangat tinggi, yang disebut laju _root-mean-square_ ($v_{rms}$).
+
+### 2. Gerakan Acak vs. Gerakan Hanyut
+
+#### A. Laju Termal ($v_{rms}$)
+
+Elektron selalu bergerak karena energi panas. Pada suhu ruang ($300\text{ K}$), laju rata-rata elektron sangat fantastis:
+
+$$v_{rms} = \sqrt{\frac{3kT}{m_e}} \approx 1,17 \times 10^5 \text{ m/s}$$
+
+Namun, karena gerakannya acak ke segala arah, perpindahan neto muatannya adalah **nol**.
+
+#### B. Pengaruh Medan Listrik ($E$)
+
+Ketika beda potensial diberikan, muncul medan listrik ($E$) di dalam kawat. Medan ini memberikan gaya elektrostatik pada elektron:
+
+$$F = eE$$
+
+Gaya ini menghasilkan percepatan ($a$):
+
+$$a = \frac{F}{m_e} = \frac{eE}{m_e}$$
+
+#### C. Kecepatan Hanyut ($v_d$) dan Waktu Relaksasi ($\tau$)
+
+Elektron tidak terus bertambah cepat hingga tak terhingga karena mereka menabrak ion-ion kisi. Waktu rata-rata antara dua tumbukan disebut **Waktu Relaksasi** atau **Waktu Tumbukan** ($\tau$). Kecepatan tambahan yang didapat elektron akibat medan listrik sebelum menabrak sesuatu disebut laju hanyut:
+
+$$v_d = a\tau = \frac{eE}{m_e}\tau$$
+
+### 3. Penurunan Matematis Hukum Ohm
+
+Dari pelajaran sebelumnya, kita tahu bahwa densitas arus ($J$) adalah:
+
+$$J = n e v_d$$
+
+Jika kita substitusikan nilai $v_d$ dari model Drude ke dalam persamaan $J$:
+
+$$J = n e \left(\frac{eE}{m_e}\tau \right) \implies J = \left(\frac{n e^2 \tau}{m_e} \right) E$$
+
+Persamaan ini dapat disusun ulang menjadi:
+
+$$E = \left(\frac{m_e}{n e^2 \tau} \right) J$$
+
+Dalam Fisika, hubungan ini sering ditulis sebagai $E = \rho J$. Maka, kita berhasil menemukan definisi mikroskopis dari **Resistivitas (**$\rho$**)**:
+
+$$\rho = \frac{m_e}{n e^2 \tau}$$
+
+**Kesimpulan Penting:**
+
+Logam dikatakan mematuhi **Hukum Ohm** jika nilai $\rho$ tetap konstan, yang berarti waktu relaksasi ($\tau$) tidak bergantung pada kuat medan listrik ($E$).
+
+![Ilustrasi tumbukan elektron.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771728295737.png)
+
+### 4. Analisis Numerik pada Tembaga
+
+Mari kita lihat angka-angka nyata untuk kawat tembaga (Cu) sepanjang $10\text{ m}$ yang diberi tegangan $10\text{ V}$:
+
+- **Medan Listrik (**$E$**):** $V/L = 10\text{ V} / 10\text{ m} = 1\text{ V/m}$.
+- **Waktu Relaksasi (**$\tau$**):** Sekitar $3 \times 10^{-14}\text{ s}$ (sangat singkat!).
+- **Laju Hanyut (**$v_d$**):**
+
+	$$v_d = \frac{(1,6 \times 10^{-19}\text{ C})(1\text{ V/m})}{9,1 \times 10^{-31}\text{ kg}} (3 \times 10^{-14}\text{ s}) \approx 5 \times 10^{-3}\text{ m/s}$$
+
+**Makna Hasil:**
+
+Elektron hanya "bergeser" sejauh $5\text{ mm}$ **setiap detiknya**. Bandingkan dengan kecepatan acaknya ($v_{rms}$) yang mencapai $117.000\text{ meter}$ **per detik**.
+
+**Analogi:**
+
+Bayangkan elektron sebagai segerombolan lebah yang sangat agresif terbang acak dengan kecepatan tinggi di dalam sebuah terowongan ($v_{rms}$). Kemudian, ada angin sepoi-sepoi yang meniup mereka perlahan ke satu arah ($v_d$). Meskipun setiap lebah terbang sangat cepat ke sana kemari, seluruh kawanan lebah tersebut hanya berpindah secara perlahan di sepanjang terowongan. Angin sepoi-sepoi inilah yang kita sebut sebagai arus listrik.
+
+## 6.3 Analogi Fenomena Transpor: Hukum Ohm dan Hukum Poiseuille
+
+Dalam fisika, kita sering menemukan bahwa alam bekerja dengan pola yang serupa meskipun dalam medium yang berbeda. Hubungan antara listrik dinamis dan mekanika fluida adalah contoh klasik dari "Fenomena Transpor", di mana sesuatu (muatan atau massa) berpindah karena adanya dorongan.
+
+### 1. Perbandingan Struktural
+
+Kedua hukum ini memiliki bentuk matematika yang identik: **Aliran = (Dorongan) / Hambatan**.
+
+#### A. Hukum Poiseuille (Fluida)
+
+Mengatur aliran fluida laminer (tenang) di dalam pipa:
+
+$$F = \frac{P_1 - P_2}{R}$$
+
+- $F$ **(Debit):** Laju aliran volume (berapa banyak air yang lewat per detik).
+- $P_1 - P_2$ **(Beda Tekanan):** Gaya dorong yang disebabkan oleh pompa atau gravitasi.
+- $R$ **(Hambatan Fluida):** Bergantung pada viskositas cairan dan geometri pipa (panjang dan radius).
+
+#### B. Hukum Ohm (Listrik)
+
+Mengatur aliran muatan listrik di dalam konduktor:
+
+$$I = \frac{V_1 - V_2}{R}$$
+
+- $I$ **(Arus):** Laju aliran muatan (berapa banyak Coulomb yang lewat per detik).
+- $V_1 - V_2$ **(Beda Potensial):** Gaya dorong (GGL) yang disediakan oleh baterai atau generator.
+- $R$ **(Hambatan Listrik):** Bergantung pada resistivitas bahan dan geometri kawat.
+
+### 2. Pemetaan Besaran Fisis
+
+Untuk mempermudah pemahaman, kita dapat memetakan setiap komponen listrik ke komponen fluida:
+
+1. **Arus (**$I$**)** $\leftrightarrow$ **Debit (**$F$**):**
+
+	Arus dalam Ampere ($C/s$) secara langsung analog dengan debit air dalam liter/menit atau $m^3/s$. Keduanya mengukur "berapa banyak sesuatu yang lewat melalui penampang dalam satu satuan waktu."
+
+2. **Konduktor/Kawat** $\leftrightarrow$ **Pipa:**
+
+	Kabel dengan resistansi kecil diibaratkan sebagai pipa yang sangat panjang namun memiliki diameter besar sehingga hambatan geseknya kecil.
+
+3. **Beda Potensial (**$V$**)** $\leftrightarrow$ **Beda Tekanan (**$P$**):**
+
+	Tegangan adalah "tekanan elektrik". Tanpa beda tekanan, air tidak mengalir. Tanpa beda potensial, elektron tidak akan bergerak secara neto.
+
+### 3. Analogi Rangkaian DC dan Aliran Tertutup
+
+![Analogi untai DC dengan aliran air.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771733415589.png)
+
+Gambar ini mengilustrasikan sebuah sistem loop tertutup yang sangat elegan untuk menjelaskan hukum kekekalan:
+
+#### A. Pompa vs Baterai
+
+- Dalam sistem air, **Pompa** meningkatkan tekanan air untuk memulai sirkulasi.
+- Dalam sistem listrik, **Baterai** meningkatkan potensial muatan untuk memulai arus.
+
+#### B. Hukum Kekekalan (Conservation Laws)
+
+Ini adalah poin yang paling fundamental dalam bab ini:
+
+- **Kekekalan Cairan (Conservation of Liquid):**
+
+	Dalam pipa tertutup, debit air harus sama di setiap penampang pipa. Jika pipa menyempit, air mengalir lebih cepat, tetapi jumlah liter per detiknya tetap sama. Air tidak bisa bocor atau menumpuk di dalam pipa yang solid.
+
+- **Kekekalan Muatan (Conservation of Charge):**
+
+	Dikenal sebagai **Hukum Arus Kirchhoff**. Arus listrik harus sama di setiap titik pada rangkaian seri. Muatan listrik tidak diciptakan atau dimusnahkan di dalam kawat; jumlah muatan yang keluar dari terminal positif baterai harus sama dengan yang kembali ke terminal negatif.
+
+### 4. Mengapa Analogi Ini Penting?
+
+Analogi ini membantu ilmuwan dan insinyur untuk:
+
+1. **Memvisualisasikan Arus:** Karena elektron tidak terlihat, membayangkan mereka sebagai aliran air membantu mencegah miskonsepsi (seperti anggapan bahwa muatan "habis" setelah melewati lampu).
+2. **Desain Sistem:** Konsep hambatan pada pipa (seperti penyempitan) membantu menjelaskan mengapa kawat yang tipis (luas penampang $A$ kecil) memiliki resistansi $R$ yang besar, persis seperti pipa kecil yang sulit dialiri air.
+
+**Catatan:**
+
+Meskipun analoginya sangat kuat, ingatlah satu perbedaan fisis: Dalam pipa, air memerlukan ruang kosong untuk mengalir. Dalam listrik, kawat sudah "penuh" dengan elektron bebas; arus terjadi seketika saat beda potensial diberikan karena semua elektron bergeser bersamaan seperti gerbong kereta api yang saling tersambung.
+
+### 5. Perbandingan Besaran Fisis
+
+|   |   |   |
+|---|---|---|
+|**Besaran**|**Listrik (Hukum Ohm)**|**Fluida (Hukum Poiseuille)**|
+|**Laju Aliran**|Arus ($I$) dalam Ampere ($C/s$)|Debit Aliran ($F$) dalam $m^3/s$|
+|**Pendorong**|Beda Potensial ($\Delta V$)|Beda Tekanan ($\Delta P$)|
+|**Penghambat**|Resistansi Listrik ($R$)|Hambatan Pipa ($R_{f}$)|
+|**Sumber**|Baterai / Generator|Pompa|
+|**Media**|Kawat Konduktor|Pipa|
+
+### 6. Persamaan Identik
+
+- **Hukum Ohm:** $I = \frac{V_1 - V_2}{R}$
+- **Hukum Poiseuille:** $F = \frac{P_1 - P_2}{R}$
+
+![](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771733220272.png)
+
+### 7. Batasan Analogi
+
+Sebagai catatan kritis, meskipun sangat membantu, analogi ini memiliki batas:
+
+- Dalam pipa, molekul air bergerak seragam. Dalam kabel, elektron bergerak acak dengan kecepatan termal tinggi, namun "hanyut" (drift) sangat lambat secara neto.
+- Aliran air memerlukan pipa yang kosong untuk mengalir, sementara elektron sudah "siap tersedia" di seluruh bagian konduktor logam bahkan sebelum tegangan diberikan.
+
+**Simpulan:**
+
+Hukum Ohm dan Hukum Poiseuille mencerminkan prinsip universal alam: bahwa **Aliran** selalu sebanding dengan **Dorongan** dan berbanding terbalik dengan **Hambatan**.
+
+# 7. Komponen Resistor dan Analisis Rangkaian
+
+Dalam praktek elektronika dan fisika eksperimental, kita memerlukan alat untuk mengontrol besar arus yang mengalir. Komponen ini disebut **Resistor**. Bab ini akan membahas bagaimana kita mengenali nilai sebuah resistor dan bagaimana perilakunya saat disusun dalam berbagai konfigurasi.
+
+## 7.1 Resistor: Pengendali Arus Listrik
+
+Resistor adalah komponen elektronika pasif yang didesain untuk memberikan nilai hambatan ($R$) tertentu. Fungsi utama resistor adalah:
+
+- **Mengontrol Arus:** Membatasi aliran muatan di berbagai bagian rangkaian agar komponen sensitif (seperti LED atau IC) tidak terbakar.
+- **Pembagi Tegangan:** Menurunkan potensial listrik sesuai kebutuhan sirkuit.
+
+Resistor dapat ditemukan dalam bentuk diskret (memiliki kaki untuk disolder) atau terintegrasi di dalam chip silikon (IC).
+
+## 7.2 Identifikasi Nilai Resistor (Cara Membaca)
+
+Karena ukuran resistor seringkali sangat kecil, nilainya tidak dicetak dalam angka biasa, melainkan menggunakan kode warna atau kode angka (SMD).
+
+### Resistor Pita Warna (Through-Hole)
+
+Nilai resistansi ditunjukkan oleh urutan gelang warna pada tubuh resistor.
+
+**A. Sistem 4 Pita Warna:**
+
+1. **Pita 1:** Digit angka pertama.
+2. **Pita 2:** Digit angka kedua.
+3. **Pita 3:** Faktor pengali (Multiplier) – pangkat dari 10.
+4. **Pita 4:** Toleransi (Emas = 5%, Perak = 10%, Tanpa warna = 20%).
+
+_Contoh:_ Merah (2), Biru (6), Hijau ($10^5$), Perak (10%).
+
+![Resistor 4 warna.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771742690315.png)
+
+- Nilai: $26 \times 10^5\ \Omega = 2,6\ \text{M}\Omega$.
+- Artinya, nilai asli resistor berada di rentang $2,6\ \text{M}\Omega \pm 10\%$.
+
+**B. Sistem 5 Pita Warna:**
+
+![Resistor 5 pita warna.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771742630858.png)
+
+Digunakan untuk resistor presisi tinggi.
+
+1. **Pita 1, 2, 3:** Tiga digit angka pertama.
+2. **Pita 4:** Multiplier.
+3. **Pita 5:** Toleransi (Cokelat biasanya $\pm 1\%$).
+
+### Resistor SMD (Surface Mount Device)
+
+Ditemukan pada perangkat modern seperti HP atau laptop. Menggunakan kode angka:
+
+![Resistor SMD.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771742740424.png)
+
+- **Model 3 Digit (ABC):** AB adalah angka, C adalah jumlah nol.
+	- Contoh: `101` $\implies 10 \times 10^1 = 100\ \Omega$.
+- **Model 4 Digit (ABCD):** ABC adalah angka, D adalah jumlah nol.
+	- Contoh: `1002` $\implies 100 \times 10^2 = 10.000\ \Omega$ atau $10\ \text{k}\Omega$.
+
+## 7.3 Rangkaian Resistor Seri
+
+Rangkaian seri adalah susunan di mana resistor dihubungkan ujung-ke-ujung sehingga hanya ada **satu jalur** untuk arus mengalir.
+
+![Rangkaian resistor seri.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771742854704.png)
+
+**Karakteristik Utama:**
+
+1. **Arus Sama:** Arus yang melewati setiap resistor adalah identik ($I_{tot} = I_1 = I_2 =...$).
+2. **Tegangan Terbagi:** Total tegangan baterai adalah jumlah dari tegangan pada tiap resistor ($\Delta V = \Delta V_1 + \Delta V_2 +...$).
+3. **Hambatan Pengganti (**$R_{eq}$**):**
+
+	$$R_{eq} = R_1 + R_2 + R_3 +...$$
+
+	_Catatan:_ $R_{eq}$ _seri selalu lebih besar dari hambatan individu terbesar._
+
+**Risiko:** Jika satu komponen putus (sirkuit terbuka), maka seluruh rangkaian akan mati.
+
+## 7.4 Rangkaian Resistor Paralel
+
+Rangkaian paralel adalah susunan di mana semua ujung resistor dihubungkan pada dua titik yang sama.
+
+![Rangkaian resistor paralel](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771742941335.png)
+
+**Karakteristik Utama:**
+
+1. **Tegangan Sama:** Setiap resistor mendapatkan beda potensial yang sama dari sumber ($\Delta V_{tot} = \Delta V_1 = \Delta V_2 =...$).
+2. **Arus Terbagi:** Arus total akan terbagi ke setiap cabang sesuai nilai hambatannya ($I_{tot} = I_1 + I_2 +...$).
+3. **Hambatan Pengganti (**$R_{eq}$**):**
+
+	$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} +...$$
+
+	_Catatan:_ $R_{eq}$ _paralel selalu lebih kecil dari hambatan individu terkecil._
+
+**Keuntungan:** Perangkat beroperasi secara independen. Jika satu lampu mati, lampu lain di cabang berbeda tetap menyala. Ini adalah standar instalasi listrik rumah tangga.
+
+## 7.5 Rangkaian Kombinasi (Seri-Paralel)
+
+Dalam banyak kasus, kita menemui rangkaian campuran. Untuk menyelesaikannya, kita harus menggunakan metode **penyederhanaan bertahap**.
+
+**Langkah Penyelesaian:**
+
+1. Identifikasi bagian terkecil yang murni seri atau murni paralel.
+2. Hitung hambatan ekuivalen bagian tersebut dan ganti dengan satu resistor imajiner.
+3. Ulangi langkah tersebut hingga rangkaian hanya menyisakan satu resistor tunggal ($R_{eq}$ akhir).
+
+_Contoh Analisis:_
+
+- Tahap 1: Resistor $8,0\ \Omega$ dan $4,0\ \Omega$ (Seri) $\implies 12,0\ \Omega$.
+- Tahap 2: Resistor $6,0\ \Omega$ dan $3,0\ \Omega$ (Paralel) $\implies \frac{1}{R} = \frac{1}{6} + \frac{1}{3} = \frac{3}{6} \implies 2,0\ \Omega$.
+- Tahap 3: Hasil tahap 1 dan 2 sekarang tersusun seri ($12,0\ \Omega + 2,0\ \Omega$) $\implies R_{eq}$ total adalah $14,0\ \Omega$.
+
+![Rangkaian kombinasi.](attachments/Materi%20Kuliah%203%20Fisika%20Dasar%20II%20%E2%80%93%20Listrik%20Dinamis%201-1771743658157.png)
+
+**Simpulan Konseptual:**
+
+Rangkaian seri digunakan untuk menjumlahkan hambatan, sedangkan rangkaian paralel digunakan untuk menyediakan jalur alternatif bagi arus dan menjaga tegangan tetap stabil di setiap beban.
+
+# 8. Daya dalam Rangkaian Listrik
+
+Daya listrik adalah konsep yang menghubungkan fenomena kelistrikan dengan hukum kekekalan energi. Konsep ini menjelaskan seberapa cepat energi listrik diubah menjadi bentuk energi lain.
+
+## 8.1 Mekanisme Perubahan Energi
+
+Dalam sebuah rangkaian tertutup yang terdiri dari baterai dan resistor, terjadi transformasi energi secara terus-menerus:
+
+1. **Energi Kimia ke Energi Potensial:** Di dalam baterai, energi kimia diubah menjadi energi potensial listrik saat muatan bergerak dari terminal rendah ke terminal tinggi.
+2. **Peningkatan Energi Potensial:** Saat muatan $Q$ bergerak melewati baterai (dari $a$ ke $b$), energi potensial sistem meningkat sebesar $\Delta U = Q \Delta V$.
+3. **Disipasi menjadi Energi Internal:** Saat muatan tersebut mengalir melewati resistor ($R$), energi potensial listrik tersebut "hilang" karena bertumbukan dengan atom-atom dalam resistor. Energi ini tidak musnah, melainkan berubah menjadi **energi internal** (getaran atom meningkat), yang kita rasakan sebagai **panas**.
+4. **Arah Arus:** Sesuai konvensi, aliran muatan positif efektif bergerak searah jarum jam (dari kutub + ke -).
+
+## 8.2 Definisi dan Formulasi Daya
+
+**Daya Listrik (**$P$**)** didefinisikan sebagai laju energi yang diubah dari energi listrik menjadi bentuk lain (panas, mekanik, cahaya, atau medan magnet/listrik).
+
+### Persamaan Dasar
+
+Secara matematis, daya adalah perubahan energi per satuan waktu:
+
+$$P = \frac{dU}{dt} = \frac{d(QV)}{dt} = V \frac{dQ}{dt}$$
+
+Karena $I = dQ/dt$, maka:
+
+$$P = I \cdot V$$
+
+### Variasi Rumus dengan Hukum Ohm (Disipasi Daya)
+
+Dengan mensubstitusikan Hukum Ohm ($V = IR$), kita mendapatkan dua rumus turunan yang sangat berguna untuk menghitung daya pada resistor:
+
+1. **Jika arus diketahui:** $P = I(IR) = I^2 R$
+2. **Jika tegangan diketahui:** $P = \frac{V}{R} \cdot V = \frac{V^2}{R}$
+
+- **Satuan SI:** Watt ($W$), di mana $1\text{ Watt} = 1\text{ Joule/detik}$.
+
+## 8.3 Aplikasi: Transmisi Tenaga Listrik
+
+Konsep daya menjelaskan mengapa jaringan listrik PLN menggunakan tegangan ekstra tinggi (SUTET).
+
+- **Masalah:** Kabel transmisi memiliki hambatan ($R$) yang cukup besar karena panjangnya ribuan kilometer.
+- **Kehilangan Daya:** Daya yang hilang di kabel (menjadi panas) dirumuskan dengan $P_{loss} = I^2 R$.
+- **Solusi:** Untuk mengirimkan daya yang sama ($P = VI$), jika kita menaikkan tegangan ($V$) setinggi mungkin, maka arus ($I$) akan menjadi sangat kecil. Karena arus kecil, maka nilai $I^2$ akan mengecil secara drastis, sehingga kehilangan daya di kabel dapat diminimalkan.
+
+## 8.4 Analisis Contoh Soal
+
+Mari kita bedah penyelesaian soal untuk memperkuat pemahaman:
+
+**Soal:** Kawat $R = 5\ \Omega$, arus $I = 3\text{ A}$, waktu $t = 6\text{ s}$.
+
+- **a. Daya yang diberikan (**$P$**):**
+
+	$$P = I^2 R = (3)^2 \cdot 5 = 9 \cdot 5 = 45\text{ Watt}$$
+
+	_Artinya, kawat ini mengubah energi listrik menjadi panas sebesar 45 Joule setiap detiknya._
+
+- **b. Panas yang dihasilkan (**$Q$ **atau** $E$**):**
+
+	Energi adalah daya dikali waktu ($E = P \cdot t$):
+
+	$$E = 45\text{ W} \cdot 6\text{ s} = 270\text{ Joule}$$
+
+	- **Konversi ke Kalori:** Karena $1\text{ Joule} \approx 0,239\text{ kalori}$, maka:
+
+		$$270 \cdot 0,239 = 64,53\text{ kalori}$$
+
+**Simpulan:**
+
+Daya listrik memberi tahu kita tentang efisiensi dan kapasitas. Dalam memilih komponen, kita tidak hanya melihat hambatannya, tetapi juga daya maksimumnya (wattage) agar komponen tidak terbakar akibat panas yang dihasilkan oleh rumus $I^2 R$.

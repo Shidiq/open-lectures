@@ -44,12 +44,21 @@ website:
           contents:
             - "Fisika Dasar II/materi-01-elektrostatika-1/index.qmd"
             - "Fisika Dasar II/materi-02-elektrostatika-2/index.qmd"
+        - section: "Listrik Dinamis"
+          contents:
+            - "Fisika Dasar II/materi-03-listrik-dinamis-1/index.qmd"
+            - "Fisika Dasar II/materi-04-listrik-dinamis-2/index.qmd"
+        - section: "kemagnetan"
+          contents:
+            - "Fisika Dasar II/materi-05-kemagnetan-1/index.qmd"
+            - "Fisika Dasar II/materi-06-kemagnetan-2/index.qmd"
+            - "Fisika Dasar II/materi-07-kemagnetan-3/index.qmd"
 
   page-navigation: true
 
   page-footer:
     left: |
-      &copy; 2024 Departemen Fisika, FMIPA UGM. Konten berlisensi [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+      &copy; 2026 Departemen Fisika, FMIPA UGM. Konten berlisensi [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
     right: |
       Dibuat dengan [Quarto](https://quarto.org) &bull; [Kode sumber](https://github.com/Shidiq/open-lectures)
     background: dark

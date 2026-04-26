@@ -1,0 +1,532 @@
+# BAB 1: Memahami Hukum Ampere
+
+## Pendahuluan
+
+Kita akan membahas salah satu pilar utama dalam elektromagnetika, yaitu **Hukum Ampere**. Jika sebelumnya kita telah mempelajari Hukum Biot-Savart untuk menghitung medan magnet dari arus listrik, kalian mungkin menyadari bahwa perhitungannya seringkali melibatkan integral yang rumit. Hukum Ampere hadir sebagai "jalan pintas" yang elegan, mirip dengan bagaimana Hukum Gauss memudahkan kita di materi elektrostatika.
+
+## 1. Konsep Dasar: Mengapa Hukum Ampere?
+
+Hukum Ampere adalah alat yang sangat kuat, namun ia memiliki syarat khusus: **Simetri Tinggi**.
+
+Secara matematis, Hukum Ampere dinyatakan dalam bentuk integral lintasan tertutup:
+
+$$\oint\vec{B}\bullet d\vec{l}=\mu_{0}I$$
+
+**Apa arti persamaan ini?**
+
+Bayangkan kita membuat sebuah "tali" imajiner (yang kita sebut _Amperian Loop_) yang melingkari arus listrik. Jika kita menjumlahkan seluruh medan magnet ($B$) di sepanjang tali tersebut ($dl$), hasilnya akan selalu sama dengan konstanta permeabilitas vakum ($\mu_{0}$) dikalikan dengan total arus ($I$) yang menembus area di dalam tali tersebut.
+
+Jika sistemnya simetris (seperti kawat bulat atau solenoida), nilai $B$ biasanya konstan di sepanjang lintasan, sehingga kita bisa mengeluarkannya dari integral dan menghitungnya dengan sangat cepat.
+
+![Ilustrasi amperian loop, medan magnet melingkar sepanjang kawat berbanding lurus dengan besarnya arus listrik.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774396001949.png)
+
+## 2. Perhitungan Medan Magnet pada Berbagai Geometri
+
+Mari kita terapkan konsep tadi pada beberapa bentuk benda yang sering kita temui di laboratorium dan industri.
+
+### A. Kawat Lurus Panjang
+
+Bayangkan sebuah kawat silinder dengan jari-jari $a$ yang dialiri arus $I$. Kita ingin tahu berapa medan magnet di dalam dan di luarnya.
+
+1. **Di luar kawat (**$R > a$**):** Ini adalah kasus paling umum. Semakin jauh kita dari kawat, medan magnetnya semakin lemah. Persamaannya:
+
+	$$B=\frac{\mu_{0}I}{2\pi R}$$
+
+	Perhatikan bahwa $2\pi R$ adalah keliling lingkaran lintasan Amperian kita.
+
+	Pemilihan loop yang tegak lurus kawat dilakukan untuk menyederhanakan perhitungan karena nilai atau besar B konstan (hanya fungsi jarak, R) dan arah B sejajar dengan lintasan. Oleh karena itu, integral garis dalam Hukum Ampere menjadi $\oint\vec{B}\bullet d\vec{l}=B(2\pi R)$, untuk arus tertutup dalam lintasan adalah besarnya $I$, maka Hukum Ampere menjadi $2\pi RB=\mu_{0}I$.
+
+	Besarnya $B$ akan berbanding terbalik dengan $R$, semakin jauh dari kawat, maka medan magnet akan semakin kecil.
+
+2. **Di dalam kawat (**$r < a$**):** Di sini, arus yang "terperangkap" di dalam lintasan kita tidak sebesar arus total. Medan magnetnya justru meningkat secara linear dari pusat kawat hingga ke permukaannya:
+
+	$$B=\frac{\mu_{0}I}{2\pi}\frac{r}{a^{2}}$$
+
+	Persamaan $I_{\text{enclosed}} = \frac{r^{2}}{a^{2}}I$ digunakan untuk menghitung jumlah arus listrik yang berada di dalam sebuah lintasan imajiner (lintasan Amperian) ketika kita meninjau bagian **dalam** sebuah kawat penghantar silinder.
+
+	$I_{\text{enclosed}}$ merupakan Arus yang "terperangkap" atau dilingkupi hanya oleh lintasan berjari-jari $r$ tersebut.
+
+	**Logika Perbandingan Luas**
+
+	Persamaan ini muncul dari asumsi bahwa arus listrik terdistribusi secara **merata** di seluruh penampang kawat. Karena distribusi merata, maka rasio antara arus yang dilingkupi dengan arus total sama dengan rasio antara luas penampang lintasan Amperian dengan luas penampang kawat total:
+
+	$$\frac{I_{\text{enclosed}}}{I} = \frac{\text{Luas penampang lingkaran } r}{\text{Luas penampang kawat total } a}$$
+
+	$$\frac{I_{\text{enclosed}}}{I} = \frac{\pi r^2}{\pi a^2}$$
+
+	Dengan mencoret nilai $\pi$, kita mendapatkan:
+
+	$$I_{\text{enclosed}} = \frac{r^{2}}{a^{2}}I$$
+
+### B. Lembar Arus Tak Berhingga
+
+Jika kita memiliki sebuah lempengan logam lebar yang dialiri arus, kita menggunakan lintasan berbentuk persegi. Hasilnya cukup mengejutkan: medan magnet di atas dan di bawah lempengan tersebut bersifat seragam (konstan) dan tidak bergantung pada jarak, selama kita masih dekat dengan lempengan tersebut.
+
+Cara menghitung **Medan Magnet ($B$) dari Lembar Arus tak berhingga** menggunakan Hukum Ampere dapat dijelaskan dalam poin-poin berikut ini.
+
+#### 1. Model Fisik
+
+- **Lembar Arus**: Lembaran ini dianggap terdiri dari kumpulan kawat tak berhingga yang sangat rapat.
+- **Karakteristik Arus**:
+	- Terdapat $n$ jumlah kawat per satuan panjang.
+	- Setiap kawat membawa arus sebesar $i$ yang arahnya masuk ke bidang layar (disimbolkan dengan tanda **X**).
+
+#### 2. Menentukan Arah Medan Magnet
+
+- Berdasarkan prinsip simetri, komponen medan magnet yang saling meniadakan membuat arah medan magnet resultan menjadi **vertikal**.
+- Medan magnet mengalir ke satu arah di atas lembaran dan ke arah sebaliknya di bawah lembaran.
+
+#### 3. Perhitungan dengan Hukum Ampere
+
+Untuk menghitung besarnya $B$, dipilih lintasan tertutup imajiner (**Amperian loop**) berbentuk persegi dengan panjang sisi $w$ yang menembus lembaran tersebut:
+
+- **Integral Garis ($\oint\vec{B}\bullet d\vec{l}$)**: Di sepanjang sisi horizontal (atas dan bawah), nilai integralnya adalah $Bw$. Di sisi vertikal, nilainya adalah 0 karena medan tegak lurus terhadap lintasan. Total integral garis adalah **$2Bw$**.
+- **Arus Terkurung ($I$)**: Total arus yang melewati persegi tersebut adalah jumlah kawat dikali arus per kawat, yaitu **$I = nwi$**.
+- **Penerapan Rumus**: Sesuai Hukum Ampere ($\oint\vec{B}\bullet d\vec{l}=\mu_{0}I$), maka $2Bw = \mu_0(nwi)$.
+
+#### 4. Kesimpulan Akhir
+
+Setelah menyederhanakan persamaan, diperoleh rumus medan magnet untuk lembar arus tak berhingga:
+
+$$B = \frac{\mu_{0}ni}{2}$$
+
+Nilai medan magnet ini bersifat **konstan**, artinya besarnya tidak bergantung pada seberapa jauh jarak titik tersebut dari lembaran arus selama lembarannya dianggap tak berhingga.
+
+![Lembar arus (current sheet) digambarkan sebagai deretan tanda "x", menandakan arus masuk ke bidang layar. Karena simetri, arah medan magnet: Ke atas di satu sisi lembar, Ke bawah di sisi lainnya. Besar medan magnet konstan pada masing-masing sisi lembar arus. Amperian loop berbentuk persegi panjang melintasi kedua sisi lembar arus: Dua sisi sejajar medan → memberi kontribusi Bw masing-masing. Dua sisi tegak lurus medan → kontribusi nol.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774397630054.png)
+
+### C. Solenoida (Kumparan Panjang)
+
+Medan magnet konstan (pada prinsipnya) dapat dihasilkan oleh lembar arus takhingga. Namun, dalam praktiknya, medan magnet konstan sering kali dihasilkan oleh solenoida.
+
+![Solenoida didefinisikan oleh arus i yang mengalir melalui kawat yang dibungkus n putaran per satuan panjang pada silinder berjari-jari a dan panjang L.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774399215445.png)
+
+Untuk menghitung medan $B$ dengan benar, kita harus menggunakan Biot-Savart, dan menjumlahkan medan dari loop yang berbeda.
+
+Jika $a \ll L$, medan $B$ adalah urutan pertama yang terkandung dalam solenoida, dalam arah aksial, dan besarnya konstan. Dalam batasan ini, kita dapat menghitung medan menggunakan Hukum Ampere.
+
+Solenoida adalah kawat yang dililitkan membentuk silinder.
+
+- **Di luar:** Medan magnetnya sangat kecil, bahkan pada solenoida ideal dianggap **nol**.
+- **Di dalam:** Medan magnetnya sangat kuat dan seragam.
+
+	Persamaannya adalah:
+
+	$$B=\mu_{0}ni$$
+
+	Di mana $n$ adalah jumlah lilitan per satuan panjang. Inilah alasan mengapa solenoida sering digunakan untuk menciptakan medan magnet yang stabil.
+
+Cara menghitung **Medan Magnet ($B$) dari Solenoid tak berhingga** menggunakan Hukum Ampere. Berikut adalah poin-poin utama penjelasannya:
+
+#### 1. Model Fisik sebagai Dua Lembar Arus
+
+Untuk mempermudah perhitungan, solenoida tak berhingga dilihat dari samping sebagai **dua lembar arus tak berhingga** yang sejajar:
+
+- Sisi atas menunjukkan arus yang masuk ke bidang (simbol **X**).
+- Sisi bawah menunjukkan arus yang keluar dari bidang (simbol titik biru).
+- **Arah Medan**: Medan magnet di antara kedua lembaran (bagian dalam solenoid) memiliki arah yang sama sehingga saling memperkuat, sedangkan di luar lembaran (bagian luar solenoid) medan magnet saling menghilangkan (bernilai **0**).
+
+#### 2. Penerapan Hukum Ampere
+
+Untuk mencari besarnya $B$ di dalam solenoid, digunakan sebuah lintasan imajiner (**Amperian loop**) berbentuk persegi dengan lebar $w$:
+
+- **Integral Garis ($\oint \vec{B} \cdot d\vec{l}$)**: Karena medan magnet di luar adalah nol dan medan di dalam sejajar dengan lintasan horizontal loop, maka hasil integralnya hanya berasal dari sisi dalam loop, yaitu **$Bw$**.
+- **Arus yang Dilingkupi ($I$)**: Total arus yang melewati lintasan persegi tersebut adalah jumlah lilitan per satuan panjang ($n$) dikali lebar loop ($w$) dikali arus per lilitan ($i$), sehingga **$I = nwi$**.
+
+#### 3. Hasil Perhitungan
+
+Dengan memasukkan nilai-nilai tersebut ke dalam persamaan Hukum Ampere ($\oint \vec{B} \cdot d\vec{l} = \mu_0 I$), didapatkan rumus akhir:
+
+$$B = \mu_0 ni$$
+
+#### 4. Catatan Penting
+
+- **Konstanta**: Medan magnet di dalam solenoid tak berhingga bersifat seragam (besarnya konstan di mana saja di dalam lilitan).
+- **Proporsionalitas**: Besarnya medan magnet sebanding dengan jumlah arus per satuan panjang ($B \propto \frac{\text{Amp}}{\text{Length}}$).
+
+### D. Toroida (Solenoida Berbentuk Donat)
+
+Jika solenoida tadi kita tekuk hingga ujung-ujungnya bertemu membentuk donat, kita mendapatkan Toroida.
+
+- **Di luar:** Tidak ada medan magnet ($B=0$). Semua medan "terkurung" di dalam donat tersebut.
+- **Di dalam:** Medannya bergantung pada jarak $r$ dari pusat donat:
+
+	$$B=\frac{\mu_{0}Ni}{2\pi r}$$
+
+Slide ini menjelaskan prinsip penghitungan **Medan Magnet ($B$) pada Toroid** menggunakan Hukum Ampere. Toroid pada dasarnya adalah solenoida yang dibengkokkan hingga ujung-ujungnya bertemu membentuk struktur seperti donat.
+
+![Toroid.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774399445499.png)
+
+Berikut adalah poin-poin utama penjelasannya:
+
+#### 1. Karakteristik Toroid
+
+- Toroid didefinisikan oleh jumlah total lilitan ($N$) dan arus ($i$) yang mengalir pada setiap lilitan tersebut.
+- **Medan magnet di luar toroid bernilai 0** ($B=0$). Hal ini dibuktikan dengan meninjau integrasi medan magnet pada lintasan lingkaran di luar struktur toroid, di mana arus total yang dilingkupi saling meniadakan.
+
+#### 2. Penghitungan Medan Magnet di Dalam Toroid
+
+Untuk mencari nilai $B$ di bagian dalam toroid, kita menggunakan lintasan Amperian berupa lingkaran dengan jari-jari $r$ yang berpusat di tengah-tengah toroid.
+
+Langkah-langkah matematisnya adalah sebagai berikut:
+
+- **Integral Garis ($\oint\vec{B}\bullet d\vec{l}$):** Keliling lintasan Amperian adalah $2\pi r$, sehingga hasil integralnya adalah $B(2\pi r)$.
+- **Arus Total yang Dilingkupi ($I$):** Karena ada $N$ lilitan yang masing-masing membawa arus $i$, maka total arus yang menembus area lintasan adalah $Ni$.
+- **Penerapan Hukum Ampere:** Dengan memasukkan nilai tersebut ke persamaan $\oint\vec{B}\bullet d\vec{l}=\mu_{0}I$, diperoleh rumus akhir:
+
+	$$B=\frac{\mu_{0}Ni}{2\pi r}$$
+
+#### 3. Penjelasan Visual pada Diagram
+
+- **Tanda (X) Kuning:** Menunjukkan arus yang masuk ke dalam bidang lilitan bagian dalam.
+- **Titik Kuning:** Menunjukkan arus yang keluar dari bidang pada lilitan bagian luar.
+- **Garis Biru ($r$):** Melambangkan jari-jari dari pusat toroid ke titik di mana kita menghitung medan magnet.
+
+Toroid sering diaplikasikan pada perangkat seperti **transformator toroidal** atau transformator _switching_ karena kemampuannya mengurung medan magnet di dalam strukturnya, sehingga meminimalkan gangguan induksi pada komponen lain di sekitarnya.
+
+## 3. Aplikasi Teknologi: Dari Bel Pintu hingga Pembangkit Listrik
+
+Ilmu yang kita pelajari di atas bukan sekadar rumus di atas kertas. Hukum Ampere adalah dasar dari teknologi modern:
+
+1. **Aplikasi Solenoida:**
+	
+	- **Relai & Sakelar:** Menggunakan arus kecil untuk menarik tuas magnetik guna menyalakan mesin besar.
+	- **Peralatan Rumah Tangga:** Bel pintu (ketika ditekan, solenoida menarik pemukul) dan kunci pintu otomatis pada mobil.
+	- **Sektor Industri:** Katup solenoid untuk mengatur aliran gas/cairan secara presisi.
+		
+2. **Aplikasi Toroida:**
+	
+	- **Trafo Toroidal:** Kalian mungkin sering melihat komponen berbentuk donat di dalam perangkat audio atau _switching power supply_. Toroida sangat efisien karena mampu mengurung medan magnet di dalamnya, sehingga tidak mengganggu komponen elektronik lain di sekitarnya (minim interferensi).
+
+## Penutup
+
+Sebagai kesimpulan, Hukum Ampere mengajarkan kita bahwa ada hubungan langsung antara geometri arus dan kekuatan medan magnet yang dihasilkan. Memahami hukum ini adalah langkah awal bagi kalian untuk bisa merancang motor listrik, generator, atau sistem sensor di masa depan.
+
+\newpage
+
+# BAB 2: Induksi Elektromagnetik & Fluks Magnetik
+
+## 2.1. Konsep Dasar: Keajaiban Perubahan
+
+Jika pada materi sebelumnya (Hukum Ampere) kita belajar bahwa arus listrik dapat menghasilkan medan magnet, sekarang kita akan membalik logikanya: **Dapatkah medan magnet menghasilkan arus listrik?**
+
+Jawabannya ditemukan oleh Michael Faraday melalui eksperimen sederhana namun revolusioner. Faraday menemukan bahwa jika kita menggerakkan magnet mendekati atau menjauhi sebuah kumparan kawat, akan muncul arus listrik pada kawat tersebut.
+
+**Hal penting yang perlu dicatat:** Arus ini _hanya_ muncul saat magnet bergerak. Jika magnet diam di dalam kumparan, tidak ada listrik yang dihasilkan. Fenomena munculnya tegangan akibat perubahan lingkungan magnetik ini kita sebut sebagai **Gaya Gerak Listrik (GGL) Induksi**.
+
+![Ilustrasi induksi elektromagnetik.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774398872898.png)
+
+**Contoh di sekitar kita:** Prinsip ini digunakan pada pembaca kartu (_card reader_). Saat kalian menggesekkan kartu magnetik, perubahan medan magnet pada strip kartu diinduksi menjadi sinyal listrik yang bisa dibaca oleh mesin.
+
+## 2.2. Fluks Magnetik ($\Phi_B$): Menghitung Garis Gaya
+
+Sebelum kita menghitung listriknya, kita perlu memahami konsep "kepadatan" medan magnet yang melewati suatu area. Inilah yang disebut dengan **Fluks Magnetik**.
+
+Bayangkan Fluks Magnetik sebagai jumlah "garis-garis" medan magnet yang menembus sebuah jendela (luas penampang).
+
+- **Satuan:** Weber (Wb).
+- **Persamaan:**
+
+	$$\Phi_B = \vec{B} \cdot \vec{A} = BA \cos \theta$$
+
+Di sini, $\theta$ adalah sudut antara arah medan magnet dengan garis normal (garis tegak lurus) permukaan area tersebut.
+
+**Kapan fluksnya maksimal?**
+
+Fluks akan bernilai maksimal ketika medan magnet menembus area secara tegak lurus (sudut $\theta = 0^\circ$, sehingga $\cos 0^\circ = 1$). Sebaliknya, jika medan magnet sejajar dengan permukaan (tidak ada yang menembus), maka fluksnya adalah nol.
+
+![Fluks medan magnet.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774398932428.png)
+
+## 2.3. Hukum Induksi Faraday: Rumus Utama
+
+Setelah memahami fluks, barulah kita masuk ke inti penemuan Faraday. Faraday merumuskan bahwa besarnya GGL ($\mathcal{E}$) yang dihasilkan sebanding dengan seberapa cepat fluks magnetik itu berubah terhadap waktu.
+
+**Persamaannya adalah:**
+
+$$\mathcal{E} = -\frac{d\Phi_B}{dt}$$
+
+Jika kita memiliki sebuah kumparan dengan banyak lilitan ($N$), maka tegangannya akan berlipat ganda:
+
+$$\mathcal{E} = -N\frac{d\Phi_B}{dt}$$
+
+**Mengapa ada tanda negatif (**$-$**) di sana?** Tanda itu bukan sekadar hiasan. Itu melambangkan Hukum Lenz (yang akan kita bahas di sesi berikutnya), yang menyatakan bahwa arah arus induksi selalu melawan perubahan yang menghasilkannya.
+
+## 2.4. Tiga Cara Mengubah Fluks Magnetik
+
+Sebagai calon insinyur atau ilmuwan, kalian harus tahu bagaimana cara memanipulasi keadaan agar listrik bisa dihasilkan. Berdasarkan rumus $\Phi_B = BA \cos \theta$, ada tiga variabel yang bisa kita utak-atik untuk mengubah fluks dan menghasilkan GGL:
+
+1. **Mengubah Besaran Medan Magnet (**$B$**):** Misalnya dengan menggerakkan magnet mendekat/menjauh atau memperkuat arus pada elektromagnet di dekatnya.
+2. **Mengubah Luas Penampang (**$A$**):** Misalnya dengan menarik atau merentangkan loop kawat sehingga luas yang terkena medan magnet berubah.
+3. **Mengubah Sudut Orientasi (**$\theta$**):** Inilah cara yang paling umum digunakan di pembangkit listrik (PLTA, PLTU). Kita memutar kumparan di dalam medan magnet menggunakan turbin. Karena sudutnya terus berubah secara berputar, fluksnya pun berubah secara terus-menerus, menghasilkan arus bolak-balik (AC).
+
+## Latihan Soal
+
+Latihan soal ini membahas penerapan **Hukum Induksi Faraday** pada sistem dua solenoida yang tersusun secara konsentris (satu di dalam yang lain). Tujuannya adalah menghitung besar Gaya Gerak Listrik (GGL) induksi yang dihasilkan pada kumparan dalam ketika arus pada kumparan luar berubah.
+
+![Ilustrasi latihan soal.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774399386477.png)
+
+Berikut adalah penjelasan langkah demi langkah berdasarkan persamaan yang tertera:
+
+### 1. Memahami Konfigurasi Sistem
+
+- **Solenoida S (Luar):** Bertindak sebagai sumber medan magnet. Memiliki rapat lilitan $n_s$ dan dialiri arus $i$.
+- **Solenoida C (Dalam):** Bertindak sebagai tempat terjadinya induksi. Berada di dalam medan magnet yang dihasilkan oleh solenoida S.
+
+### 2. Menentukan Fluks Magnetik Awal ($\Phi_{B,i}$)
+
+Medan magnet di dalam solenoida panjang $S$ adalah $B_s = \mu_0 i n_s$. Fluks magnetik yang menembus penampang solenoida $C$ dihitung dengan mengalikan medan magnet luar ($B_s$) dengan luas penampang solenoida dalam ($A_c$):
+
+$$\Phi_{B,i} = B_s A_c = (\mu_0 i n_s) A_c$$
+
+### 3. Menghitung Laju Perubahan Fluks ($\frac{\partial\Phi_B}{\partial t}$)
+
+Karena arus $i$ pada solenoida $S$ berkurang hingga menjadi $0$ dalam waktu $t$ detik, maka medan magnet dan fluksnya pun akan turun menjadi nol secara konstan.
+
+- **Fluks Akhir ($\Phi_{B,f}$):** $0$ (karena arus menjadi nol).
+- **Perubahan Fluks ($\Delta\Phi_B$):** $\Phi_{B,f} - \Phi_{B,i} = - \Phi_{B,i}$.
+- **Laju Perubahan terhadap Waktu:**
+
+	$$\frac{\partial\Phi_B}{\partial t} = \frac{\Delta\Phi_B}{\Delta t} = \frac{0 - \Phi_{B,i}}{t}$$
+
+### 4. Menghitung GGL Induksi ($\mathcal{E}$)
+
+Berdasarkan Hukum Faraday, GGL induksi pada kumparan $C$ sebanding dengan jumlah lilitannya ($n_c$) dan laju perubahan fluks magnetik yang melaluinya:
+
+$$\mathcal{E} = n_c \frac{\partial\Phi_B}{\partial t}$$
+
+Jika kita menggabungkan semua variabelnya, besar GGL induksinya secara matematis adalah:
+
+$$\mathcal{E} = n_c \left(\frac{(\mu_0 i n_s) A_c}{t} \right)$$
+
+**Kesimpulan Logika:** Perubahan arus pada solenoida luar ($S$) menyebabkan perubahan medan magnet. Perubahan medan ini mengakibatkan perubahan fluks magnetik pada solenoida dalam ($C$), yang akhirnya membangkitkan tegangan atau GGL induksi pada solenoida tersebut.
+
+## Penutup
+
+Jadi, kuncinya bukan pada seberapa besar magnet yang kalian punya, tapi seberapa cepat kalian bisa **mengubah** fluks magnetik tersebut. Tanpa perubahan, tidak ada induksi. Tanpa induksi, tidak ada listrik di rumah kita.
+
+Selanjutnya, kita akan membahas **Hukum Lenz** untuk memahami ke mana arah arus listrik "perlawanan" itu mengalir.
+
+\newpage
+
+# BAB 3: Hukum Lenz
+
+## 3.1. Definisi: Sifat "Enggan" dari Alam
+
+Pernahkah kalian bertanya-tanya mengapa pada Hukum Faraday terdapat tanda negatif ($\mathcal{E} = -N \frac{d\Phi_B}{dt}$)? Tanda negatif itulah yang dijelaskan oleh **Hukum Lenz**.
+
+Jika Hukum Faraday memberi tahu kita **berapa besar** tegangan yang dihasilkan, Hukum Lenz memberi tahu kita **ke mana arah** arus tersebut mengalir.
+
+**Definisi Sederhana:**
+
+Hukum Lenz menyatakan bahwa arah arus induksi selalu sedemikian rupa sehingga menciptakan medan magnet yang **melawan** penyebab perubahan fluks tersebut. Dalam bahasa yang lebih santai, alam itu "keras kepala" atau "enggan terhadap perubahan". Jika kalian mencoba menambah magnet, ia akan melawannya. Jika kalian mencoba mengurangi magnet, ia akan mencoba menahannya.
+
+> The direction of any magnetic induction effect is such as to oppose the cause of the effect.
+
+![Besarnya medan meningkat, sehingga terdapat ggl induksi yang menggerakkan arus, seperti yang ditunjukkan.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774399829494.png)
+
+## 3.2. Menentukan Arah Gaya Gerak Listrik (EMF)
+
+Bagaimana cara kita menentukan arah arus secara praktis? Kita harus melihat apa yang terjadi pada fluks magnetiknya. Mari kita bedah dua skenario utama:
+
+![Hukum Lenz dan arah arus induksi](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774399862127.png)
+
+![Hukum Lenz dan arah arus induksi](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774399916946.png)
+
+### Skenario 1: Fluks Magnetik Meningkat
+
+Bayangkan kalian menggerakkan kutub Utara sebuah magnet mendekati sebuah cincin kawat (loop).
+
+1. **Penyebab:** Fluks magnetik yang menembus cincin meningkat (semakin banyak garis gaya yang masuk).
+2. **Reaksi Cincin:** Cincin tidak suka fluksnya bertambah. Maka, cincin akan menghasilkan **Arus Induksi**.
+3. **Hasil:** Arus induksi ini menciptakan medan magnet baru yang **berlawanan arah** dengan medan magnet asli.
+4. **Logika Fisika:** Jika kutub Utara magnet mendekat, cincin akan membuat kutub Utara induksi di depannya untuk "menolak" magnet tersebut agar tidak mendekat.
+
+### Skenario 2: Fluks Magnetik Menurun
+
+Sekarang bayangkan kalian menarik magnet tersebut menjauh dari cincin.
+
+1. **Penyebab:** Fluks magnetik yang menembus cincin berkurang (garis gaya semakin sedikit).
+2. **Reaksi Cincin:** Cincin tidak suka kehilangan fluks. Ia akan berusaha mempertahankan fluks yang hilang.
+3. **Hasil:** Arus induksi akan mengalir ke arah yang menghasilkan medan magnet **searah** dengan medan magnet asli.
+4. **Logika Fisika:** Jika kutub Utara magnet menjauh, cincin akan membuat kutub Selatan induksi untuk "menarik" magnet tersebut agar tidak pergi.
+
+## Mengapa Hukum Lenz Penting? (Perspektif Energi)
+
+Hukum Lenz sebenarnya adalah perwujudan dari **Hukum Kekekalan Energi**.
+
+Bayangkan jika Hukum Lenz tidak melawan perubahan (misalnya, saat magnet mendekat, cincin justru menarik magnet tersebut lebih kuat). Maka magnet akan terus bertambah cepat tanpa henti, menghasilkan energi listrik tak terbatas dari ketiadaan. Hal ini mustahil secara fisika. Jadi, perlawanan yang diberikan oleh arus induksi adalah "biaya" yang harus kita bayar (dalam bentuk usaha mekanik) untuk menghasilkan energi listrik.
+
+## Lenz's Law (EMF Direction)
+
+Penjelasan mendalam mengenai **Hukum Lenz**, khususnya terkait cara menentukan arah Gaya Gerak Listrik (GGL) atau EMF induksi.
+
+Berikut adalah poin-poin utama dari slide tersebut:
+
+### 1. Prinsip Utama: Perlawanan terhadap Perubahan
+
+Hukum Lenz menyatakan bahwa GGL induksi akan selalu **melawan perubahan fluks** magnetik yang menghasilkannya. Hal ini dinyatakan secara matematis melalui tanda negatif dalam persamaan Faraday:
+
+$$\mathcal{E} = -\frac{\Delta\Phi}{\Delta t} = -\frac{\Phi_f - \Phi_i}{t_f - t_i}$$
+
+### 2. Dua Skenario Penentuan Arah Medan Induksi
+
+Arah medan magnet baru yang dihasilkan oleh GGL induksi bergantung pada apa yang terjadi dengan fluks aslinya:
+
+- **Jika Fluks Meningkat ($\Delta\Phi > 0$):** GGL induksi akan menciptakan medan magnet baru yang arahnya **berlawanan (_opposite_)** dengan medan magnet asli. Tujuannya adalah untuk "menahan" pertambahan fluks tersebut.
+- **Jika Fluks Menurun ($\Delta\Phi < 0$):** GGL induksi akan menciptakan medan magnet baru yang arahnya **searah (_same direction_)** dengan medan magnet asli. Tujuannya adalah untuk "membantu" atau mempertahankan fluks yang sedang hilang.
+
+### 3. Catatan Penting Mengenai Kesalahpahaman Umum
+
+Di bagian bawah slide ditekankan poin yang sangat krusial untuk dipahami:
+
+- GGL **TIDAK** melawan medan magnet ($B$) atau fluks itu sendiri.
+- GGL secara spesifik melawan **PERUBAHAN** pada fluks tersebut.
+
+Artinya, jika fluksnya besar tetapi stabil (tidak berubah), maka tidak akan ada GGL induksi. GGL hanya muncul untuk bereaksi terhadap dinamika perubahan fluks.
+
+## Kesimpulan Singkat
+
+Untuk menentukan arah arus induksi, ingatlah prinsip ini:
+
+- Jika magnet **bertambah**, buat medan magnet yang **melawan**.
+- Jika magnet **berkurang**, buat medan magnet yang **membantu (searah)**.
+
+**Penutup Bagian 3**
+
+Setelah kita tahu ke mana arah arusnya, di sesi berikutnya kita akan melihat apa yang terjadi jika yang berubah bukan magnetnya, melainkan kawatnya yang bergerak memotong medan magnet. Kita akan membahas **GGL Gerak (**_**Motional EMF**_**)**.
+
+\newpage
+
+# BAB 4: GGL Gerak & Generator (Kumparan Berputar)
+
+## 4.1. Batang Konduktor Bergerak (_Motional EMF_)
+
+Sejauh ini, kita telah membahas GGL yang muncul karena magnetnya yang bergerak atau medannya yang berubah. Sekarang, bayangkan sebuah skenario berbeda: **Bagaimana jika magnetnya diam, tetapi kawatnya yang kita gerakkan memotong medan magnet tersebut?**
+
+Inilah yang disebut dengan **GGL Gerak** atau _Motional EMF_.
+
+**Logika Fisikanya:**
+
+Bayangkan sebuah batang konduktor sepanjang $L$ yang digerakkan dengan kecepatan $v$ di dalam medan magnet $B$ yang tegak lurus. Di dalam batang tersebut terdapat muatan-muatan bebas (elektron). Saat batang bergerak, muatan-muatan ini juga ikut bergerak dan merasakan gaya magnet ($F = qvB$).
+
+Gaya ini mendorong muatan positif ke satu ujung dan muatan negatif ke ujung lainnya. Pemisahan muatan ini menciptakan perbedaan potensial (tegangan) di ujung-ujung batang.
+
+**Persamaannya:**
+
+$$\mathcal{E} = vBL$$
+
+Tegangan ini akan terus ada selama batang tersebut bergerak memotong garis medan magnet. Jika batang berhenti, tegangannya pun hilang.
+
+## 4.2. Transfer Energi: Kerja Mekanik menjadi Listrik
+
+Salah satu konsep terpenting dalam fisika adalah bahwa energi tidak bisa muncul begitu saja. Untuk mendapatkan energi listrik dari batang yang bergerak tadi, kita harus melakukan **kerja mekanik**.
+
+Saat batang tersebut dihubungkan ke sebuah rangkaian dengan hambatan $R$, maka akan mengalir arus listrik. Berdasarkan Hukum Lenz, arus ini akan menciptakan gaya magnet yang **melawan** gerakan batang kita. Jadi, kita harus terus menarik batang tersebut dengan gaya luar agar kecepatannya tetap konstan.
+
+Daya listrik yang dihasilkan dari proses ini adalah:
+
+$$P = \frac{\mathcal{E}^2}{R} = \frac{(vBL)^2}{R} = \frac{B^2 L^2 v^2}{R}$$
+
+Ini membuktikan sebuah hukum universal: Daya listrik yang kita terima pada hambatan $R$ besarnya sama persis dengan daya mekanik yang kita berikan saat menarik batang tersebut. Tidak ada energi yang gratis!
+
+## 4.3. Generator (Kumparan Berputar)
+
+Aplikasi paling canggih dari konsep ini adalah **Generator Listrik**. Dalam kehidupan nyata, sangat sulit untuk terus-menerus menarik batang lurus dalam satu arah. Cara yang lebih efisien adalah dengan **memutar** kumparan di dalam medan magnet.
+
+**Bagaimana Generator Bekerja?**
+
+Saat kumparan diputar dengan kecepatan sudut $\omega$, sudut $\theta$ antara medan magnet dan permukaan kumparan akan berubah terus-menerus terhadap waktu ($\theta = \omega t$).
+
+Karena sudutnya berubah, maka fluks magnetiknya ($\Phi_B = BA \cos \omega t$) juga berubah secara periodik. Sesuai Hukum Faraday, perubahan fluks ini akan menghasilkan GGL induksi.
+
+**Persamaan GGL Generator:**
+
+Jika kumparan memiliki $N$ lilitan, maka GGL yang dihasilkan adalah:
+
+$$\mathcal{E} = NAB\omega \sin(\omega t)$$
+
+**Mengapa Listrik di Rumah Kita Disebut AC?**
+
+Perhatikan fungsi $\sin(\omega t)$ pada rumus di atas. Nilai sinus akan berubah dari positif ke negatif secara bergantian. Inilah alasan mengapa generator menghasilkan **Arus Bolak-balik (Alternating Current - AC)**. Tegangan listrik akan naik ke puncak, turun ke nol, berbalik arah ke puncak negatif, dan kembali lagi.
+
+## Penutup Bagian 4
+
+Jadi, intinya generator adalah mesin yang "memaksa" perubahan fluks magnetik melalui rotasi mekanis. Entah itu diputar oleh air (PLTA), uap panas (PLTU), atau angin, prinsip fisika yang digunakan tetap sama: mengubah energi gerak menjadi energi listrik melalui induksi magnetik.
+
+Di bagian terakhir, kita akan membahas fenomena unik yang disebut **Arus Eddy**, yaitu arus "liar" yang muncul di dalam bongkahan logam.
+
+\newpage
+
+# BAB 5: Arus Eddy (Eddy Currents)
+
+## 5.1. Definisi dan Konsep: "Arus Liar" dalam Logam
+
+Selama ini, kita selalu membayangkan arus induksi mengalir melalui lintasan kawat yang jelas (seperti loop atau kumparan). Namun, apa yang terjadi jika kita menggerakkan sepotong lempengan logam padat (seperti tembaga atau aluminium) di dalam medan magnet?
+
+Jawabannya adalah munculnya **Arus Eddy** atau sering disebut Arus Pusaran.
+
+**Bagaimana Arus ini Terbentuk?**
+
+Sesuai dengan Hukum Faraday, setiap bagian dari lempengan logam tersebut akan mengalami perubahan fluks magnetik saat bergerak. Karena logam adalah konduktor yang baik, elektron-elektron di dalamnya akan mulai mengalir membentuk jalur melingkar (seperti pusaran air di sungai). Inilah alasan mengapa disebut "Eddy", yang berarti pusaran.
+
+**Efek Gaya Hambat (Magnetic Braking):**
+
+Berdasarkan Hukum Lenz, arus Eddy ini akan menghasilkan medan magnetnya sendiri yang arahnya **melawan** medan magnet asli. Interaksi antara kedua medan magnet ini menciptakan gaya magnet ($F_m$) yang arahnya berlawanan dengan arah gerak logam tersebut.
+
+**Eksperimen Sederhana:**
+
+Jika kalian mencoba menarik lempengan aluminium melewati celah antara dua magnet yang kuat, kalian akan merasakan hambatan yang berat, seolah-olah lempengan tersebut ditarik melalui cairan yang sangat kental (madu atau oli). Padahal, aluminium bukanlah bahan feromagnetik yang bisa ditarik magnet biasa. Hambatan ini murni berasal dari arus Eddy yang berusaha "mengerem" gerakan tersebut.
+
+## 5.2. Penerapan Praktis: Dari Keamanan hingga Industri
+
+Meskipun dalam beberapa kasus arus Eddy dianggap sebagai kerugian (karena menyebabkan panas pada trafo), namun manusia telah berhasil memanfaatkannya untuk teknologi canggih:
+
+![Contoh penerapan arus Eddy.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774400327189.png)
+
+### A. Sistem Pendeteksi Logam (Airport Security)
+
+Pernahkah kalian melewati gerbang pendeteksi logam di bandara? Gerbang tersebut memiliki kumparan pemancar yang memancarkan pulsa medan magnet.
+
+1. Jika kalian membawa benda logam, medan magnet dari gerbang akan menginduksi **arus Eddy** pada benda logam tersebut.
+2. Arus Eddy ini kemudian menghasilkan medan magnet "balasan".
+3. Kumparan penerima di gerbang akan mendeteksi medan magnet balasan ini dan memicu alarm.
+
+### B. Pengujian Bahan Tak Merusak (Non-Destructive Testing / NDT)
+
+Dalam industri manufaktur pesawat terbang atau otomotif, sangat penting untuk memastikan tidak ada retakan kecil di dalam komponen logam tanpa harus membongkarnya.
+
+- **Cara kerja:** Sebuah sensor yang memancarkan arus Eddy ditempelkan pada permukaan logam.
+- **Logika:** Jika logam tersebut mulus dan utuh, arus Eddy akan mengalir membentuk lingkaran sempurna. Namun, jika ada **retakan atau cacat** di dalamnya, aliran arus Eddy akan terganggu atau berbelok. Perubahan pola arus ini akan terbaca oleh alat, sehingga kita tahu persis di mana letak kerusakannya.
+- **Kegunaan lain:** Mengukur ketebalan material, identifikasi jenis benda, hingga pengukuran ketebalan pelapisan cat di atas logam.
+
+![Eddy current testing is a nondestructive testing (NDT) inspection method used for a variety of purposes, including for flaw detection, material and coating thickness measurements, material identification and establishing the heat treatment condition of certain materials.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774400831484.png)
+
+## Fenomena
+
+Penjelasan mendalam mengenai fenomena **Arus Eddy** (atau arus pusaran), yaitu arus listrik induksi yang mengalir di dalam sebuah konduktor padat (bukan pada kawat tipis).
+
+![Munculnya arus Eddy.](attachments/Materi%20Kuliah%206%20Fisika%20Dasar%20II%20%E2%80%93%20Kemagnetan%202-1774400606742.png)
+
+Berikut adalah poin-poin utama penjelasannya:
+
+### 1. Definisi dan Proses Terbentuknya
+
+Arus Eddy muncul ketika sepotong logam bergerak memotong medan magnet atau ketika logam tersebut berada dalam lingkungan medan magnet yang kekuatannya berubah seiring waktu.
+
+- **Perubahan Fluks**: Sesuai Hukum Faraday, perubahan fluks magnetik pada setiap lintasan tertutup ($C$) di dalam pelat logam akan menghasilkan gaya gerak listrik (GGL) induksi.
+- **Arus di Konduktor**: Karena lintasan tersebut berada di dalam material konduktor, GGL ini langsung menggerakkan arus listrik di dalam massa logam tersebut.
+
+### 2. Analisis Gambar (Efek Pengereman Magnetik)
+
+Pada ilustrasi, kita melihat sebuah pelat logam ditarik ke arah kanan dengan kecepatan $\vec{v}$ melewati daerah bermedan magnet $\vec{B}_{in}$.
+
+- **Arah Arus**: Saat pelat ditarik keluar ke kanan, fluks magnetik yang menembus loop $C$ berkurang. Hal ini menginduksi GGL dan arus ($I$) yang mengalir searah jarum jam.
+- **Gaya Hambat ($F_m$)**: Arus induksi yang mengalir ke atas di dalam medan magnet akan menghasilkan gaya magnet ($F_m$) ke arah kiri (berdasarkan aturan tangan kanan).
+- **Hukum Lenz**: Gaya $F_m$ ini secara otomatis **melawan** arah gerakan pelat ($\vec{v}$), sehingga memberikan efek "pengereman" magnetik.
+
+### 3. Pembuktian Eksperimental
+
+Fenomena ini dapat dibuktikan secara nyata dengan mencoba menarik lembaran tembaga atau aluminium di antara kutub magnet permanen yang sangat kuat. Anda akan merasakan adanya hambatan fisik yang berat, meskipun logam tersebut (seperti aluminium) sebenarnya tidak ditarik oleh magnet secara statis.
+
+## Penutup Kuliah
+
+Dengan berakhirnya materi Arus Eddy ini, lengkaplah pembahasan kita mengenai Kemagnetan II. Kita telah melihat bagaimana arus menghasilkan magnet (Ampere), bagaimana magnet menghasilkan listrik (Faraday), bagaimana alam melawan perubahan tersebut (Lenz), hingga bagaimana fenomena ini bisa kita manfaatkan dalam bentuk generator dan sensor keamanan.

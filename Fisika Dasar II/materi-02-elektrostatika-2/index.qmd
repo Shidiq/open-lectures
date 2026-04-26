@@ -1,5 +1,6 @@
 ---
 title: "Elektrostatika 2"
+code-tools: false
 ---
 
 # Bab 1: Energi Potensial dan Potensial Listrik

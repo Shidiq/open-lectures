@@ -1,5 +1,6 @@
 ---
 title: "Fisika Dasar II"
+code-tools: false
 ---
 
 Daftar materi kuliah Fisika Dasar II.
